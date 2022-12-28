@@ -1,0 +1,58 @@
+#promoSlider
+    .slick
+        &-list
+            width: 100%
+            position: relative
+            &::before, &::after
+                position: absolute
+                content: ''
+                top: 0
+                left: 0
+                height: 100%
+                width: 100px
+                background: linear-gradient(to right, #ffffff 0%,rgba(0, 0, 0, 0) 100%)
+                z-index: 50
+            &:after
+                left: auto
+                right: 0
+                background: linear-gradient(to left, #ffffff 0%,rgba(0, 0, 0, 0) 100%)
+        &-track
+            display: flex
+            align-items: center
+            column-gap: 64px
+            width: 4200px !important
+        &-slide
+            display: grid !important
+            place-items: center
+            width: 150px
+            height: 100%
+#reviewsSlider
+    .slick
+        &-list
+            overflow: visible
+        &-track
+            display: flex
+            column-gap: 24px
+        &-dots
+            position: absolute
+            left: 50%
+            bottom: -58px
+            transform: translateX(-50%)
+            display: flex
+            align-items: center
+            list-style: none
+            li
+                height: 8px
+                width: 8px
+                background-color: $primary
+                opacity: .5
+                border-radius: 50%
+                transition: .4s
+                cursor: pointer
+                &:not(:last-child)
+                    margin-right: 5px
+                &.slick-active
+                    opacity: 1
+                    height: 12px
+                    width: 12px
+                    cursor: default

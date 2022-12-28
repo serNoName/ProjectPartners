@@ -1,0 +1,300 @@
+.btn
+    border-radius: 8px
+    padding: 10px 16px 8px 16px
+    cursor: pointer
+    text-decoration: none
+    transition: color .4s, background-color .4s
+    background: $primary
+    color: #fff
+    font-weight: 800
+    &:hover
+        background-color: #30057D
+        color: #fff
+    &-big
+        padding: 19px 32px
+        font-size: 18px
+    &-light
+        background-color: $white
+        color: $primary
+.mini-card
+    width: fit-content
+    padding: 6px 8px
+    background-color: #fff
+    border-radius: 12px
+    box-shadow: 2px 4px 10px rgba(22,20,40,.1)
+    border: 1px solid $secondary2
+    svg, img
+        grid-area: i
+    &__wrapper
+        display: grid
+        grid-template-areas: 'i t''i s'
+        grid-template-columns: auto auto
+        grid-template-rows: auto
+        column-gap: 6px
+        align-items: center
+        position: relative
+    &__title
+        font-weight: 800
+        font-size: 7px
+        line-height: 9px
+        text-transform: uppercase
+        grid-area: t
+    &__subtitle
+        color: #000
+        font-weight: 600
+        font-size: 10px
+        line-height: 13px
+        grid-area: s
+    &__people
+        padding-right: 12px
+        .mini-card
+            &__title
+                font-size: 11px
+                color: #000 !important
+                font-weight: 600
+            &__subtitle
+                font-size: 7px
+                font-weight: 800
+    &-neon
+        border-color: $neon
+        .mini-card__title
+            color: $neon
+    &-rose
+        border-color: $secondary2
+        .mini-card__title
+            color: $secondary2
+    &-purple
+        border-color: $primary
+        .mini-card
+            &__title
+                color: $primary
+            &__circle
+                background-color: $primary
+    &-cyan
+        border-color: $cyan
+        .mini-card
+            &__circle
+                background-color: $cyan
+            &__subtitle
+                color: $cyan
+    &-orange
+        border-color: $secondary
+        .mini-card
+            &__circle
+                background-color: $secondary
+            &__subtitle
+                color: $secondary
+    &__circle
+        position: absolute
+        top: 50%
+        right: -12px
+        transform: translateY(-50%) translateX(50%)
+        border-radius: 50%
+        width: 13px
+        height: 13px
+        background-color: $secondary2
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: #fff
+            height: 6px
+            width: 1px
+            border-radius: 2px
+        &::after
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: #fff
+            height: 1px
+            width: 6px
+            border-radius: 2px
+.review__card
+    background-color: $mid-grey
+    padding: 32px
+    border-radius: 16px
+    border: 1px solid #EDEDED
+    width: fit-content
+    height: auto
+    &-header
+        display: flex
+        column-gap: 16px
+    &-name
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &-ava
+        grid-area: a
+        width: fit-content
+    &-wrapper
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        height: 100%
+    &-title
+        color: $black
+        font-size: 20px
+        line-height: 26px
+        font-weight: 800
+        grid-area: t
+    &-subtitle
+        color: $black
+        opacity: 0.5
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+        grid-area: s
+    &-descr
+        color: $black
+        font-weight: 800
+        font-size: 22px
+        line-height: 28px
+        width: 320px
+        max-width: 100%
+    &-more
+        font-weight: 800
+        font-size: 14px
+        line-height: 24px
+        color: $dark-grey
+        position: relative
+        text-decoration: none
+        width: fit-content
+        margin-top: auto
+        margin-bottom: 0
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: 0
+            height: 1px
+            background-color: $dark-grey
+            width: 100%
+.prof__card
+    position: relative
+    background-color: #fff
+    width: fit-content
+    padding: 96px 24px 16px 24px
+    border-radius: 16px
+    &-ava
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: -13%
+    &-name
+        color: $black
+        font-size: 28px
+        line-height: 36px
+        text-align: center
+        font-weight: 800
+        margin-bottom: 10px
+    &-status
+        color: $secondary2
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: 800
+        font-size: 16px
+        line-height: 20px
+        svg
+            opacity: .7
+            margin-left: 4px
+            transform: translateY(-2px)
+    &-profesion
+        margin-bottom: 16px
+        color: $dark-grey
+        font-weight: 700
+        text-align: center
+        font-size: 18px
+        line-height: 23px
+    &-prof
+        background-color: $dark-grey
+        border-radius: 12px
+        color: #fff
+        font-size: 16px
+        font-weight: 800
+        line-height: 20px
+        display: flex
+        width: fit-content
+        align-items: center
+        padding: 10px 16px 8px 16px
+        margin: 0 auto
+        margin-bottom: 8px
+        svg
+            opacity: .7
+            margin-right: 6px
+            transform: translateY(-1px)
+    &:nth-child(2)
+        .prof__card
+            &-status
+                color: $primary
+    &:nth-child(3)
+        .prof__card
+            &-status
+                color: $yellow
+    &:nth-child(4)
+        .prof__card
+            &-status
+                color: $secondary
+    &-grid
+        display: grid
+        gap: 8px
+        grid-template-areas: 'h1 h2''b b''f f'
+        margin-bottom: 24px
+        &-item
+            background: $light-grey
+            border: 1px solid #EDEDED
+            border-radius: 8px
+            padding: 9px 8px 7px 8px
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                margin-right: 7px
+                transform: translateY(-1px)
+        &-1
+            grid-area: h1
+            color: $dark-grey
+            font-weight: 800
+        &-2
+            grid-area: h2
+            color: $dark-grey
+            font-weight: 800
+            span
+                opacity: .4
+        &-3
+            grid-area: b
+            img
+                opacity: .5
+        &-4
+            grid-area: f
+            img
+                opacity: .5
+    &-btn
+        display: flex
+        margin-bottom: 16px
+        padding: 19px 48px
+        white-space: nowrap
+    &-add
+        margin: 0 auto
+        color: $primary
+        font-weight: 800
+        cursor: pointer
+        text-align: center
+        position: relative
+        width: fit-content
+        img
+            margin-right: 7px
+            transform: translateY(1px)
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: 0
+            height: 1px
+            width: 100%
+            background-color: $primary
+            opacity: .5

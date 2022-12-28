@@ -1,0 +1,144 @@
+.header
+    padding-top: 28px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__logo
+        display: flex
+        align-items: center
+    &__burger
+        display: none
+        height: 40px
+        width: 40px
+        padding: 8px
+        background-color: $light-grey
+        border: 1px solid $mid-grey
+        border-radius: 8px
+        justify-content: space-between
+        flex-direction: column
+        cursor: pointer
+        transition: transform .4s
+        span
+            height: 2px
+            width: 100%
+            background-color: $dark-grey
+            opacity: .7
+            transition: opacity .4s
+        &:hover
+            span
+                opacity: 1
+        &.active
+            transform: rotate(360deg)
+            transition: transform .3s
+    &__masthead
+        display: flex
+        column-gap: 8px
+    &__shortlist
+        background-color: $light-grey
+        color: $dark-grey
+        font-weight: 600
+        display: flex
+        align-items: center
+        border: 1px solid $mid-grey
+        img
+            margin-right: 6px
+        &-count
+            margin-left: 6px
+            background-color: $secondary2
+            border-radius: 4px
+            width: 13px
+            height: 13px
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #fff
+            font-weight: 700
+            font-size: 12px
+            line-height: 15px
+        &:hover
+            color: $dark-grey
+            background-color: $mid-grey
+    &__login
+        display: flex
+        column-gap: 8px
+        &-log
+            background-color: $white
+            color: $primary
+            font-size: 16px
+            line-height: 18px
+            font-weight: 800
+            white-space: nowrap
+        &-sign
+            background-color: $primary
+            color: $white
+            font-size: 16px
+            line-height: 18px
+            font-weight: 800
+            white-space: nowrap
+    &__profile
+        display: none
+        align-items: center
+        &-select
+            white-space: nowrap
+            margin-right: 21px
+            position: relative
+            cursor: pointer
+            &::before
+                position: absolute
+                content: ''
+                bottom: 50%
+                right: -12px
+                transform: translateY(50%) rotate(180deg)
+                width: 0px
+                height: 0px
+                border-color: transparent transparent $dark-grey transparent
+                border-style: solid
+                border-width: 0px 5px 5px 5px
+                border-radius: 4px
+    &__menu
+        display: flex
+        justify-content: space-between
+        position: relative
+        &::before
+            position: absolute
+            content: ''
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 1px
+            background-color: $mid-grey
+        &-mobile
+            display: none
+        &-close
+            position: absolute
+            display: none
+            height: 30px
+            width: 30px
+            top: 40px
+            right: 40px
+            cursor: pointer
+            opacity: .7
+            transition: opacity .4s
+            span
+                width: 100%
+                height: 2px
+                background-color: $dark-grey
+                display: block
+                &:first-child
+                    transform: rotate(45deg) translate(10px, 10px)
+                &:last-child
+                    transform: rotate(-45deg) translate(-9px, 9px)
+            &:hover
+                opacity: 1
+        &-item
+            padding-top: 20px
+            padding-bottom: 16px
+            color: $dark-grey
+            font-weight: 600
+            font-size: 16px
+            line-height: 20px
+            text-decoration: none
+            transition: color .4s
+            cursor: pointer
+            &:hover
+                color: $primary

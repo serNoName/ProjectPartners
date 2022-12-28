@@ -1,0 +1,108 @@
+.promo
+    position: relative
+    padding-top: 54px
+    padding-bottom: 100px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__inner
+        position: relative
+    &__select-theme
+        background-color: $mid-grey
+        display: flex
+        justify-content: space-between
+        column-gap: 4px
+        padding: 4px
+        border-radius: 12px
+        width: fit-content
+        margin-bottom: 40px
+        margin-top: 48px
+        &-item
+            color: $dark-grey
+            font-weight: 600
+            font-size: 16px
+            line-height: 20px
+            letter-spacing: 1px
+            text-transform: uppercase
+            padding: 7px 12px 4px 12px
+            border-radius: 8px
+            cursor: pointer
+            transition: background-color .6s, color .6s
+            &.active
+                color: #fff
+                cursor: default
+            &:first-child
+                &.active
+                    background-color: $secondary2
+            &:last-child
+                &.active
+                    background-color: $secondary
+    &__title
+        max-width: 404px
+        margin-bottom: 32px
+        font-size: 48px
+        line-height: 61px
+    &__btns
+        display: flex
+        column-gap: 16px
+    .mini-card
+        &-1
+            left: 58px
+            top: 202px
+            .mini-card
+                &__subtitle
+                    color: $secondary2
+        &-2
+            bottom: 90px
+            left: 159px
+        &-3
+            top: 230px
+            right: 80px
+        &-4
+            top: 118px
+            right: 30px
+            .mini-card
+                &__subtitle
+                    color: $primary
+        &-5
+            left: -10px
+            bottom: 117px
+        &-6
+            left: 55px
+            bottom: 250px
+        &-7
+            right: 136px
+            bottom: 80px
+        &-8
+            right: 18px
+            top: 150px
+    &__mini-card
+        position: absolute
+        z-index: 2
+    &__partners
+        margin-top: 100px
+        &-inner
+            display: flex
+            justify-content: center
+            opacity: .4
+            align-items: center
+            column-gap: 32px
+            a
+                display: block
+    &__content
+        &-title
+            text-align: center
+            margin-bottom: 24px
+    .chat-buble
+        position: absolute
+        right: 150px
+        bottom: 265px
+        background-color: $primary
+        display: grid
+        place-items: center
+        height: 48px
+        width: 48px
+        border-radius: 100px 100px 100px 25px
+        transition: transform .2s
+        &:hover
+            transform: translateY(-2px) translateX(-2px)

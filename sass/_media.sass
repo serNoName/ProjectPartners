@@ -1,0 +1,410 @@
+@media (max-width: 1200px)
+    .container
+        width: 1159px
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) 
+    .container
+        width: 951px
+    .header
+        &__wrapper
+            padding-bottom: 16px
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 1px
+                background-color: $mid-grey
+        &__burger
+            display: flex
+        &__menu
+            padding: 40px
+            background-color: #fff
+            position: absolute
+            left: -450px
+            top: 0
+            height: 100%
+            width: 400px
+            flex-direction: column
+            justify-content: start
+            border-right: 1px solid $light-grey
+            transition: left .4s
+            z-index: 200
+            position: fixed
+            &.active
+                left: 0
+            &-item
+                font-size: 24px
+            &-close
+                display: block
+            &::before
+                display: none
+    .promo
+        padding-top: 40px
+        padding-bottom: 80px
+        &__wrapper
+            column-gap: 48px
+        &__btn
+            white-space: nowrap
+            padding: 17px 30px
+            font-size: 16px
+        &__title
+            font-size: 40px
+            line-height: 50px
+        &__select-theme
+            margin-bottom: 32px
+        &__inner
+            img
+                width: 90%
+            .mini-card
+                &-1
+                    left: 0
+                &-2
+                    bottom: 120px
+                &-4
+                    top: 98px
+                    right: 62px
+                &-8
+                    right: 100px
+    .featback
+        &__wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr
+        &__inner
+            &:first-child
+                display: flex
+                align-items: center
+                .mini-card
+                    &-3
+                        bottom: 60px
+                        right: 70px
+                    &-1
+                        top: 20px
+                        right: 130px
+                    &-2
+                        top: 120px
+    .demand
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            justify-items: center
+            row-gap: 80px
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) 
+    .container
+        width: 747px
+    .header
+        &__wrapper
+            padding-bottom: 16px
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 1px
+                background-color: $mid-grey
+        &__burger
+            display: flex
+        &__menu
+            padding: 40px
+            background-color: #fff
+            position: absolute
+            left: -450px
+            top: 0
+            height: 100%
+            width: 400px
+            flex-direction: column
+            justify-content: start
+            border-right: 1px solid $light-grey
+            transition: left .4s
+            z-index: 200
+            position: fixed
+            &.active
+                left: 0
+            &-item
+                font-size: 24px
+            &-close
+                display: block
+            &::before
+                display: none
+    .promo
+        padding-top: 40px
+        padding-bottom: 80px
+        &__wrapper
+            display: block
+        &__btn
+            white-space: nowrap
+            padding: 17px 30px
+            font-size: 16px
+        &__title
+            font-size: 40px
+            line-height: 50px
+            text-align: center
+        &__select-theme
+            margin-bottom: 32px
+            margin-top: 0
+        &__inner
+            justify-content: center
+            display: flex
+            flex-direction: column
+            align-items: center
+            &:first-child
+                margin-bottom: 32px
+            img
+                width: 90%
+            .mini-card
+                &-1
+                    left: 50px
+                &-2
+                    left: 240px
+                &-3
+                    right: 200px
+                &-4
+                    right: 140px
+                &-5
+                    left: 100px
+                &-6
+                    left: 89px
+                    bottom: 326px
+                &-8
+                    right: 100px
+    .featback
+        padding: 80px 0
+        &__inner
+            &:first-child
+                display: none
+    .demand
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            justify-items: center
+            row-gap: 80px
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) 
+    .container
+        width: 556px
+    .header
+        padding-top: 16px
+        &__wrapper
+            padding-bottom: 12px
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 1px
+                background-color: $mid-grey
+        &__logo
+            display: flex
+            align-items: center
+            img
+                width: 160px
+        &__burger
+            display: flex
+        &__menu
+            padding: 30px
+            background-color: #fff
+            position: absolute
+            left: -450px
+            top: 0
+            height: 100%
+            width: 400px
+            flex-direction: column
+            justify-content: start
+            border-right: 1px solid $light-grey
+            transition: left .4s
+            z-index: 200
+            position: fixed
+            &.active
+                left: 0
+            &-item
+                font-size: 22px
+            &-close
+                display: block
+            &::before
+                display: none
+    .promo
+        padding-top: 30px
+        padding-bottom: 80px
+        &__wrapper
+            display: block
+        &__btn
+            white-space: nowrap
+            padding: 17px 30px
+            font-size: 16px
+        &__title
+            font-size: 40px
+            line-height: 50px
+            text-align: center
+        &__select-theme
+            margin-bottom: 32px
+            margin-top: 0
+        &__inner
+            justify-content: center
+            display: flex
+            flex-direction: column
+            align-items: center
+            &:first-child
+                margin-bottom: 32px
+            img
+                width: 90%
+            .mini-card
+                &-1
+                    left: 50px
+                &-2
+                    left: 200px
+                    bottom: 50px
+                &-3
+                    right: 100px
+                &-4
+                    right: 80px
+                    top: 90px
+                &-5
+                    left: 70px
+                &-6
+                    left: 89px
+                    bottom: 240px
+                &-7
+                    right: 90px
+                &-8
+                    right: 100px
+                    top: 120px
+        &__partners
+            &-inner
+                &:first-child
+                    display: flex
+                    flex-wrap: wrap
+                    column-gap: 80px
+                    row-gap: 16px
+        .chat-buble
+            right: 40px
+    .slick
+        &-track
+            column-gap: 4px
+    .reviews
+        padding: 80px 0
+        &__card
+            &-descr
+                width: auto
+        #reviewsSlider .slick-track
+            display: flex
+    .review__card
+        padding: 28px 18px
+        &-descr
+            font-size: 20px
+    .featback
+        padding: 60px 0
+        &__inner
+            &:first-child
+                display: none
+    .demand
+        &__wrapper
+            grid-template-columns: 1fr
+            justify-items: center
+            row-gap: 80px
+@media (max-width: 576px) 
+    .container  
+        width: 460px
+    .title
+        font-size: 38px
+    .header
+        &__shortlist
+            display: none
+        &__menu
+            .header
+                &__login
+                    display: none
+                &__sign
+                    display: none
+                &__shortlist
+                    display: flex
+                    width: fit-content
+                    margin-top: 12px
+    .promo
+        padding-bottom: 50px
+        &__title
+            font-size: 36px
+            line-height: 40px
+        .btn
+            font-size: 14px
+            padding: 15px 28px
+        .bg
+            display: none !important
+        .mini-card
+            position: static
+            width: 160px
+            max-width: 100%
+            img
+                width: 24px
+                height: 24px
+        &__inner
+            &:last-child
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: 1fr 1fr
+                row-gap: 16px
+                column-gap: 32px
+                justify-items: center
+        .chat-buble
+            bottom: 0px
+    .featback
+        &__inner
+            &:first-child
+                display: none
+        &__form
+            display: flex
+            justify-content: center
+            &-wrapper
+                flex-direction: column
+                max-width: 360px
+                row-gap: 16px
+        &__btn
+            width: 100%
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) 
+    .container  
+        width: 350px
+    .header
+        &__login
+            display: none
+        &__menu
+            width: 100vw
+            &-mobile
+                display: flex
+                flex-direction: column-reverse
+            .header
+                &__login
+                    display: flex
+                &__sign
+                    display: flex
+                &__shortlist
+                    margin-bottom: 8px
+                    display: flex
+                    width: fit-content
+                    margin-top: 12px
+    .featback
+        &__inner
+            &:first-child
+                display: none
+        &__form
+            display: flex
+            justify-content: center
+            &-wrapper
+                flex-direction: column
+                width: 320px
+                row-gap: 16px
+        &__btn, &__input
+            width: 100%
+    .demand
+        padding-top: 60px
+        padding-bottom: 80px
+
+@media (max-width: 360px) 
+    .container  
+        width: 340px

@@ -1,0 +1,93 @@
+.featback
+    padding: 105px 0
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        column-gap: 16px
+    &__inner
+        &:first-child
+            position: relative
+            img
+                max-width: 100%
+            .mini-card
+                position: absolute
+                padding: 6px 8px 6px 10px
+                &-1
+                    top: 0
+                    right: 200px
+                    &::before
+                        position: absolute
+                        bottom: -20px
+                        content: 'Awesome!'
+                        right: 22px
+                        padding: 6px 8px
+                        background-color: $secondary2
+                        color: #fff
+                        border-radius: 12px
+                        font-size: 10px
+                        z-index: 2
+                        box-shadow: 0px 2px 4px rgba(22,20,40,.2)
+                &-2
+                    border-color: $secondary
+                    right: 10px
+                    top: 60px
+                    .mini-card__title
+                        color: $secondary
+                    &::before
+                        position: absolute
+                        bottom: -30px
+                        content: 'Wow!'
+                        right: 2px
+                        padding: 6px 8px
+                        background-color: $secondary
+                        color: #fff
+                        border-radius: 12px
+                        font-size: 10px
+                        z-index: 2
+                        box-shadow: 0px 2px 4px rgba(22,20,40,.2)
+                &-3
+                    border-color: $primary
+                    right: 70px
+                    bottom: 110px
+                    .mini-card__title
+                        color: $primary
+                    &::before
+                        position: absolute
+                        content: 'Thanks!'
+                        top: 0
+                        transform: translateY(-50%)
+                        right: -8px
+                        padding: 6px 8px
+                        background-color: $primary
+                        color: #fff
+                        border-radius: 12px
+                        font-size: 10px
+                        z-index: 2
+                        box-shadow: 0px 2px 4px rgba(22,20,40,.2)
+    &__title
+        color: $black
+        font-weight: 800
+        font-size: 40px
+        line-height: 51px
+        margin-bottom: 22px
+    &__subtitle
+        color: $dark-grey
+        font-weight: 600
+        font-size: 18px
+        line-height: 150%
+        margin-bottom: 56px
+    &__form
+        &-wrapper
+            display: flex
+            column-gap: 10px
+    &__input
+        padding: 19px 24px
+        border: solid 1px $primary
+        color: $dark-grey
+        border-radius: 12px
+        background-color: #fff
+        font-weight: 600
+        font-size: 14px
+        width: 360px
+    &__btn
+        white-space: nowrap
