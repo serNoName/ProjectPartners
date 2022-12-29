@@ -1,8 +1,5 @@
-@media (max-width: 1200px)
-    .container
-        width: 1159px
 /* Landscape tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) 
+@media (min-width: 992px) and (max-width: 1240px) 
     .container
         width: 951px
     .header
@@ -90,6 +87,11 @@
             grid-template-columns: 1fr 1fr
             justify-items: center
             row-gap: 80px
+    .footer
+        &__menu
+            column-gap: 60px
+    .start
+        padding-top: 120px
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) 
@@ -174,6 +176,8 @@
                     right: 100px
     .featback
         padding: 80px 0
+        &__wrapper
+            justify-content: center
         &__inner
             &:first-child
                 display: none
@@ -182,6 +186,30 @@
             grid-template-columns: 1fr 1fr
             justify-items: center
             row-gap: 80px
+    .footer
+        &__logo
+            img
+                width: 160px
+        &__menu
+            column-gap: 30px
+        &__cards
+            display: grid
+            grid-template-columns: 1fr 1fr
+            justify-items: center
+            gap: 18px
+    .start
+        padding: 80px 0
+        &__inner
+            &:first-child
+                display: flex
+                align-items: center
+                img
+                    max-width: 100%
+        &__title
+            margin-bottom: 18px
+        &__subtitle
+            margin-bottom: 18px
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) 
     .container
@@ -210,7 +238,7 @@
             padding: 30px
             background-color: #fff
             position: absolute
-            left: -450px
+            left: -500px
             top: 0
             height: 100%
             width: 400px
@@ -307,6 +335,35 @@
             grid-template-columns: 1fr
             justify-items: center
             row-gap: 80px
+    .footer
+        &__wrapper
+            padding: 120px 0
+        &__bg
+            display: none
+        &__logo
+            img
+                width: auto
+        &__menu
+            column-gap: 30px
+        &__cards
+            display: grid
+            grid-template-columns: 1fr 1fr
+            justify-items: center
+            gap: 18px
+        &__content
+            .container
+                display: flex
+                flex-direction: column
+                row-gap: 32px
+    .start
+        padding: 80px 0
+        &__wrapper
+            flex-direction: column
+            row-gap: 24px
+        &__inner
+            img
+                width: 100%
+
 @media (max-width: 576px) 
     .container  
         width: 460px
@@ -333,23 +390,6 @@
         .btn
             font-size: 14px
             padding: 15px 28px
-        .bg
-            display: none !important
-        .mini-card
-            position: static
-            width: 160px
-            max-width: 100%
-            img
-                width: 24px
-                height: 24px
-        &__inner
-            &:last-child
-                display: grid
-                grid-template-columns: 1fr 1fr
-                grid-template-rows: 1fr 1fr
-                row-gap: 16px
-                column-gap: 32px
-                justify-items: center
         .chat-buble
             bottom: 0px
     .featback
@@ -365,6 +405,13 @@
                 row-gap: 16px
         &__btn
             width: 100%
+    .footer
+        &__menu
+            display: flex
+            flex-direction: column
+            row-gap: 32px
+        &__card
+            width: 160px
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) 
@@ -404,6 +451,19 @@
     .demand
         padding-top: 60px
         padding-bottom: 80px
+    .footer
+        &__bottom
+            .container
+                display: flex
+                flex-direction: column-reverse
+                row-gap: 16px
+                align-items: center
+    .start
+        padding: 80px 0
+        &__title
+            margin-bottom: 18px
+        &__subtitle
+            margin-bottom: 18px
 
 @media (max-width: 360px) 
     .container  

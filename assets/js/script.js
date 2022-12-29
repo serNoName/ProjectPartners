@@ -55,8 +55,8 @@ $(document).ready(function () {
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 3,
                     centerMode: true,
+                    slidesToShow: 3,
               }
             },
             {
@@ -71,7 +71,6 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        centerMode: true,
         arrows: false,
         dots: true,
         customPaging: (slider) => `<span></span>`,
