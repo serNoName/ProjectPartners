@@ -1,3 +1,4 @@
+@import 'base/_variebles'
 @import 'base/_fonts'
 *
     margin: 0
@@ -6,8 +7,7 @@
     font-family: 'Mont'
     font-style: normal
     font-weight: 400
-    &[data-theme="partners"]
-        display: none
+    
 h1,
 h2,
 h3,
@@ -26,7 +26,7 @@ img
     width: 1200px
     margin: 0 auto
 
-@import 'base/_variebles'
+
 @import 'base/_text'
 @import 'base/_mixins'
 @import 'base/_ui'
@@ -34,11 +34,27 @@ img
 
 @import 'blocks/_header'
 @import 'blocks/_promo'
+@import 'blocks/_possibilities'
 @import 'blocks/_reviews'
+@import 'blocks/_roles'
 @import 'blocks/_featback'
 @import 'blocks/_start'
 @import 'blocks/_demand'
 @import 'blocks/_footer'
+@import 'blocks/_alert'
 @import 'blocks/_slick'
 
+.add-to-shortlist
+    width: 240px
+    padding: 19px 0
+    align-items: center
+    justify-content: center
+    transition: color .4s, background-color .4s
+    &.active
+        color: $primary
+        background-color: #F0EEFF
+
 @import '_media'
+
+*[data-theme="partners"]
+    display: none

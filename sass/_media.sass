@@ -92,7 +92,11 @@
             column-gap: 60px
     .start
         padding-top: 120px
-
+    .roles
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            justify-items: center
+            row-gap: 64px
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) 
     .container
@@ -209,7 +213,11 @@
             margin-bottom: 18px
         &__subtitle
             margin-bottom: 18px
-
+    .roles
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            justify-items: center
+            row-gap: 64px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) 
     .container
@@ -363,7 +371,13 @@
         &__inner
             img
                 width: 100%
-
+    .roles
+        &__wrapper
+            grid-template-columns: 1fr
+            justify-items: center
+            row-gap: 64px
+    .prof__card-footer
+        margin-top: 16px
 @media (max-width: 576px) 
     .container  
         width: 460px

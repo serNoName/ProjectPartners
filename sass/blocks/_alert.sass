@@ -1,0 +1,17 @@
+.alert
+    position: fixed
+    top: -72px
+    left: 50%
+    transform: translateX(-50%)
+    background: #F0EEFF
+    border-radius: 16px
+    padding: 16px
+    z-index: 5
+    cursor: pointer
+    transition: top .4s
+    &__wrapper
+        display: flex
+        align-items: center
+        column-gap: 8px
+    &.active
+        top: 72px
