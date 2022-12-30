@@ -1,0 +1,112 @@
+.empower
+    padding: 120px 0
+    position: relative
+    overflow: hidden
+    &__bg
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        width: 100vw
+        display: none
+        user-select: none
+        &.active
+            display: block
+    &__title
+        text-align: center
+        margin-bottom: 110px
+        span
+            color: $primary
+            font-weight: 800
+    &__wrapper
+        display: flex
+        justify-content: center
+        column-gap: 140px
+    &__image
+        display: none
+        &.active
+            display: block
+    &__list
+        list-style: none
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        width: 390px
+        &-item
+            display: flex
+            column-gap: 12px
+            align-items: center
+            border-radius: 16px
+            padding: 16px
+            transition: .4s
+            &:last-child
+                .empower__cheackmark
+                    &::before
+                        display: none !important
+            &.active
+                z-index: 2
+                background-color: $white
+                font-weight: 800
+                color: $primary
+                .empower__cheackmark
+                    background-color: $primary
+                    color: #fff
+            &.completed
+                color: $dark-grey
+                .empower__cheackmark
+                    background-color: $neon
+                    color: transparent
+                    &::before
+                        background-color: $neon
+                    &::after
+                        opacity: 1
+    &__cheackmark
+        transition: .4s
+        width: 32px
+        height: 32px
+        max-width: 32px
+        max-height: 32px
+        display: grid
+        place-items: center
+        border-radius: 6px
+        background-color: $mid-grey
+        color: rgba(52,63,72, .5 )
+        font-size: 22px
+        font-weight: 800
+        line-height: 28px
+        position: relative
+        &::before
+            position: absolute
+            transition: .4s
+            content: ''
+            top: 100%
+            left: 50%
+            transform: translateX(-50%)
+            width: 2px
+            height: 150%
+            background-color: #F0EEFF
+        &::after
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            width: 100%
+            height: 100%
+            background: url(../img/ico/check-mark.svg) center center no-repeat
+            transition: .4s
+    &__btns
+        position: relative
+        z-index: 2
+        display: flex
+        column-gap: 16px
+        justify-content: center
+        margin-top: 135px
+    &__btn
+        &:last-child
+            color: $primary
+            background-color: $white
+            &:hover
+                background-color: $mid-primary
+                color: #fff

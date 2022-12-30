@@ -171,6 +171,7 @@
         width: fit-content
         margin-top: auto
         margin-bottom: 0
+        transition: .4s
         &::before
             position: absolute
             content: ''
@@ -179,6 +180,8 @@
             height: 1px
             background-color: $dark-grey
             width: 100%
+        &:hover
+            color: $mid-primary
 .prof__card
     position: relative
     background-color: #fff
@@ -296,6 +299,7 @@
         text-align: center
         position: relative
         width: fit-content
+        transition: .4s
         img
             margin-right: 7px
             transform: translateY(1px)
@@ -308,3 +312,5 @@
             width: 100%
             background-color: $primary
             opacity: .5
+        &:hover
+            color: $mid-primary

@@ -1,0 +1,68 @@
+.search
+    padding: 120px 0
+    &__title
+        margin-bottom: 32px
+    &__wrapper
+        display: flex
+        align-items: center
+    &__menu
+        display: flex
+        column-gap: 16px
+        margin-bottom: 40px
+        &-item
+            color: $dark-grey
+            font-weight: 600
+            font-size: 16px
+            line-height: 20px
+            text-transform: capitalize
+            padding: 9px 16px 6px 16px
+            cursor: pointer
+            transition: color .4s, background-color .4s, border .4s
+            background-color: $mid-grey
+            border-radius: 12px
+            border-radius: 1px solid $light-grey
+            &.active
+                background-color: $secondary2
+                color: #fff
+                border-color: $secondary2
+                &:hover
+                    background-color: $secondary2
+                    color: #fff
+                    border-color: $secondary2
+            &:hover
+                color: $primary
+                background-color: $white
+    &__grid
+        display: grid
+        grid-template-columns: repeat(3, 160px)
+        grid-template-rows: repeat(2, 160px)
+        column-gap: 20px
+        row-gap: 16px
+        width: fit-content
+    &__card
+        border: 1px solid #EDEDED
+        border-radius: 16px
+        background-color: $light-grey
+        cursor: pointer
+        padding: 24px
+        transition: background-color .4s
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &-image
+            background-color: #FFE1E8
+            border-radius: 8px
+            display: grid
+            place-items: center
+            height: 48px
+            width: 48px
+        &-footer
+            display: flex
+            justify-content: space-between
+            align-items: end
+            margin-top: auto
+            margin-bottom: 0
+            img
+                transform: translateY(-4px)
+        &:hover
+            background-color: $white

@@ -41,6 +41,15 @@ $(document).ready(function () {
             }
         }
     });
+    
+    //list in do
+    $('.do__list-item').on('animationend', function(){
+        if($(this).hasClass('do__list-item-last')) {
+            $(this).removeClass('active').parent().children(':first-child').addClass('active');
+        } else {
+            $(this).removeClass('active').next().addClass('active');
+        }
+    });
 
     //add to shortlist
     $('.add-to-shortlist').on('click', function (e) {
@@ -68,19 +77,47 @@ $(document).ready(function () {
     });
 
 
+    $('.search__menu-item').click(function(){
+        $(this).toggleClass('active');
+    });
+
+    const changeSlideEmpower = function () { 
+        if($('.empower__list-item').last().hasClass('completed')) {
+            $('.empower__list-item').removeClass('completed').first().addClass('active');
+            $('.empower__image').removeClass('active').first().addClass('active').fadeIn(200);
+            $('.empower__bg').removeClass('active').first().addClass('active').fadeIn(200);
+            $('.empower__bg').last().css('display', 'none');
+            $('.empower__image').last().css('display', 'none');
+        } else {
+            $('.empower__list-item.active').removeClass('active').addClass('completed').next().addClass('active');
+            if(!$('.empower__list-item').last().hasClass('completed')){
+                $('.empower__image.active').fadeOut(200, function(){
+                    $(this).removeClass('active').next().fadeIn(200, function(){ $(this).addClass('active'); });
+                })
+                $('.empower__bg.active').fadeOut(200, function(){
+                    $(this).removeClass('active').next().fadeIn(200, function(){ $(this).addClass('active'); });
+                })
+            }
+        }
+        setTimeout(changeSlideEmpower, 5000);
+    };
+    changeSlideEmpower();
+
+
+
     /* sliders */
     $('#promoSlider').slick({
         slidesToShow: 8,
         slidesToScroll: 1,
         infinite: true,
         arrows: false,
+        centerMode: true,
         autoplay: true,
         autoplaySpeed: 300,
         responsive: [
             {
                 breakpoint: 767,
                 settings: {
-                    centerMode: true,
                     slidesToShow: 3,
               }
             },

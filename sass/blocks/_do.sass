@@ -1,0 +1,51 @@
+.do
+    background-color: $black
+    padding: 200px 0
+    position: relative
+    overflow: hidden
+    &__wrapper
+        position: relative
+        z-index: 2
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        //height: 100vh
+    &__list
+        display: flex
+        list-style: none
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        margin-bottom: 40px
+        &-item
+            font-weight: 800
+            font-size: 40px
+            line-height: 51px
+            text-align: center
+            color: #FFFFFF
+            opacity: 0.2
+            &.active
+                animation: changeOpacityAnim 2.5s 0s 1
+    &__label
+        font-weight: 600
+        font-size: 20px
+        line-height: 140%
+        text-align: center
+        justify-content: center
+        width: 320px
+        margin: 0 auto
+        margin-bottom: 40px
+        color: #FFFFFF
+    &__btns
+        display: flex
+        column-gap: 16px
+        justify-content: center
+    &__btn
+        &:last-child
+            background-color: $white
+            color: $primary
+            &:hover
+                background: $mid-primary
+                color: $white

@@ -1,0 +1,56 @@
+.help
+    background-color: $black
+    padding-top: 165px
+    padding-bottom: 135px
+    position: relative
+    overflow: hidden
+    &__wrapper
+        display: flex
+        column-gap: 120px
+        justify-content: center
+    &__title
+        color: #fff
+        font-size: 40px
+        line-height: 51px
+        margin-bottom: 22px
+        max-width: 572px
+    &__subtitle
+        color: #fff
+        font-size: 18px
+        font-weight: 600
+        line-height: 150%
+        margin-bottom: 56px
+        max-width: 488px
+    &__bg
+        position: absolute
+        &:first-child
+            right: 0
+            bottom: 0
+        &:last-child
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+    &__card
+        position: relative
+        &-ava
+            position: absolute
+            left: 35px
+            top: 0
+            transform: translateY(-50%)
+            border-radius: 50%
+            width: 124px
+            height: 124px
+            background-color: $black
+            border: 8px solid $black
+            overflow: hidden
+            display: flex
+            align-items: center
+            justify-content: center
+        &-tip
+            position: absolute
+            &-1
+                right: -25px
+                top: 50px
+            &-2
+                left: -42px
+                top: 218px

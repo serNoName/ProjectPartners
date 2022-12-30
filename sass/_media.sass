@@ -97,6 +97,38 @@
             grid-template-columns: 1fr 1fr
             justify-items: center
             row-gap: 64px
+    .possibilities
+        &__cards
+            column-gap: 32px
+        &__inner
+            &:last-child
+                max-width: 400px
+        &__checkmark
+            display: none
+        &__list
+            &-item
+                padding-left: 1em
+                position: relative
+                &::before
+                    position: absolute
+                    content: ''
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 0
+                    width: 12px
+                    height: 12px
+                    border-radius: 50%
+                    background-color: $neon
+    .search
+        &__inner
+            &:last-child
+                display: none
+    .empower
+        &__bg
+            display: none !important
+    .help
+        &__wrapper
+            column-gap: 60px
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) 
     .container
@@ -218,6 +250,53 @@
             grid-template-columns: 1fr 1fr
             justify-items: center
             row-gap: 64px
+    .alert
+        svg
+            height: 40px
+            width: 40px
+            &:last-child
+                width: 20px
+                height: 20px
+    .possibilities
+        padding: 80px 0
+        padding-bottom: 0
+        .bg__line
+            display: none
+        &__wrapper
+            display: flex
+            flex-direction: column-reverse
+            row-gap: 180px
+        &__cards
+            position: static
+            animation: none
+            display: grid
+            grid-template-columns: 1fr 1fr
+            justify-content: center
+            column-gap: 32px
+        &__col
+            row-gap: 48px
+            justify-content: start
+            align-items: center
+        &__inner
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__list
+            transform: translateX(44px)
+    .search 
+        &__inner
+            &:last-child
+                display: none
+    .empower
+        &__bg
+            display: none !important
+        &__inner
+            &:first-child
+                display: none
+    .help
+        &__wrapper
+            column-gap: 60px
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) 
     .container
@@ -378,6 +457,73 @@
             row-gap: 64px
     .prof__card-footer
         margin-top: 16px
+    .alert
+        padding: 10px 14px
+        top: -100px
+        width: 300px
+        svg
+            height: 40px
+            width: 40px
+            &:last-child
+                display: none
+    .possibilities
+        padding: 80px 0
+        padding-bottom: 0
+        .bg__line
+            display: none !important
+        &__wrapper
+            display: flex
+            flex-direction: column-reverse
+            row-gap: 180px
+        &__cards
+            position: static
+            animation: none
+            display: grid
+            grid-template-columns: 1fr 1fr
+            justify-content: center
+            column-gap: 32px
+        &__col
+            row-gap: 48px
+            justify-content: start
+            align-items: center
+        &__inner
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__list
+            transform: translateX(26px)
+            &-item
+                max-width: 500px
+        &__checkmark
+            width: 24px
+            height: 24px
+            margin-right: 8px
+            svg
+                width: 12px
+    .search
+        &__inner
+            &:last-child
+                display: none
+        &__menu
+            display: flex
+            row-gap: 8px
+            flex-wrap: wrap
+    .empower
+        padding: 80px 0
+        &__bg
+            display: none !important
+        &__inner
+            &:first-child
+                display: none
+    .help
+        &__bg
+            display: none
+        &__wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+            row-gap: 48px
+
 @media (max-width: 576px) 
     .container  
         width: 460px
@@ -426,6 +572,49 @@
             row-gap: 32px
         &__card
             width: 160px
+    .possibilities
+        &__list
+            transform: none
+            &-item
+                position: relative
+                padding-left: 1em
+                &:before
+                    position: absolute
+                    content: ''
+                    top: 50%
+                    left: 0
+                    transform: translateY(-50%)
+                    height: 12px
+                    width: 12px
+                    border-radius: 50%
+                    background-color: $neon
+        &__checkmark
+            display: none
+    .do
+        padding: 80px 0
+        &__list
+            &-item
+                white-space: nowrap
+        &__btns
+            display: flex
+            flex-direction: column
+            row-gap: 24px
+            align-items: center
+        &__btn
+            width: fit-content
+    .search
+        padding: 80px 0
+        &__title
+            text-align: center
+        &__grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: repeat(3, 160px)
+        &__menu
+            justify-content: center
+        &__inner
+            display: flex
+            align-items: center
+            flex-direction: column
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) 
@@ -478,7 +667,50 @@
             margin-bottom: 18px
         &__subtitle
             margin-bottom: 18px
-
+    .alert
+        font-size: 16px
+    .possibilities
+        .bg__line
+            display: none
+        &__btns
+            flex-direction: column
+            row-gap: 16px
+        &__cards
+            display: flex
+            flex-direction: column
+            row-gap: 48px
+    .do
+        padding: 80px 0
+        &__list
+            &-item
+                font-size: 28px
+    .empower
+        &__title
+            margin-bottom: 48px
+        &__list
+            width: auto
+            &-item
+                font-size: 12px
+        &__btns
+            flex-direction: column
+            align-items: center
+            row-gap: 16px
+            margin-top: 48px
+        &__btn
+            width: fit-content
+    .help
+        padding: 80px 0
+        &__inner
+            max-width: 100%
+        &__card
+            img
+                max-width: 100%
+            &-tip
+                &-1
+                    right: -8px
+                &-2
+                    left: 0
+                    top: 195px
 @media (max-width: 360px) 
     .container  
         width: 340px
