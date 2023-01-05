@@ -1,17 +1,24 @@
 .do
-    background-color: $black
     padding: 200px 0
     position: relative
     overflow: hidden
+    background: url(../img/bg/lines/do-1.svg) left center/cover no-repeat
+    background-color: $black !important
+    &__bg-1
+        background: url(../img/bg/lines/do-1.svg) left center/cover no-repeat
+    &__bg-2
+        background: url(../img/bg/lines/do-2.svg) left center/cover no-repeat
+    &__bg-3
+        background: url(../img/bg/lines/do-3.svg) left center/cover no-repeat
+    &__bg-4
+        background: url(../img/bg/lines/do-4.svg) left center/cover no-repeat
     &__wrapper
         position: relative
         z-index: 2
-    &__bg
-        position: absolute
-        top: 0
-        left: 0
-        width: 100vw
-        //height: 100vh
+    &__tab
+        display: none
+        &.active
+            display: block
     &__list
         display: flex
         list-style: none
@@ -26,6 +33,8 @@
             text-align: center
             color: #FFFFFF
             opacity: 0.2
+            cursor: pointer
+            user-select: none
             &.active
                 animation: changeOpacityAnim 2.5s 0s 1
     &__label

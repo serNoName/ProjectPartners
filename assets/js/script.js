@@ -54,16 +54,18 @@ $(document).ready(function () {
             }
         }
     });
-    
-    //list in do
-    $('.do__list-item').on('animationend', function(){
-        if($(this).hasClass('do__list-item-last')) {
-            $(this).removeClass('active').parent().children(':first-child').addClass('active');
-        } else {
-            $(this).removeClass('active').next().addClass('active');
-        }
-    });
 
+    const startTimerAlert = () => {
+        timerAlert = setTimeout(function() {
+            $('.alert').removeClass('active')
+        }, 3000)
+    }       
+
+    const stopTimerAlert = () => {
+        clearInterval(timerAlert);
+    }
+    
+    let timerAlert;
     //add to shortlist
     $('.add-to-shortlist').on('click', function (e) {
         e.preventDefault();
@@ -81,9 +83,10 @@ $(document).ready(function () {
             myElm.addClass('active')
             myElm.text(parseInt(myElm.text())+1);
             $('.alert').addClass('active');
-            setTimeout(function() {
-                $('.alert').removeClass('active')
-            }, 3000);
+            if($('.alert').hasClass('active')){
+                stopTimerAlert()
+            }
+            startTimerAlert()
         }
     });
 
@@ -92,22 +95,22 @@ $(document).ready(function () {
         $(this).removeClass('active');
     });
 
+
+
     //tabs in search
     $('.search__menu-item').click(function(){
         if(!$(this).hasClass('active')) {
             $(this).addClass('active').siblings().removeClass('active');
             let index = $(this).index();
-            console.log(index);
             $('.search__tab.active').fadeOut(200, function(){
                 $(this).removeClass('active')
                 $('.search__tab').eq(index).css('display', 'grid').fadeIn(200, function(){ $(this).addClass('active') })
-                console.log($(this).eq(index));
             })
         }
     });
 
     
-
+    //tabs in empower
     $(function() {
         let timer1;
         let item = $('.empower__list-item');
@@ -115,10 +118,10 @@ $(document).ready(function () {
         const startTimer = () => {
             timer1 = window.setInterval(switchTabs, 5000);
         }       
-
         const stopTimer = () => {
             clearInterval(timer1);
         }
+
         item.click(function() {
             if(!$(this).hasClass('active')) {
                 switchTabs($(this).index()+1);
@@ -151,6 +154,60 @@ $(document).ready(function () {
                 }
             }
         }
+    });
+
+    //tabs in do
+    $(function() {
+        let timer1;
+        let item = $('.do__list-item');
+        const mainElm = $('.do')
+        
+        const startTimer = () => {
+            timer1 = window.setInterval(switchTabs, 5000);
+        }       
+
+        const stopTimer = () => {
+            clearInterval(timer1);
+        }
+        item.click(function() {
+            if(!$(this).hasClass('active')) {
+                switchTabs($(this).index()+1);
+                $(this).addClass('active').siblings().removeClass('active')
+                
+                stopTimer();
+                startTimer();
+            }
+        })
+
+        startTimer();
+        function switchTabs(index) {
+            if(Number.isInteger(index)){
+                mainElm.removeClass('do__bg-1').removeClass('do__bg-2').removeClass('do__bg-3').removeClass('do__bg-4').addClass('do__bg-' + index)
+            }
+        }
+        function changeBG() {
+            if(mainElm.hasClass('do__bg-1')) {
+                mainElm.removeClass('do__bg-1').addClass('do__bg-2');
+            }
+            else if(mainElm.hasClass('do__bg-2')) {
+                mainElm.removeClass('do__bg-2').addClass('do__bg-3');
+            }
+            else if(mainElm.hasClass('do__bg-3')) {
+                mainElm.removeClass('do__bg-3').addClass('do__bg-4');
+            }
+            else if(mainElm.hasClass('do__bg-4')) {
+                mainElm.removeClass('do__bg-4').addClass('do__bg-1');
+            }
+        }
+        //list in do
+        $('.do__list-item').on('animationend', function(){
+            if($(this).hasClass('do__list-item-last')) {
+                $(this).removeClass('active').parent().children(':first-child').addClass('active');
+            } else {
+                $(this).removeClass('active').next().addClass('active');
+            }
+            changeBG();
+        });
     });
 
     $('.prof__card-add').click(function(){

@@ -437,9 +437,11 @@
             font-size: 20px
     .featback
         padding: 60px 0
+        &__wrapper
+            display: block
         &__inner
             &:first-child
-                display: none
+                margin-bottom: 24px
     .demand
         &__wrapper
             grid-template-columns: 1fr
@@ -690,7 +692,11 @@
             display: flex
             align-items: center
             flex-direction: column
-
+    .empower
+        &__title
+            margin-bottom: 40px
+        &__btns
+            margin-top: 40px
 /* Portrait phones and smaller */
 @media (max-width: 480px) 
     .container  
