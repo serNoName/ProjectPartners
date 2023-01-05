@@ -70,6 +70,7 @@ $(document).ready(function () {
     $('.add-to-shortlist').on('click', function (e) {
         e.preventDefault();
         let myElm = $('.header__shortlist-count');
+        let myElm2 = $('.header__shortlist-count');
 
         if($(this).text() == 'Added to Shortlist') {
             $(this).removeClass('active').text('Add to Shortlist');
