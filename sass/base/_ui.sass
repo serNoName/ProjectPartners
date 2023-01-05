@@ -1,16 +1,16 @@
 .btn
     border: none
     outline: none
-    border-radius: 8px
+    border-radius: 12px
     padding: 10px 16px 8px 16px
     cursor: pointer
     text-decoration: none
     transition: color .4s, background-color .4s
     background: $primary
     color: #fff
-    font-weight: 800
+    font-weight: 700
     &:hover
-        background-color: #30057D
+        background-color: $mid-primary
         color: #fff
     &-big
         padding: 19px 32px
@@ -157,7 +157,7 @@
         grid-area: s
     &-descr
         color: $black
-        font-weight: 800
+        font-weight: 700
         font-size: 22px
         line-height: 28px
         width: 320px
@@ -172,7 +172,7 @@
         width: fit-content
         margin-top: auto
         margin-bottom: 0
-        transition: .4s
+        transition: color .2s
         &::before
             position: absolute
             content: ''
@@ -181,14 +181,18 @@
             height: 1px
             background-color: $dark-grey
             width: 100%
+            transition: background-color .2s
         &:hover
             color: $mid-primary
+            &::before
+                background-color: $mid-primary
 .prof__card
     position: relative
     background-color: #fff
     width: fit-content
     padding: 96px 24px 24px 24px
     border-radius: 16px
+    user-select: none
     &-footer
         margin: auto
         margin-bottom: 0
@@ -196,7 +200,7 @@
         position: absolute
         left: 50%
         transform: translateX(-50%)
-        top: -13%
+        top: -8%
     &-name
         color: $black
         font-size: 28px
@@ -205,6 +209,7 @@
         font-weight: 800
         margin-bottom: 10px
     &-status
+        position: relative
         color: $secondary2
         display: flex
         align-items: center
@@ -212,10 +217,16 @@
         font-weight: 800
         font-size: 16px
         line-height: 20px
+        cursor: help
         svg
             opacity: .7
             margin-left: 4px
-            transform: translateY(-2px)
+            //transform: translateY(-2px)
+        &:hover
+            .prof__card-toopip
+                z-index: 2
+                opacity: 1
+                transform: translate(-50%, -10px)
     &-profesion
         margin-bottom: 16px
         color: $dark-grey
@@ -228,7 +239,7 @@
         border-radius: 12px
         color: #fff
         font-size: 16px
-        font-weight: 800
+        font-weight: 600
         line-height: 20px
         display: flex
         width: fit-content
@@ -270,15 +281,29 @@
                 margin-right: 7px
                 transform: translateY(-1px)
         &-1
+            position: relative
             grid-area: h1
             color: $dark-grey
             font-weight: 800
+            cursor: help
+            &:hover
+                .prof__card-toopip
+                    z-index: 2
+                    opacity: 1
+                    transform: translate(-50%, -10px)
         &-2
+            position: relative
             grid-area: h2
             color: $dark-grey
             font-weight: 800
+            cursor: help
             span
                 opacity: .4
+            &:hover
+                .prof__card-toopip
+                    z-index: 2
+                    opacity: 1
+                    transform: translate(-50%, -10px)
         &-3
             grid-area: b
             img
@@ -292,6 +317,22 @@
         margin-bottom: 16px
         padding: 19px 48px
         white-space: nowrap
+    &-toopip
+        position: absolute
+        left: 50%
+        top: 150%
+        transform: translateX(-50%)
+        width: 140px
+        padding: 8px
+        background-color: $white
+        z-index: -1
+        font-size: 10px
+        border-radius: 12px
+        color: $dark-grey
+        font-weight: 600
+        line-height: 13px
+        opacity: 0
+        transition: .3s
     &-add
         margin: 0 auto
         color: $primary
@@ -304,6 +345,16 @@
         img
             margin-right: 7px
             transform: translateY(1px)
+        &::after
+            position: absolute
+            content: ''
+            left: -47%
+            top: 0
+            width: 100%
+            height: 100%
+            background: url(../img/ico/marker-active.svg) center center no-repeat
+            opacity: 0
+            transition: .1s
         &::before
             position: absolute
             content: ''
@@ -315,3 +366,6 @@
             opacity: .5
         &:hover
             color: $mid-primary
+        &-active
+            &::after
+                opacity: 1

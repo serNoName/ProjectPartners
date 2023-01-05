@@ -8,15 +8,28 @@
     &__link
         position: relative
         text-align: center
+        text-decoration: none
         display: block
         color: $primary
         font-size: 18px
         line-height: 24px
-        font-weight: 800
+        font-weight: 700
+        margin: 0 auto
         margin-top: 45px
-        transition: .4s
+        transition: color .4s
+        width: fit-content
         &:hover
             color: $mid-primary
+            &::before
+                background-color: $mid-primary
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: -3px
+            background-color: $primary
+            width: 100%
+            height: 1px
     &__wrapper
         display: grid
         column-gap: 14px

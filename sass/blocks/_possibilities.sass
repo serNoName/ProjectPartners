@@ -1,15 +1,24 @@
 .possibilities
     padding: 150px 0
-    background-color: $mid-grey
-    overflow: hidden
+    height: 100vh
+    overflow-y: auto
     position: relative
+    background: $mid-grey url(../img/bg/lines/line-possibilities2.svg) center center / cover no-repeat
+    scrollbar-color: transparent transparent
+    &::-webkit-scrollbar-track 
+        background: transparent
+    &::-webkit-scrollbar-thumb
+        background: transparent
+    &::-webkit-scrollbar-thumb:hover 
+        background: transparent
+    &::-webkit-scrollbar
+        width: 0
+    &.theme-partners
+        background-image: url(../img/bg/lines/line-possibilities1.svg)
     &__cards
         display: flex
         column-gap: 64px
-        position: absolute
-        transform: translateY(-100px)
-        animation: verticalScrollAnim 30s 0.2s infinite alternate
-        animation-timing-function: linear
+        //transform: translateY(-100px)
     &__card
         .prof__card
             &-ava
@@ -31,25 +40,25 @@
         justify-content: center
     .bg__line
         position: absolute
-        left: 50%
-        top: 0
-        transform: translateX(-50%)
-        width: 100vw
+        inset: 0
+        width: 100%
     &__wrapper
-        display: grid
-        column-gap: 110px
-        grid-template-columns: auto auto
+        display: flex
         justify-content: space-between
     &__inner
         position: relative
         z-index: 2
+    &__content
+        position: sticky
+        top: 0px
+        width: max-content
     &__title
         line-height: 51px
         margin-bottom: 32px
         max-width: 470px
         span
             color: $primary
-            font-weight: 800
+            font-weight: 700
     &__subtitle
         margin-bottom: 24px
         font-weight: 600
@@ -60,13 +69,15 @@
         list-style: none
         display: flex
         flex-direction: column
-        margin-bottom: 56px
+        margin-bottom: 70px
         &-item
             font-weight: 600
-            font-size: 20px
+            font-size: 18px
             line-height: 30px
             display: flex
             align-items: center
+            img
+                margin-right: 12px
             &:not(:last-child)
                 margin-bottom: 24px
     &__checkmark
@@ -77,15 +88,28 @@
         display: grid
         place-items: center
         background-color: $neon
-    &__btns
-        column-gap: 32px
-        display: flex
-        align-items: center
     &__btn
+        padding: 16px 32px
+        font-size: 18px
         &:last-child
-            background-color: transparent
+            position: relative
+            margin-left: 28px
             color: $primary
             text-decoration: underline
             transition: color .4s
+            background-color: transparent
+            text-decoration: none
+            padding: 16px 0
+            &::before
+                position: absolute
+                content: ''
+                left: 0
+                bottom: 16px
+                width: 100%
+                height: 1px
+                background-color: $primary
+                transition: background-color .4s
             &:hover
                 color: $mid-primary
+                &:before
+                    background-color: $mid-primary

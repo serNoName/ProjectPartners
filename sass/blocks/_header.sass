@@ -8,28 +8,34 @@
         align-items: center
     &__burger
         display: none
-        height: 40px
-        width: 40px
-        padding: 8px
-        background-color: $light-grey
-        border: 1px solid $mid-grey
+        height: 38px
+        width: 38px
+        padding: 4px
         border-radius: 8px
         justify-content: space-between
         flex-direction: column
         cursor: pointer
         transition: transform .4s
         span
-            height: 2px
+            height: 4px
             width: 100%
-            background-color: $dark-grey
+            background-color: $primary
             opacity: .7
-            transition: opacity .4s
+            transition: .2s
+            border-radius: 4px
         &:hover
             span
-                opacity: 1
+                opacity: 1   
         &.active
-            transform: rotate(360deg)
-            transition: transform .3s
+            span
+                opacity: 1
+                &:nth-child(1)
+                    transform: rotate(45deg) translate(9px, 9px) scaleX(1.45)
+                &:nth-child(2)
+                    transform: scale(0)
+                &:nth-child(3)
+                    transform: rotate(-45deg) translate(9px, -9px) scaleX(1.45)
+                    
     &__masthead
         display: flex
         column-gap: 8px
@@ -40,14 +46,17 @@
         display: flex
         align-items: center
         border: 1px solid $mid-grey
-        img
+        transition: color .3s, background-color .3s, border-color .3s
+        svg
             margin-right: 6px
+            path
+                transition: .3s
         &-count
             margin-left: 6px
             background-color: $secondary2
             border-radius: 4px
-            width: 13px
-            height: 13px
+            width: 15px
+            height: 15px
             display: flex
             justify-content: center
             align-items: center
@@ -59,8 +68,11 @@
             &.active
                 display: flex
         &:hover
-            color: $dark-grey
-            background-color: $mid-grey
+            color: #fff
+            background-color: $mid-primary
+            border-color: $mid-primary
+            path
+                fill: #fff
     &__login
         display: flex
         column-gap: 8px
@@ -69,14 +81,14 @@
             color: $primary
             font-size: 16px
             line-height: 18px
-            font-weight: 800
+            font-weight: 700
             white-space: nowrap
         &-sign
             background-color: $primary
             color: $white
             font-size: 16px
-            line-height: 18px
-            font-weight: 800
+            line-height: 1
+            font-weight: 700
             white-space: nowrap
     &__profile
         display: none
@@ -98,50 +110,50 @@
                 border-style: solid
                 border-width: 0px 5px 5px 5px
                 border-radius: 4px
-    &__menu
-        display: flex
-        justify-content: space-between
-        position: relative
-        &::before
-            position: absolute
-            content: ''
-            bottom: 0
-            left: 0
+.nav
+    display: flex
+    justify-content: space-between
+    position: relative
+    &::before
+        position: absolute
+        content: ''
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: $mid-grey
+    &-mobile
+        display: none
+    &-close
+        position: absolute
+        display: none
+        height: 30px
+        width: 30px
+        top: 40px
+        right: 40px
+        cursor: pointer
+        opacity: .7
+        transition: opacity .4s
+        span
             width: 100%
-            height: 1px
-            background-color: $mid-grey
-        &-mobile
-            display: none
-        &-close
-            position: absolute
-            display: none
-            height: 30px
-            width: 30px
-            top: 40px
-            right: 40px
-            cursor: pointer
-            opacity: .7
-            transition: opacity .4s
-            span
-                width: 100%
-                height: 2px
-                background-color: $dark-grey
-                display: block
-                &:first-child
-                    transform: rotate(45deg) translate(10px, 10px)
-                &:last-child
-                    transform: rotate(-45deg) translate(-9px, 9px)
-            &:hover
-                opacity: 1
-        &-item
-            padding-top: 20px
-            padding-bottom: 16px
-            color: $dark-grey
-            font-weight: 600
-            font-size: 16px
-            line-height: 20px
-            text-decoration: none
-            transition: color .4s
-            cursor: pointer
-            &:hover
-                color: $primary
+            height: 2px
+            background-color: $dark-grey
+            display: block
+            &:first-child
+                transform: rotate(45deg) translate(10px, 10px)
+            &:last-child
+                transform: rotate(-45deg) translate(-9px, 9px)
+        &:hover
+            opacity: 1
+    &-item
+        padding-top: 20px
+        padding-bottom: 16px
+        color: $dark-grey
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+        text-decoration: none
+        transition: color .2s
+        cursor: pointer
+        &:hover
+            color: $primary

@@ -7,7 +7,6 @@
     font-family: 'Mont'
     font-style: normal
     font-weight: 400
-    
 h1,
 h2,
 h3,
@@ -17,15 +16,23 @@ h6,
 ul, li
     margin: 0
     padding: 0
-
 img
     user-select: none
-
 .container
     max-width: 100%
     width: 1200px
     margin: 0 auto
-
+.overlayer
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+    width: 100vw
+    height: 100vh
+    background-color: #000
+    opacity: .4
+    filter: blur(4px)
+    display: none
 
 @import 'base/_text'
 @import 'base/_mixins'

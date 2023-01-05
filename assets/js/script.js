@@ -11,29 +11,45 @@ $(document).ready(function () {
     //open menu on phones (header)
     $('.header__burger').click(function (e) { 
         e.preventDefault();
-        
+
+        $('.overlayer').fadeOut(300)
         $(this).toggleClass('active')
-        $('.header__menu').toggleClass('active');
+        $('.nav').toggleClass('active');
+        $('.overlayer').fadeIn(300)
     });
 
     //close menu on phones (header)
-    $('.header__menu-close').click(function (e) { 
+    $('.nav-close').click(function (e) { 
         e.preventDefault();
-        
+
+        $('.overlayer').fadeOut(300)
         $(this).parent().removeClass('active');
+        $('.header__burger').removeClass('active')
     });
+
+    //close menu if click overlayer
+    $('.overlayer').click(function(){
+        $(this).fadeOut(300)
+        $('.nav').removeClass('active');
+        $('.header__burger').removeClass('active')
+    })
 
     //change main theme
     $('.promo__select-theme-item').click(function() {
         if (!$(this).hasClass('active')){
             $(this).addClass('active').siblings().removeClass('active');
+
             if ($('.promo__select-theme-item:last-child').hasClass('active')) {
                 $('*[data-theme="business"]').stop(true, false).fadeOut(300, function() {
-                    $('*[data-theme="partners"]').stop().fadeIn(300);
-                });
+                    $('*[data-theme="partners"]').stop().fadeIn(300)
+
+                    $('.possibilities').addClass('theme-partners');
+                })
             } else {
                 $('*[data-theme="partners"]').stop(true, false).fadeOut(300, function() {
                     $('*[data-theme="business"]').stop().fadeIn(300);
+
+                    $('.possibilities').removeClass('theme-partners');
                 });
             }
         }
@@ -51,7 +67,7 @@ $(document).ready(function () {
     //add to shortlist
     $('.add-to-shortlist').on('click', function (e) {
         e.preventDefault();
-        let myElm = $('#countInShortList');
+        let myElm = $('.header__shortlist-count');
 
         if($(this).text() == 'Added to Shortlist') {
             $(this).removeClass('active').text('Add to Shortlist');
@@ -60,66 +76,124 @@ $(document).ready(function () {
             } else {
                 myElm.text(parseInt(myElm.text())-1);
             }
-            
         } else {
             $(this).addClass('active').text('Added to Shortlist');
             myElm.addClass('active')
             myElm.text(parseInt(myElm.text())+1);
             $('.alert').addClass('active');
+            setTimeout(function() {
+                $('.alert').removeClass('active')
+            }, 3000);
         }
     });
 
+    //close alert after click
     $('.alert').click(function(){
         $(this).removeClass('active');
     });
 
-
+    //tabs in search
     $('.search__menu-item').click(function(){
-        $(this).toggleClass('active');
+        if(!$(this).hasClass('active')) {
+            $(this).addClass('active').siblings().removeClass('active');
+            let index = $(this).index();
+            console.log(index);
+            $('.search__tab.active').fadeOut(200, function(){
+                $(this).removeClass('active')
+                $('.search__tab').eq(index).css('display', 'grid').fadeIn(200, function(){ $(this).addClass('active') })
+                console.log($(this).eq(index));
+            })
+        }
     });
 
-    const changeSlideEmpower = function () { 
-        if($('.empower__list-item').last().hasClass('completed')) {
-            $('.empower__list-item').removeClass('completed').first().addClass('active');
-            $('.empower__image').removeClass('active').first().addClass('active').fadeIn(200);
-            $('.empower__bg').removeClass('active').first().addClass('active').fadeIn(200);
-            $('.empower__bg').last().css('display', 'none');
-            $('.empower__image').last().css('display', 'none');
-        } else {
-            $('.empower__list-item.active').removeClass('active').addClass('completed').next().addClass('active');
-            if(!$('.empower__list-item').last().hasClass('completed')){
-                $('.empower__image.active').fadeOut(200, function(){
-                    $(this).removeClass('active').next().fadeIn(200, function(){ $(this).addClass('active'); });
-                })
-                $('.empower__bg.active').fadeOut(200, function(){
-                    $(this).removeClass('active').next().fadeIn(200, function(){ $(this).addClass('active'); });
-                })
+    
+
+    $(function() {
+        let timer1;
+        let item = $('.empower__list-item');
+        
+        const startTimer = () => {
+            timer1 = window.setInterval(switchTabs, 5000);
+        }       
+
+        const stopTimer = () => {
+            clearInterval(timer1);
+        }
+        item.click(function() {
+            if(!$(this).hasClass('active')) {
+                switchTabs($(this).index()+1);
+                $(this).nextAll().removeClass('active').removeClass('completed')
+                $(this).addClass('active').removeClass('completed').prevAll().removeClass('active').addClass('completed')
+                
+                stopTimer();
+                startTimer();
+            }
+        })
+
+        startTimer();
+        function switchTabs(index) {
+            if(item.last().hasClass('completed')) {
+                item.removeClass('completed').first().addClass('active');
+                $('.empower__image.active').removeClass('active')
+                $('.empower__image').first().addClass('active');
+                $('.empower__bg').removeClass('active').first().addClass('active')
+            } else {
+                $('.empower__list-item.active').addClass('completed').removeClass('active').next().addClass('active')
+                if(!$('.empower__list-item').last().hasClass('completed')) {
+                    if(Number.isInteger(index)) {
+                        index--;
+                        $('.empower__image').removeClass('active').eq(index).addClass('active');
+                        $('.empower__bg').removeClass('active').eq(index).addClass('active');
+                    } else {
+                        $('.empower__image.active').removeClass('active').next().addClass('active');
+                        $('.empower__bg.active').removeClass('active').next().addClass('active');
+                    }
+                }
             }
         }
-        setTimeout(changeSlideEmpower, 5000);
-    };
-    changeSlideEmpower();
+    });
+
+    $('.prof__card-add').click(function(){
+        $(this).toggleClass('prof__card-add-active');
+    })
+
 
     /* sliders */
     $('#promoSlider').slick({
-        slidesToShow: 8,
-        slidesToScroll: 1,
+        slidesToShow: 7,
+        slidesToScroll: 3,
         infinite: true,
         arrows: false,
         centerMode: true,
         autoplay: true,
-        autoplaySpeed: 300,
+        autoplaySpeed: 1600,
         responsive: [
             {
-                breakpoint: 767,
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+              }
+            },
+            {
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
               }
             },
             {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerPadding: '50px'
+              }
+            },
+            {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
               }
             }
         ]
@@ -130,6 +204,8 @@ $(document).ready(function () {
         infinite: true,
         arrows: false,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         customPaging: (slider) => `<span></span>`,
         responsive: [
             {
@@ -147,9 +223,25 @@ $(document).ready(function () {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
                 }
             }
         ]
     });
+    $(window).on('load resize', function() {
+        if ($(window).width() < 769) {
+            $('#rolesSlider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                infinite: false,
+                arrows: false,
+                dots: true,
+                customPaging: (slider) => `<span></span>`,
+            });
+        } else {
+          $("#rolesSlider").slick("unslick");
+        }
+    });
+
 });
