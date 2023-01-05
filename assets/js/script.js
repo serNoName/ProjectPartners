@@ -69,19 +69,21 @@ $(document).ready(function () {
     //add to shortlist
     $('.add-to-shortlist').on('click', function (e) {
         e.preventDefault();
-        let myElm = $('.header__shortlist-count');
-        let myElm2 = $('.header__shortlist-count');
+        let myElm = $('#countInShortList');
+        let myElm2 = $('#countInShortListMobile');
 
         if($(this).text() == 'Added to Shortlist') {
             $(this).removeClass('active').text('Add to Shortlist');
             if(myElm.text() == 1){
                 myElm.text(0).removeClass('active');
+                myElm2.text(0).removeClass('active');
             } else {
                 myElm.text(parseInt(myElm.text())-1);
             }
         } else {
             $(this).addClass('active').text('Added to Shortlist');
             myElm.addClass('active')
+            myElm2.addClass('active')
             myElm.text(parseInt(myElm.text())+1);
             $('.alert').addClass('active');
             if($('.alert').hasClass('active')){
@@ -89,6 +91,9 @@ $(document).ready(function () {
             }
             startTimerAlert()
         }
+        myElm2.text()
+        myElm2.text(myElm.text());
+        myElm2.text()
     });
 
     //close alert after click
@@ -184,6 +189,12 @@ $(document).ready(function () {
         function switchTabs(index) {
             if(Number.isInteger(index)){
                 mainElm.removeClass('do__bg-1').removeClass('do__bg-2').removeClass('do__bg-3').removeClass('do__bg-4').addClass('do__bg-' + index)
+                $('.do__tab').removeClass('active').eq(index-2).addClass('active')
+            }
+            if($('.do__tab').last().hasClass('active')) {
+                $('.do__tab').removeClass('active').first().addClass('active')
+            } else {
+                $('.do__tab.active').removeClass('active').next().addClass('active')
             }
         }
         function changeBG() {
@@ -202,12 +213,13 @@ $(document).ready(function () {
         }
         //list in do
         $('.do__list-item').on('animationend', function(){
+            changeBG();
             if($(this).hasClass('do__list-item-last')) {
                 $(this).removeClass('active').parent().children(':first-child').addClass('active');
             } else {
                 $(this).removeClass('active').next().addClass('active');
             }
-            changeBG();
+            switchTabs()
         });
     });
 
