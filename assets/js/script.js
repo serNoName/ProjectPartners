@@ -228,7 +228,10 @@ $(document).ready(function () {
             }
         ]
     });
-    $(window).on('load resize', function() {
+    $(window).on('resize', function() {
+        rolesSlider();
+    });
+    const rolesSlider = () => {
         if ($(window).width() < 769) {
             $('#rolesSlider').slick({
                 slidesToShow: 1,
@@ -242,6 +245,6 @@ $(document).ready(function () {
         } else {
           $("#rolesSlider").slick("unslick");
         }
-    });
-
+    }
+    rolesSlider();
 });
