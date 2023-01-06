@@ -261,6 +261,7 @@
         &__subtitle
             margin-bottom: 18px
     .roles
+        
         &__wrapper
             grid-template-columns: 1fr 1fr
             justify-items: center
@@ -307,7 +308,8 @@
     .help
         &__wrapper
             column-gap: 60px
-
+        &__title
+            font-size: 32px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -466,6 +468,7 @@
             img
                 width: 100%
     .roles
+        background-image: none
         &__wrapper
             display: flex
             align-items: center
@@ -661,10 +664,6 @@
         &__checkmark
             width: 22px
             height: 22px
-        &__cards
-            display: flex
-            flex-direction: column
-            row-gap: 48px
     .do
         padding: 80px 0
         &__list
