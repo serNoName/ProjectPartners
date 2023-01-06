@@ -34,32 +34,6 @@ $(document).ready(function () {
         $('.header__burger').removeClass('active')
     })
 
-    //change main theme
-    $('.promo__select-theme-item').on('click', function () {
-        if (!$(this).hasClass('active')) {
-            $(this).addClass('active').siblings().removeClass('active');
-
-            if ($('.promo__select-theme-item:last-child').hasClass('active')) {
-                $('*[data-theme="business"]').stop(true, false).fadeOut(300, function () {
-                    $('*[data-theme="partners"]').stop().fadeIn(300)
-
-                    $('.possibilities').addClass('theme-partners');
-                })
-            } else {
-                $('*[data-theme="partners"]').stop(true, false).fadeOut(300, function () {
-                    $('*[data-theme="business"]').stop().fadeIn(300);
-
-                    $('.possibilities').removeClass('theme-partners');
-                });
-            }
-        }
-        if(!$(this).attr('id') === undefined) {
-            console.log(1);
-            $('#rolesSlider').slick('setPosition');
-            $('.partners-carousel').slick('setPosition');
-            mySlider();
-        }
-    });
 
     const startTimerAlert = () => {
         timerAlert = setTimeout(function () {
@@ -107,8 +81,6 @@ $(document).ready(function () {
         $(this).removeClass('active');
     });
 
-
-
     //tabs in search
     $('.search__menu-item').click(function () {
         if (!$(this).hasClass('active')) {
@@ -122,7 +94,6 @@ $(document).ready(function () {
             })
         }
     });
-
 
     //tabs in empower
     $(function () {
@@ -174,9 +145,9 @@ $(document).ready(function () {
                         $('.empower__image.active').removeClass('active').next().addClass('active');
                         $('.empower__bg.active').fadeOut(200, () => {
                             let tempItem = $('.empower__bg.active').next();
-                            $('.empower__bg.active').removeClass('active').next().fadeIn(200, () => { 
+                            $('.empower__bg.active').removeClass('active').next().fadeIn(200, () => {
                                 tempItem.addClass('active')
-                            }) 
+                            })
                         })
                     }
                 }
@@ -225,13 +196,13 @@ $(document).ready(function () {
                     myItem.eq(n).addClass('active')
                 })
             }
-            
+
             if ($('.do__tab').last().hasClass('active')) {
                 $('.do__tab').removeClass('active').first().addClass('active')
             } else {
                 $('.do__tab.active').removeClass('active').next().addClass('active')
             }
-            
+
         }
 
         //list in do
@@ -249,9 +220,7 @@ $(document).ready(function () {
         $(this).toggleClass('prof__card-add-active');
     })
 
-
     /* sliders */
-    
     $('#reviewsSlider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -281,6 +250,7 @@ $(document).ready(function () {
             }
         ]
     });
+
     $('#promoSlider').slick({
         slidesToShow: 7,
         slidesToScroll: 3,
@@ -316,16 +286,19 @@ $(document).ready(function () {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                 }
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 2,
+                }
             }
         ]
     });
-    $(window).on('resize', function () {
-        mySlider();
-    });
-    $(window).on('load', function () {
-        mySlider();
-    });
-    function mySlider()  {
+
+    let activeSliders = false;
+    function mySlider() {
         if ($(window).width() < 769) {
             $('#rolesSlider:not(.slick-initialized)').slick({
                 slidesToShow: 1,
@@ -346,8 +319,46 @@ $(document).ready(function () {
                 customPaging: (slider) => `<span></span>`,
             });
         } else {
-            $("#rolesSlider").slick("unslick");
-            $("#demandSlider").slick("unslick");
+            if ($("#rolesSlider").hasClass('slick-initialized') || $("#demandSlider").hasClass('slick-initialized')) {
+                $("#rolesSlider").slick("unslick");
+                $("#demandSlider").slick("unslick");
+            } else {
+                if($('#rolesSlider').hasClass('slick-initialized')) {
+                    $('#rolesSlider').slick('setPosition');
+                    console.log(1);
+                }
+                else if ($('.partners-carousel').hasClass('slick-initialized')) {
+                    $('.partners-carousel').slick('setPosition');
+                }
+            }
         }
     }
+    $(window).on('resize', function () {
+        mySlider();
+    });
+    $(window).on('load', function () {
+        mySlider();
+    });
+    //change main theme
+    $('.promo__select-theme-item').click(function () {
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active').siblings().removeClass('active');
+
+            if ($('.promo__select-theme-item:last-child').hasClass('active')) {
+                $('*[data-theme="business"]').stop(true, false).fadeOut(300, function () {
+                    $('*[data-theme="partners"]').stop().fadeIn(300);
+                    $('.possibilities').addClass('theme-partners');
+                })
+            } else {
+                $('*[data-theme="partners"]').stop(true, false).fadeOut(300, function () {
+                    $('*[data-theme="business"]').stop().fadeIn(300);
+
+                    $('.possibilities').removeClass('theme-partners');
+                });
+            }
+        }
+        if ($(this).attr('id')) {
+            mySlider();
+        }
+    });
 });
