@@ -158,7 +158,6 @@ $(document).ready(function () {
                 if (!$('.empower__list-item').last().hasClass('completed')) {
                     if (Number.isInteger(index)) {
                         index--;
-                        console.log(index);
                         $('.empower__image').removeClass('active').eq(index).addClass('active');
                         $('.empower__bg').stop(true, true).fadeOut(200, () => {
                             $('.empower__bg').removeClass('active').eq(index).stop(true, true).fadeIn(200, () => {
@@ -181,55 +180,56 @@ $(document).ready(function () {
 
     //tabs in do
     $(function () {
-        let timer1;
+        //let timer1;
         let item = $('.do__list-item');
-        const mainElm = $('.do')
 
-        const startTimer = () => {
-            timer1 = window.setInterval(switchTabs, 5000);
+        /*const startTimer = () => {
+            //timer1 = window.setInterval(switchTabs, 0);
         }
-
         const stopTimer = () => {
             clearInterval(timer1);
-        }
+        }*/
         item.click(function () {
             if (!$(this).hasClass('active')) {
                 switchTabs($(this).index() + 1);
                 $(this).addClass('active').siblings().removeClass('active')
 
-                stopTimer();
-                startTimer();
+                //stopTimer();
+                //startTimer();
             }
         })
 
-        startTimer();
+        //startTimer();
 
         function switchTabs(index) {
+            let myItem = $('.do__bg');
             if (Number.isInteger(index)) {
-                mainElm.removeClass('do__bg-1').removeClass('do__bg-2').removeClass('do__bg-3').removeClass('do__bg-4').addClass('do__bg-' + index)
                 $('.do__tab').removeClass('active').eq(index - 2).addClass('active')
+                index--;
+                myItem.stop(true, false).fadeOut(300, () => {
+                    myItem.removeClass('active')
+                }).eq(index).fadeIn(300, () => {
+                    myItem.eq(index).addClass('active')
+                })
+            } else {
+                let n = $('.do__list-item.active').index();
+                myItem.stop(true, false).fadeOut(300, () => {
+                    myItem.removeClass('active')
+                }).eq(n).fadeIn(300, () => {
+                    myItem.eq(n).addClass('active')
+                })
             }
+            
             if ($('.do__tab').last().hasClass('active')) {
                 $('.do__tab').removeClass('active').first().addClass('active')
             } else {
                 $('.do__tab.active').removeClass('active').next().addClass('active')
             }
+            
         }
 
-        function changeBG() {
-            if (mainElm.hasClass('do__bg-1')) {
-                mainElm.removeClass('do__bg-1').addClass('do__bg-2');
-            } else if (mainElm.hasClass('do__bg-2')) {
-                mainElm.removeClass('do__bg-2').addClass('do__bg-3');
-            } else if (mainElm.hasClass('do__bg-3')) {
-                mainElm.removeClass('do__bg-3').addClass('do__bg-4');
-            } else if (mainElm.hasClass('do__bg-4')) {
-                mainElm.removeClass('do__bg-4').addClass('do__bg-1');
-            }
-        }
         //list in do
         $('.do__list-item').on('animationend', function () {
-            changeBG();
             if ($(this).hasClass('do__list-item-last')) {
                 $(this).removeClass('active').parent().children(':first-child').addClass('active');
             } else {
@@ -245,43 +245,46 @@ $(document).ready(function () {
 
 
     /* sliders */
-    $('#promoSlider').slick({
-        slidesToShow: 7,
-        slidesToScroll: 3,
-        infinite: true,
-        arrows: false,
-        centerMode: true,
-        autoplay: true,
-        autoplaySpeed: 1600,
-        responsive: [{
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
+    $('#sliderTriger').click( function () {
+        $('#promoSlider').slick({
+            slidesToShow: 7,
+            slidesToScroll: 3,
+            infinite: true,
+            arrows: false,
+            centerMode: true,
+            autoplay: true,
+            autoplaySpeed: 1600,
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centerPadding: '50px'
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
                 }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    centerPadding: '50px'
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
+            ]
+        });
+        mySlider()
     });
     $('#reviewsSlider').slick({
         slidesToShow: 3,
