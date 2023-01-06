@@ -148,17 +148,31 @@ $(document).ready(function () {
                 item.removeClass('completed').first().addClass('active');
                 $('.empower__image.active').removeClass('active')
                 $('.empower__image').first().addClass('active');
-                $('.empower__bg').removeClass('active').first().addClass('active')
+                $('.empower__bg').fadeOut(200, () => {
+                    $('.empower__bg').removeClass('active').first().fadeIn(200, () => {
+                        $('.empower__bg').first().addClass('active')
+                    })
+                })
             } else {
                 $('.empower__list-item.active').addClass('completed').removeClass('active').next().addClass('active')
                 if (!$('.empower__list-item').last().hasClass('completed')) {
                     if (Number.isInteger(index)) {
                         index--;
+                        console.log(index);
                         $('.empower__image').removeClass('active').eq(index).addClass('active');
-                        $('.empower__bg').removeClass('active').eq(index).addClass('active');
+                        $('.empower__bg').stop(true, true).fadeOut(200, () => {
+                            $('.empower__bg').removeClass('active').eq(index).stop(true, true).fadeIn(200, () => {
+                                $('.empower__bg').eq(index).addClass('active');
+                            })
+                        })
                     } else {
                         $('.empower__image.active').removeClass('active').next().addClass('active');
-                        $('.empower__bg.active').removeClass('active').next().addClass('active');
+                        $('.empower__bg.active').fadeOut(200, () => {
+                            let tempItem = $('.empower__bg.active').next();
+                            $('.empower__bg.active').removeClass('active').next().fadeIn(200, () => { 
+                                tempItem.addClass('active')
+                            }) 
+                        })
                     }
                 }
             }
