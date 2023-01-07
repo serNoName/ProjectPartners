@@ -325,7 +325,6 @@ $(document).ready(function () {
             } else {
                 if($('#rolesSlider').hasClass('slick-initialized')) {
                     $('#rolesSlider').slick('setPosition');
-                    console.log(1);
                 }
                 else if ($('.partners-carousel').hasClass('slick-initialized')) {
                     $('.partners-carousel').slick('setPosition');
