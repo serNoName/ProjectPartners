@@ -297,38 +297,42 @@ $(document).ready(function () {
         ]
     });
 
-    let activeSliders = false;
+    $('#rolesSlider:not(.slick-initialized)').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        infinite: false,
+        arrows: false,
+        dots: true,
+        customPaging: (slider) => `<span></span>`,
+    });
+
+    $('#demandSlider:not(.slick-initialized)').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        infinite: false,
+        arrows: false,
+        dots: true,
+        customPaging: (slider) => `<span></span>`,
+    });
+
     function mySlider() {
         if ($(window).width() < 769) {
-            $('#rolesSlider:not(.slick-initialized)').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                infinite: false,
-                arrows: false,
-                dots: true,
-                customPaging: (slider) => `<span></span>`,
-            });
-            $('#demandSlider:not(.slick-initialized)').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                infinite: false,
-                arrows: false,
-                dots: true,
-                customPaging: (slider) => `<span></span>`,
-            });
+            $("#demandSlider").slick("setPosition");
+            $('#rolesSlider').slick('setPosition');
+            if(!$("#demandSlider").hasClass('slick-initialized')) {
+                $("#demandSlider").slick('init')
+            }
+            if(!$('#rolesSlider').hasClass('slick-initialized')) {
+                $('#rolesSlider').slick('init')
+            }
         } else {
             if ($("#rolesSlider").hasClass('slick-initialized') || $("#demandSlider").hasClass('slick-initialized')) {
                 $("#rolesSlider").slick("unslick");
                 $("#demandSlider").slick("unslick");
             } else {
-                if($('#rolesSlider').hasClass('slick-initialized')) {
-                    $('#rolesSlider').slick('setPosition');
-                }
-                else if ($('.partners-carousel').hasClass('slick-initialized')) {
-                    $('.partners-carousel').slick('setPosition');
-                }
+                $("#demandSlider").slick("setPosition");
             }
         }
     }
@@ -347,17 +351,19 @@ $(document).ready(function () {
                 $('*[data-theme="business"]').stop(true, false).fadeOut(300, function () {
                     $('*[data-theme="partners"]').stop().fadeIn(300);
                     $('.possibilities').addClass('theme-partners');
+                    console.log(1);
+                    mySlider();
+                    $('.partners-carousel').slick('setPosition');
+                    $('#rolesSlider').slick('setPosition');
                 })
             } else {
                 $('*[data-theme="partners"]').stop(true, false).fadeOut(300, function () {
                     $('*[data-theme="business"]').stop().fadeIn(300);
-
                     $('.possibilities').removeClass('theme-partners');
                 });
             }
         }
         if ($(this).attr('id')) {
-            mySlider();
         }
     });
 
@@ -365,6 +371,7 @@ $(document).ready(function () {
     var paralax = document.getElementById("myParallax");
 
     /* коэфициент сдвига: 1 сдвиг равный смещению по оси Y, 0 без сдвига */
+    /* ЗДЕСЬ ИЗМЕНЯТЬ СКОРОСТЬ ПРОКРУТКИ */
     var moveCoef = 0.5;
 
     window.addEventListener("scroll", scroll);
@@ -375,12 +382,12 @@ $(document).ready(function () {
     /* берём огнаничивающий прямоугольник паралакса относительно окна (фрейма) */
     var r = paralax.getBoundingClientRect();
 
-    /* центр паралакса */
+    /* parallax center */
     var paralaxYCenter = r.y + r.height / 2;
-    /* центр экрана */
+    /* screen center */
     var scrollYCenter = window.innerHeight / 2;
 
-    /* Вычисляем смещение */
+    /* Calculate the offset */
     var move = (paralaxYCenter - scrollYCenter) * moveCoef - 100;
 
     paralax.style.transform = "translateY(" + (move-300) + "px)";
