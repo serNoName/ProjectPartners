@@ -361,4 +361,29 @@ $(document).ready(function () {
             mySlider();
         }
     });
+
+    //parallax
+    var paralax = document.getElementById("myParallax");
+
+    /* коэфициент сдвига: 1 сдвиг равный смещению по оси Y, 0 без сдвига */
+    var moveCoef = 0.5;
+
+    window.addEventListener("scroll", scroll);
+    window.addEventListener("resize", scroll);
+    scroll();
+
+    function scroll() {
+    /* берём огнаничивающий прямоугольник паралакса относительно окна (фрейма) */
+    var r = paralax.getBoundingClientRect();
+
+    /* центр паралакса */
+    var paralaxYCenter = r.y + r.height / 2;
+    /* центр экрана */
+    var scrollYCenter = window.innerHeight / 2;
+
+    /* Вычисляем смещение */
+    var move = (paralaxYCenter - scrollYCenter) * moveCoef - 100;
+
+    paralax.style.transform = "translateY(" + (move-300) + "px)";
+    }
 });

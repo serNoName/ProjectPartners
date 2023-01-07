@@ -1,13 +1,13 @@
 .possibilities
     position: relative
-    padding: 150px 0
     height: 100vh
+    padding: 150px 0
+    width: 100%
     max-height: 750px
     background: $mid-grey url(../img/bg/lines/line-possibilities2.svg) center center / cover no-repeat
-    scrollbar-color: transparent transparent
+    //perspective-origin: 0 0
     overflow: hidden
-    overflow-y: auto
-    perspective: 1px
+    scrollbar-color: transparent transparent
     &::-webkit-scrollbar-track 
         background: transparent
     &::-webkit-scrollbar-thumb
@@ -16,13 +16,15 @@
         background: transparent
     &::-webkit-scrollbar
         width: 0
+    .container
+        height: 100%
+        position: static
     &.theme-partners
         background-image: url(../img/bg/lines/line-possibilities1.svg)
     &__cards
         display: flex
         column-gap: 64px
         width: fit-content
-        transform: translateZ(0px)
         //transform: translateY(-100px)
     &__card
         .prof__card
@@ -48,20 +50,16 @@
         inset: 0
         width: 100%
     &__wrapper
+        //transform: translate3d(700px, 0, -800px) rotateY(30deg)
         position: relative
+        height: 100%
         display: flex
-        perspective: 1px
-        justify-content: end
+        justify-content: space-between
     &__inner
         width: fit-content
-        &:first-child
-            position: absolute
-            inset: 0
-        &:last-child
-            //transform: translateZ(-2px)
     &__content
-        //position: sticky
-        //top: 0px
+        top: 0
+        position: sticky
         width: max-content
     &__title
         line-height: 51px
