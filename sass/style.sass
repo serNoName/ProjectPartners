@@ -33,6 +33,15 @@ img
     opacity: .4
     filter: blur(4px)
     display: none
+.add-to-shortlist
+    width: 240px
+    padding: 19px 0
+    align-items: center
+    justify-content: center
+    transition: color .4s, background-color .4s
+    &.active
+        color: $primary
+        background-color: #F0EEFF
 
 @import 'base/_text'
 @import 'base/_mixins'
@@ -54,16 +63,11 @@ img
 @import 'blocks/_help'
 @import 'blocks/_search'
 @import 'blocks/_slick'
+@import 'blocks/_breadcrumb'
+@import 'blocks/_catalog'
+@import 'blocks/_filter'
+@import 'blocks/_pagination'
 
-.add-to-shortlist
-    width: 240px
-    padding: 19px 0
-    align-items: center
-    justify-content: center
-    transition: color .4s, background-color .4s
-    &.active
-        color: $primary
-        background-color: #F0EEFF
 
 @import '_media'
 

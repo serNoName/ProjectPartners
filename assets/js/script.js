@@ -27,11 +27,24 @@ $(document).ready(function () {
         $('.header__burger').removeClass('active')
     });
 
-    //close menu if click overlayer
+    //open filter
+    $('#filterTriger').click(function() {
+        $('#filter').addClass('active')
+        $('.overlayer').fadeIn(300)
+    })
+
+    //close filter
+    $('#filterClose').click( function () {
+        $('#filter').removeClass('active')
+        $('.overlayer').fadeOut(300)
+    })
+
+    //close all if click overlayer
     $('.overlayer').click(function () {
         $(this).fadeOut(300)
         $('.nav').removeClass('active');
         $('.header__burger').removeClass('active')
+        $('#filter').removeClass('active')
     })
 
 
@@ -368,28 +381,27 @@ $(document).ready(function () {
     });
 
     //parallax
-    var paralax = document.getElementById("myParallax");
+    const paralax = document.getElementById("myParallax");
 
-    /* коэфициент сдвига: 1 сдвиг равный смещению по оси Y, 0 без сдвига */
-    /* ЗДЕСЬ ИЗМЕНЯТЬ СКОРОСТЬ ПРОКРУТКИ */
-    var moveCoef = 0.5;
+    /* HERE CHANGE SCROLL SPEED*/
+    const moveCoef = 0.5;
 
     window.addEventListener("scroll", scroll);
     window.addEventListener("resize", scroll);
     scroll();
 
     function scroll() {
-    /* берём огнаничивающий прямоугольник паралакса относительно окна (фрейма) */
-    var r = paralax.getBoundingClientRect();
+        if(!paralax) return
+        let r = paralax.getBoundingClientRect();
 
-    /* parallax center */
-    var paralaxYCenter = r.y + r.height / 2;
-    /* screen center */
-    var scrollYCenter = window.innerHeight / 2;
+        /* parallax center */
+        let paralaxYCenter = r.y + r.height / 2;
+        /* screen center */
+        let scrollYCenter = window.innerHeight / 2;
 
-    /* Calculate the offset */
-    var move = (paralaxYCenter - scrollYCenter) * moveCoef - 100;
+        /* Calculate the offset */
+        let move = (paralaxYCenter - scrollYCenter) * moveCoef - 100;
 
-    paralax.style.transform = "translateY(" + (move-300) + "px)";
+        paralax.style.transform = "translateY(" + (move-300) + "px)";
     }
 });

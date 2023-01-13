@@ -1,5 +1,5 @@
 /* Landscape tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1240px) 
+@media (min-width: 992px) and (max-width: 1240px)
     .chat-buble
         bottom: 60px
         right: 60px
@@ -19,6 +19,8 @@
                 background-color: $mid-grey
         &__burger
             display: flex
+        &__masthead
+            align-items: center
     .nav
         padding: 40px 24px
         background-color: #fff
@@ -144,8 +146,27 @@
                 height: 100%
                 width: 100%
                 object-fit: cover
+    .catalog
+        &__wrapper
+            grid-template-columns: 190px auto
+            column-gap: 18px
+        &__content
+            padding-left: 18px
+        &-card
+            &__wrapper
+                padding: 24px 20px
+            &__image
+                margin-right: 8px
+            &__name
+                font-size: 18px
+            &__status
+                font-size: 12px
+            &__prof
+                font-size: 12px
+            &__list
+                margin-bottom: 16px
 /* Portrait tablets and small desktops */
-@media (min-width: 768px) and (max-width: 991px) 
+@media (min-width: 768px) and (max-width: 991px)
     .chat-buble
         bottom: 60px
         right: 60px
@@ -165,6 +186,8 @@
                 background-color: $mid-grey
         &__burger
             display: flex
+        &__masthead
+            align-items: center
     .nav
         padding: 40px
         background-color: #fff
@@ -267,7 +290,7 @@
         &__subtitle
             margin-bottom: 18px
     .roles
-        
+
         &__wrapper
             grid-template-columns: 1fr 1fr
             justify-items: center
@@ -301,7 +324,7 @@
                     width: 28px
                     height: 28px
                     margin-right: 6px
-    .search 
+    .search
         &__inner
             &:last-child
                 display: none
@@ -322,6 +345,52 @@
                 height: 100%
                 width: 100%
                 object-fit: cover
+    .catalog
+        &__wrapper
+            display: block
+        &__triger
+            display: flex
+        &__content
+            padding: 0
+            border: none
+        &__title
+            margin-bottom: 16px
+        &__row
+            &-cards
+                column-gap: 18px
+            &:not(:first-child)
+                margin-top: 16px
+        &__header
+            flex-direction: column
+        &__inner
+            display: flex
+            align-items: center
+            margin-top: 16px
+            column-gap: 16px
+        &-card
+            &__wrapper
+                padding: 24px 20px
+            &__image
+                margin-right: 8px
+            &__name
+                font-size: 18px
+            &__status
+                font-size: 12px
+            &__prof
+                font-size: 12px
+            &__list
+                margin-bottom: 16px
+    .filter
+        position: fixed
+        overflow-y: scroll
+        height: 100vh
+        padding: 24px 18px
+        left: -350px
+        top: 0
+        z-index: 199
+        background-color: #fff
+        border-right: 1px solid rgba(52,63,72,.1)
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -349,6 +418,8 @@
                 width: 160px
         &__burger
             display: flex
+        &__masthead
+            align-items: center
     .nav
         padding: 30px
         background-color: #fff
@@ -585,13 +656,54 @@
     .do
         &__bg
             display: none !important
-@media (max-width: 576px) 
-    .container  
+    .catalog
+        &__wrapper
+            display: block
+        &__triger
+            display: flex
+        &__content
+            padding: 0
+            border: none
+        &__title
+            margin-bottom: 16px
+        &__cards
+            &-category
+                grid-template-columns: 1fr 1fr
+                grid-template-areas: 'c1 c2''c3 c4''c5 i1''c6 c8''c9 c10''i2 c11''c12 c13''c14 c15''i3 i3'
+        &__header
+            flex-direction: column
+        &__inner
+            display: flex
+            align-items: center
+            margin-top: 16px
+            column-gap: 16px
+        &__row
+            &-cards
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                column-gap: 18px
+                row-gap: 18px
+            &:not(:first-child)
+                margin-top: 16px
+    .filter
+        position: fixed
+        overflow-y: scroll
+        height: 100vh
+        padding: 24px 18px
+        left: -350px
+        top: 0
+        z-index: 199
+        background-color: #fff
+        border-right: 1px solid rgba(52,63,72,.1)
+
+@media (max-width: 576px)
+    .container
         width: 460px
     .title
         font-size: 38px
     body
-        padding-top: 60px
+        padding-top: 48px
     .overlayer
         display: none !important
     .alert
@@ -705,6 +817,27 @@
             margin-bottom: 40px
         &__btns
             margin-top: 40px
+    .filter
+        width: 100vw
+        left: -580px
+        &.active
+            transform: translateX(580px)
+        &__burger
+            display: flex
+    .catalog
+        &__title
+            line-height: 1
+            margin-bottom: 8px
+        &__triger
+            font-size: 14px
+            padding: 8px 0
+            width: 120px
+        &__subtitle
+            font-size: 22px
+        &__more
+            font-size: 16px
+            white-space: nowrap
+            height: fit-content
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -714,7 +847,7 @@
             display: none
     .title
         font-size: 32px
-    .container  
+    .container
         width: 350px
     .header
         .container
@@ -875,10 +1008,20 @@
                 padding: 0 !important
     .search
         padding-bottom: 40px
-@media (max-width: 360px) 
+    .catalog
+        padding-top: 30px
+        &__header
+            flex-direction: column-reverse
+            row-gap: 12px
+        &__cards
+            &-category
+                grid-template-columns: max-content
+                justify-content: center
+                grid-template-areas: 'c1''c2''c3''c4''i1''c5''c6''c7''c8''i2''c9''c10''c11''c12''i3'
+@media (max-width: 360px)
     .title
         line-height: 40px
-    .container  
+    .container
         width: 310px
     .search
         &__grid
@@ -929,3 +1072,8 @@
         &__card
             &-wrapper
                 min-width: 300px
+    .catalog
+        &__name
+            padding: 10px
+        &__subtitle
+            font-size: 20px

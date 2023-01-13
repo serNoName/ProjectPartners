@@ -1,0 +1,122 @@
+.filter
+    transition: transform .4s
+    max-width: 100vw
+    position: relative
+    &.active
+        transform: translateX(350px)
+    &__burger
+        display: none
+        flex-direction: column
+        justify-content: space-between
+        width: 38px
+        height: 32px
+        position: absolute
+        top: 12px
+        right: 18px
+        cursor: pointer
+        span
+            width: 100%
+            height: 4px
+            background-color: $primary
+            border-radius: 4px
+            &:first-child
+                transform: rotate(45deg) translate(7px, 12px) scaleX(1.1)
+            &:last-child
+                transform: rotate(-45deg) translate(7px, -12px) scaleX(1.1)
+    &__title
+        color: $black
+        font-size: 24px
+        font-weight: 700
+        line-height: 31px
+    &__subtitle
+        margin-bottom: 12px
+        color: $dark-grey
+        font-size: 16px
+        line-height: 20px
+        text-transform: capitalize
+        font-weight: 700
+    &__list
+        display: flex
+        flex-direction: column
+        list-style: none
+        row-gap: 12px
+        &-scroll
+            overflow-y: scroll
+            height: 290px
+            padding: 1px 0
+            scrollbar-width: thin
+            scrollbar-color: #343F48 rgba(52, 63, 72, 0.2)
+            &::-webkit-scrollbar
+                width: 5px
+            &::-webkit-scrollbar-thumb
+                background-color: #343F48
+                border-radius: 5px
+            &::-webkit-scrollbar-track
+                background: rgba(52, 63, 72, 0.2)
+                border-radius: 10px
+                border-radius: 5px
+    &__block
+        position: relative
+        padding-bottom: 16px
+        margin-top: 16px
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 1px
+            background-color: $dark-grey
+            opacity: .1
+    &__label
+        position: relative
+        color: $dark-grey
+        padding-left: 28px
+        font-size: 14px
+        font-weight: 600
+        cursor: pointer
+        user-select: none
+        display: flex
+        line-height: 130%
+        input
+            position: absolute
+            opacity: 0
+            cursor: pointer
+            height: 0
+            width: 0
+            &:checked ~ .filter__checkmark
+                background-color: $mid-primary
+                opacity: 1
+                border: none
+                &::before
+                    opacity: 1
+        &:hover
+            .filter__checkmark
+                background-color: $primary
+                opacity: 1
+                border: none
+                &::before
+                    opacity: 1
+    &__checkmark
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 20px
+        height: 20px
+        border-radius: 6px
+        border: 1px solid $dark-grey
+        opacity: .5
+        background-color: transparent
+        transition: .1s
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            height: 100%
+            background: url(../img/ico/check.svg) center center no-repeat
+            transition: .1s
+            opacity: 0

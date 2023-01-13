@@ -51,7 +51,7 @@
         padding-right: 12px
         img
             border-radius: 50%
-        .mini-card 
+        .mini-card
             &__title
                 font-size: 11px
                 color: #000 !important
@@ -383,3 +383,193 @@
         &-active
             &::after
                 opacity: 1
+.catalog-card
+    background-color: #fff
+    border-radius: 16px
+    &__wrapper
+        padding: 24px
+    &__header
+        display: flex
+    &__name
+        color: $black
+        font-size: 20px
+        line-height: 26px
+        font-weight: 700
+        margin-bottom: 2px
+    &__status
+        position: relative
+        font-size: 12px
+        font-weight: 700
+        line-height: 15px
+        color: $secondary2
+        cursor: help
+        display: flex
+        column-gap: 2px
+        &:hover
+            .catalog-card__tooltip
+                z-index: 2
+                opacity: 1
+                transform: translateY(-20px) translateX(-50%)
+        &-yellow
+            color: $yellow
+            path
+                fill: $yellow
+        &-cyan
+            color: #00C8E8
+            path
+                fill: #00C8E8
+        &-neon
+            color: $neon
+            path
+                fill: $neon
+        &-orange
+            color: $secondary
+            path
+                fill: $secondary
+        &-purple
+            color: $primary
+            path
+                fill: $primary
+    &__inner
+        height: fit-content
+    &__prof
+        color: $dark-grey
+        font-weight: 600
+        font-size: 14px
+        line-height: 18px
+    &__image
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: 12px
+        img
+            border-radius: 50%
+    &__body
+        max-width: 172px
+        margin: 0 auto
+        margin-top: 12px
+    &__rating
+        display: flex
+        gap: 8px
+        margin-bottom: 8px
+        .catalog-card__item
+            justify-content: center
+            &:first-child
+                width: 64px
+            &:last-child
+                width: 100%
+    &__item
+        position: relative
+        background-color: $light-grey
+        border: 1px solid $mid-grey
+        display: flex
+        align-items: center
+        border-radius: 8px
+        padding: 5px 9px
+        padding-right: 6px
+        cursor: help
+        &:hover
+            .catalog-card__tooltip
+                z-index: 2
+                opacity: 1
+                transform: translateY(-12px) translateX(-50%)
+        img
+            margin-right: 5px
+        &-text
+            font-weight: 600
+            font-size: 14px
+            line-height: 18px
+            display: flex
+            align-items: center
+            font-weight: 700
+            color: $dark-grey
+            span
+                font-weight: 700
+                opacity: .4
+    &__list
+        display: flex
+        flex-direction: column
+        row-gap: 8px
+        margin-bottom: 25px
+        img, svg
+            margin-right: 5px
+        &-item
+            display: flex
+            justify-content: center
+            .catalog-card__item-text
+                font-weight: 600
+            &:last-child
+                img,svg
+                    opacity: .7
+    &__btn
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 12px 0 10px 0
+        border-radius: 8px
+        margin-bottom: 12px
+        &.active
+            &:hover
+                color: $primary
+                background-color: $white
+    &__add
+        margin-bottom: 5px
+        line-height: 24px
+    &__compare
+        line-height: 24px
+        user-select: none
+        &::after
+            display: none !important
+    &__tooltip
+        position: absolute
+        bottom: -60px
+        left: 50%
+        transform: translateX(-50%)
+        padding: 8px
+        max-width: 140px
+        font-size: 10px
+        font-weight: 600
+        line-height: 13px
+        color: $dark-grey
+        background-color: $white
+        border-radius: 12px
+        width: max-content
+        transition: .3s
+        opacity: 0
+        cursor: auto
+        z-index: -1
+    &-role
+        position: relative
+        margin-top: 36px
+        .catalog-card
+            &__header
+                flex-direction: column
+            &__inner
+                display: flex
+                flex-direction: column
+                justify-content: center
+            &__image
+                position: absolute
+                top: -36px
+                left: 50%
+                transform: translateX(-50%)
+                background-color: #fff
+                width: 72px
+                height: 72px
+                border-radius: 50%
+                border: 4px solid $light-grey
+            &__name
+                color: $dark-grey
+                text-align: center
+            &__status
+                justify-content: center
+                margin-top: 16px
+            &__list
+                margin-bottom: 16px
+                &-item
+                    span
+                        font-weight: 700
+                    &:last-child
+                        span
+                            font-weight: 600

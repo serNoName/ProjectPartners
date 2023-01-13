@@ -1,0 +1,46 @@
+.breadcrumb
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    &__item
+        margin-left: 24px
+        &:first-child
+            margin: 0
+            .breadcrumb
+                &__link
+                    position: relative
+                    padding-left: 20px
+                    &::before
+                        position: absolute
+                        content: ''
+                        top: 50%
+                        transform: translateY(-50%)
+                        left: 0
+                        width: 16px
+                        height: 16px
+                        background: url(../img/ico/home.svg) center center no-repeat
+        &:last-child
+            .breadcrumb
+                &__link
+                    color: $primary
+                    font-weight: 700
+        &:not(:first-child)
+            position: relative
+            &::after
+                position: absolute
+                content: ''
+                top: 50%
+                left: -20px
+                transform: translateY(-50%)
+                width: 16px
+                height: 16px
+                background: url(../img/ico/short-arrow.svg) center center no-repeat
+    &__link
+        color: rgba(52,63,72,.5)
+        text-decoration: none
+        transition: color .3s
+        font-size: 12px
+        line-height: 150%
+        font-weight: 600
+        &:hover
+            color: rgba(52,63,72,.8)

@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="assets/fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Mont-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Mont-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Mont-Heavy.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Mont-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Mont-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Mont-SemiBold.woff" as="font" type="font/woff" crossorigin>
+
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-128.png" sizes="128x128">
+
+    <title>PPv2</title>
+</head>
+
+<body>
+
+    <div class="alert" id="alert">
+        <div class="alert__wrapper">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8C15 9.85652 14.2625 11.637 12.9497 12.9497C11.637 14.2625 9.85652 15 8 15C6.14348 15 4.36301 14.2625 3.05025 12.9497C1.7375 11.637 1 9.85652 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1ZM7.128 9.381L5.573 7.825C5.51725 7.76925 5.45107 7.72503 5.37824 7.69486C5.3054 7.66469 5.22734 7.64917 5.1485 7.64917C5.06966 7.64917 4.9916 7.66469 4.91876 7.69486C4.84593 7.72503 4.77975 7.76925 4.724 7.825C4.61142 7.93758 4.54817 8.09028 4.54817 8.2495C4.54817 8.40872 4.61142 8.56142 4.724 8.674L6.704 10.654C6.75959 10.71 6.82572 10.7545 6.89858 10.7848C6.97143 10.8152 7.04958 10.8308 7.1285 10.8308C7.20742 10.8308 7.28557 10.8152 7.35842 10.7848C7.43128 10.7545 7.49741 10.71 7.553 10.654L11.653 6.553C11.7095 6.49748 11.7544 6.43133 11.7852 6.35836C11.816 6.28539 11.8321 6.20705 11.8324 6.12785C11.8328 6.04864 11.8175 5.97015 11.7874 5.8969C11.7573 5.82365 11.7129 5.75708 11.657 5.70104C11.601 5.645 11.5345 5.6006 11.4613 5.5704C11.388 5.54019 11.3096 5.52478 11.2304 5.52506C11.1512 5.52533 11.0728 5.54129 10.9998 5.572C10.9268 5.60271 10.8606 5.64757 10.805 5.704L7.128 9.381Z"
+                    fill="#6E55FF" />
+            </svg>
+            <span>Partner was successfully added to your Checklist</span>
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M4.00008 4.00008L0.666748 0.666748M4.00008 4.00008L7.33341 7.33341M4.00008 4.00008L7.33341 0.666748M4.00008 4.00008L0.666748 7.33341"
+                    stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="overlayer" id="overlayer"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/img/logo/logo.svg" alt="logo" width="249">
+                </a>
+                <div class="header__masthead">
+                    <a href="#" class="header__shortlist btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.5 5.25C5.5 5.44891 5.42098 5.63968 5.28033 5.78033C5.13968 5.92098 4.94891 6 4.75 6C4.55109 6 4.36032 5.92098 4.21967 5.78033C4.07902 5.63968 4 5.44891 4 5.25C4 5.05109 4.07902 4.86032 4.21967 4.71967C4.36032 4.57902 4.55109 4.5 4.75 4.5C4.94891 4.5 5.13968 4.57902 5.28033 4.71967C5.42098 4.86032 5.5 5.05109 5.5 5.25ZM4.75 9C4.94891 9 5.13968 8.92098 5.28033 8.78033C5.42098 8.63968 5.5 8.44891 5.5 8.25C5.5 8.05109 5.42098 7.86032 5.28033 7.71967C5.13968 7.57902 4.94891 7.5 4.75 7.5C4.55109 7.5 4.36032 7.57902 4.21967 7.71967C4.07902 7.86032 4 8.05109 4 8.25C4 8.44891 4.07902 8.63968 4.21967 8.78033C4.36032 8.92098 4.55109 9 4.75 9ZM5.5 11.25C5.5 11.4489 5.42098 11.6397 5.28033 11.7803C5.13968 11.921 4.94891 12 4.75 12C4.55109 12 4.36032 11.921 4.21967 11.7803C4.07902 11.6397 4 11.4489 4 11.25C4 11.0511 4.07902 10.8603 4.21967 10.7197C4.36032 10.579 4.55109 10.5 4.75 10.5C4.94891 10.5 5.13968 10.579 5.28033 10.7197C5.42098 10.8603 5.5 11.0511 5.5 11.25ZM7.5 5C7.36739 5 7.24021 5.05268 7.14645 5.14645C7.05268 5.24021 7 5.36739 7 5.5C7 5.63261 7.05268 5.75979 7.14645 5.85355C7.24021 5.94732 7.36739 6 7.5 6H11.5C11.6326 6 11.7598 5.94732 11.8536 5.85355C11.9473 5.75979 12 5.63261 12 5.5C12 5.36739 11.9473 5.24021 11.8536 5.14645C11.7598 5.05268 11.6326 5 11.5 5H7.5ZM7 8.5C7 8.36739 7.05268 8.24021 7.14645 8.14645C7.24021 8.05268 7.36739 8 7.5 8H11.5C11.6326 8 11.7598 8.05268 11.8536 8.14645C11.9473 8.24021 12 8.36739 12 8.5C12 8.63261 11.9473 8.75979 11.8536 8.85355C11.7598 8.94732 11.6326 9 11.5 9H7.5C7.36739 9 7.24021 8.94732 7.14645 8.85355C7.05268 8.75979 7 8.63261 7 8.5ZM7.5 11C7.36739 11 7.24021 11.0527 7.14645 11.1464C7.05268 11.2402 7 11.3674 7 11.5C7 11.6326 7.05268 11.7598 7.14645 11.8536C7.24021 11.9473 7.36739 12 7.5 12H11.5C11.6326 12 11.7598 11.9473 11.8536 11.8536C11.9473 11.7598 12 11.6326 12 11.5C12 11.3674 11.9473 11.2402 11.8536 11.1464C11.7598 11.0527 11.6326 11 11.5 11H7.5ZM1 3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H13C13.5304 1 14.0391 1.21071 14.4142 1.58579C14.7893 1.96086 15 2.46957 15 3V13C15 13.5304 14.7893 14.0391 14.4142 14.4142C14.0391 14.7893 13.5304 15 13 15H3C2.46957 15 1.96086 14.7893 1.58579 14.4142C1.21071 14.0391 1 13.5304 1 13V3ZM3 2C2.73478 2 2.48043 2.10536 2.29289 2.29289C2.10536 2.48043 2 2.73478 2 3V13C2 13.2652 2.10536 13.5196 2.29289 13.7071C2.48043 13.8946 2.73478 14 3 14H13C13.2652 14 13.5196 13.8946 13.7071 13.7071C13.8946 13.5196 14 13.2652 14 13V3C14 2.73478 13.8946 2.48043 13.7071 2.29289C13.5196 2.10536 13.2652 2 13 2H3Z"
+                                fill="#343F48" />
+                        </svg>
+                        <span>Shortlist</span>
+                        <span class="header__shortlist-count" id="countInShortList">0</span>
+                    </a>
+                    <div class="header__login">
+                        <a href="#" class="header__login-log btn">Log in</a>
+                        <a href="#" class="header__login-sign btn">Sign up</a>
+                    </div>
+                    <div class="header__profile">
+                        <div class="header__profile-select">My Account</div>
+                        <a href="#">
+                            <img src="assets/img/ava/header_ava.webp" alt="avatar">
+                        </a>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <div class="nav-close">
+                    <span></span><span></span>
+                </div>
+                <a href="#" class="nav-item">Find Skilled People</a>
+                <a href="#" class="nav-item">Find Industry Experts</a>
+                <a href="#" class="nav-item">Find Project Specialists</a>
+                <a href="#" class="nav-item">Find Exciting Roles</a>
+                <a href="#" class="nav-item">Resources & Guides</a>
+                <a href="#" class="nav-item">Profile Builder</a>
+                <div class="nav-mobile">
+                    <a href="#" class="header__shortlist btn">
+                        <img src="assets/img/ico/shortlist.svg" alt="ico">
+                        <span>Shortlist</span>
+                        <span class="header__shortlist-count" id="countInShortListMobile">0</span>
+                    </a>
+                    <div class="header__login">
+                        <a href="#" class="header__login-log btn">Log in</a>
+                        <a href="#" class="header__login-sign btn">Sign up</a>
+                    </div>
+                    <div class="header__profile">
+                        <div class="header__profile-select">My Account</div>
+                        <a href="#">
+                            <img src="assets/img/ava/header_ava.webp" alt="avatar">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chat-buble">
+        <img src="assets/img/ico/message.svg" alt="ico">
+    </div>
+
+    <div class="catalog">
+        <div class="container">
+            <div class="catalog__wrapper">
+                <div class="filter" id="filter">
+                    <div class="filter__title">Filter by</div>
+                    <div class="filter__burger" id="filterClose">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="filter__wrapper">
+                        <div class="filter__block">
+                            <div class="filter__subtitle">
+                                Discipline
+                            </div>
+                            <div class="filter__list">
+                                <ul class="filter__list">
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Program Managers
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Project Managers
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Business Analysts
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Developers
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Cloud Engineers
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">PMO
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Business Architect
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Agile / Scrum Master
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Business Automation
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <div class="filter__subtitle">
+                                Industry
+                            </div>
+                            <div class="filter__list">
+                                <ul class="filter__list">
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Financial Services
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Pharmaceutical
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Retail
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Technology
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Industrial
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Mergers, acquisitions and integrations
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <div class="filter__subtitle">
+                                project type
+                            </div>
+                            <div class="filter__list">
+                                <ul class="filter__list">
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Business and process optimisation
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Data transformation and warehousing
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Digital transformation
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Financial crime and compliance
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">HR and organisational change
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Mergers, acquisitions and integrations
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Property change
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Regulatory change
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">System and cloud development testing
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li><li class="filter__list-item">
+                                        <label class="filter__label">Sustainability
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li><li class="filter__list-item">
+                                        <label class="filter__label">Target Operating Model design
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <div class="filter__subtitle">
+                                Level
+                            </div>
+                            <div class="filter__list">
+                                <ul class="filter__list">
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Junior
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Foundation
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Practitioner
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Specialist
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Apprentice
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Guru
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <div class="filter__subtitle">
+                                Availability
+                            </div>
+                            <div class="filter__list">
+                                <ul class="filter__list">
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Immediate start
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Start in 30 days
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Start in 1-3 months
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Start in 3+ months
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <div class="filter__subtitle">
+                                Rate
+                            </div>
+                            <div class="filter__list">
+                                <ul class="filter__list">
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">< £100/d
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">£100-250/d
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">£250-300/d
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">> £300/d
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <div class="filter__subtitle">
+                                Superpower
+                            </div>
+                            <div class="filter__list">
+                                <ul class="filter__list filter__list-scroll">
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">SQL Database
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Agile
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">SaaS
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Wordpress
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">HTML/CSS
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Angular
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">JIRA
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Adobe PremierPro
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Figma
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li><li class="filter__list-item">
+                                        <label class="filter__label">UX/UI
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Angular
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">JIRA
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Adobe PremierPro
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <label class="filter__label">Figma
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li><li class="filter__list-item">
+                                        <label class="filter__label">UX/UI
+                                            <input type="checkbox">
+                                            <span class="filter__checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__content">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Homepage</a></li>
+                        <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Partners Catalogue</a></li>
+                        <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Financial service partners</a></li>
+                    </ul>
+                    <div class="title catalog__title">
+                        Financial service partners
+                    </div>
+                    <div class="catalog__header">
+                        <div class="catalog__tags">
+
+                            <div class="catalog__tag">
+                                <span class="catalog__tag-category">
+                                    Discipline:
+                                </span>
+                                <span class="catalog__tag-name">
+                                    Program Managers
+                                </span>
+                                <img src="assets/img/ico/round-close.svg" alt="ico" width="16" height="16">
+                            </div>
+                            <div class="catalog__tag">
+                                <span class="catalog__tag-category">
+                                    Industry:
+                                </span>
+                                <span class="catalog__tag-name">
+                                    Retail
+                                </span>
+                                <img src="assets/img/ico/round-close.svg" alt="ico" width="16" height="16">
+                            </div>
+                            <div class="catalog__tag">
+                                <span class="catalog__tag-category">
+                                    Level:
+                                </span>
+                                <span class="catalog__tag-name">
+                                    Guru
+                                </span>
+                                <img src="assets/img/ico/round-close.svg" alt="ico" width="16" height="16">
+                            </div>
+                            <div class="catalog__tag">
+                                <span class="catalog__tag-category">
+                                    Rate:
+                                </span>
+                                <span class="catalog__tag-name">
+                                    > £300/d
+                                </span>
+                                <img src="assets/img/ico/round-close.svg" alt="ico" width="16" height="16">
+                            </div>
+                            <div class="catalog__tag">
+                                <span class="catalog__tag-category">
+                                    Level:
+                                </span>
+                                <span class="catalog__tag-name">
+                                    Specialist
+                                </span>
+                                <img src="assets/img/ico/round-close.svg" alt="ico" width="16" height="16">
+                            </div>
+                            <div class="catalog__tag catalog__tag-close">
+                                <span class="catalog__tag-name">
+                                    Clear all
+                                </span>
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12.7001 3.80666C12.6385 3.74486 12.5652 3.69583 12.4846 3.66237C12.4039 3.62892 12.3175 3.6117 12.2301 3.6117C12.1428 3.6117 12.0564 3.62892 11.9757 3.66237C11.8951 3.69583 11.8218 3.74486 11.7601 3.80666L8.50015 7.06L5.24015 3.8C5.17843 3.73828 5.10515 3.68932 5.02451 3.65591C4.94387 3.62251 4.85744 3.60532 4.77015 3.60532C4.68286 3.60532 4.59643 3.62251 4.51579 3.65591C4.43514 3.68932 4.36187 3.73828 4.30015 3.8C4.23843 3.86172 4.18947 3.93499 4.15606 4.01563C4.12266 4.09628 4.10547 4.18271 4.10547 4.27C4.10547 4.35728 4.12266 4.44372 4.15606 4.52436C4.18947 4.605 4.23843 4.67828 4.30015 4.74L7.56015 8L4.30015 11.26C4.23843 11.3217 4.18947 11.395 4.15606 11.4756C4.12266 11.5563 4.10547 11.6427 4.10547 11.73C4.10547 11.8173 4.12266 11.9037 4.15606 11.9844C4.18947 12.065 4.23843 12.1383 4.30015 12.2C4.36187 12.2617 4.43514 12.3107 4.51579 12.3441C4.59643 12.3775 4.68286 12.3947 4.77015 12.3947C4.85744 12.3947 4.94387 12.3775 5.02451 12.3441C5.10515 12.3107 5.17843 12.2617 5.24015 12.2L8.50015 8.94L11.7601 12.2C11.8219 12.2617 11.8951 12.3107 11.9758 12.3441C12.0564 12.3775 12.1429 12.3947 12.2301 12.3947C12.3174 12.3947 12.4039 12.3775 12.4845 12.3441C12.5652 12.3107 12.6384 12.2617 12.7001 12.2C12.7619 12.1383 12.8108 12.065 12.8442 11.9844C12.8776 11.9037 12.8948 11.8173 12.8948 11.73C12.8948 11.6427 12.8776 11.5563 12.8442 11.4756C12.8108 11.395 12.7619 11.3217 12.7001 11.26L9.44015 8L12.7001 4.74C12.9535 4.48666 12.9535 4.06 12.7001 3.80666Z" fill="#FF3E6C"/> </svg>
+                            </div>
+                        </div>
+                        <div class="catalog__inner">
+                            <div class="catalog__triger" id="filterTriger">Filter</div>
+                            <div class="catalog__sort">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2.5 6.5L5.16667 3.83334L7.83333 6.5M5.16667 3.83334V13.1667M14.5 10.5L11.8333 13.1667L9.16667 10.5M11.8333 13.1667V3.83334" stroke="#6E55FF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+                                <span>Newest first</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__cards catalog__cards-category">
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="catalog-card catalog-card-role">
+                                <div class="catalog-card__wrapper">
+                                    <div class="catalog-card__header">
+                                        <a href="#" class="catalog-card__image">
+                                            <img src="assets/img/ico/setting.svg" alt="ava" width="32" height="32">
+                                        </a>
+                                        <div class="catalog-card__inner">
+                                            <div class="catalog-card__status">Professional
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                    <span class="catalog-card__info">
+                                                        <svg width="14"
+                                                        height="14" viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                        d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                        fill="#FF3E6C" /></svg>
+                                                    </span>
+                                                </div>
+                                                <a class="catalog-card__name">Busyness Analyst</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-card__body">
+                                        <ul class="catalog-card__list">
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£450/<span>d</span></span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <img src="assets/img/ico/calendar.svg" alt="calendar">
+                                                <span class="catalog-card__item-text">In 1-3 months</span>
+                                            </li>
+                                            <li class="catalog-card__item catalog-card__list-item">
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                                    adipiscing</span>
+                                                <span class="catalog-card__item-text"><img
+                                                        src="assets/img/ico/technology.svg" alt="ico" width="14"
+                                                        height="14">Technology</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="catalog-card__footer">
+                                        <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
+                                        <div class="prof__card-add catalog-card__add">
+                                            <img src="assets/img/ico/marker.svg" alt="ico">
+                                            Add to Favourites</div>
+                                        <div class="prof__card-add catalog-card__compare">
+                                            <img src="assets/img/ico/compare.svg" alt="ico">
+                                            Compare</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        <div class="catalog__info-card"></div>
+                        <div class="catalog__info-card catalog__info-card-2"></div>
+                        <div class="catalog__info-card catalog__info-card-3"></div>
+
+                    </div>
+
+                    <div class="pagination">
+                        <a href="#" class="pagination__btn pagination__btn-prev">
+                            Previous
+                        </a>
+                        <ul class="pagination__list">
+                            <li class="pagination__list-item">
+                                <a href="#" class="pagination__link active">1</a>
+                            </li>
+                            <li class="pagination__list-item">
+                                <a href="#" class="pagination__link">2</a>
+                            </li>
+                            <li class="pagination__list-item">
+                                <a href="#" class="pagination__link">3</a>
+                            </li>
+                            <li class="pagination__list-item">
+                                <a href="#" class="pagination__link">...</a>
+                            </li>
+                            <li class="pagination__list-item">
+                                <a href="#" class="pagination__link">4</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="pagination__btn pagination__btn-next">
+                            Next
+                        </a>
+                    </div>
+
+                    <p class="catalog__descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum, ligula nec dapibus
+                        vestibulum, tortor urna venenatis velit, et tincidunt est metus ac elit. Integer aliquet nisl
+                        augue, at tincidunt tellus aliquam vel. Morbi commodo eleifend neque, blandit lobortis neque
+                        imperdiet at. Integer bibendum consequat gravida. Vestibulum vulputate quam sed arcu molestie,
+                        ac fringilla elit tempor. Phasellus ultricies orci in nisl blandit vestibulum. Suspendisse in
+                        rutrum velit. Integer semper nisi quis dui rutrum sollicitudin. Ut ut elit nisi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <img src="assets/img/bg/lines/line-footer.svg" alt="image" class="footer__bg">
+            <div class="container">
+                <div class="footer__title">Need some help?</div>
+                <div class="footer__subtitle">Choose the best way we can reach you and give a hand</div>
+                <div class="footer__cards">
+                    <a href="#" class="footer__card">
+                        <span class="footer__card-image">
+                            <img src="assets/img/ico/footer/phone.svg" alt="ico">
+                        </span>
+                        <span class="footer__card-text">Call Us</span>
+                        <img src="assets/img/ico/footer/arrow-to-right.svg" alt="ico" class="footer__card-arrow">
+                    </a>
+                    <a href="#" class="footer__card">
+                        <span class="footer__card-image">
+                            <img src="assets/img/ico/footer/quiz.svg" alt="ico">
+                        </span>
+                        <span class="footer__card-text">Live Chat</span>
+                        <img src="assets/img/ico/footer/arrow-to-right.svg" alt="ico" class="footer__card-arrow">
+                    </a>
+                    <a href="#" class="footer__card">
+                        <span class="footer__card-image">
+                            <img src="assets/img/ico/footer/camera.svg" alt="ico">
+                        </span>
+                        <span class="footer__card-text">Video Call</span>
+                        <img src="assets/img/ico/footer/arrow-to-right.svg" alt="ico" class="footer__card-arrow">
+                    </a>
+                    <a href="#" class="footer__card">
+                        <span class="footer__card-image">
+                            <img src="assets/img/ico/footer/message.svg" alt="ico">
+                        </span>
+                        <span class="footer__card-text">Message Us</span>
+                        <img src="assets/img/ico/footer/arrow-to-right.svg" alt="ico" class="footer__card-arrow">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__content">
+            <div class="container">
+                <a href="#" class="footer__logo">
+                    <img src="assets/img/logo/logo-footer.svg" alt="logo">
+                </a>
+                <div class="footer__menu">
+                    <ul class="footer__list">
+                        <li class="footer__list-item">Learn more about us</li>
+                        <li class="footer__list-item"><a href="#">Our Why</a></li>
+                        <li class="footer__list-item"><a href="#">Testimonials</a></li>
+                        <li class="footer__list-item"><a href="#">Methodologies</a></li>
+                        <li class="footer__list-item"><a href="#">Our People</a></li>
+                        <li class="footer__list-item"><a href="#">Company Info</a></li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">Become a ProjectPartner</li>
+                        <li class="footer__list-item"><a href="#">Onboarding</a></li>
+                        <li class="footer__list-item"><a href="#">Promote Myself</a></li>
+                        <li class="footer__list-item"><a href="#">More Uptime</a></li>
+                        <li class="footer__list-item"><a href="#">Upskilling & Training</a></li>
+                        <li class="footer__list-item"><a href="#">Resources</a></li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">Let us help you</li>
+                        <li class="footer__list-item"><a href="#">Help & Advice</a></li>
+                        <li class="footer__list-item"><a href="#">Contact Us</a></li>
+                        <li class="footer__list-item"><a href="#">Rate Card</a></li>
+                        <li class="footer__list-item"><a href="#">How It Works</a></li>
+                        <li class="footer__list-item"><a href="#">Service Delivery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__label">Project Partners © 2022 </div>
+                <ul class="footer__social">
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/twitter.svg" alt="ico"></a>
+                    </li>
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/youtube.svg" alt="ico"></a>
+                    </li>
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/linkedin.svg" alt="ico"></a>
+                    </li>
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/facebook.svg" alt="ico"></a>
+                    </li>
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/instagram.svg" alt="ico"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
