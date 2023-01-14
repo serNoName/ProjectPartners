@@ -1,0 +1,159 @@
+.aside
+    border-left: 1px solid rgba(52,63,72,.1)
+    padding: 32px 20px
+    padding-right: 0
+    display: flex
+    flex-direction: column
+    row-gap: 48px
+    &__subtitle
+        margin-bottom: 16px
+    &__list
+        display: flex
+        row-gap: 10px
+        list-style: none
+        flex-direction: column
+        margin-bottom: 16px
+        &-item
+            background-color: $light-grey
+            border-radius: 16px
+            padding: 16px
+            width: 100%
+            a
+                display: flex
+                text-decoration: none
+            &-yellow
+                .aside
+                    &__ava
+                        path
+                            fill: $yellow
+                    &__info-role
+                        color: $yellow
+                        path
+                            fill: $yellow
+            &-neon
+                .aside
+                    &__ava
+                        path
+                            fill: $neon
+                    &__info-role
+                        color: $neon
+                        path
+                            fill: $neon
+            &-cyan
+                .aside
+                    &__ava
+                        path
+                            fill: $cyan
+                    &__info-role
+                        color: $cyan
+                        path
+                            fill: $cyan
+    &__info
+        display: flex
+        flex-direction: column
+        &-role
+            justify-content: center
+            align-items: start !important
+        &-name
+            font-weight: 700
+            color: $black
+            font-size: 16px
+            line-height: 20px
+            margin-bottom: 2px9
+        &-role
+            position: relative
+            display: flex
+            align-items: center
+            color: $secondary2
+            font-weight: 700
+            font-size: 12px
+            line-height: 15px
+            cursor: help
+            img,svg
+                margin-left: 2px
+                opacity: .7
+                transition: .2s
+                width: 12px
+                height: 12px
+            &-yellow
+                color: $yellow
+                path
+                    fill: $yellow
+            &-cyan
+                color: $cyan
+                path
+                    fill: $cyan
+            &-neon
+                color: $neon
+                path
+                    fill: $neon
+            &-role
+                flex-direction: column-reverse
+            &:hover
+                .aside__tooltip
+                    transform: translateX(-50%) translateY(-18px)
+                    opacity: 1
+                    z-index: 2
+        &-discipline
+            color: $dark-grey
+            font-size: 14px
+            line-height: 18px
+            font-weight: 700
+    &__ava
+        margin-right: 12px
+        img
+            border-radius: 50%
+        &-role
+            width: 56px
+            height: 56px
+            background-color: #fff
+            border-radius: 50%
+            display: grid
+            place-items: center
+    &__text
+        font-size: 14px
+        line-height: 130%
+        font-weight: 600
+        color: $dark-grey
+        margin: 16px 0
+        max-width: 237px
+        &:nth-child(2)
+            margin-bottom: 8px
+            margin-top: 0
+    &__phone
+        display: flex
+        align-items: center
+        column-gap: 8px
+        text-decoration: none
+        padding-bottom: 16px
+        border-bottom: 1px solid rgba(52,63,72,.1)
+        &-image
+            background-color: $white
+            height: 40px
+            width: 40px
+            display: grid
+            place-content: center
+            border-radius: 8px
+            svg
+                path
+                    transition: .2s
+        &-number
+            color: $primary
+            font-size: 16px
+            line-height: 130%
+            font-weight: 700
+            transition: color .2s
+        &:hover
+            .aside__phone
+                &-image
+                    svg
+                        path
+                            fill: $mid-primary
+                &-number
+                    color: $mid-primary
+    &__btn
+        display: flex
+        justify-content: center
+        padding: 0
+        padding-top: 12px
+        padding-bottom: 10px

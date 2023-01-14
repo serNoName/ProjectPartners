@@ -165,6 +165,29 @@
                 font-size: 12px
             &__list
                 margin-bottom: 16px
+    .page
+        &__body
+            column-gap: 12px
+            grid-template-columns: auto 200px
+    .aside
+        padding-left: 12px
+        &__list
+            &-item
+                padding: 12px
+        &__ava
+            img
+                height: 48px
+                width: 48px
+        &__info
+            &-name
+                font-size: 14px
+                &-role
+                    line-height: 1.1
+            &-discipline
+                font-size: 12px
+            &-role
+                width: min-content
+
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
     .chat-buble
@@ -390,6 +413,39 @@
         z-index: 199
         background-color: #fff
         border-right: 1px solid rgba(52,63,72,.1)
+    .page
+        &__body
+            display: flex
+            flex-direction: column
+            row-gap: 40px
+        &__name
+            &-role
+                span
+                    &:first-child
+                        font-size: 28px
+    .aside
+        padding: 0
+        border: none
+        flex-direction: row
+        column-gap: 24px
+        justify-content: space-evenly
+        &__ava
+            margin-right: 8px
+        &__list
+            display: grid
+            grid-template-columns: 1fr 1fr
+            column-gap: 12px
+            &-item
+                padding: 12px
+        &__ava
+            img
+                height: 48px
+                width: 48px
+        &__info
+            &-name
+                font-size: 14px
+            &-discipline
+                font-size: 12px
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
@@ -696,6 +752,49 @@
         z-index: 199
         background-color: #fff
         border-right: 1px solid rgba(52,63,72,.1)
+    .page
+        &__body
+            display: flex
+            flex-direction: column
+            row-gap: 40px
+        &__subtitle
+            margin-bottom: 12px
+            line-height: 1
+        &__content
+            row-gap: 28px
+        &__header
+            flex-direction: column
+            row-gap: 24px
+        &__ava
+            &-role
+                width: 108px
+                height: 108px
+    .aside
+        padding: 0
+        border: none
+        justify-content: space-evenly
+        &__ava
+            margin-right: 8px
+        &__list
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            column-gap: 12px
+            &-item
+                padding: 12px
+            &-role
+                grid-template-columns: 1fr 1fr
+        &__ava
+            img
+                height: 48px
+                width: 48px
+        &__info
+            &-name
+                font-size: 14px
+            &-discipline
+                font-size: 12px
+    .superpower
+        display: flex
+        flex-wrap: wrap
 
 @media (max-width: 576px)
     .container
@@ -838,6 +937,69 @@
             font-size: 16px
             white-space: nowrap
             height: fit-content
+    .page
+        &__name
+            span
+                &:first-child
+                    font-size: 32px
+                    margin: 0
+        &__discipline
+            font-size: 18px
+        &__ava
+            img
+                width: 124px
+        &__header
+            &-inner
+                &:first-child
+                    align-items: start
+        &__btn
+            padding: 12px 0
+        &__item
+            &-detail
+                &-role
+                    flex-direction: column
+                    overflow-x: hidden
+                    display: none
+                    svg
+                        display: none
+                    span
+                        margin: 0
+                        padding: 0
+                        padding-bottom: 4px
+                        margin-bottom: 4px
+                        &::before
+                            width: 400px
+                            height: 1px
+                            top: auto
+                            bottom: 0
+                            right: 50%
+                            transform: translateX(50%)
+    .aside
+        row-gap: 24px
+        &__list
+            grid-template-columns: 1fr 1fr
+    .experience
+        &__main-info
+            display: grid
+            grid-template-areas: 't t''l r'
+        &__period
+            flex-direction: row
+            column-gap: 8px
+            padding: 0
+            border: none
+            margin-bottom: 4px
+            justify-content: start
+            grid-area: t
+            &-end
+                padding-left: 8px
+                border-left: 1px solid rgba(52,63,72,.1)
+        &__profile
+            padding-left: 0
+            grid-area: l
+        &__star
+            grid-area: r
+        &__title
+            margin: 0
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -1018,6 +1180,68 @@
                 grid-template-columns: max-content
                 justify-content: center
                 grid-template-areas: 'c1''c2''c3''c4''i1''c5''c6''c7''c8''i2''c9''c10''c11''c12''i3'
+    .page
+        &__ava
+            margin-right: 8px
+            img
+                width: 80px
+            &-role
+                width: 88px
+                height: 88px
+                svg
+                    width: 48px
+                    height: 48px
+        &__name
+            span
+                &:first-child
+                    font-size: 28px
+                    line-height: 1
+                    display: flex
+                    align-items: center
+        &__prof
+            font-size: 14px
+            margin-bottom: 2px
+        &__discipline
+            font-size: 16px
+            line-height: 1
+            margin: 0
+            margin-bottom: 2px
+        &__location
+            img
+                width: 18px
+                margin-right: 2px
+            span
+                line-height: 1
+        &__star
+            font-size: 14px
+            padding: 4px 6px
+            height: auto
+            img
+                width: 14px
+                margin-right: 2px
+        &__info
+            &-role
+                width: min-content
+    .experience
+        &__label
+            display: none
+    .aside
+        &__info
+            &-discipline
+                font-size: 11px
+        &__ava
+            &-role
+                width: 42px
+                height: 42px
+                svg
+                    width: 24px
+        &__list
+            &-role
+                grid-template-columns: 1fr
+                display: flex
+                align-items: center
+                .aside__list-item
+                    width: 280px
 @media (max-width: 360px)
     .title
         line-height: 40px
@@ -1077,3 +1301,7 @@
             padding: 10px
         &__subtitle
             font-size: 20px
+    .aside
+        &__list
+            grid-template-columns: 220px
+            justify-content: center

@@ -1,0 +1,182 @@
+.page
+    padding-top: 36px
+    padding-bottom: 32px
+    &__subtitle
+        font-weight: 700
+        font-size: 20px
+        line-height: 150%
+        color: $dark-grey
+        margin-bottom: 16px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 32px
+        border-bottom: 1px solid rgba(52,63,72,.1)
+        &-inner
+            &:first-child
+                display: flex
+                align-items: center
+            &:last-child
+                display: grid
+                column-gap: 16px
+                row-gap: 12px
+                grid-template-areas: 'bb bb''sb1 sb2'
+    &__ava
+        margin-right: 24px
+        &-role
+            width: 136px
+            height: 136px
+            background-color: $light-grey
+            border-radius: 50%
+            display: grid
+            place-items: center
+            svg,img
+                width: 56px
+                height: 56px
+    &__name
+        display: flex
+        column-gap: 8px
+        span
+            &:first-child
+                color: $black
+                font-weight: 700
+                font-size: 36px
+                line-height: 36px
+                margin-bottom: 4px
+        &-role
+            margin-top: 4px
+            span
+                margin: 0
+    &__star
+        display: flex
+        align-items: center
+        padding: 5px 8px 5px 12px
+        background-color: $light-grey
+        border: 1px solid $mid-grey
+        border-radius: 12px
+        font-weight: 700
+        color: $dark-grey
+        font-size: 16px
+        line-height: 20px
+        height: fit-content
+        img
+            margin-right: 4px
+    &__prof
+        position: relative
+        cursor: help
+        color: $secondary2
+        font-weight: 700
+        display: flex
+        align-items: center
+        width: fit-content
+        svg,img
+            margin-left: 2px
+        &:hover
+            .page-card__tooltip
+                transform: translateX(-50%) translateY(-18px)
+                opacity: 1
+                z-index: 2
+    &__discipline
+        font-weight: 600
+        font-size: 20px
+        line-height: 26px
+        color: $dark-grey
+        margin-bottom: 12px
+    &__location
+        display: flex
+        align-items: center
+        img, svg
+            margin-right: 4px
+        span
+            color: $dark-grey
+            opacity: .4
+            font-size: 14px
+            font-weight: 700
+            line-height: 18px
+    &__btn
+        width: 285px
+        padding: 19px 0
+        grid-area: bb
+        margin: 0
+        &-mini
+            margin: 0
+            grid-area: sb1
+            &:last-child
+                grid-area: sb2
+    &__body
+        display: grid
+        grid-template-columns: auto 305px
+        column-gap: 20px
+    &__content
+        display: flex
+        flex-direction: column
+        row-gap: 48px
+        padding-top: 32px
+        padding-bottom: 20px
+        border-bottom: 1px solid rgba(52,63,72,.1)
+        &-role
+            border: none
+    &__text
+        font-size: 14px
+        font-weight: 600
+        color: $dark-grey
+        line-height: 150%
+        font-size: 14px
+        font-weight: 600
+        color: $dark-grey
+        line-height: 150%
+        ul
+            list-style: none
+            margin-top: 4px
+            li
+                font-weight: 600
+                &:not(:last-child)
+                    margin-bottom: 4px
+    &__info
+        &-role
+            display: flex
+            flex-direction: column-reverse
+    &__details
+        display: flex
+        flex-wrap: wrap
+        row-gap: 12px
+        column-gap: 12px
+    &__item
+        display: flex
+        align-items: center
+        background-color: $light-grey
+        border: 1px solid $mid-grey
+        border-radius: 8px
+        padding: 6px 16px
+        &-detail
+            width: fit-content
+            max-height: 36px
+            font-weight: 600
+            color: $dark-grey
+            border-radius: 12px
+            img,svg
+                margin-right: 4px
+            span
+                font-weight: 700
+                margin-left: 6px
+            &:last-child
+                img, svg
+                    opacity: .5
+            &-role
+                overflow: hidden
+                div
+                    &:nth-child(2)
+                        padding-right: 17px
+                        margin-right: 8px
+                        position: relative
+                        font-weight: 600
+                        &::before
+                            position: absolute
+                            content: ''
+                            height: 50px
+                            width: 1px
+                            background-color: rgba(52,63,72,.1)
+                            right: 0
+                            top: 50%
+                            transform: translateY(-50%)

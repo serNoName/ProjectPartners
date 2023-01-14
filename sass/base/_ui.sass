@@ -18,6 +18,30 @@
     &-light
         background-color: $white
         color: $primary
+    &__more
+        position: relative
+        color: $primary
+        font-size: 14px
+        line-height: 24px
+        font-weight: 700
+        width: fit-content
+        cursor: pointer
+        text-decoration: none
+        transition: color .2s
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 1px
+            opacity: .5
+            background-color: $primary
+            transition: background-color .2s
+        &:hover
+            color: $mid-primary
+            &::before
+                background-color: $mid-primary
 .mini-card
     width: fit-content
     padding: 6px 8px
