@@ -8,7 +8,7 @@
     transition: color .4s, background-color .4s
     background: $primary
     color: #fff
-    font-weight: 700
+    font-weight: 800
     &:hover
         background-color: $mid-primary
         color: #fff
@@ -23,7 +23,7 @@
         color: $primary
         font-size: 14px
         line-height: 24px
-        font-weight: 700
+        font-weight: 800
         width: fit-content
         cursor: pointer
         text-decoration: none
@@ -181,7 +181,7 @@
         grid-area: s
     &-descr
         color: $black
-        font-weight: 700
+        font-weight: 800
         font-size: 22px
         line-height: 28px
         width: 320px
@@ -264,7 +264,7 @@
     &-profesion
         margin-bottom: 16px
         color: $dark-grey
-        font-weight: 700
+        font-weight: 800
         text-align: center
         font-size: 18px
         line-height: 23px
@@ -321,7 +321,7 @@
             position: relative
             grid-area: h1
             color: $dark-grey
-            font-weight: 700
+            font-weight: 800
             cursor: help
             &:hover
                 .prof__card-toopip
@@ -332,7 +332,7 @@
             position: relative
             grid-area: h2
             color: $dark-grey
-            font-weight: 700
+            font-weight: 800
             cursor: help
             span
                 opacity: .4
@@ -373,7 +373,7 @@
     &-add
         margin: 0 auto
         color: $primary
-        font-weight: 700
+        font-weight: 800
         cursor: pointer
         text-align: center
         position: relative
@@ -381,7 +381,7 @@
         transition: .4s
         font-size: 14px
         img
-            margin-right: 7px
+            margin-right: 2px
             transform: translateY(1px)
         &::after
             position: absolute
@@ -418,12 +418,17 @@
         color: $black
         font-size: 20px
         line-height: 26px
-        font-weight: 700
+        font-weight: 800
         margin-bottom: 2px
+    &__link
+        position: absolute
+        width: 100%
+        height: 100%
+        display: block
     &__status
         position: relative
         font-size: 12px
-        font-weight: 700
+        font-weight: 800
         line-height: 15px
         color: $secondary2
         cursor: help
@@ -454,6 +459,8 @@
             color: $primary
             path
                 fill: $primary
+        &-role
+            font-size: 16px
     &__inner
         height: fit-content
     &__prof
@@ -505,10 +512,10 @@
             line-height: 18px
             display: flex
             align-items: center
-            font-weight: 700
+            font-weight: 800
             color: $dark-grey
             span
-                font-weight: 700
+                font-weight: 800
                 opacity: .4
     &__list
         display: flex
@@ -533,6 +540,8 @@
         padding: 12px 0 10px 0
         border-radius: 8px
         margin-bottom: 12px
+        position: relative
+        z-index: 1
         &.active
             &:hover
                 color: $primary
@@ -593,7 +602,7 @@
                 margin-bottom: 16px
                 &-item
                     span
-                        font-weight: 700
+                        font-weight: 800
                     &:last-child
                         span
-                            font-weight: 600
+                            font-weight: 700

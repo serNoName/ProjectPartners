@@ -25,7 +25,7 @@
             border-radius: 4px
         &:hover
             span
-                opacity: 1   
+                opacity: 1
         &.active
             span
                 opacity: 1
@@ -35,12 +35,13 @@
                     transform: scale(0)
                 &:nth-child(3)
                     transform: rotate(-45deg) translate(5px, -9px) scaleX(1.1)
-                    
+
     &__masthead
         display: flex
         column-gap: 8px
     &__shortlist
         background-color: $light-grey
+        border-radius: 8px
         color: $dark-grey
         font-weight: 600
         display: flex
@@ -61,7 +62,7 @@
             justify-content: center
             align-items: center
             color: #fff
-            font-weight: 700
+            font-weight: 800
             font-size: 12px
             line-height: 15px
             display: none
@@ -81,15 +82,17 @@
             color: $primary
             font-size: 16px
             line-height: 18px
-            font-weight: 700
+            font-weight: 800
+            border-radius: 8px
             white-space: nowrap
         &-sign
             background-color: $primary
             color: $white
             font-size: 16px
             line-height: 1
-            font-weight: 700
+            font-weight: 800
             white-space: nowrap
+            border-radius: 8px
     &__profile
         display: none
         align-items: center
@@ -149,7 +152,6 @@
         padding-top: 20px
         padding-bottom: 16px
         color: $dark-grey
-        font-weight: 600
         font-size: 16px
         line-height: 20px
         text-decoration: none

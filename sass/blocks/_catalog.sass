@@ -31,7 +31,7 @@
     &__subtitle
         color: $black
         font-size: 24px
-        font-weight: 700
+        font-weight: 800
     &__name
         display: flex
         justify-content: space-between
@@ -87,13 +87,12 @@
     &__info
         height: 175px
         border-radius: 16px
-        background: url(../img/bg/temp-info.svg) center center $primary
+        background: $primary
         max-width: 100%
         margin: 32px 0
         &-card
-            background: url(../img/bg/temp-info.svg) center center $primary
+            background: $primary
             grid-area: i1
-            min-height: 175px
             border-radius: 16px
             &-2
                 grid-area: i2
@@ -112,10 +111,12 @@
     &__tag
         cursor: pointer
         background-color: $white
-        padding: 5px 11px 4px 8px
+        padding: 4px 8px
+        padding-bottom: 2px
         display: flex
         align-items: center
         border-radius: 8px
+        transition: background-color .2s
         img, svg
             margin-left: 4px
             opacity: .5
@@ -126,17 +127,18 @@
             line-height: 15px
             color: #000
         &-name
-            font-weight: 700
+            font-weight: 800
             font-size: 12px
             line-height: 15px
             color: $primary
         &-close
-            background-color: transparent
+            background-color: transparent !important
             svg, img
                 opacity: 1
             .catalog__tag-name
                 color: $secondary2
         &:hover
+            background-color: #E0DEEE
             img, svg
                 opacity: 1
     &__sort
@@ -151,7 +153,7 @@
             color: $primary
             margin-left: 4px
             font-size: 14px
-            font-weight: 700
+            font-weight: 800
             transition: color .2s
         svg
             path

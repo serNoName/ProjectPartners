@@ -5,6 +5,10 @@
         right: 60px
     .container
         width: 951px
+    .body__fuild-container
+        .container
+            width: 100%
+            padding: 0 15px
     .header
         &__wrapper
             padding-bottom: 16px
@@ -187,6 +191,12 @@
                 font-size: 12px
             &-role
                 width: min-content
+        &__phone
+            &-number
+                font-size: 14px
+            &-image
+                width: 36px
+                height: 36px
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
@@ -195,6 +205,10 @@
         right: 60px
     .container
         width: 747px
+    .body__fuild-container
+        .container
+            width: 100%
+            padding: 0 15px
     .header
         &__wrapper
             padding-bottom: 16px
@@ -414,6 +428,10 @@
         background-color: #fff
         border-right: 1px solid rgba(52,63,72,.1)
     .page
+        &__header
+            &-inner
+                &:first-child
+                    padding-right: 16px
         &__body
             display: flex
             flex-direction: column
@@ -423,6 +441,15 @@
                 span
                     &:first-child
                         font-size: 28px
+            span
+                &:first-child
+                    font-size: 32px
+        &__btn
+            width: 260px
+            padding: 16px 0
+            font-size: 16px
+            &-mini
+                font-size: 14px
     .aside
         padding: 0
         border: none
@@ -446,6 +473,13 @@
                 font-size: 14px
             &-discipline
                 font-size: 12px
+        &__inner
+            &:last-child
+                width: 100%
+        &__phone
+            &-image
+                width: 36px
+                height: 36px
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
@@ -454,8 +488,13 @@
         right: 40px
     .container
         width: 556px
+    .body__fuild-container
+        .container
+            width: 100%
+            padding: 0 15px
     .header
         padding: 0
+
         &__wrapper
             padding: 12px 0
             position: relative
@@ -765,7 +804,28 @@
         &__header
             flex-direction: column
             row-gap: 24px
+            &-inner
+                &:first-child
+                    padding-right: 0
+        &__name
+            span
+                &:first-child
+                    font-size: 32px
+        &__prof
+            font-size: 14px
+        &__discipline
+            font-size: 18px
+            margin-bottom: 4px
+        &__btn
+            width: 260px
+            padding: 16px 0
+            font-size: 16px
+            &-mini
+                font-size: 14px
         &__ava
+            margin-right: 12px
+            img
+                width: 100px
             &-role
                 width: 108px
                 height: 108px
@@ -773,6 +833,10 @@
         padding: 0
         border: none
         justify-content: space-evenly
+        &__phone
+            &-image
+                width: 36px
+                height: 36px
         &__ava
             margin-right: 8px
         &__list
@@ -947,7 +1011,7 @@
             font-size: 18px
         &__ava
             img
-                width: 124px
+                width: 100px
         &__header
             &-inner
                 &:first-child
@@ -958,8 +1022,16 @@
             &-detail
                 &-role
                     flex-direction: column
-                    overflow-x: hidden
-                    display: none
+                    div
+                        &:nth-child(2)
+                            margin-bottom: 4px
+                            padding-bottom: 4px
+                            &::before
+                                width: 1000%
+                                transform: translateX(50%)
+                                bottom: 0
+                                top: auto
+                                height: 1px
                     svg
                         display: none
                     span
