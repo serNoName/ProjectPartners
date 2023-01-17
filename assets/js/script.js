@@ -8,6 +8,13 @@ $(document).ready(function () {
         });
     });
 
+    //header dropdown
+    $('.header__profile-select').hover(() => {
+        $('.header__dropdown').slideDown(200).css('display', 'flex')
+    }, () => {
+        $('.header__dropdown').slideUp(100)
+    })
+
     //open menu on phones (header)
     $('.header__burger').click(function (e) {
         e.preventDefault();
