@@ -410,6 +410,8 @@
 .catalog-card
     background-color: #fff
     border-radius: 16px
+    max-width: 300px
+    position: relative
     &__wrapper
         padding: 24px
     &__header
@@ -420,6 +422,7 @@
         line-height: 26px
         font-weight: 800
         margin-bottom: 2px
+        word-wrap: anywhere
     &__link
         position: absolute
         width: 100%
@@ -465,7 +468,7 @@
         height: fit-content
     &__prof
         color: $dark-grey
-        font-weight: 600
+        font-weight: 700
         font-size: 14px
         line-height: 18px
     &__image
@@ -507,7 +510,7 @@
         img
             margin-right: 5px
         &-text
-            font-weight: 600
+            font-weight: 700
             font-size: 14px
             line-height: 18px
             display: flex
@@ -527,8 +530,10 @@
         &-item
             display: flex
             justify-content: center
+            cursor: pointer
+            text-decoration: none
             .catalog-card__item-text
-                font-weight: 600
+                font-weight: 700
             &:last-child
                 img,svg
                     opacity: .7
@@ -606,3 +611,5 @@
                     &:last-child
                         span
                             font-weight: 700
+    &__footer
+        display: none

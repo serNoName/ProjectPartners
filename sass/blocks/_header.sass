@@ -1,5 +1,13 @@
 .header
     padding-top: 28px
+    &-no-border
+        .header
+            &__wrapper
+                &::before
+                    display: none
+        .nav
+            &::before
+                display: none
     &__wrapper
         display: flex
         justify-content: space-between
@@ -101,6 +109,7 @@
             margin-right: 21px
             position: relative
             cursor: pointer
+            color: $black
             &::before
                 position: absolute
                 content: ''
@@ -113,6 +122,9 @@
                 border-style: solid
                 border-width: 0px 5px 5px 5px
                 border-radius: 4px
+        a
+            img
+                vertical-align: top
 .nav
     display: flex
     justify-content: space-between

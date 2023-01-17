@@ -36,7 +36,7 @@
     <title>PPv2</title>
 </head>
 
-<body>
+<body class="body__fuild-container">
 
     <div class="alert" id="alert">
         <div class="alert__wrapper">
@@ -56,7 +56,7 @@
 
     <div class="overlayer" id="overlayer"></div>
 
-    <header class="header">
+    <header class="header header-no-border">
         <div class="container">
             <div class="header__wrapper">
                 <a href="index.html" class="header__logo">
@@ -301,12 +301,14 @@
                                             <input type="checkbox">
                                             <span class="filter__checkmark"></span>
                                         </label>
-                                    </li><li class="filter__list-item">
+                                    </li>
+                                    <li class="filter__list-item">
                                         <label class="filter__label">Sustainability
                                             <input type="checkbox">
                                             <span class="filter__checkmark"></span>
                                         </label>
-                                    </li><li class="filter__list-item">
+                                    </li>
+                                    <li class="filter__list-item">
                                         <label class="filter__label">Target Operating Model design
                                             <input type="checkbox">
                                             <span class="filter__checkmark"></span>
@@ -485,7 +487,8 @@
                                             <input type="checkbox">
                                             <span class="filter__checkmark"></span>
                                         </label>
-                                    </li><li class="filter__list-item">
+                                    </li>
+                                    <li class="filter__list-item">
                                         <label class="filter__label">UX/UI
                                             <input type="checkbox">
                                             <span class="filter__checkmark"></span>
@@ -514,7 +517,8 @@
                                             <input type="checkbox">
                                             <span class="filter__checkmark"></span>
                                         </label>
-                                    </li><li class="filter__list-item">
+                                    </li>
+                                    <li class="filter__list-item">
                                         <label class="filter__label">UX/UI
                                             <input type="checkbox">
                                             <span class="filter__checkmark"></span>
@@ -534,13 +538,14 @@
                         Partners Catalogue
                     </div>
                     <div class="catalog__triger" id="filterTriger">Filter</div>
-                    <div class="catalog__row">
+                    <div class="catalog__row catalog__row-mt">
                         <div class="catalog__name">
                             <div class="catalog__subtitle">Top rated partners</div>
                             <a href="#" class="catalog__more">See more</a>
                         </div>
                         <div class="catalog__row-cards">
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -548,8 +553,8 @@
                                         </a>
                                         <div class="catalog-card__inner">
                                             <a class="catalog-card__name">Lauren S.</a>
-                                            <div class="catalog-card__status catalog-card__status-yellow">Foundation <span
-                                                    class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                            <div class="catalog-card__status catalog-card__status-yellow">Foundation
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span> <span class="catalog-card__info"><svg width="14"
                                                         height="14" viewBox="0 0 15 14" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -569,11 +574,11 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money">
+                                                <span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -591,8 +596,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -610,15 +615,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -632,6 +637,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -660,11 +666,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -682,8 +687,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -701,15 +706,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -723,6 +728,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -751,11 +757,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -773,8 +778,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -792,15 +797,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -818,13 +823,14 @@
                     <div class="catalog__info">
                         <img src="assets/img/bg/temp-info.svg" alt="bg">
                     </div>
-                    <div class="catalog__row">
+                    <div class="catalog__row catalog__row-mt">
                         <div class="catalog__name">
                             <div class="catalog__subtitle">Financial service partners</div>
                             <a href="#" class="catalog__more">See more</a>
                         </div>
                         <div class="catalog__row-cards">
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -832,8 +838,8 @@
                                         </a>
                                         <div class="catalog-card__inner">
                                             <a class="catalog-card__name">Lauren S.</a>
-                                            <div class="catalog-card__status catalog-card__status-orange">Foundation <span
-                                                    class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                            <div class="catalog-card__status catalog-card__status-orange">Foundation
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span> <span class="catalog-card__info"><svg width="14"
                                                         height="14" viewBox="0 0 15 14" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -853,11 +859,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -875,8 +880,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -894,15 +899,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -916,6 +921,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -923,8 +929,8 @@
                                         </a>
                                         <div class="catalog-card__inner">
                                             <a class="catalog-card__name">Lauren S.</a>
-                                            <div class="catalog-card__status catalog-card__status-purple">Foundation <span
-                                                    class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
+                                            <div class="catalog-card__status catalog-card__status-purple">Foundation
+                                                <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span> <span class="catalog-card__info"><svg width="14"
                                                         height="14" viewBox="0 0 15 14" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -944,11 +950,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -966,8 +971,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -985,15 +990,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1007,6 +1012,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1035,11 +1041,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1057,8 +1062,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1076,15 +1081,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1099,13 +1104,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="catalog__row">
+                    <div class="catalog__row catalog__row-mt">
                         <div class="catalog__name">
                             <div class="catalog__subtitle">Digital transformation partners</div>
                             <a href="#" class="catalog__more">See more</a>
                         </div>
                         <div class="catalog__row-cards">
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1134,11 +1140,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1156,8 +1161,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1175,15 +1180,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1197,6 +1202,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1225,11 +1231,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1247,8 +1252,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1266,15 +1271,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1288,6 +1293,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1316,11 +1322,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1338,8 +1343,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1357,15 +1362,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1380,13 +1385,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="catalog__row">
+                    <div class="catalog__row catalog__row-mt">
                         <div class="catalog__name">
                             <div class="catalog__subtitle">Partners with immediate availability</div>
                             <a href="#" class="catalog__more">See more</a>
                         </div>
                         <div class="catalog__row-cards">
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1415,11 +1421,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1437,8 +1442,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1456,15 +1461,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1478,6 +1483,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1506,11 +1512,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1528,8 +1533,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1547,15 +1552,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1569,6 +1574,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1597,11 +1603,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1619,8 +1624,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1638,15 +1643,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1661,13 +1666,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="catalog__row">
+                    <div class="catalog__row catalog__row-mt">
                         <div class="catalog__name">
                             <div class="catalog__subtitle">Partners with agile superpowers</div>
                             <a href="#" class="catalog__more">See more</a>
                         </div>
                         <div class="catalog__row-cards">
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1696,11 +1702,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1718,8 +1723,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1737,15 +1742,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1759,6 +1764,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1787,11 +1793,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1809,8 +1814,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1828,15 +1833,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1850,6 +1855,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1878,11 +1884,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1900,8 +1905,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1919,15 +1924,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -1942,13 +1947,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="catalog__row">
+                    <div class="catalog__row catalog__row-mt">
                         <div class="catalog__name">
                             <div class="catalog__subtitle">Guru level partners</div>
                             <a href="#" class="catalog__more">See more</a>
                         </div>
                         <div class="catalog__row-cards">
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -1977,11 +1983,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1999,8 +2004,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2018,15 +2023,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -2040,6 +2045,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -2068,11 +2074,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2090,8 +2095,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2109,15 +2114,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -2131,6 +2136,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -2159,11 +2165,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2181,8 +2186,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2200,15 +2205,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -2223,13 +2228,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="catalog__row">
+                    <div class="catalog__row catalog__row-mt">
                         <div class="catalog__name">
                             <div class="catalog__subtitle">Project Manager partners</div>
                             <a href="#" class="catalog__more">See more</a>
                         </div>
                         <div class="catalog__row-cards">
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -2258,11 +2264,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2280,8 +2285,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2299,15 +2304,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -2321,6 +2326,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -2349,11 +2355,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2371,8 +2376,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2390,15 +2395,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>
@@ -2412,6 +2417,7 @@
                                 </div>
                             </div>
                             <div class="catalog-card">
+                                <a href="#" class="catalog-card__link"></a>
                                 <div class="catalog-card__wrapper">
                                     <div class="catalog-card__header">
                                         <a href="#" class="catalog-card__image">
@@ -2440,11 +2446,10 @@
                                             <div class="catalog-card__item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
-                                                <img src="assets/img/ico/sterling.svg" alt="money"><span
-                                                    class="catalog-card__item-text">£250/<span>d</span></span></div>
+                                                <img src="assets/img/ico/sterling.svg" alt="money"><span class="catalog-card__item-text">£250</span></div>
                                         </div>
-                                        <ul class="catalog-card__list">
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                        <div class="catalog-card__list">
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2462,8 +2467,8 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Microsoft Word</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -2481,15 +2486,15 @@
                                                     </defs>
                                                 </svg>
                                                 <span class="catalog-card__item-text">Juggling</span>
-                                            </li>
-                                            <li class="catalog-card__item catalog-card__list-item">
+                                            </a>
+                                            <a href="#" class="catalog-card__item catalog-card__list-item">
                                                 <span class="catalog-card__tooltip">Lorem ipsum dolor sita, consectetur
                                                     adipiscing</span>
                                                 <span class="catalog-card__item-text"><img
                                                         src="assets/img/ico/technology.svg" alt="ico" width="14"
                                                         height="14">Technology</span>
-                                            </li>
-                                        </ul>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="catalog-card__footer">
                                         <a href="#" class="catalog-card__btn btn add-to-shortlist">Add to Shortlist</a>

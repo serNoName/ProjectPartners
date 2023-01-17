@@ -115,9 +115,10 @@
             justify-items: center
             row-gap: 64px
     .possibilities
-        &__cards
-            column-gap: 28px
         &__inner
+            &:first-child
+                img
+                    width: 500px
             &:last-child
                 max-width: 400px
         &__title
@@ -354,6 +355,8 @@
             display: flex
             flex-direction: column
             align-items: center
+            &:first-child
+                display: none
         &__list
             transform: none
             &-item
@@ -392,11 +395,13 @@
             border: none
         &__title
             margin-bottom: 16px
+        &__name
+            margin-bottom: 12px
         &__row
             &-cards
                 column-gap: 18px
             &:not(:first-child)
-                margin-top: 16px
+                margin-top: 48px
         &__header
             flex-direction: column
         &__inner
@@ -696,6 +701,8 @@
             display: flex
             flex-direction: column
             align-items: center
+            &:first-child
+                display: none
         &__list
             transform: none
             margin-bottom: 50px
@@ -760,7 +767,19 @@
             padding: 0
             border: none
         &__title
+            font-size: 36px
             margin-bottom: 16px
+        &-card
+            min-width: 280px
+            &__status
+                &-role
+                    font-size: 14px
+                    svg,img
+                        width: 12px
+                        height: 12px
+            &__name
+                font-size: 18px
+                line-height: 1
         &__cards
             &-category
                 grid-template-columns: 1fr 1fr
@@ -779,8 +798,15 @@
                 justify-content: center
                 column-gap: 18px
                 row-gap: 18px
-            &:not(:first-child)
-                margin-top: 16px
+            // &:not(:first-child)
+            //     margin-top: 16px
+        &__info
+            &-card
+                &-1
+                    max-width: 300px
+                    display: none
+                &-2
+                    max-width: 300px
     .filter
         position: fixed
         overflow-y: scroll
@@ -1244,13 +1270,24 @@
         padding-bottom: 40px
     .catalog
         padding-top: 30px
+        &___title
+            font-size: 28px
+        &__info
+            &-card
+                &-3
+                    display: none
         &__header
             flex-direction: column-reverse
             row-gap: 12px
+            margin-top: 8px
+        &__name
+            margin-bottom: 16px
+        &-card
+            min-width: 280px
         &__cards
             &-category
-                grid-template-columns: max-content
-                justify-content: center
+                grid-template-columns: 1fr
+                justify-items: center
                 grid-template-areas: 'c1''c2''c3''c4''i1''c5''c6''c7''c8''i2''c9''c10''c11''c12''i3'
     .page
         &__ava
@@ -1315,8 +1352,6 @@
                 .aside__list-item
                     width: 280px
 @media (max-width: 360px)
-    .title
-        line-height: 40px
     .container
         width: 310px
     .search
@@ -1369,8 +1404,8 @@
             &-wrapper
                 min-width: 300px
     .catalog
-        &__name
-            padding: 10px
+        // &__name
+        //     padding: 10px
         &__subtitle
             font-size: 20px
     .aside

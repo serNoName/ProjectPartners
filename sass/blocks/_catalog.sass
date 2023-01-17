@@ -2,6 +2,7 @@
     padding-top: 50px
     padding-bottom: 40px
     background-color: $light-grey
+    overflow: hidden
     .breadcrumb
         margin-bottom: 8px
     &__triger
@@ -21,6 +22,7 @@
     &__title
         margin-bottom: 32px
         font-size: 48px
+        word-wrap: anywhere
     &__wrapper
         display: grid
         grid-template-columns: 228px auto
@@ -31,7 +33,9 @@
     &__subtitle
         color: $black
         font-size: 24px
+        word-wrap: anywhere
         font-weight: 800
+        padding-right: 12px
     &__name
         display: flex
         justify-content: space-between
@@ -43,8 +47,14 @@
             column-gap: 20px
         &:not(:first-child)
             margin-top: 32px
+        &-mt
+            &:not(:first-child)
+                margin-top: 72px
+            &:nth-child(4)
+                margin-top: 32px
         &:nth-child(3)
             margin-top: 32px
+
     &__more
         position: relative
         color: $primary
@@ -85,15 +95,20 @@
             //     &:nth-child(4)
             //         grid-area: c4
     &__info
-        height: 175px
+        //height: 175px
         border-radius: 16px
         background: $primary
         max-width: 100%
+
         margin: 32px 0
+        img
+            width: 100%
         &-card
             background: $primary
             grid-area: i1
             border-radius: 16px
+            img
+                width: 100%
             &-2
                 grid-area: i2
             &-3
@@ -178,8 +193,9 @@
                 background-color: $mid-primary
     &__descr
         margin-top: 32px
-        padding-top: 32px
+        padding-top: 16px
         border-top: 1px solid rgba(52,63,72,.1)
         color: $dark-grey
         font-size: 14px
         font-weight: 500
+        line-height: 1.4
