@@ -24,6 +24,9 @@
                 row-gap: 12px
                 grid-template-areas: 'bb bb''sb1 sb2'
                 justify-items: center
+    &__more
+        margin-top: 16px
+        display: block
     &__ava
         margin-right: 24px
         border-radius: 50%
@@ -58,7 +61,7 @@
     &__star
         display: flex
         align-items: center
-        padding: 5px 8px 5px 12px
+        padding: 6px 8px
         background-color: $light-grey
         border: 1px solid $mid-grey
         border-radius: 12px
@@ -66,8 +69,9 @@
         color: $dark-grey
         font-size: 16px
         line-height: 20px
-        height: 32px
-        line-height: 1
+        line-height: 1.2
+        height: 36px
+        max-height: 36px
         img
             margin-right: 4px
     &__prof
@@ -102,7 +106,7 @@
             color: $dark-grey
             opacity: .4
             font-size: 14px
-            font-weight: 800
+            font-weight: 700
             line-height: 18px
     &__btn
         width: 285px
@@ -179,6 +183,7 @@
             line-height: 1
             img,svg
                 margin-right: 4px
+                transform: translateY(-1px)
             span
                 font-weight: 800
                 margin-left: 6px
@@ -190,19 +195,12 @@
                     opacity: .5
                 div
                     font-weight: 600
+                    word-wrap: anywhere
                     &:nth-child(2)
-                        padding-right: 17px
-                        margin-right: 8px
-                        position: relative
                         font-weight: 700
-                        &::before
-                            position: absolute
-                            content: ''
-                            height: 500px
-                            width: 1px
-                            background-color: rgba(52,63,72,.1)
-                            right: 0
-                            top: 50%
-                            transform: translateY(-50%)
                     &:nth-child(3)
                         word-wrap: anywhere
+    &__block
+        &-wrapper
+            display: flex
+            column-gap: 105px

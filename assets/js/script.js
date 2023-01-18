@@ -8,6 +8,13 @@ $(document).ready(function () {
         });
     });
 
+    //sort dropdown
+    $('.catalog__sort').hover(() => {
+        $('.catalog__sort-list').stop(true, true).slideDown(200).css('display', 'flex')
+    }, () => {
+        $('.catalog__sort-list').stop(true, true).slideUp(100)
+    })
+
     //header dropdown
     $('.header__profile-select').hover(() => {
         $('.header__dropdown').slideDown(200).css('display', 'flex')
