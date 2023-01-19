@@ -30,9 +30,9 @@ $(document).ready(function () {
 
     //header dropdown
     $('.header__profile-select').hover(() => {
-        $('.header__dropdown').slideDown(200).css('display', 'flex')
+        $('.header__dropdown').stop(true, false).slideDown(200).css('display', 'flex')
     }, () => {
-        $('.header__dropdown').slideUp(100)
+        $('.header__dropdown').stop(true, false).slideUp(100)
     })
 
     //open menu on phones (header)
