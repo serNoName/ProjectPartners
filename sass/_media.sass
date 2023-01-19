@@ -210,6 +210,8 @@
                 width: 36px
                 height: 36px
 
+@media  ( max-width: 1000px )
+
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
     .chat-buble
@@ -460,6 +462,10 @@
             span
                 &:first-child
                     font-size: 32px
+        &__star
+            img
+                &:not(:last-child)
+                    display: none
         &__btn
             width: 260px
             padding: 16px 0
@@ -847,6 +853,9 @@
             &-inner
                 &:first-child
                     padding-right: 0
+        &__item
+            &-detail
+                line-height: 1.1
         &__name
             span
                 &:first-child
@@ -869,6 +878,10 @@
             &-role
                 width: 108px
                 height: 108px
+        &__star
+            img
+                &:not(:last-child)
+                    display: none
         &__block
             &-wrapper
                 column-gap: 64px

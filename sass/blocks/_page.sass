@@ -25,7 +25,7 @@
                 grid-template-areas: 'bb bb''sb1 sb2'
                 justify-items: center
     &__more
-        margin-top: 16px
+        // margin-top: 16px
         display: block
     &__ava
         margin-right: 24px
@@ -118,10 +118,13 @@
         &-mini
             margin: 0
             grid-area: sb1
+            display: flex
+            align-items: center
             &:last-child
                 grid-area: sb2
             img
                 margin-right: 2px
+                transform: translateY(-1px)
     &__body
         display: grid
         grid-template-columns: auto 305px
@@ -157,16 +160,24 @@
             flex-direction: column-reverse
         .page__item
             margin-top: 8px
-    &__projects
-        display: flex
-        flex-direction: column
-        svg, img
-            opacity: .5
     &__details
         display: flex
         flex-wrap: wrap
         row-gap: 12px
         column-gap: 12px
+    &__projects
+        flex-direction: column
+        display: none
+        row-gap: 0
+        svg, img
+            opacity: .5
+        &-main
+            display: flex
+            margin-bottom: 12px
+        .page__item
+            &:not(:last-child)
+                margin-bottom: 12px
+
     &__item
         display: flex
         align-items: center
@@ -187,6 +198,7 @@
             span
                 font-weight: 800
                 margin-left: 6px
+                width: max-content
             &-role
                 overflow: hidden
                 max-height: none
@@ -204,3 +216,8 @@
         &-wrapper
             display: flex
             column-gap: 105px
+            row-gap: 12px
+            margin-bottom: 4px
+            &:not(:first-child)
+                margin-top: 12px
+                display: none

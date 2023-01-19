@@ -15,6 +15,19 @@ $(document).ready(function () {
         $('.catalog__sort-list').stop(true, true).slideUp(100)
     })
 
+    //page see more
+    $('.page__more').click(function() {
+        $(this).toggleClass('page__more-active')
+
+        if($(this).hasClass('page__more-active')) {
+            $('.page__projects:not(.page__projects-main)').slideDown(300)
+            $(this).text('See less')
+        } else {
+            $('.page__projects:not(.page__projects-main)').slideUp(200)
+            $(this).text('See all')
+        }
+    })
+
     //header dropdown
     $('.header__profile-select').hover(() => {
         $('.header__dropdown').slideDown(200).css('display', 'flex')
@@ -283,9 +296,10 @@ $(document).ready(function () {
         slidesToScroll: 3,
         infinite: true,
         arrows: false,
-        centerMode: true,
         autoplay: true,
         autoplaySpeed: 1600,
+        centerMode: true,
+        variableWidth: true,
         responsive: [{
                 breakpoint: 1200,
                 settings: {
