@@ -5,6 +5,11 @@
                 width: 100%
                 height: 100%
                 object-fit: cover
+    .filter__rate-item
+        &:first-child
+            .filter__rate-list-wrapper
+                left: 0
+                transform: translateY(3px)
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1240px)
     .chat-buble
@@ -209,9 +214,13 @@
             &-image
                 width: 36px
                 height: 36px
-
-@media  ( max-width: 1000px )
-
+    .filter
+        &__rate
+            &-item
+                &:first-child
+                    .filter__rate-list-wrapper
+                        left: 0
+                        transform: translateY(3px)
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
     .chat-buble
@@ -445,6 +454,20 @@
         z-index: 199
         background-color: #fff
         border-right: 1px solid rgba(52,63,72,.1)
+        &__rate
+            &-list
+                &-wrapper
+                    top: auto
+                    bottom: 100%
+                    transform: translateX(-50%) translateY(-3px)
+            &-item
+                &::before
+                    top: auto
+                    bottom: 100%
+                &:first-child
+                    .filter__rate-list-wrapper
+                        left: 0
+                        transform: translateY(-3px)
     .page
         &__header
             &-inner
@@ -837,6 +860,20 @@
         z-index: 199
         background-color: #fff
         border-right: 1px solid rgba(52,63,72,.1)
+        &__rate
+            &-list
+                &-wrapper
+                    top: auto
+                    bottom: 100%
+                    transform: translateX(-50%) translateY(-3px)
+            &-item
+                &::before
+                    top: auto
+                    bottom: 100%
+                &:first-child
+                    .filter__rate-list-wrapper
+                        left: 0
+                        transform: translateY(-3px)
     .page
         &__body
             display: flex
@@ -878,6 +915,7 @@
             &-role
                 width: 108px
                 height: 108px
+                min-width: 108px
         &__star
             img
                 &:not(:last-child)
@@ -1318,6 +1356,7 @@
             &-role
                 width: 88px
                 height: 88px
+                min-width: 88px
                 svg
                     width: 48px
                     height: 48px

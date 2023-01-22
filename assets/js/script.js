@@ -8,6 +8,18 @@ $(document).ready(function () {
         });
     });
 
+    //filter rare dropdown
+    $('.filter__rate-item').hover(function () {
+        $(this).addClass('active').children('.filter__rate-list-wrapper').stop(true, true).slideDown(200)
+    }, function () {
+        $(this).removeClass('active').children('.filter__rate-list-wrapper').stop(true, true).slideUp(200)
+    });
+
+    $('.filter__rate-list-item').click(function () {
+        const tempText = $(this).text()
+        $(this).addClass('active').siblings().removeClass('active').parent().parent().siblings('.filter__rate-item-active').text(tempText)
+    })
+
     //sort dropdown
     $('.catalog__sort').hover(() => {
         $('.catalog__sort-list').stop(true, true).slideDown(200).css('display', 'flex')
@@ -16,10 +28,10 @@ $(document).ready(function () {
     })
 
     //page see more
-    $('.page__more').click(function() {
+    $('.page__more').click(function () {
         $(this).toggleClass('page__more-active')
 
-        if($(this).hasClass('page__more-active')) {
+        if ($(this).hasClass('page__more-active')) {
             $('.page__projects:not(.page__projects-main)').slideDown(300)
             $(this).text('See less')
         } else {
@@ -55,13 +67,13 @@ $(document).ready(function () {
     });
 
     //open filter
-    $('#filterTriger').click(function() {
+    $('#filterTriger').click(function () {
         $('#filter').addClass('active')
         $('.overlayer').fadeIn(300)
     })
 
     //close filter
-    $('#filterClose').click( function () {
+    $('#filterClose').click(function () {
         $('#filter').removeClass('active')
         $('.overlayer').fadeOut(300)
     })
@@ -362,10 +374,10 @@ $(document).ready(function () {
         if ($(window).width() < 769) {
             $("#demandSlider").slick("setPosition");
             $('#rolesSlider').slick('setPosition');
-            if(!$("#demandSlider").hasClass('slick-initialized')) {
+            if (!$("#demandSlider").hasClass('slick-initialized')) {
                 $("#demandSlider").slick('init')
             }
-            if(!$('#rolesSlider').hasClass('slick-initialized')) {
+            if (!$('#rolesSlider').hasClass('slick-initialized')) {
                 $('#rolesSlider').slick('init')
             }
         } else {
@@ -404,8 +416,7 @@ $(document).ready(function () {
                 });
             }
         }
-        if ($(this).attr('id')) {
-        }
+        if ($(this).attr('id')) {}
     });
 
     //parallax
@@ -419,7 +430,7 @@ $(document).ready(function () {
     scroll();
 
     function scroll() {
-        if(!paralax) return
+        if (!paralax) return
         let r = paralax.getBoundingClientRect();
 
         /* parallax center */
@@ -430,6 +441,6 @@ $(document).ready(function () {
         /* Calculate the offset */
         let move = (paralaxYCenter - scrollYCenter) * moveCoef - 100;
 
-        paralax.style.transform = "translateY(" + (move-300) + "px)";
+        paralax.style.transform = "translateY(" + (move - 300) + "px)";
     }
 });
