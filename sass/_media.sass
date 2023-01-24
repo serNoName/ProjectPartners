@@ -37,6 +37,18 @@
             display: flex
         &__masthead
             align-items: center
+        &__search
+            &-select
+                padding-left: 12px
+                padding-right: 26px
+                &::before
+                    right: 10px
+            &-input
+                padding-left: 24px
+                padding-right: 4px
+            &-inner
+                &::before
+                    left: 4px
     .nav
         padding: 40px 24px
         background-color: #fff
@@ -61,6 +73,18 @@
                 margin-top: 32px
         &-close
             display: block
+        &__dropdown
+            position: static
+            transform: none
+            top: auto
+            left: auto
+            background: transparent
+            padding: 0
+            padding-left: 1em
+            padding-top: 16px
+            li
+                a
+                    font-size: 18px
         &::before
             display: none
     .promo
@@ -248,6 +272,27 @@
             display: flex
         &__masthead
             align-items: center
+        &__search
+            width: fit-content
+            height: 36px
+            &-desk
+                display: none
+            &-mobi
+                display: flex
+            &-select
+                padding-left: 12px
+                padding-right: 26px
+                &::before
+                    right: 10px
+            &-input
+                padding-left: 24px
+                padding-right: 4px
+            &-inner
+                &::before
+                    left: 4px
+            &-dropdown
+                left: 0
+                transform: none
     .nav
         padding: 40px
         background-color: #fff
@@ -269,6 +314,18 @@
             font-size: 24px
         &-close
             display: block
+        &__dropdown
+            position: static
+            transform: none
+            top: auto
+            left: auto
+            background: transparent
+            padding: 0
+            padding-left: 1em
+            padding-top: 16px
+            li
+                a
+                    font-size: 18px
         &::before
             display: none
     .promo
@@ -563,6 +620,27 @@
             display: flex
         &__masthead
             align-items: center
+        &__search
+            width: fit-content
+            height: 36px
+            &-desk
+                display: none
+            &-mobi
+                display: flex
+            &-select
+                padding-left: 12px
+                padding-right: 26px
+                &::before
+                    right: 10px
+            &-input
+                padding-left: 24px
+                padding-right: 4px
+            &-inner
+                &::before
+                    left: 4px
+            &-dropdown
+                left: 0
+                transform: none
     .nav
         padding: 30px
         background-color: #fff
@@ -584,6 +662,18 @@
             font-size: 22px
         &-close
             display: block
+        &__dropdown
+            position: static
+            transform: none
+            top: auto
+            left: auto
+            background: transparent
+            padding: 0
+            padding-left: 1em
+            padding-top: 16px
+            li
+                a
+                    font-size: 16px
         &::before
             display: none
     .promo
@@ -1413,6 +1503,15 @@
 @media (max-width: 360px)
     .container
         width: 310px
+    .header
+        &__search
+            &-select
+                padding-left: 8px
+                padding-right: 18px
+                &::before
+                    right: 6px
+            &-input
+                letter-spacing: -0.05px
     .search
         &__grid
             grid-template-columns: 1fr

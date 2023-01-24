@@ -271,10 +271,13 @@
     &-profesion
         margin-bottom: 16px
         color: $dark-grey
-        font-weight: 800
+        font-weight: 700
         text-align: center
         font-size: 18px
         line-height: 23px
+        &-role
+            font-weight: 800
+            margin-bottom: 16px
     &-prof
         background-color: $dark-grey
         border-radius: 12px
@@ -309,10 +312,19 @@
                 &-status
                     color: $secondary
     &-grid
-        display: grid
-        gap: 8px
-        grid-template-areas: 'h1 h2''b b''f f'
+        // display: grid
+        // gap: 8px
+        // grid-template-areas: 'h1 h2''b b''f f'
+        display: flex
+        flex-direction: column
         margin-bottom: 24px
+        row-gap: 8px
+        &-servise
+            font-weight: 700
+            img,svg
+                opacity: .4
+                min-width: 16px
+                transform: translateY(-1px)
         &-item
             background: $light-grey
             border: 1px solid #EDEDED
@@ -324,7 +336,9 @@
             text-decoration: none
             color: $dark-grey
             position: relative
-            img
+            width: 200px
+            margin: 0 auto
+            img, svg
                 margin-right: 7px
                 transform: translateY(-1px)
         &-1

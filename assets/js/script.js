@@ -40,11 +40,11 @@ $(document).ready(function () {
         }
     })
 
-    //header dropdown
-    $('.header__profile-select').hover(() => {
-        $('.header__dropdown').stop(true, false).slideDown(200).css('display', 'flex')
-    }, () => {
-        $('.header__dropdown').stop(true, false).slideUp(100)
+    //dropdown
+    $( '.dropdown-triger' ).hover( function () {
+        $(this).children('.dropdown').stop(true, false).slideDown(200)
+    }, function () {
+        $(this).children('.dropdown').stop(true, false).slideUp(200)
     })
 
     //open menu on phones (header)
