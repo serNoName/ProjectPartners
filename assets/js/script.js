@@ -1,3 +1,34 @@
+//lazy load
+const images = document.querySelectorAll('img.lazyload');
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+}
+
+function handleImg( myImg, observer ) {
+    myImg.forEach( myImgSingle => {
+        //console.log(myImgSingle.intersectionRatio);
+        if ( myImgSingle.intersectionRatio > 0) {
+            loadImage( myImgSingle.target )
+        }
+    })
+}
+
+function loadImage( image ) {
+    extension = image.getAttribute('data-src').split('.')[1]
+
+    image.src = image.getAttribute('data-src')
+    image.srcset = `${image.getAttribute('data-src').split('.')[0]}_x2.${extension} 2x`
+}
+
+const observer = new IntersectionObserver(handleImg, options);
+
+images.forEach ( img => {
+    observer.observe(img)
+})
+
 $(document).ready(function () {
     //log in account (header)
     $('.header__login > .btn').click(function (e) {
