@@ -7,16 +7,15 @@ const options = {
     threshold: 0.1
 }
 
-function handleImg( myImg, observer ) {
-    myImg.forEach( myImgSingle => {
-        //console.log(myImgSingle.intersectionRatio);
-        if ( myImgSingle.intersectionRatio > 0) {
-            loadImage( myImgSingle.target )
+function handleImg(myImg, observer) {
+    myImg.forEach(myImgSingle => {
+        if (myImgSingle.intersectionRatio > 0) {
+            loadImage(myImgSingle.target)
         }
     })
 }
 
-function loadImage( image ) {
+function loadImage(image) {
     extension = image.getAttribute('data-src').split('.')[1]
 
     image.src = image.getAttribute('data-src')
@@ -24,52 +23,54 @@ function loadImage( image ) {
 }
 const observer = new IntersectionObserver(handleImg, options);
 
-images.forEach ( img => {
+images.forEach(img => {
     observer.observe(img)
 })
 
 //remove #text in NodeList
-let deleteTextNodes = function(a) {
+let deleteTextNodes = function (a) {
     let ch = Array.from(a.childNodes);
     for (let i = 0; i < ch.length; i++) {
-        ch[i].nodeType === 3 ?  a.removeChild(ch[i]) :  deleteTextNodes(ch[i]);
+        ch[i].nodeType === 3 ? a.removeChild(ch[i]) : deleteTextNodes(ch[i]);
     }
 };
 
-//stars in cards
-function showReiteng() {
-    stars = document.querySelectorAll('.stars')
-
-    stars.forEach( (value, index) => {
-        let rating = $(value).next().text()
-        deleteTextNodes(value)
-
-        let lastItem = 0;
-
-        for (let i = 0; i < parseInt(rating); i++) {
-            for(let k = 0; k < 4; k++) {
-                $(value.childNodes[i].childNodes[1].childNodes[0].childNodes[k]).attr('stop-color', '#FED45C')
-            }
-
-            lastItem = i;
-        }
-
-        let remainder = rating.split('.')
-
-        if( remainder.length == 2 ) {
-            remainder = parseInt(remainder[1].toString())
-
-            for(let k = 0; k < 4; k++) {
-                $(value.childNodes[lastItem+1].childNodes[1].childNodes[0].childNodes[k]).attr('offset', `0.${remainder}`)
-                $(value.childNodes[lastItem+1].childNodes[1].childNodes[0].childNodes[0]).attr('stop-color', `#FED45C`)
-            }
-        }
-    })
-}
-showReiteng()
-
-
 $(document).ready(function () {
+
+    //stars in cards
+    function showReiteng() {
+        stars = document.querySelectorAll('.stars')
+
+        stars.forEach((value, index) => {
+            let rating = $(value).next().text()
+
+            parseInt(rating) > 5 ? rating = '5' : rating;
+
+            deleteTextNodes(value)
+
+            let lastItem = 0;
+
+            for (let i = 0; i < parseInt(rating); i++) {
+                for (let k = 0; k < 4; k++) {
+                    $(value.childNodes[i].childNodes[1].childNodes[0].childNodes[k]).attr('stop-color', '#FED45C')
+                }
+
+                lastItem = i;
+            }
+
+            let remainder = rating.split('.')
+
+            if (remainder.length == 2) {
+                remainder = parseInt(remainder[1].toString())
+
+                for (let k = 0; k < 4; k++) {
+                    $(value.childNodes[lastItem + 1].childNodes[1].childNodes[0].childNodes[k]).attr('offset', `0.${remainder}`)
+                    $(value.childNodes[lastItem + 1].childNodes[1].childNodes[0].childNodes[0]).attr('stop-color', `#FED45C`)
+                }
+            }
+        })
+    }
+    showReiteng()
 
     //log in account (header)
     $('.header__login > .btn').click(function (e) {
@@ -113,7 +114,7 @@ $(document).ready(function () {
     })
 
     //dropdown
-    $( '.dropdown-triger' ).hover( function () {
+    $('.dropdown-triger').hover(function () {
         $(this).children('.dropdown').stop(true, false).slideDown(200)
     }, function () {
         $(this).children('.dropdown').stop(true, false).slideUp(200)
