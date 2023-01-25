@@ -28,32 +28,45 @@ images.forEach ( img => {
     observer.observe(img)
 })
 
-
-//stars in cards
-let stars = document.querySelectorAll('.stars')
-
-// let rating = parseFloat(stars.siblings('.star-rating').text().substr(0, 3));
-
 //remove #text in NodeList
 let deleteTextNodes = function(a) {
     let ch = Array.from(a.childNodes);
-  for (let i = 0; i < ch.length; i++) {
-    ch[i].nodeType === 3 ?  a.removeChild(ch[i]) :  deleteTextNodes(ch[i]);
-  }
+    for (let i = 0; i < ch.length; i++) {
+        ch[i].nodeType === 3 ?  a.removeChild(ch[i]) :  deleteTextNodes(ch[i]);
+    }
 };
 
-stars.forEach( (value, index) => {
-    let rating = $(value).next().text()
-    deleteTextNodes(value)
+//stars in cards
+function showReiteng() {
+    stars = document.querySelectorAll('.stars')
 
-    for (let i = 0; i < parseInt(rating); i++) {
-        for(let k = 0; k < 4; k++) {
-            $(value.childNodes[i].childNodes[1].childNodes[0].childNodes[k]).attr('stop-color', 'red')
+    stars.forEach( (value, index) => {
+        let rating = $(value).next().text()
+        deleteTextNodes(value)
+
+        let lastItem = 0;
+
+        for (let i = 0; i < parseInt(rating); i++) {
+            for(let k = 0; k < 4; k++) {
+                $(value.childNodes[i].childNodes[1].childNodes[0].childNodes[k]).attr('stop-color', '#FED45C')
+            }
+
+            lastItem = i;
         }
 
-        // $(value.childNodes[i]).children('defs').children().children().attr('stop-color', 'red')
-    }
-})
+        let remainder = rating.split('.')
+
+        if( remainder.length == 2 ) {
+            remainder = parseInt(remainder[1].toString())
+
+            for(let k = 0; k < 4; k++) {
+                $(value.childNodes[lastItem+1].childNodes[1].childNodes[0].childNodes[k]).attr('offset', `0.${remainder}`)
+                $(value.childNodes[lastItem+1].childNodes[1].childNodes[0].childNodes[0]).attr('stop-color', `#FED45C`)
+            }
+        }
+    })
+}
+showReiteng()
 
 
 $(document).ready(function () {
