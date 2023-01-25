@@ -22,14 +22,43 @@ function loadImage( image ) {
     image.src = image.getAttribute('data-src')
     image.srcset = `${image.getAttribute('data-src').split('.')[0]}_x2.${extension} 2x`
 }
-
 const observer = new IntersectionObserver(handleImg, options);
 
 images.forEach ( img => {
     observer.observe(img)
 })
 
+
+//stars in cards
+let stars = document.querySelectorAll('.stars')
+
+// let rating = parseFloat(stars.siblings('.star-rating').text().substr(0, 3));
+
+//remove #text in NodeList
+let deleteTextNodes = function(a) {
+    let ch = Array.from(a.childNodes);
+  for (let i = 0; i < ch.length; i++) {
+    ch[i].nodeType === 3 ?  a.removeChild(ch[i]) :  deleteTextNodes(ch[i]);
+  }
+};
+
+stars.forEach( (value, index) => {
+    let rating = $(value).next().text()
+    deleteTextNodes(value)
+
+    for (let i = 0; i < parseInt(rating); i++) {
+        for(let k = 0; k < parseInt(rating); k++) {
+            $(value.childNodes[i].childNodes[1].childNodes[0].childNodes[k]).attr('stop-color', '#FED45C')
+            console.log(value.childNodes[i].childNodes[1].childNodes[0].childNodes[i]);
+        }
+
+        // $(value.childNodes[i]).children('defs').children().children().attr('stop-color', 'red')
+    }
+})
+
+
 $(document).ready(function () {
+
     //log in account (header)
     $('.header__login > .btn').click(function (e) {
         e.preventDefault();
