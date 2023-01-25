@@ -37,41 +37,6 @@ let deleteTextNodes = function (a) {
 
 $(document).ready(function () {
 
-    //stars in cards
-    function showReiteng() {
-        stars = document.querySelectorAll('.stars')
-
-        stars.forEach((value, index) => {
-            let rating = $(value).next().text()
-
-            parseInt(rating) > 5 ? rating = '5' : rating;
-
-            deleteTextNodes(value)
-
-            let lastItem = 0;
-
-            for (let i = 0; i < parseInt(rating); i++) {
-                for (let k = 0; k < 4; k++) {
-                    $(value.childNodes[i].childNodes[1].childNodes[0].childNodes[k]).attr('stop-color', '#FED45C')
-                }
-
-                lastItem = i;
-            }
-
-            let remainder = rating.split('.')
-
-            if (remainder.length == 2) {
-                remainder = parseInt(remainder[1].toString())
-
-                for (let k = 0; k < 4; k++) {
-                    $(value.childNodes[lastItem + 1].childNodes[1].childNodes[0].childNodes[k]).attr('offset', `0.${remainder}`)
-                    $(value.childNodes[lastItem + 1].childNodes[1].childNodes[0].childNodes[0]).attr('stop-color', `#FED45C`)
-                }
-            }
-        })
-    }
-    showReiteng()
-
     //log in account (header)
     $('.header__login > .btn').click(function (e) {
         e.preventDefault();
