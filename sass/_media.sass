@@ -71,6 +71,24 @@
             font-size: 22px
             &:nth-child(2)
                 margin-top: 32px
+            &.dropdown-triger
+                position: relative
+                width: fit-content
+                &::before
+                    position: absolute
+                    content: ''
+                    top: 24px
+                    right: -18px
+                    border-color: transparent transparent $dark-grey transparent
+                    border-style: solid
+                    border-width: 0px 6px 7px 6px
+                    border-radius: 4px
+                    opacity: .8
+                    transition: transform .2s
+                    transform: rotate(180deg)
+                &:hover
+                    &::before
+                        transform: none
         &-close
             display: block
         &__dropdown
@@ -312,6 +330,24 @@
             transform: none
         &-item
             font-size: 24px
+            &.dropdown-triger
+                position: relative
+                width: fit-content
+                &::before
+                    position: absolute
+                    content: ''
+                    top: 26px
+                    right: -18px
+                    border-color: transparent transparent $dark-grey transparent
+                    border-style: solid
+                    border-width: 0px 6px 7px 6px
+                    border-radius: 4px
+                    opacity: .8
+                    transition: transform .2s
+                    transform: rotate(180deg)
+                &:hover
+                    &::before
+                        transform: none
         &-close
             display: block
         &__dropdown
@@ -660,6 +696,24 @@
             transform: translateX(520px)
         &-item
             font-size: 22px
+            &.dropdown-triger
+                position: relative
+                width: fit-content
+                &::before
+                    position: absolute
+                    content: ''
+                    top: 26px
+                    right: -18px
+                    border-color: transparent transparent $dark-grey transparent
+                    border-style: solid
+                    border-width: 0px 6px 7px 6px
+                    border-radius: 4px
+                    opacity: .8
+                    transition: transform .2s
+                    transform: rotate(180deg)
+                &:hover
+                    &::before
+                        transform: none
         &-close
             display: block
         &__dropdown
