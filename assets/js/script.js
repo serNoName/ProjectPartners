@@ -47,9 +47,8 @@ stars.forEach( (value, index) => {
     deleteTextNodes(value)
 
     for (let i = 0; i < parseInt(rating); i++) {
-        for(let k = 0; k < parseInt(rating); k++) {
-            $(value.childNodes[i].childNodes[1].childNodes[0].childNodes[k]).attr('stop-color', '#FED45C')
-            console.log(value.childNodes[i].childNodes[1].childNodes[0].childNodes[i]);
+        for(let k = 0; k < 4; k++) {
+            $(value.childNodes[i].childNodes[1].childNodes[0].childNodes[k]).attr('stop-color', 'red')
         }
 
         // $(value.childNodes[i]).children('defs').children().children().attr('stop-color', 'red')
