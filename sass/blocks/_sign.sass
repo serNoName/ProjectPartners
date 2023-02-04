@@ -1,0 +1,87 @@
+.sign
+    padding: 32px 0
+    background-color: $light-grey
+    &__wrapper
+        padding-top: 16px
+    &__inner
+        padding: 24px
+        padding-top: 32px
+        background-color: #fff
+        border-radius: 16px
+        width: 386px
+        display: none
+        flex-direction: column
+        margin: 0 auto
+        max-width: 100%
+        &.active
+            display: flex
+    &__title
+        font-weight: 800
+        font-size: 40px
+        line-height: 120%
+        color: $dark-grey
+    &__subtitle
+        margin-top: 6px
+        font-weight: 600
+        font-size: 14px
+        line-height: 120%
+        color: $dark-grey
+    &__form
+        margin-top: 24px
+        display: flex
+        flex-direction: column
+    &__input
+        outline: none
+        background: #FFFFFF
+        border: 1px solid rgba(52, 63, 72, 0.2)
+        border-radius: 12px
+        padding: 15px 12px 13px 12px
+        font-size: 14px
+        line-height: 140%
+        transition: border-color .2s, box-shadow .2s
+        &:not(:first-child)
+            margin-top: 12px
+        &:focus-visible
+            box-shadow: 0 0 12px 6px rgba(110,85,255, .08 )
+            border-color: $primary
+    &__notification
+        opacity: .3
+        margin-top: 6px
+        font-weight: 600
+        font-size: 12px
+        line-height: 140%
+        svg, img
+            margin-right: 2px
+            vertical-align: middle
+    &__link
+        margin-top: 9px
+        font-weight: 800
+        font-size: 12px
+        line-height: 125% // 15/12
+        text-decoration: none
+        color: $primary
+        transition: color .2s
+        &:hover
+            color: $mid-primary
+    &__btn
+        height: 56px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 12px
+        svg, img
+            margin-right: 10px
+        &:hover
+            svg
+                path
+                    fill: $white
+        &-purple
+            margin-top: 28px
+    &__label
+        color: #000
+        opacity: .5
+        font-weight: 600
+        font-size: 14px
+        line-height: 128.571429% // 18/14
+        text-align: center
+        margin-top: 24px

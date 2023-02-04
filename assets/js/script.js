@@ -16,10 +16,12 @@ function handleImg(myImg, observer) {
 }
 
 function loadImage(image) {
-    extension = image.getAttribute('data-src').split('.')[1]
+    // let extension = image.getAttribute('data-src').match(/\.([^.]+)$|$/)[1]
+    // extension = image.getAttribute('data-src').split('.')[1]
 
     image.src = image.getAttribute('data-src')
-    image.srcset = `${image.getAttribute('data-src').split('.')[0]}_x2.${extension} 2x`
+    image.srcset = image.getAttribute('data-x2set')
+    // image.srcset = `${image.getAttribute('data-src').split('.')[0]}_x2.${extension} 2x`
 }
 const observer = new IntersectionObserver(handleImg, options);
 
@@ -123,6 +125,19 @@ $(document).ready(function () {
         $('.header__burger').removeClass('active')
         $('#filter').removeClass('active')
     })
+
+    //sign window
+    $('.sign__triger').click(function () {
+        $('.sign__inner.active').fadeOut(300, function () {
+            $(this).removeClass('active').siblings().fadeIn(300).addClass('active');
+        })
+    })
+
+    //confirm window
+    $('.confirm__select').click(function (e) {
+        e.preventDefault();
+        console.log(1);
+    });
 
 
     const startTimerAlert = () => {
