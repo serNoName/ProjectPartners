@@ -129,9 +129,15 @@ $(document).ready(function () {
     //sign window
     $('.sign__triger').click(function () {
         $('.sign__inner.active').fadeOut(300, function () {
-            $(this).removeClass('active').siblings().fadeIn(300).addClass('active');
+            $(this).removeClass('active').siblings(':not(.sign__recovery)').fadeIn(300).addClass('active');
         })
-    })
+    });
+
+    $('.form__recovery-triger').click(function () {
+        $('.sign__inner.active').fadeOut(300, function () {
+            $('.sign__recovery').fadeIn(300).addClass('active');
+        })
+    });
 
     // confirm window
     $('.confirm__select-item').click(function () {
