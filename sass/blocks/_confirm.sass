@@ -3,11 +3,170 @@
     background-color: $light-grey
     &__wrapper
         padding-top: 16px
+        width: 590px
+        max-width: 100%
+        margin: 0 auto
     &__inner
         background-color: #fff
         border-radius: 16px
         padding: 24px
+        display: flex
         &:not(:first-child)
             margin-top: 20px
         &-window
             padding: 32px 24px
+        &:last-child
+            flex-direction: column
+    &__season
+        font-weight: 800
+        font-size: 16px
+        line-height: 120%
+        color: $dark-grey
+        margin-bottom: auto
+        margin-top: auto
+        margin-left: 8px
+    &__count
+        margin: auto
+        margin-right: 0
+        font-weight: 600
+        font-size: 14px
+        line-height: 120%
+        span
+            font-weight: 800
+    &__step
+        background: #3AEDBA
+        border-radius: 8px
+        padding: 2px 6px
+        display: flex
+        align-items: center
+        width: fit-content
+        color: #fff
+        font-weight: 800
+        font-size: 14px
+        line-height: 130%
+        white-space: nowrap
+        svg, img
+            margin-right: 5px
+            vertical-align: middle
+        &-purple
+            background-color: $primary
+    &__text
+        display: flex
+        column-gap: 8px
+        align-items: center
+        margin-top: 4px
+        margin-bottom: 8px
+        span
+            font-weight: 600
+            font-size: 14px
+            line-height: 120%
+            color: $dark-grey
+    &__title
+        color: $dark-grey
+        font-weight: 800
+        font-size: 40px
+        line-height: 120%
+    &__subtitle
+        font-weight: 700
+        font-size: 14px
+        line-height: 100%
+        color: $dark-grey
+        margin-top: 16px
+        margin-bottom: 8px
+        span
+            color: $primary
+    &__select
+        position: relative
+        padding: 14px 12px
+        border-radius: 8px
+        border: 1px solid rgba(52, 63, 72, 0.2)
+        transition: border .3s, box-shadow .3s
+        span
+            font-size: 14px
+            font-weight: 600
+            line-height: 100%
+            color: $dark-grey
+            &.placeholder
+                color: rgba(52, 63, 72, 0.3)
+        &:hover
+            cursor: pointer
+            border-color: $primary
+            box-shadow: 0 0 12px 6px rgba(110,85,255, .08 )
+            &::before
+                transform: translateY(-50%)
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            right: 12px
+            transform: translateY(-50%) rotate(180deg)
+            width: 0px
+            height: 0px
+            border-color: transparent transparent $dark-grey transparent
+            border-style: solid
+            border-width: 0px 5px 5px 5px
+            border-radius: 4px
+            transition: transform .2s
+        &-list
+            position: absolute
+            left: 0
+            top: calc( 100% + 3px )
+            width: 100%
+            max-height: 170px
+            background: $white
+            border-radius: 12px
+            padding: 16px 12px
+            list-style: none
+            display: flex
+            flex-direction: column
+            row-gap: 12px
+            display: none
+        &-item
+            position: relative
+            font-weight: 600
+            font-size: 14px
+            line-height: 130%
+            color: $dark-grey
+            padding-left: 24px
+            &.active
+                color: $primary
+                font-weight: 800
+                &::before
+                    position: absolute
+                    content: ''
+                    top: 50%
+                    left: 0
+                    transform: translateY(-50%)
+                    width: 16px
+                    height: 16px
+                    background: url('../img/ico/check-circle.svg') center center no-repeat
+            &:not(:last-child)
+                margin-bottom: 12px
+    &__input
+        padding: 14px 12px
+        border-radius: 8px
+        border: 1px solid rgba(52, 63, 72, 0.2)
+        font-size: 14px
+        font-weight: 600
+        line-height: 100%
+        transition: border .3s, box-shadow .3s
+        outline: none
+        &::placeholder
+            color: rgba(52, 63, 72, .6)
+        &:focus-visible
+            border-color: $primary
+            box-shadow: 0 0 12px 6px rgba(110,85,255, .08 )
+    &__label
+        font-weight: 600
+        font-size: 12px
+        line-height: 140%
+        color: rgba(52, 63, 72, .5)
+        margin-top: 16px
+        margin-bottom: 24px
+        span
+            color: $primary
+    &__btn
+        padding: 0
+        height: 56px
+        display: grid
+        place-items: center

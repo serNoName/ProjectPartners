@@ -56,7 +56,7 @@
 
     <div class="overlayer"></div>
 
-    <header class="header">
+    <header class="header header-no-border">
         <div class="container">
             <div class="header__wrapper">
                 <a href="#" class="header__logo">
@@ -250,19 +250,34 @@
             <ul class="breadcrumb">
                 <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Homepage</a></li>
                 <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Shorlist</a></li>
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Sign in</a>
+                <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Confirm Enquiry</a>
                 </li>
             </ul>
             <div class="confirm__wrapper">
                 <div class="confirm__inner">
-
+                    <div class="confirm__step">
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.06732 8.7L4.61732 7.25C4.4951 7.12778 4.3451 7.06667 4.16732 7.06667C3.98954 7.06667 3.83398 7.13333 3.70065 7.26667C3.57843 7.38889 3.51732 7.54445 3.51732 7.73333C3.51732 7.92222 3.57843 8.07778 3.70065 8.2L5.60065 10.1C5.72287 10.2222 5.87843 10.2833 6.06732 10.2833C6.25621 10.2833 6.41176 10.2222 6.53398 10.1L10.3173 6.31667C10.4395 6.19445 10.5007 6.04445 10.5007 5.86667C10.5007 5.68889 10.434 5.53333 10.3007 5.4C10.1784 5.27778 10.0229 5.21667 9.83398 5.21667C9.6451 5.21667 9.48954 5.27778 9.36732 5.4L6.06732 8.7ZM7.00065 14.1667C6.07843 14.1667 5.21176 13.9916 4.40065 13.6413C3.58954 13.2916 2.88398 12.8167 2.28398 12.2167C1.68398 11.6167 1.2091 10.9111 0.859318 10.1C0.509096 9.28889 0.333984 8.42222 0.333984 7.5C0.333984 6.57778 0.509096 5.71111 0.859318 4.9C1.2091 4.08889 1.68398 3.38333 2.28398 2.78333C2.88398 2.18333 3.58954 1.70822 4.40065 1.358C5.21176 1.00822 6.07843 0.833334 7.00065 0.833334C7.92287 0.833334 8.78954 1.00822 9.60065 1.358C10.4118 1.70822 11.1173 2.18333 11.7173 2.78333C12.3173 3.38333 12.7922 4.08889 13.142 4.9C13.4922 5.71111 13.6673 6.57778 13.6673 7.5C13.6673 8.42222 13.4922 9.28889 13.142 10.1C12.7922 10.9111 12.3173 11.6167 11.7173 12.2167C11.1173 12.8167 10.4118 13.2916 9.60065 13.6413C8.78954 13.9916 7.92287 14.1667 7.00065 14.1667Z" fill="white"/> </svg>
+                        Step 1
+                    </div>
+                    <div class="confirm__season">
+                        Summary
+                    </div>
+                    <div class="confirm__count">
+                        <span>10x</span> Partners
+                    </div>
                 </div>
-                <div class="confirm__inner confirm__inner-window">
+                <form action="#" class="confirm__inner confirm__inner-window">
                     <div class="confirm__title">Confirm Enquiry</div>
-
-                    <div class="confirm__select">
-                        <span class="text">I don’t know</span>
-                        <ul class="confirm__select-list">
+                    <div class="confirm__text">
+                        <div class="confirm__step confirm__step-purple">
+                            Step 2
+                        </div>
+                        <span>Enter your details to submit an enquiry</span>
+                    </div>
+                    <div class="confirm__subtitle">When are you available to start <span>*</span></div>
+                    <div class="confirm__select dropdown-triger">
+                        <span class="text placeholder">Approximate start</span>
+                        <ul class="confirm__select-list dropdown">
                             <li class="confirm__select-item active">I’m not sure yet</li>
                             <li class="confirm__select-item">Immidiately</li>
                             <li class="confirm__select-item">Within 7 days</li>
@@ -270,7 +285,14 @@
                             <li class="confirm__select-item">Within 3 months</li>
                         </ul>
                     </div>
-                </div>
+                    <div class="confirm__subtitle">When are you available to start <span>*</span></div>
+                    <input type="text" class="confirm__input" placeholder="Write what we should know">
+                    <div class="confirm__label">
+                        <span>*</span>
+                        These fields are optional
+                    </div>
+                    <button type="submit" class="btn confirm__btn">Submit an Enquiry</button>
+                </form>
             </div>
         </div>
     </section>

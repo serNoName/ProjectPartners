@@ -1574,6 +1574,13 @@
                 width: 18px
             &-purple
                 margin-top: 16px
+    .confirm
+        &__title
+            font-size: 32px
+        &__btn
+            font-size: 14px
+            height: 42px
+            padding: 0
 @media (max-width: 360px)
     .container
         width: 310px
@@ -1644,3 +1651,29 @@
         &__list
             grid-template-columns: 220px
             justify-content: center
+    .confirm
+        &__title
+            font-size: 29px
+        &__text
+            flex-direction: column
+            align-items: flex-start
+            row-gap: 4px
+        &__select
+            height: 41px
+            display: flex
+            align-items: center
+        &__input
+            height: 41px
+        &__inner
+            flex-direction: column
+            &:first-child
+                display: grid
+                row-gap: 4px
+                grid-template-areas: 'item1 item1''item2 item3'
+                .confirm__step
+                    grid-area: item1
+                .confirm__season
+                    grid-area: item2
+                    margin: 0
+                .confirm__count
+                    grid-area: item3

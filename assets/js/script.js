@@ -133,10 +133,10 @@ $(document).ready(function () {
         })
     })
 
-    //confirm window
-    $('.confirm__select').click(function (e) {
-        e.preventDefault();
-        console.log(1);
+    // confirm window
+    $('.confirm__select-item').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).parent().siblings('span').removeClass('placeholder').text($(this).text())
     });
 
 
