@@ -37,7 +37,63 @@ let deleteTextNodes = function (a) {
     }
 };
 
+
 $(document).ready(function () {
+    /* SHORTLIST */
+
+    // аккордеон шаблон
+    const accTemplate = `<div class="shortlist__accordion new"> <label class="shortlist__label"> <input type="checkbox"> <span class="shortlist__checkmark"></span> </label> <div class="shortlist__accordion-text text">All</div> <div class="shortlist__accordion-amount"></div> <span class="shortlist__accordion-arrow"></span> </div>`;
+
+    $('.shortlist__group-triger').click(function () {
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active').children('span').text('Ungroup')
+
+            $('.row-card').each(function () {
+
+                let discipline_current = $(this).attr('data-discipline'), // дисципліна айтему
+                    level_current = $(this).attr('data-level'), // левел айтему
+                    title_new = level_current + ' ' + discipline_current, // змінна, якщо треба буде додати заголовок
+                    title_current = $('.shortlist__accordion[data-discipline="' + discipline_current + '"][data-level="' + level_current + '"]'), //пошук аккордеону з необхідними параметрами
+                    card_current = $(this); //поточнка картка
+
+                if (!title_current.length) {
+                    //створити та присвоїти data атрибути поточної картки
+                    $('.shortlist__row-cards').append(accTemplate)
+                    $('.shortlist__row-cards').append('<div class="shortlist__list"></div>')
+                    $('.new').attr('data-level', level_current).attr('data-discipline', discipline_current)
+                    $('.new > .text').text(title_new); //змінити текст аккордеону
+                    $('.new').next().append(card_current) //додати поточну картку до списку
+
+
+
+                    $(title_current).children('.text').text(title_new);
+
+                    $('.new').click(function () {
+                        $(this).toggleClass('active').next().stop(true, false).slideToggle(300);
+                    });
+
+                    $('.new').removeClass('new')
+                }
+
+                $(this).appendTo(title_current.next());
+                // console.log(title_current.next().children().length);
+                // title_current.children('.shortlist__accordion-amount').text(title_current.next().children().length)
+            })
+
+            $('.shortlist__accordion').each(function () {
+                $(this).children('.shortlist__accordion-amount').text($(this).next().children().length)
+
+            });
+        } else {
+            $(this).removeClass('active')
+            $('.row-card').each(function () {
+                $('.shortlist__row-cards').append($(this))
+            })
+            $('.shortlist__accordion').remove()
+            $('.shortlist__list').remove()
+        }
+    })
+
 
     //log in account (header)
     $('.header__login > .btn').click(function (e) {

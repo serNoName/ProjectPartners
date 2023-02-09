@@ -28,6 +28,7 @@
         cursor: pointer
         text-decoration: none
         transition: color .2s
+        height: fit-content
         &::before
             position: absolute
             content: ''
@@ -454,6 +455,8 @@
         width: 100%
         height: 100%
         display: block
+    &-favorite
+        width: 285px
     &__status
         position: relative
         font-size: 12px
@@ -640,3 +643,190 @@
                     &:last-child
                         span
                             font-weight: 700
+.tooltip
+    position: absolute
+    top: calc( 100% + 2px )
+    left: 50%
+    transform: translateX(-50%) translateY(20%)
+    padding: 8px
+    max-width: 140px
+    font-size: 10px
+    font-weight: 600
+    line-height: 13px
+    color: $dark-grey
+    background-color: $white
+    border-radius: 12px
+    width: max-content
+    transition: .3s
+    opacity: 0
+    cursor: auto
+    z-index: -1
+    &__triger
+        position: relative
+        width: fit-content
+        cursor: help
+        &:hover
+            .tooltip
+                transform: translateX(-50%)
+                z-index: 2
+                opacity: 1
+.row-card
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 1px
+        background-color: $primary
+    &::after
+        position: absolute
+        content: ''
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        height: 1px
+        width: calc( 100% - 48px )
+        background-color: $dark-grey
+        opacity: .1
+    &:last-child
+        &::after
+            display: none
+    &-role
+        .row-card
+            &__ava
+                width: 48px
+                height: 48px
+                display: grid
+                place-items: center
+                border-radius: 50%
+                border: 2px solid $light-grey
+                min-height: 48px
+            &__item
+                &:nth-child(2)
+                    flex-direction: row
+            &__list
+                padding-left: 45px
+                padding-right: 92px
+                width: fill-available
+                width: -webkit-fill-available
+                width: -moz-available
+            &__profile
+                align-content: center
+                grid-template-areas:"ava text""ava text"
+            &__role
+                align-self: end
+            &__position
+                font-size: 16px
+                font-weight: 800
+                width: max-content
+                max-width: 200px
+    &__wrapper
+        padding: 24px
+        padding-bottom: 12px
+    &__body
+        margin-bottom: 15px
+        display: flex
+        align-items: center
+    &__ava
+        overflow: hidden
+        margin-right: 8px
+        grid-area: ava
+        img
+            vertical-align: middle
+            border-radius: 50%
+        svg
+            path
+                fill: $primary
+    &__profile
+        display: grid
+        grid-template-columns: repeat(2, auto)
+        grid-template-areas: 'ava text''ava text''ava text'
+        width: fit-content
+        padding-right: 7px
+        margin-left: 36px
+    &__name
+        color: $black
+        font-weight: 800
+        font-size: 16px
+        line-height: 16px
+        word-wrap: anywhere
+    &__role
+        font-weight: 800
+        font-size: 12px
+        line-height: 15px
+        color: $primary
+        display: flex
+        align-items: center
+        column-gap: 3px
+        svg
+            path
+                fill: $primary
+            opacity: .7
+    &__position
+        color: $dark-grey
+        font-weight: 700
+        font-size: 14px
+        line-height: 18px
+    &__rating
+        margin-left: 4px
+    &__list
+        display: flex
+        justify-content: space-between
+        padding: 0 16px
+        column-gap: 28px
+    &__item
+        display: flex
+        align-items: center
+        font-weight: 600
+        font-size: 10px
+        line-height: 130% // 13/10
+        color: $dark-grey
+        .stars
+            svg
+                width: 11px
+        &-inner
+            display: flex
+            align-items: center
+        &:first-child
+            display: flex
+            align-items: center
+        &:nth-of-type(2)
+            flex-direction: column
+            align-items: start
+        svg
+            margin-right: 4px
+    &__rate
+        height: 30px
+        display: flex
+        align-items: center
+        padding: 0 8px
+        width: fit-content
+        background-color: $light-grey
+        border: 1px solid $mid-grey
+        border-radius: 8px
+        margin: auto
+        margin-right: 0
+        &-text
+            margin-left: 7px
+            color: $dark-grey
+            font-weight: 800
+            font-size: 14px
+            line-height: 18px
+    &__btn
+        border: none
+        background-color: transparent
+        color: $primary
+        outline: none
+        cursor: pointer
+        font-size: 12px
+        font-weight: 800
+        line-height: 125% // 15/12
+        &-remove
+            color: $secondary2
+            margin-left: 12px
+            svg
+                margin-left: 2px
+    &__footer
+        margin-left: 36px

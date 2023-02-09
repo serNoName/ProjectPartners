@@ -1,3 +1,8 @@
+@media ( min-width: 1600px)
+    .thank
+        background-size: cover
+        background-position-y: -100px
+        background-origin: border-box
 @media ( max-width: 1600px)
     .do
         &__bg
@@ -256,6 +261,10 @@
             &-image
                 width: 36px
                 height: 36px
+        &__btn
+            &-shortlist
+                font-size: 16px
+
     .filter
         &__rate
             &-item
@@ -263,6 +272,41 @@
                     .filter__rate-list-wrapper
                         left: 0
                         transform: translateY(3px)
+    .thank
+        &__image
+            width: 475px
+        &__wrapper
+            column-gap: 42px
+    .shortlist
+        &__wrapper
+            column-gap: 4px
+            // grid-template-columns: auto 250px
+        &__content
+            margin-bottom: 24px
+    .favorite
+        .catalog-card
+            width: auto
+            &:not(:last-child)
+                margin-right: 10px
+        &__row
+            margin-bottom: 12px
+    .row-card
+        &__list
+            column-gap: 12px
+            padding: 0 12px
+            display: flex
+            flex-wrap: wrap
+            row-gap: 4px
+        &__ava
+            width: fit-content
+        &__rate
+            img
+                width: 16px
+            &-text
+                font-size: 12px
+        &__profile
+            margin-left: 28px
+
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
     .chat-buble
@@ -617,11 +661,82 @@
         &__inner
             &:last-child
                 width: 100%
+            &-shortlist
+                width: inherit
+                width: 520px
+            &-role
+                .aside
+                    &__list
+                        grid-template-columns: repeat(3, 1fr)
         &__phone
             &-image
                 width: 36px
                 height: 36px
+        &-shortlist
+            display: flex
+            flex-direction: column
+            width: 100%
+            max-width: 520px
+        &__btn
+            &-shortlist
+                font-size: 14px
+                width: 40%
+                height: 48px
+                svg
+                    width: 7px
+    .thank
+        background-position-y: -70px
+        &__image
+            width: 375px
+        &__wrapper
+            column-gap: 24px
+        &__title
+            font-size: 40px
+            margin-bottom: 18px
+        &__subtitle
+            margin-bottom: 18px
+            &:nth-child(3)
+                margin-bottom: 24px
+        &__btn
+            padding: 16px 28px
+            font-size: 16px
+    .shortlist
+        .breadcrumb
+            padding: 8px 0
+        &__title
+            font-size: 40px
+            margin-bottom: 4px
+        &__content
+            margin-bottom: 24px
+        &__wrapper
+            grid-template-columns: 1fr
+            grid-template-rows: auto auto
+        &__col
+            &-role
+                max-width: 100%
+    .favorite
+        margin-bottom: 32px
+        &__row
+            margin-bottom: 16px
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            // justify-items: center
+            row-gap: 24px
+        &-role
 
+    .row-card
+        &__list
+            padding: 0 8px
+        &__ava
+            width: fit-content
+        &__profile
+            margin-left: 28px
+        &__rate
+            img
+                width: 12px
+            &-text
+                font-size: 12px
+                margin-left: 4px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -1094,10 +1209,114 @@
                 font-size: 14px
             &-discipline
                 font-size: 12px
+        &__btn
+            &-shortlist
+                font-size: 14px
+                padding: 0 16px
+                height: 42px
+                width: fit-content
+                column-gap: 6px
+                svg
+                    width: 6px
+        &-shortlist
+            .btn__more
+                margin: 0
+        &__inner
+            &-shortlist
+                display: grid
+                grid-template-areas: 'r1 r1''r2 r2''i1 i2'
+                .aside__row
+                    &:nth-child(1)
+                        grid-area: r1
+                    &:nth-child(2)
+                        grid-area: r2
+                    &:last-child
+                        grid-area: i2
+                        align-self: center
+                        justify-self: end
     .superpower
         display: flex
         flex-wrap: wrap
-
+    .thank
+        padding-top: 40px
+        padding-bottom: 100px
+        background-position-y: 80px
+        &__image
+            width: 100%
+        &__wrapper
+            flex-direction: column
+            padding: 0
+        &__inner
+            &:first-child
+                margin-bottom: 32px
+            &:last-child
+                display: flex
+                flex-direction: column
+                align-items: center
+        &__title
+            font-size: 40px
+            margin-bottom: 18px
+            max-width: 370px
+            text-align: center
+        &__subtitle
+            margin-bottom: 18px
+            text-align: center
+        &__btn
+            padding: 16px 28px
+            font-size: 16px
+            margin: 0 auto
+    .shortlist
+        &__wrapper
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(2, auto)
+        &__accordion
+            margin: 0 16px
+    .favorite
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            row-gap: 12px
+            column-gap: 12px
+            margin-bottom: 32px
+        .catalog-card
+            width: auto
+    .row-card
+        &::after
+            width: calc( 100% - 32px )
+        &__wrapper
+            padding: 12px 16px
+        &__body
+            display: grid
+            grid-template-rows: repeat(3, auto)
+            grid-template-areas: 't''m''f'
+            margin: 0
+            .shortlist__label
+                position: absolute
+                top: 36px
+        &__profile
+            grid-area: t
+            margin-left: 28px
+        &__list
+            padding: 0
+            margin-top: 12px
+            margin-bottom: 8px
+        &__rate
+            position: absolute
+            right: 16px
+            top: 36px
+            transform: translateY(-50%)
+            height: 32px
+            img,svg
+                width: 14px
+            &-text
+                font-size: 12px
+                margin-left: 2px
+        &-role
+            .row-card__list
+                padding: 0
+                justify-content: space-evenly
+        &__footer
+            grid-area: f
+            margin: 0
 @media (max-width: 576px)
     .container
         width: 460px
@@ -1218,6 +1437,10 @@
             margin-bottom: 40px
         &__btns
             margin-top: 40px
+        &__list
+            &-thank
+                .empower__list-item
+                    font-size: 18px
     .filter
         width: 100vw
         left: -580px
@@ -1298,6 +1521,34 @@
             grid-area: r
         &__title
             margin: 0
+    .thank
+        background-position-y: 45px
+    .row-card
+        &__list
+            display: grid
+            grid-template-columns: 1fr 1fr
+            align-items: center
+            row-gap: 4px
+            justify-items: center
+        &-role
+            .row-card
+                &__list
+                    display: flex
+                    justify-content: space-around
+    .shortlist
+        .breadcrumb
+            padding: 8px 0
+        &__title
+            font-size: 36px
+            margin-bottom: 4px
+    .favorite
+        &__wrapper
+            grid-template-columns: 1fr
+            justify-items: center
+            row-gap: 24px
+        &__btn
+            &-more
+                font-size: 16px
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -1551,7 +1802,7 @@
                 grid-template-columns: 1fr
                 display: flex
                 align-items: center
-                .aside__list-item
+                .aside__list-item aside__list-item-shortlist
                     width: 280px
     .sign
         &__title
@@ -1581,6 +1832,50 @@
             font-size: 14px
             height: 42px
             padding: 0
+    .thank
+        background-position-y: 20px
+    .aside
+        &__inner
+            &-shortlist
+                row-gap: 4px
+                .aside
+                    &__row
+                        margin: 0
+                .btn
+                    font-size: 12px
+                    height: 38px
+                    &__more
+                        font-size: 12px
+                        svg
+                            width: 12px
+        &__list
+            &-shortlist
+                grid-template-columns: 1fr
+                max-width: 330px
+        &__row
+            &-amount
+                font-size: 14px
+                margin-top: 4px
+        &__btn
+            &-shortlist
+                padding: 0 12px
+    .shortlist
+        padding-top: 8px
+        &__btn
+            height: 28px
+            padding: 0 8px
+            border-radius: 8px
+            font-size: 14px
+            &:first-child
+                margin-left: 18px
+        &__content
+            padding: 18px 0
+        &__group
+            &-triger
+                margin-left: 18px
+                font-size: 12px
+                svg
+                    width: 10px
 @media (max-width: 360px)
     .container
         width: 310px
@@ -1632,6 +1927,9 @@
     .empower
         &__list
             width: 310px
+            &-thank
+                .empower__list-item
+                    font-size: 14px
     .footer
         &__cards
             grid-template-columns: 1fr
@@ -1651,6 +1949,11 @@
         &__list
             grid-template-columns: 220px
             justify-content: center
+        &__inner
+            &-shortlist
+                display: flex
+                .btn
+                    margin: 0 auto
     .confirm
         &__title
             font-size: 29px
@@ -1677,3 +1980,47 @@
                     margin: 0
                 .confirm__count
                     grid-area: item3
+    .thank
+        background-position-y: -20px
+        &__title
+            line-height: 1
+            font-size: 36px
+        &__subtitle
+            font-size: 14px
+            .btn__more-thank
+                font-size: 14px
+        &__btn
+            padding: 14px 28px
+    .shortlist
+        &__accordion
+            position: relative
+            padding: 8px 0
+            &-text
+                max-width: 190px
+            &-amount
+                position: absolute
+                top: 50%
+                right: 12px
+                transform: translateY(-50%)
+            &-arrow
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+            &.active
+                .shortlist
+                    &__accordion
+                        &-arrow
+                            transform: rotate(180deg) translateY(50%)
+    .row-card
+        &__rate
+            height: 26px
+            bottom: -6px
+            top: auto
+        &__list
+            margin-bottom: 16px
+        &-role
+            .row-card
+                &__list
+                    flex-direction: column
+                    align-items: start

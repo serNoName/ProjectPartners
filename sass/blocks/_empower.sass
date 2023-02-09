@@ -2,6 +2,8 @@
     padding: 120px 0
     position: relative
     background-size: 100% contain
+    &-thank
+        padding-top: 50px
     &__bg
         position: absolute
         top: 0
@@ -19,17 +21,27 @@
         span
             color: $primary
             font-weight: 800
+        &-thank
+            margin-bottom: 24px
+            color: $dark-grey
     &__wrapper
         display: flex
         justify-content: center
         column-gap: 140px
+        &-thank
+            column-gap: 100px
     &__inner
         &:first-child
             width: 480px
+        &-thank
+            display: flex
+            align-items: center
     &__image
         display: none
         &.active
             display: block
+        &-thank
+            max-width: 100%
     &__list
         position: relative
         list-style: none
@@ -38,6 +50,10 @@
         row-gap: 16px
         width: 390px
         z-index: 2
+        &-thank
+            width: 480px
+            .empower__list-item
+                font-size: 22px
         &-item
             display: flex
             column-gap: 12px
