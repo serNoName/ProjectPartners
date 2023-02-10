@@ -16,6 +16,8 @@
             flex-direction: column
             row-gap: 12px
     &__step
+        display: flex
+        align-items: center
         font-weight: 800
         font-size: 12px
         line-height: 130%
@@ -26,13 +28,13 @@
             margin-right: 4px
             color: #fff
             border-radius: 8px
+            height: 21px
+            display: flex
+            align-items: center
     &-shortlist
         padding: 0
         border: none
         row-gap: 32px
-        .aside
-            &__ava
-                background-color: $light-grey
     &__title
         font-weight: 800
         font-size: 20px
@@ -47,6 +49,9 @@
             line-height: 120%
             justify-content: flex-end
             color: $dark-grey
+            .amount
+                font-weight: 800
+                font-size: 16px
         &:first-child
             display: flex
             align-items: center
@@ -82,6 +87,10 @@
         list-style: none
         flex-direction: column
         margin-bottom: 16px
+        &-shortlist
+            &-role
+                .aside__ava
+                    background-color: $light-grey
         &-item
             background-color: $light-grey
             border-radius: 16px

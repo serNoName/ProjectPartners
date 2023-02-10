@@ -815,6 +815,8 @@
             font-size: 14px
             line-height: 18px
     &__btn
+        display: flex
+        align-items: center
         border: none
         background-color: transparent
         color: $primary
@@ -823,10 +825,18 @@
         font-size: 12px
         font-weight: 800
         line-height: 125% // 15/12
+        transition: color .2s
         &-remove
             color: $secondary2
             margin-left: 12px
             svg
                 margin-left: 2px
+                path
+                    transition: .2s
+        &:hover
+            color: $mid-primary
+            svg path
+                fill: $mid-primary
     &__footer
+        display: flex
         margin-left: 36px

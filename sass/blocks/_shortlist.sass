@@ -142,27 +142,18 @@
         padding: 0
         input
             position: absolute
-            opacity: 0
             cursor: pointer
-            height: 0
-            width: 0
             visibility: hidden
             &:checked ~ .shortlist__checkmark
-                border: 1px solid $dark-grey
-                background-color: transparent
-                opacity: .5
+                background-color: $mid-primary
+                border: none
                 &::before
                     opacity: 1
         &:hover
             .shortlist__checkmark
-                opacity: 1
-                border: none
-                // background-color: $primary
-                &::before
-                    opacity: 1
-            input:checked ~ .shortlist__checkmark
-                background-color: $primary
-                border: none
+                background-color: transparent
+                border-color: $primary
+                box-shadow: 0 0 10px 4px rgba(110,85,255, .14 )
                 opacity: 1
     &__checkmark
         position: absolute
@@ -174,9 +165,9 @@
         border-radius: 6px
         opacity: .5
         transition: .1s
-        background-color: $mid-primary
+        background-color: transparent
         opacity: 1
-        border: none
+        border: 1px solid $dark-grey
         &::before
             position: absolute
             content: ''
@@ -216,7 +207,7 @@
             border-radius: 4px
             font-weight: 800
             font-size: 12px
-            line-height: 1
+            line-height: 120% // 15/12
             margin-left: 10px
             transition: .2s
         &.active

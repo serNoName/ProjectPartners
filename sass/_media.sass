@@ -301,11 +301,16 @@
             width: fit-content
         &__rate
             img
-                width: 16px
+                width: 14px
             &-text
                 font-size: 12px
+                margin-left: 4px
         &__profile
             margin-left: 28px
+        &__name
+            font-size: 13px
+        &__position
+            font-size: 12px
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
@@ -726,7 +731,11 @@
 
     .row-card
         &__list
+            display: grid
             padding: 0 8px
+            grid-template-columns: repeat(2, auto)
+            margin: 0 auto
+            row-gap: 4px
         &__ava
             width: fit-content
         &__profile
@@ -2015,10 +2024,10 @@
     .row-card
         &__rate
             height: 26px
-            bottom: -6px
+            bottom: 0px
             top: auto
         &__list
-            margin-bottom: 16px
+            margin-bottom: 18px
         &-role
             .row-card
                 &__list

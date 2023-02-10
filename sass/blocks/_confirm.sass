@@ -81,6 +81,7 @@
         border-radius: 8px
         border: 1px solid rgba(52, 63, 72, 0.2)
         transition: border .3s, box-shadow .3s
+        user-select: none
         span
             font-size: 14px
             font-weight: 600
@@ -115,22 +116,27 @@
             max-height: 170px
             background: $white
             border-radius: 12px
-            padding: 16px 12px
+            padding: 8px 12px
             list-style: none
             display: flex
             flex-direction: column
             row-gap: 12px
             display: none
+            cursor: default
         &-item
             position: relative
             font-weight: 600
             font-size: 14px
             line-height: 130%
             color: $dark-grey
+            padding: 6px 0
             padding-left: 24px
+            transition: color .2s
+            cursor: pointer
             &.active
                 color: $primary
                 font-weight: 800
+                cursor: pointer
                 &::before
                     position: absolute
                     content: ''
@@ -140,8 +146,8 @@
                     width: 16px
                     height: 16px
                     background: url('../img/ico/check-circle.svg') center center no-repeat
-            &:not(:last-child)
-                margin-bottom: 12px
+            &:hover
+                color: $mid-primary
     &__input
         padding: 14px 12px
         border-radius: 8px
