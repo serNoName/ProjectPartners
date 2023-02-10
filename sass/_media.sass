@@ -264,7 +264,6 @@
         &__btn
             &-shortlist
                 font-size: 16px
-
     .filter
         &__rate
             &-item
@@ -323,6 +322,7 @@
                 margin-left: 4px
         &__profile
             margin-left: 28px
+            width: 200px
             &-role
                 .row-card__position
                     font-size: 14px
@@ -685,7 +685,9 @@
             &:last-child
                 width: 100%
             &-shortlist
-                width: inherit
+                position: absolute
+                top: 0
+                left: 0
                 width: 520px
             &-role
                 .aside
@@ -734,6 +736,7 @@
         &__wrapper
             grid-template-columns: 1fr
             grid-template-rows: auto auto
+            padding-top: 235px
         &__col
             &-role
                 max-width: 100%
@@ -765,6 +768,7 @@
         &__ava
             width: fit-content
         &__profile
+            width: 220px
             margin-left: 28px
             &-role
                 .row-card__position
@@ -1261,6 +1265,10 @@
                 margin: 0
         &__inner
             &-shortlist
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
                 display: grid
                 grid-template-areas: 'r1 r1''r2 r2''i1 i2'
                 .aside__row
@@ -1305,6 +1313,8 @@
             margin: 0 auto
     .shortlist
         &__wrapper
+            position: relative
+            padding-top: 185px
             grid-template-columns: 1fr
             grid-template-rows: repeat(2, auto)
         &__accordion
@@ -1333,6 +1343,11 @@
         &__profile
             grid-area: t
             margin-left: 28px
+            width: 300px
+            max-width: 100%
+            &-role
+                .row-card__position
+                    font-size: 14px
         &__list
             padding: 0
             margin-top: 12px
@@ -1920,7 +1935,14 @@
                 font-size: 12px
                 svg
                     width: 10px
+        &__wrapper
+            padding-top: 154px
     .row-card
+        &__rate
+            height: 26px
+            padding: 0 4px
+            top: auto
+            bottom: 0
         &-role
             .row-card
                 &__list
@@ -1928,6 +1950,14 @@
                         display: flex
                         flex-wrap: wrap
                         justify-content: start
+                        margin-bottom: 12px
+        &__btn-remove
+            margin-left: 6px
+        &__profile
+            margin-left: 26px
+            column-gap: 4px
+            padding: 0
+            max-width: 270px
 @media (max-width: 360px)
     .container
         width: 310px
@@ -2064,13 +2094,13 @@
                     &__accordion
                         &-arrow
                             transform: rotate(180deg) translateY(50%)
+        &__wrapper
+            padding-top: 178px
     .row-card
-        &__rate
-            height: 26px
-            bottom: 0px
-            top: auto
         &__list
             margin-bottom: 18px
+        &__profile
+            width: auto
         &-role
             .row-card
                 &__list
