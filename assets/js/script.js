@@ -136,11 +136,11 @@ $(document).ready(function () {
             siblings_card = $(this).parent().parent().parent().parent().parent().children().find('.shortlist__label > input[type="checkbox"]'),
             bool_value = true
 
-        setTimeout( () => {
+        setTimeout(() => {
             if ($(temp_item).hasClass('shortlist__accordion')) {
                 // $(temp_item).find('.shortlist__label > input[type="checkbox"]').prop('checked', false)
 
-                $(siblings_card).each( function () {
+                $(siblings_card).each(function () {
                     // $(this).prop('checked', false)
                     if (!$(this).prop('checked')) {
                         bool_value = false
@@ -217,7 +217,11 @@ $(document).ready(function () {
         let ele = $(e.target);
         if (!ele.hasClass('dropdown-triger-click') &&
             !ele.hasClass('text')) {
-            $(".dropdown").stop(true, false).slideUp(200);
+            if (ele.hasClass('confirm__select-item')) {
+                $('.dropdown').slideUp(200);
+            } else {
+                $('.dropdown').stop(true, false).slideUp(200);
+            }
         }
     });
 });

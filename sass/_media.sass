@@ -294,11 +294,25 @@
             column-gap: 8px
     .row-card
         &__list
-            column-gap: 12px
-            padding: 0 12px
-            display: flex
-            flex-wrap: wrap
+            // column-gap: 12px
+            // padding: 0 12px
+            // display: flex
+            // flex-wrap: wrap
             row-gap: 4px
+            display: grid
+            grid-template-columns: 1fr 1fr
+            &-role
+                display: flex
+
+                .row-card__item
+                    &:nth-child(2)
+                        min-width: 90px
+                    &:nth-child(3)
+                        min-width: 70px
+        .row-card__body
+            .row-card__list-role
+                padding: 0 12px
+                column-gap: 8px
         &__ava
             width: fit-content
         &__rate
@@ -309,11 +323,13 @@
                 margin-left: 4px
         &__profile
             margin-left: 28px
+            &-role
+                .row-card__position
+                    font-size: 14px
         &__name
             font-size: 13px
         &__position
             font-size: 12px
-
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
     .chat-buble
@@ -734,14 +750,25 @@
     .row-card
         &__list
             display: grid
+            grid-template-columns: 1fr 1fr
             padding: 0 8px
-            grid-template-columns: repeat(2, auto)
-            margin: 0 auto
             row-gap: 4px
+        &-role
+            .row-card__list
+                &-role
+                    display: flex
+                    column-gap: 8px
+                    padding: 0 12px
+                    max-width: 360px
+                    .row-card__item:nth-child(3)
+                        min-width: 70px
         &__ava
             width: fit-content
         &__profile
             margin-left: 28px
+            &-role
+                .row-card__position
+                    font-size: 14px
         &__rate
             img
                 width: 12px
@@ -1540,12 +1567,18 @@
             grid-template-columns: 1fr 1fr
             align-items: center
             row-gap: 4px
-            justify-items: center
+            justify-items: start
+            max-width: 360px
+
         &-role
             .row-card
                 &__list
                     display: flex
                     justify-content: space-around
+                    max-width: none
+        &__position
+            font-size: 12px
+            line-height: 1.2
     .shortlist
         .breadcrumb
             padding: 8px 0
@@ -1887,6 +1920,14 @@
                 font-size: 12px
                 svg
                     width: 10px
+    .row-card
+        &-role
+            .row-card
+                &__list
+                    &-role
+                        display: flex
+                        flex-wrap: wrap
+                        justify-content: start
 @media (max-width: 360px)
     .container
         width: 310px

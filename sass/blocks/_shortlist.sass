@@ -64,24 +64,25 @@
             &:last-child
                 &::after
                     display: block
+
         &:last-of-type
             .row-card
                 &:last-child
                     &::after
                         display: none
-        &:nth-of-type(4n + 4)
-            .row-card
-                &::before
-                    background: $secondary
-                &__role
-                    color: $yellow
-                    svg
-                        path
-                            fill: $yellow
-                &__ava
-                    svg
-                        path
-                            fill: $yellow
+        // &:nth-of-type(4n + 4)
+        //     .row-card
+        //         &::before
+        //             background: $secondary
+        //         &__role
+        //             color: $yellow
+        //             svg
+        //                 path
+        //                     fill: $yellow
+        //         &__ava
+        //             svg
+        //                 path
+        //                     fill: $yellow
     &__accordion
         display: flex
         align-items: center
@@ -198,7 +199,7 @@
             margin-left: 24px
             margin-right: 8px
         &-amount
-            width: 13px
+            min-width: 13px
             height: 13px
             display: grid
             place-items: center
@@ -207,9 +208,13 @@
             border-radius: 4px
             font-weight: 800
             font-size: 12px
-            line-height: 120% // 15/12
+            line-height: 110% // 15/12
             margin-left: 10px
             transition: .2s
+            padding: 0 2.5px
+        &:hover
+            background-color: #EBEBEB
+            border-color: #E1E1E1
         &.active
             border: none
             background-color: $secondary2

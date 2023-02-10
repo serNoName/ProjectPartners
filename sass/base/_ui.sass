@@ -693,6 +693,60 @@
     &:last-child
         &::after
             display: none
+    &__ava
+        overflow: hidden
+        grid-area: ava
+        width: fit-content
+        img
+            vertical-align: middle
+            border-radius: 50%
+        svg
+            path
+                fill: $primary
+    &-practitioner
+        &::before
+            background-color: #FF8C52
+        .row-card
+            &__ava
+                svg path
+                    fill: #FF8C52
+            &__role
+                color: #FF8C52
+                svg path
+                    fill: #FF8C52
+    &-junior
+        &::before
+            background-color: $neon
+        .row-card
+            &__ava
+                svg path
+                    fill: $neon
+            &__role
+                color: $neon
+                svg path
+                    fill: $neon
+    &-foundation
+        &::before
+            background-color: $yellow
+        .row-card
+            &__ava
+                svg path
+                    fill: $yellow
+            &__role
+                color: $yellow
+                svg path
+                    fill: $yellow
+    &-apprentice
+        &::before
+            background-color: $cyan
+        .row-card
+            &__ava
+                svg path
+                    fill: $cyan
+            &__role
+                color: $cyan
+                svg path
+                    fill: $cyan
     &-role
         .row-card
             &__ava
@@ -706,6 +760,7 @@
             &__item
                 &:nth-child(2)
                     flex-direction: row
+                    align-items: center
             &__list
                 padding-left: 45px
                 padding-right: 92px
@@ -729,23 +784,15 @@
         margin-bottom: 15px
         display: flex
         align-items: center
-    &__ava
-        overflow: hidden
-        margin-right: 8px
-        grid-area: ava
-        img
-            vertical-align: middle
-            border-radius: 50%
-        svg
-            path
-                fill: $primary
     &__profile
         display: grid
-        grid-template-columns: repeat(2, auto)
+        grid-template-columns: 48px auto
+        column-gap: 8px
         grid-template-areas: 'ava text''ava text''ava text'
         width: fit-content
         padding-right: 7px
         margin-left: 36px
+        min-width: 180px
     &__name
         color: $black
         font-weight: 800
@@ -771,11 +818,6 @@
         line-height: 18px
     &__rating
         margin-left: 4px
-    &__list
-        display: flex
-        justify-content: space-between
-        padding: 0 16px
-        column-gap: 28px
     &__item
         display: flex
         align-items: center
@@ -792,9 +834,13 @@
         &:first-child
             display: flex
             align-items: center
+            min-width: 93px
+        &:nth-of-type(3)
+            min-width: 120px
         &:nth-of-type(2)
             flex-direction: column
             align-items: start
+            min-width: 110px
         svg
             margin-right: 4px
     &__rate
@@ -814,6 +860,14 @@
             font-weight: 800
             font-size: 14px
             line-height: 18px
+    &__list
+        display: flex
+        justify-content: space-between
+        padding: 0 16px
+        column-gap: 28px
+        &-role
+            .row-card__item:first-child
+                min-width: 120px
     &__btn
         display: flex
         align-items: center
