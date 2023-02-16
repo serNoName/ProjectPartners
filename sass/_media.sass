@@ -79,21 +79,25 @@
             &.dropdown-triger
                 position: relative
                 width: fit-content
+                width: 100%
+                &::after
+                    display: none
                 &::before
                     position: absolute
                     content: ''
                     top: 24px
-                    right: -18px
+                    right: 0
                     border-color: transparent transparent $dark-grey transparent
                     border-style: solid
                     border-width: 0px 6px 7px 6px
                     border-radius: 4px
                     opacity: .8
-                    transition: transform .2s
+                    transition: transform .2s, border-color .2s
                     transform: rotate(180deg)
                 &:hover
                     &::before
                         transform: none
+                        border-color: transparent transparent $primary transparent
         &-close
             display: block
         &__dropdown
@@ -105,6 +109,9 @@
             padding: 0
             padding-left: 1em
             padding-top: 16px
+            background-color: transparent
+            border: none
+            box-shadow: none
             li
                 a
                     font-size: 18px
@@ -400,21 +407,25 @@
             &.dropdown-triger
                 position: relative
                 width: fit-content
+                width: 100%
                 &::before
                     position: absolute
                     content: ''
                     top: 26px
-                    right: -18px
+                    right: 0
                     border-color: transparent transparent $dark-grey transparent
                     border-style: solid
                     border-width: 0px 6px 7px 6px
                     border-radius: 4px
                     opacity: .8
-                    transition: transform .2s
+                    transition: transform .2s, color .2s
                     transform: rotate(180deg)
+                &::after
+                    display: none
                 &:hover
                     &::before
                         transform: none
+                        border-color: transparent transparent $primary transparent
         &-close
             display: block
         &__dropdown
@@ -426,6 +437,8 @@
             padding: 0
             padding-left: 1em
             padding-top: 16px
+            border: none
+            box-shadow: none
             li
                 a
                     font-size: 18px
@@ -855,22 +868,25 @@
             font-size: 22px
             &.dropdown-triger
                 position: relative
-                width: fit-content
+                width: 100%
+                &::after
+                    display: none
                 &::before
                     position: absolute
                     content: ''
                     top: 26px
-                    right: -18px
+                    right: 0
                     border-color: transparent transparent $dark-grey transparent
                     border-style: solid
                     border-width: 0px 6px 7px 6px
                     border-radius: 4px
                     opacity: .8
-                    transition: transform .2s
+                    transition: transform .2s, color .2s
                     transform: rotate(180deg)
                 &:hover
                     &::before
                         transform: none
+                        border-color: transparent transparent $primary transparent
         &-close
             display: block
         &__dropdown
@@ -879,12 +895,9 @@
             top: auto
             left: auto
             background: transparent
-            padding: 0
-            padding-left: 1em
-            padding-top: 16px
-            li
-                a
-                    font-size: 16px
+            border: none
+            box-shadow: none
+            padding: 16px 0 0 1em !important
         &::before
             display: none
     .promo
@@ -1424,6 +1437,10 @@
             display: flex
         &-close
             display: none !important
+        &-item
+            &.dropdown-triger::before
+                right: auto
+                left: -16px
     .promo
         padding-bottom: 50px
         &__title
