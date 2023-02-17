@@ -96,9 +96,15 @@
                     transition: transform .2s, border-color .2s
                     transform: rotate(180deg)
                 &:hover
+                    color: $primary
+                    &::before
+                        border-color: transparent transparent $primary transparent
+                &.active
                     &::before
                         transform: none
                         border-color: transparent transparent $primary transparent
+                    &:hover
+                        color: $primary
         &-close
             display: block
         &__dropdown
@@ -426,8 +432,10 @@
                     display: none
                 &:hover
                     &::before
-                        transform: none
                         border-color: transparent transparent $primary transparent
+                &.active
+                    &::before
+                        transform: none
         &-close
             display: block
         &__dropdown
@@ -887,6 +895,9 @@
                     transition: transform .2s, color .2s
                     transform: rotate(180deg)
                 &:hover
+                    &::before
+                        border-color: transparent transparent $primary transparent
+                &.active
                     &::before
                         transform: none
                         border-color: transparent transparent $primary transparent
