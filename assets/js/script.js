@@ -176,11 +176,19 @@ $(document).ready(function () {
         $(this).parent().parent().siblings('span.text').text(text);
     });
 
-    $('.nav-item-triger').hover(function () {
+
+    $('.nav-item-triger').mouseover(function () {
         $(this).children('.dropdown').stop(true, false).slideDown(200)
-    }, function () {
+    });
+    $('.nav-item-triger').mouseout(function () {
         $(this).children('.dropdown').stop(true, false).slideUp(200)
     });
+    if (screen.width <= 768) {
+        $('.nav-item-triger').off()
+        $('.nav-item-triger').mouseover( function () {
+            $(this).children('.nav__dropdown').css('display', 'flex');
+        })
+    }
 
     //filter rare dropdown
     $('.filter__rate-item').hover(function () {
