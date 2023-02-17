@@ -179,6 +179,7 @@ $(document).ready(function () {
 
     if (screen.width <= 1240) {
         $('.nav-item-triger').click( function () {
+            $('.nav__dropdown').slideUp(200).parent().removeClass('active')
             $(this).toggleClass('active').children().slideToggle(200)
         })
         $('.header__search-select').click( function () {
