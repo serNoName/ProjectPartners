@@ -169,6 +169,19 @@ $(document).ready(function () {
         });
     });
 
+    $('.header__search-link').click( function(e) {
+
+        const text  = $(this).children('.header__search-title').text()
+
+        $(this).parent().parent().siblings('span.text').text(text);
+    });
+
+    $('.nav-item-triger').hover(function () {
+        $(this).children('.dropdown').stop(true, false).slideDown(200)
+    }, function () {
+        $(this).children('.dropdown').stop(true, false).slideUp(200)
+    });
+
     //filter rare dropdown
     $('.filter__rate-item').hover(function () {
         $(this).addClass('active').children('.filter__rate-list-wrapper').stop(true, true).slideDown(200)

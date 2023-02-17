@@ -62,9 +62,16 @@
             &:hover
                 .header__search-title
                     color: $primary
+                .header__search-ico
+                    opacity: 1
+                    path
+                        fill: $primary
         &-ico
             opacity: .5
             grid-area: i
+            transition: opacity .2s
+            path
+                transition: fill .2s
         &-title
             grid-area: t
             white-space: nowrap
@@ -371,13 +378,14 @@
         cursor: pointer
         text-decoration: none
         white-space: nowrap
+        user-select: none
         &:hover
             color: $primary
-        &.dropdown-triger
+        &-triger
             &::after
                 position: absolute
                 content: ''
-                top: calc( 50% + 2px )
+                top: calc( 50% + 1px )
                 right: -12px
                 transform: translateY(-50%) rotate(180deg)
                 width: 0px
@@ -388,6 +396,11 @@
                 border-radius: 4px
                 transition: transform .2s, border-color .2s
             &:hover
+                &::after
+                    border-color: transparent transparent $primary transparent
+                    transform: translateY(-50%)
+            &.active
+                color: $primary
                 &::after
                     border-color: transparent transparent $primary transparent
                     transform: translateY(-50%)
