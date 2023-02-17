@@ -179,8 +179,18 @@ $(document).ready(function () {
 
     if (screen.width <= 1240) {
         $('.nav-item-triger').click( function () {
+            const isActive = $(this).hasClass('active');
+
+            console.log(isActive);
+
             $('.nav__dropdown').slideUp(200).parent().removeClass('active')
-            $(this).toggleClass('active').children().slideToggle(200)
+            if (isActive) {
+                $(this).removeClass('active').children().slideUp(200)
+                console.log(1);
+            } else {
+                console.log(2);
+                $(this).addClass('active').children().slideDown(200)
+            }
         })
         $('.header__search-select').click( function () {
             $(this).children('.header__search-dropdown').slideToggle(200)
@@ -241,7 +251,6 @@ $(document).ready(function () {
         let ele = $(e.target);
         if (!ele.hasClass('dropdown-triger-click') &&
             !ele.hasClass('text')) {
-                console.log('close drop');
             if (ele.hasClass('confirm__select-item')) {
                 $('.dropdown').slideUp(200);
             } else {
