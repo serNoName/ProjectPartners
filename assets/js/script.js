@@ -177,20 +177,21 @@ $(document).ready(function () {
     });
 
 
-    $('.nav-item-triger').mouseover(function () {
-        $(this).children('.dropdown').stop(true, false).slideDown(200)
+    $('.nav-item-triger').hover(function () {
+        $(this).children('.nav__dropdown').stop(true, false).slideDown(200)
+    }, function () {
+        $(this).children('.nav__dropdown').stop(true, false).slideUp(200)
     });
-    $('.nav-item-triger').mouseout(function () {
-        $(this).children('.dropdown').stop(true, false).slideUp(200)
-    });
-    if (screen.width <= 768) {
-        $('.nav-item-triger').off()
-        $('.nav-item-triger').mouseover( function () {
-            $(this).children('.nav__dropdown').css('display', 'flex');
-        })
-    }
 
-    //filter rare dropdown
+    // $('.nav-item-triger').click( function () {
+    //     console.log(1);
+    //     $(this).children('.nav__dropdown').slideDown(200);
+    // })
+    // if (screen.width <= 768) {
+    //     $('.nav-item-triger').off()
+    // }
+
+0    //filter rare dropdown
     $('.filter__rate-item').hover(function () {
         $(this).addClass('active').children('.filter__rate-list-wrapper').stop(true, true).slideDown(200)
     }, function () {
