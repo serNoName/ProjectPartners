@@ -179,9 +179,9 @@ $(document).ready(function () {
 
     $('.nav-item-triger').hover(function () {
         $(this).children('.nav__dropdown').stop(true, false).slideDown(200)
-    }, function () {
+    }/*, function () {
         $(this).children('.nav__dropdown').stop(true, false).slideUp(200)
-    });
+    }*/);
 
     // $('.nav-item-triger').click( function () {
     //     console.log(1);
