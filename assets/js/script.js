@@ -498,6 +498,34 @@ $(function () {
         }
         switchTabs()
     });
+
+    //switching steps in profile builder after trigger click
+    $('.builder__triger').click( function(e){
+        e.preventDefault();
+
+        const currentStep = parseInt($(this).parent().attr('data-step-content')); //get current step
+
+        $($(this).parent()).fadeOut(300, function(){ //hide current content
+            $(this).removeClass('active').next().fadeIn(300, function(){$(this).addClass('active');}); //show next content
+        })
+
+        $(`[data-step="${currentStep}"]`).removeClass('builder__step-active').addClass('builder__step-confirm').next().addClass('builder__step-active');
+    })
+    //switching steps in profile builder after step click
+    $('[data-step]').click( function(e) {
+        if (!$(this).hasClass('builder__step-confirm')) return 0; // cancel function if btn has not class '.builder__step-confirm'
+        e.preventDefault();
+
+        $(this).removeClass('builder__step-confirm').nextAll().removeClass('builder__step-active').removeClass('builder__step-confirm')
+        $(this).addClass('builder__step-active')
+
+        const currentStep = parseInt($(this).attr('data-step')); // get current index of step
+
+        $('.active[data-step-content]').stop(true, false).fadeOut(300, function() {
+            $(this).removeClass('active')
+            $(`[data-step-content="${currentStep}"]`).stop(true, false).fadeIn(300).addClass('active')
+        })
+    })
 });
 
 $('.prof__card-add').click(function () {
