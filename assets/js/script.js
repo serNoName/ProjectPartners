@@ -167,6 +167,7 @@ $(document).ready(function () {
         $(this).parents().children('.btn:not(.header__shortlist)').fadeOut(400, function () {
             $(this).parents().siblings('.header__profile').fadeIn(300).css('display', 'flex');
         });
+        $('.nav-item-no-login').fadeOut(400)
     });
 
     $('.header__search-link').click( function(e) {

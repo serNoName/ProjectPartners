@@ -386,6 +386,8 @@
         user-select: none
         &:hover
             color: $primary
+        &-no-login
+            display: none
         &-triger
             .text
                 position: relative
@@ -401,7 +403,7 @@
                     border-style: solid
                     border-width: 0px 5px 5px 5px
                     border-radius: 4px
-                    transition: transform .2s, border-color .2s
+                    transition: transform .2s, border-color .2s, padding-bottom .19s
             &:hover
                 .text
                     &::after
@@ -411,6 +413,7 @@
                     border-color: transparent transparent $primary transparent
             &.active
                 color: $primary
+                padding-bottom: 8px
                 &::after
                     border-color: transparent transparent $primary transparent
                     transform: translateY(-50%)
