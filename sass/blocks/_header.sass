@@ -105,6 +105,7 @@
             padding-left: 24px
             padding-right: 38px
             cursor: pointer
+            user-select: none
             &::before
                 position: absolute
                 content: ''
@@ -131,6 +132,9 @@
                 width: 1px
                 opacity: .2
                 background-color: $dark-grey
+            &.active
+                &::before
+                    transform: translateY(-50%) rotate(0deg)
         &-dropdown
             position: absolute
             z-index: 2

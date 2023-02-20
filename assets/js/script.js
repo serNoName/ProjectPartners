@@ -181,19 +181,12 @@ $(document).ready(function () {
         $('.nav-item-triger').click( function () {
             const isActive = $(this).hasClass('active');
 
-            console.log(isActive);
-
             $('.nav__dropdown').slideUp(200).parent().removeClass('active')
             if (isActive) {
                 $(this).removeClass('active').children().slideUp(200)
-                console.log(1);
             } else {
-                console.log(2);
                 $(this).addClass('active').children().slideDown(200)
             }
-        })
-        $('.header__search-select').click( function () {
-            $(this).children('.header__search-dropdown').slideToggle(200)
         })
     } else {
         $('.nav-item-triger').hover(function () {
@@ -201,6 +194,11 @@ $(document).ready(function () {
         }, function () {
             $(this).children('.nav__dropdown').stop(true, false).slideUp(200)
         });
+    }
+    if (screen.width <= 991) {
+        $('.header__search-select').click( function () {
+            $(this).toggleClass('active').children('.header__search-dropdown').slideToggle(200)
+        })
     }
 
     //filter rare dropdown
