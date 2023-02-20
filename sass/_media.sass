@@ -1202,6 +1202,15 @@
                     .filter__rate-list-wrapper
                         left: 0
                         transform: translateY(-3px)
+        &__label
+            &:hover
+                .filter__checkmark
+                    border: 1px solid #343f48
+                    opacity: .5
+                    background-color: transparent
+                    &::before
+                        opacity: 0
+
     .page
         &__body
             display: flex
