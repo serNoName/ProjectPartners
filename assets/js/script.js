@@ -164,8 +164,8 @@ $(document).ready(function () {
     $('.header__login > .btn').click(function (e) {
         e.preventDefault();
 
-        $(this).parents().children('.btn:not(.header__shortlist)').fadeOut(400, function () {
-            $(this).parents().siblings('.header__profile').fadeIn(300).css('display', 'flex');
+        $('.nav-mobile > .header__login').fadeOut(400, function () {
+            $('.nav-mobile > .header__profile').fadeIn(300).css('display', 'flex');
         });
         $('.nav-item-no-login').fadeOut(400)
     });
@@ -235,7 +235,7 @@ $(document).ready(function () {
     })
 
     //dropdown hover
-    $('.dropdown-triger').hover(function () {
+    $('.dropdown-triger').on('hover',function () {
         $(this).children('.dropdown').stop(true, false).slideDown(200)
     }, function () {
         $(this).children('.dropdown').stop(true, false).slideUp(200)
@@ -505,10 +505,10 @@ $(function () {
         const currentStep = parseInt($(this).parent().attr('data-step-content')); //get current step
 
         $($(this).parent()).fadeOut(300, function(){ //hide current content
-            $(this).removeClass('active').next().fadeIn(300, function(){$(this).addClass('active');}); //show next content
+            $(this).removeClass('active').next().fadeIn(300, function(){$(this).addClass('active').css('display', 'flex');}); //show next content
         })
 
-        $(`[data-step="${currentStep}"]`).removeClass('builder__step-active').addClass('builder__step-confirm').next().addClass('builder__step-active');
+        $(`[data-step="${currentStep}"]`).removeClass('builder__step-active').next().addClass('builder__step-active').prevAll().removeClass('builder__step-active').addClass('builder__step-confirm');
     })
     //switching steps in profile builder after step click
     $('[data-step]').click( function(e) {
@@ -516,6 +516,8 @@ $(function () {
         e.preventDefault();
 
         $(this).removeClass('builder__step-confirm').nextAll().removeClass('builder__step-active').removeClass('builder__step-confirm')
+        $(this).prevAll().removeClass('builder__step-active').addClass('builder__step-confirm')
+
         $(this).addClass('builder__step-active')
 
         const currentStep = parseInt($(this).attr('data-step')); // get current index of step
@@ -524,6 +526,16 @@ $(function () {
             $(this).removeClass('active')
             $(`[data-step-content="${currentStep}"]`).stop(true, false).fadeIn(300).addClass('active')
         })
+    })
+
+    //builder input
+    $('.input-focus').focus( function() {
+        $(this).siblings('.label-focus').addClass('active')
+    })
+    $('.input-focus').focusout( function() {
+        if (!$(this).val()) {
+            $(this).siblings('.label-focus').removeClass('active')
+        }
     })
 });
 
@@ -702,3 +714,10 @@ function scroll() {
 
     paralax.style.transform = "translateY(" + (move - 300) + "px)";
 };
+
+
+// if screen width <= 480 off next functions
+
+if (screen.width <= 480) {
+    $('.header__profile-select.dropdown-triger').off('hover')
+}

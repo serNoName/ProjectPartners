@@ -70,6 +70,18 @@
         position: fixed
         transition: transform .4s
         transform: translateX(-450px)
+        overflow-y: auto
+        scrollbar-width: thin
+        scrollbar-color: $primary transparent
+        &::-webkit-scrollbar
+            width: 6px
+        &::-webkit-scrollbar-track
+            background-color: transparent
+        &::-webkit-scrollbar-thumb
+            background-color: $primary
+            border-radius: 8px
+        &::-webkit-scrollbar-button
+            background-color: transparent
         &.active
             transform: none
         &-item
@@ -381,6 +393,7 @@
         &__search
             width: fit-content
             height: 36px
+            min-height: 36px
             &-desk
                 display: none
             &-mobi
@@ -421,6 +434,18 @@
         position: fixed
         transition: transform .4s
         transform: translateX(-450px)
+        overflow-y: auto
+        scrollbar-width: thin
+        scrollbar-color: $primary transparent
+        &::-webkit-scrollbar
+            width: 6px
+        &::-webkit-scrollbar-track
+            background-color: transparent
+        &::-webkit-scrollbar-thumb
+            background-color: $primary
+            border-radius: 8px
+        &::-webkit-scrollbar-button
+            background-color: transparent
         &.active
             transform: none
         &-item
@@ -860,10 +885,12 @@
         &__search
             width: fit-content
             height: 36px
+            min-height: 36px
             &-desk
                 display: none
             &-mobi
                 display: flex
+                margin-top: 36px
             &-select
                 padding-left: 12px
                 padding-right: 26px
@@ -900,10 +927,22 @@
         position: fixed
         transition: transform .4s
         //transform: none
+        overflow-y: auto
+        scrollbar-width: thin
+        scrollbar-color: $primary transparent
+        &::-webkit-scrollbar
+            width: 6px
+        &::-webkit-scrollbar-track
+            background-color: transparent
+        &::-webkit-scrollbar-thumb
+            background-color: $primary
+            border-radius: 8px
+        &::-webkit-scrollbar-button
+            background-color: transparent
         &.active
             transform: translateX(520px)
         &-item
-            font-size: 22px
+            font-size: 20px
             &.nav-item-triger
                 position: relative
                 width: 100%
@@ -1489,7 +1528,7 @@
             &__shortlist
                 display: flex
                 width: fit-content
-                margin-top: 24px
+                margin-top: 20px
                 img
                     margin-right: 6px
                 &:hover
@@ -1705,8 +1744,16 @@
         &__login
             display: none
         &__profile
+            align-items: start
             &-desk
                 display: none !important
+            &-select
+                color: $dark-grey
+                font-size: 18px
+                flex-direction: column
+                align-items: start
+                &::before
+                    display: none
         &__logo
             img
                 width: 180px
@@ -1720,21 +1767,30 @@
             &-input
                 padding: 0 4px
                 padding-left: 6px
+        &__dropdown
+            position: static
+            display: block !important
+            padding: 0
+            padding-left: 0.5em
+            background-color: transparent
+            margin-top: 16px
     .nav
         width: 100vw
         &-mobile
             display: flex
             flex-direction: column-reverse
+            row-gap: 36px
+            margin-top: 20px
         .header
             &__login
                 display: flex
+                margin: 0
             &__sign
                 display: flex
             &__shortlist
-                margin-bottom: 8px
+                margin: 0
                 display: flex
                 width: fit-content
-                margin-top: 12px
     .promo
         &__title
             font-size: 32px
