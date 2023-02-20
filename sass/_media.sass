@@ -105,6 +105,9 @@
                         border-color: transparent transparent $primary transparent
                     &:hover
                         color: $primary
+                .text
+                    &::after
+                        display: none
         &-close
             display: block
         &__dropdown
@@ -114,14 +117,18 @@
             left: auto
             background: transparent
             padding: 0
-            padding-left: 1em
-            padding-top: 16px
+            padding-left: .5em
+            padding-top: 12px
             background-color: transparent
             border: none
             box-shadow: none
-            li
-                a
-                    font-size: 18px
+            &-title
+                font-size: 16px
+            &-descr
+                font-size: 12px
+                white-space: normal
+                br
+                    display: none
         &::before
             display: none
     .promo
@@ -383,6 +390,7 @@
                 padding-right: 26px
                 &::before
                     right: 10px
+                    transition: .3s
                 &:hover
                     &::before
                         transform: translateY(-50%) rotate(180deg)
@@ -442,6 +450,10 @@
                 &.active
                     &::before
                         transform: none
+                        border-color: transparent transparent $primary transparent
+                .text
+                    &::after
+                        display: none
         &-close
             display: block
         &__dropdown
@@ -451,13 +463,17 @@
             left: auto
             background: transparent
             padding: 0
-            padding-left: 1em
-            padding-top: 16px
+            padding-left: .5em
+            padding-top: 12px
             border: none
             box-shadow: none
-            li
-                a
-                    font-size: 18px
+            &-title
+                font-size: 16px
+            &-descr
+                font-size: 12px
+                white-space: normal
+                br
+                    display: none
         &::before
             display: none
     .promo
@@ -821,7 +837,6 @@
             padding: 0 15px
     .header
         padding: 0
-
         &__wrapper
             padding: 12px 0
             position: relative
@@ -854,6 +869,7 @@
                 padding-right: 26px
                 &::before
                     right: 10px
+                    transition: .3s
                 &:hover
                     &::before
                         transform: translateY(-50%) rotate(180deg)
@@ -913,6 +929,9 @@
                     &::before
                         transform: none
                         border-color: transparent transparent $primary transparent
+                .text
+                    &::after
+                        display: none
         &-close
             display: block
         &__dropdown
@@ -923,7 +942,14 @@
             background: transparent
             border: none
             box-shadow: none
-            padding: 16px 0 0 1em !important
+            padding: 12px 0 0 .5em !important
+            &-title
+                font-size: 14px
+            &-descr
+                font-size: 12px
+                white-space: normal
+                br
+                    display: none
         &::before
             display: none
     .promo
