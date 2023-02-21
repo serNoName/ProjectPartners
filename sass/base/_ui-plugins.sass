@@ -1,0 +1,86 @@
+.ui // jquary
+    &-datepicker
+        background-color: #fff
+        box-shadow: 0px 4px 4px rgba(0,0,0,.12)
+        border-radius: 8px 8px 4px 4px
+        border: 1px solid $light-grey
+        table
+            margin-bottom: 0.2em
+        &-header
+            background-color: $light-grey
+            border-radius: 4px 4px 0 0
+        &-title
+            color: $dark-grey
+        &-calendar
+            border: 1px solid rgba(52,63,72,.1)
+            border-top: none
+            thead
+                position: relative
+                &:before
+                    position: absolute
+                    content: ''
+                    bottom: 0
+                    left: 0
+                    height: 1px
+                    width: 100%
+                    background-color: $dark-grey
+                    opacity: 0.1
+                tr th
+                    color: $dark-grey
+                    &:not(:last-child)
+                        border-right: 1px solid rgba(52,63,72,.1)
+            tbody
+                td
+                    border-right: 1px solid rgba(52,63,72,.1)
+                tr
+                    &:not(:last-child)
+                        border-bottom: 1px solid rgba(52,63,72,.1)
+                //     td
+                //         a
+                //             border-right: 1px solid rgba(52,63,72,.1)
+                //         &:last-child
+                //             a
+                //                 border: none
+                //     &:first-child
+                //         td
+                //             &:first-child
+                //                 a
+                //                     border-left: 1px solid rgba(52,63,72,.1)
+        &-prev, &-next
+            position: relative
+            cursor: pointer
+            &:before
+                position: absolute
+                content: ''
+                top: 50%
+                left: 50%
+                border: 3.5px solid $dark-grey
+                border-bottom: none
+                border-right: none
+                width: 40%
+                height: 40%
+                border-radius: 2px
+                transition: transform .2s, opacity .2s
+                opacity: .6
+        &-prev
+            &:before
+                transform: translate(-50%, -50%) rotate(-45deg)
+            &:hover
+                left: 2px
+                top: 2px
+            &-hover
+                &:before
+                    border-color: $primary
+                    opacity: 1
+        &-next
+            &:before
+                transform: translate(-50%, -50%) rotate(135deg)
+            &:hover
+                right: 2px
+                top: 2px
+            &-hover
+                &:before
+                    border-color: $primary
+                    opacity: 1
+    &-state-default
+        color: $primary

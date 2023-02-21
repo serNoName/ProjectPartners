@@ -170,16 +170,16 @@ $(document).ready(function () {
         $('.nav-item-no-login').fadeOut(400)
     });
 
-    $('.header__search-link').click( function(e) {
+    $('.header__search-link').click(function (e) {
 
-        const text  = $(this).children('.header__search-title').text()
+        const text = $(this).children('.header__search-title').text()
 
         $(this).parent().parent().siblings('span.text').text(text);
     });
 
 
     if (screen.width <= 1240) {
-        $('.nav-item-triger').click( function () {
+        $('.nav-item-triger').click(function () {
             const isActive = $(this).hasClass('active');
 
             $('.nav__dropdown').slideUp(200).parent().removeClass('active')
@@ -197,7 +197,7 @@ $(document).ready(function () {
         });
     }
     if (screen.width <= 991) {
-        $('.header__search-select').click( function () {
+        $('.header__search-select').click(function () {
             $(this).toggleClass('active').children('.header__search-dropdown').slideToggle(250)
         })
     }
@@ -235,7 +235,7 @@ $(document).ready(function () {
     })
 
     //dropdown hover
-    $('.dropdown-triger').on('hover',function () {
+    $('.dropdown-triger').on('hover', function () {
         $(this).children('.dropdown').stop(true, false).slideDown(200)
     }, function () {
         $(this).children('.dropdown').stop(true, false).slideUp(200)
@@ -314,7 +314,11 @@ $('.form__recovery-triger').click(function () {
 // confirm window
 $('.confirm__select-item').click(function () {
     $(this).addClass('active').siblings().removeClass('active');
-    $(this).parent().siblings('span').removeClass('placeholder').text($(this).text())
+    if ($(this).parent().parent().hasClass('builder__availability-select')) {
+        $(this).parent().siblings('.label-focus').addClass('active');
+    }
+    $(this).parent().siblings('span.text').removeClass('placeholder').text($(this).text())
+
 });
 
 
@@ -499,19 +503,21 @@ $(function () {
     });
 
     //switching steps in profile builder after trigger click
-    $('.builder__triger').click( function(e){
+    $('.builder__triger').click(function (e) {
         e.preventDefault();
 
         const currentStep = parseInt($(this).parent().attr('data-step-content')); //get current step
 
-        $($(this).parent()).fadeOut(300, function(){ //hide current content
-            $(this).removeClass('active').next().fadeIn(300, function(){$(this).addClass('active').css('display', 'flex');}); //show next content
+        $($(this).parent()).fadeOut(300, function () { //hide current content
+            $(this).removeClass('active').next().fadeIn(300, function () {
+                $(this).addClass('active').css('display', 'flex');
+            }); //show next content
         })
 
         $(`[data-step="${currentStep}"]`).removeClass('builder__step-active').next().addClass('builder__step-active').prevAll().removeClass('builder__step-active').addClass('builder__step-confirm');
     })
     //switching steps in profile builder after step click
-    $('[data-step]').click( function(e) {
+    $('[data-step]').click(function (e) {
         if (!$(this).hasClass('builder__step-confirm')) return 0; // cancel function if btn has not class '.builder__step-confirm'
         e.preventDefault();
 
@@ -522,19 +528,51 @@ $(function () {
 
         const currentStep = parseInt($(this).attr('data-step')); // get current index of step
 
-        $('.active[data-step-content]').stop(true, false).fadeOut(300, function() {
+        $('.active[data-step-content]').stop(true, false).fadeOut(300, function () {
             $(this).removeClass('active')
             $(`[data-step-content="${currentStep}"]`).stop(true, false).fadeIn(300).addClass('active')
         })
     })
 
-    //builder input
-    $('.input-focus').focus( function() {
-        $(this).siblings('.label-focus').addClass('active')
-    })
-    $('.input-focus').focusout( function() {
-        if (!$(this).val()) {
-            $(this).siblings('.label-focus').removeClass('active')
+    //counter
+    $(".increment").click(function () {
+        let input = $(this).siblings('input')
+        let count = parseInt(input.val())
+
+        count++
+        input.val(count)
+    });
+
+    $(".decrement").click(function () {
+        let input = $(this).siblings('input')
+        let count = parseInt(input.val())
+
+        count = count >= 1 ? count - 1 : 0;
+        input.val(count)
+    });
+
+    $('.onlyInteger').on('keypress', function (e) {
+        // get the character code from the event object
+        const charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
+        // convert the character code to a string
+        const charStr = String.fromCharCode(charCode);
+        // check if the character is a digit
+        if (!charStr.match(/^[0-9]+$/)) {
+            // if it's not a digit, prevent the default action
+            e.preventDefault();
+        }
+    });
+
+    $('.experiance-btn-switch').on('click', function () {
+        $('.builder__experiance-inner.active').fadeOut(300, function () {
+            $(this).removeClass('active').siblings().fadeIn(300).addClass('active');
+        })
+        if(!$('.builder__experiance-inner').last().hasClass('active')) {
+            $('.builder__triger').attr('disabled', ' ');
+            $('.builder__step').attr('disabled', ' ');
+        } else {
+            $('.builder__triger').removeAttr('disabled');
+            $('.builder__step').removeAttr('disabled');
         }
     })
 });
@@ -721,3 +759,28 @@ function scroll() {
 if (screen.width <= 480) {
     $('.header__profile-select.dropdown-triger').off('hover')
 }
+
+
+//custom calendar
+$('.input-date').datepicker();
+
+//builder input
+const inputs = $('.input-focus');
+
+$.each(inputs, function (i, elm) {
+    if ($(elm).val()) {
+        $(elm).siblings('.label-focus').addClass('active')
+    }
+});
+
+$('.input-focus').focus(function () {
+    $(this).siblings('.label-focus').addClass('active')
+})
+
+$('.input-focus').focusout(function () {
+    setTimeout(() => {
+        if (!$(this).val()) {
+            $(this).siblings('.label-focus').removeClass('active')
+        }
+    }, 100);
+})

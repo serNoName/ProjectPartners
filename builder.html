@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="assets/css/normalize.min.css">
     <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
@@ -418,7 +419,7 @@
                                 <div class="builder__descr">Add short description to your profile</div>
                             </div>
                             <div class="builder__description">
-                                <textarea class="builder__description-input" maxlength="1000" height="220" placeholder="Write..."></textarea>
+                                <textarea class="builder__description-input" maxlength="1000" height="220" placeholder="Type..."></textarea>
                                 <div class="builder__main-info__box builder__main-info__info">
                                     <img src="assets/img/ico/info-grey.svg" alt="ico">
                                     Write a description within 1000 symbols
@@ -476,6 +477,78 @@
                                 <div class="builder__label">Step 4</div>
                                 <div class="builder__descr">Choose up to 5 disciplines and define the primary one</div>
                             </div>
+                            <div class="builder__disciplines">
+                                <div class="builder__disciplines-list">
+                                    <div class="builder__disciplines-row">
+                                        <div class="builder__disciplines-col">
+                                            <span class="text">UX/UI Designer</span>
+                                            <span class="label">Primary</span>
+                                        </div>
+                                        <div class="builder__disciplines-col">
+                                            <button class="remove">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="builder__disciplines-row">
+                                        <div class="builder__disciplines-col">
+                                            <span class="text">Graphic Designer</span>
+                                        </div>
+                                        <div class="builder__disciplines-col">
+                                            <button class="set">Set as primary</button><button class="remove">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="builder__disciplines-row">
+                                        <div class="builder__disciplines-col">
+                                            <span class="text">Frontend Developer</span>
+                                        </div>
+                                        <div class="builder__disciplines-col">
+                                            <button class="set">Set as primary</button><button class="remove">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="builder__disciplines-tags">
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/code.svg" alt="ico" width="16" height="16">
+                                        <span class="text">Project Manager</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/code.svg" alt="ico" width="16" height="16">
+                                        <span class="text">Business Analyst</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/code.svg" alt="ico" width="16" height="16">
+                                        <span class="text">PMO</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/code.svg" alt="ico" width="16" height="16">
+                                        <span class="text">Program Manager</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/code.svg" alt="ico" width="16" height="16">
+                                        <span class="text">Agile/Scrum master</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/code.svg" alt="ico" width="16" height="16">
+                                        <span class="text">Developer</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/code.svg" alt="ico" width="16" height="16">
+                                        <span class="text">Business Architect</span>
+                                    </button>
+                                </div>
+
+                                <div class="confirm__select dropdown-triger-click builder__availability-select">
+                                    <span class="builder__main-info__label label-focus">Choose from the full list</span>
+                                    <span class="text"></span>
+                                    <ul class="confirm__select-list dropdown">
+                                        <li class="confirm__select-item">Busy</li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time</li>
+                                        <li class="confirm__select-item">Busy, but ready to </li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time</li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time Busy, but ready to</li>
+                                    </ul>
+                                </div>
+                            </div>
 
                             <button class="btn builder__btn btn__continue builder__triger">Continue</button>
                         </div>
@@ -484,7 +557,33 @@
                             <div class="builder__row">
                                 <div class="builder__label">Step 5</div>
                                 <div class="builder__descr">Set up your availability for the next project</div>
-
+                            </div>
+                            <div class="builder__availability">
+                                <div class="confirm__select dropdown-triger-click builder__availability-select">
+                                    <span class="builder__main-info__label label-focus">Availability</span>
+                                    <span class="text"></span>
+                                    <ul class="confirm__select-list dropdown">
+                                        <li class="confirm__select-item">Busy</li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time</li>
+                                        <li class="confirm__select-item">Busy, but ready to </li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time</li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time Busy, but ready to</li>
+                                    </ul>
+                                </div>
+                                <div class="builder__availability-inner">
+                                    <div class="counter builder__availability-counter">
+                                        <button type="button" class="decrement">
+                                            <img src="assets/img/ico/minus.svg" alt="minus" width="16" height="16">
+                                        </button>
+                                        <input class="onlyInteger" type="text" value="0" maxlength="3">
+                                        <button type="button" class="increment">
+                                            <img src="assets/img/ico/plus.svg" alt="plus" width="16" height="16">
+                                        </button>
+                                    </div>
+                                    <div class="builder__availability-text">
+                                        weeks from now
+                                    </div>
+                                </div>
                             </div>
                             <button class="btn builder__btn btn__continue builder__triger">Continue</button>
                         </div>
@@ -494,7 +593,79 @@
                                 <div class="builder__label">Step 6</div>
                                 <div class="builder__descr">Choose up to 10 superpowers and define two primary ones
                                 </div>
+                            </div>
+                            <div class="builder__disciplines">
+                                <div class="builder__disciplines-list">
+                                    <div class="builder__disciplines-row">
+                                        <div class="builder__disciplines-col">
+                                            <span class="text">Figma Master</span>
+                                            <span class="label">Primary</span>
+                                        </div>
+                                        <div class="builder__disciplines-col">
+                                            <button class="remove">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="builder__disciplines-row">
+                                        <div class="builder__disciplines-col">
+                                            <span class="text">Photoshop God</span>
+                                            <span class="label">Primary</span>
+                                        </div>
+                                        <div class="builder__disciplines-col">
+                                            <button class="remove">Remove</button>
+                                        </div>
+                                    </div>
+                                    <div class="builder__disciplines-row">
+                                        <div class="builder__disciplines-col">
+                                            <span class="text">Expert of UX</span>
+                                        </div>
+                                        <div class="builder__disciplines-col">
+                                            <button class="set">Set as primary</button><button class="remove">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="builder__superpower-tags">
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/lightning-purple.svg" alt="ico" width="12" height="12">
+                                        <span class="text">Guru of animations</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/lightning-purple.svg" alt="ico" width="12" height="12">
+                                        <span class="text">Landing page killer</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/lightning-purple.svg" alt="ico" width="12" height="12">
+                                        <span class="text">MVP of UX</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/lightning-purple.svg" alt="ico" width="12" height="12">
+                                        <span class="text">Fast concept creator</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/lightning-purple.svg" alt="ico" width="12" height="12">
+                                        <span class="text">Master of UI</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/lightning-purple.svg" alt="ico" width="12" height="12">
+                                        <span class="text">Agile master</span>
+                                    </button>
+                                    <button class="builder__disciplines-tag">
+                                        <img src="assets/img/ico/lightning-purple.svg" alt="ico" width="12" height="12">
+                                        <span class="text">Prototyping Maestro</span>
+                                    </button>
+                                </div>
+
+                                <div class="confirm__select dropdown-triger-click builder__availability-select">
+                                    <span class="builder__main-info__label label-focus">Choose from the full list</span>
+                                    <span class="text"></span>
+                                    <ul class="confirm__select-list dropdown">
+                                        <li class="confirm__select-item">Busy</li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time</li>
+                                        <li class="confirm__select-item">Busy, but ready to </li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time</li>
+                                        <li class="confirm__select-item">Busy, but ready to start within some time Busy, but ready to</li>
+                                    </ul>
+                                </div>
                             </div>
                             <button class="btn builder__btn btn__continue builder__triger">Continue</button>
                         </div>
@@ -503,7 +674,138 @@
                             <div class="builder__row">
                                 <div class="builder__label">Step 7</div>
                                 <div class="builder__descr">Tell about your previous experience</div>
-
+                            </div>
+                            <div class="builder__experiance">
+                                <div class="builder__experiance-inner active">
+                                    <div class="builder__experiance-items">
+                                        <div class="exp-card">
+                                            <div class="exp-card__header">
+                                                <div class="exp-card__col">
+                                                    <div class="exp-card__date exp-card__no-date">
+                                                        From
+                                                    </div>
+                                                    <div class="exp-card__date">
+                                                        <span class="month">Dec</span>, <span class="year">2022</span>
+                                                    </div>
+                                                </div>
+                                                <div class="exp-card__col">
+                                                    <div class="exp-card__title">
+                                                        UX/UI Designer
+                                                    </div>
+                                                    <div class="exp-card__subtitle">
+                                                        Company name
+                                                    </div>
+                                                </div>
+                                                <button class="exp-card__edit experiance-btn-switch">
+                                                    <img src="assets/img/ico/pen.svg" alt="edit" width="16" height="16">
+                                                </button>
+                                            </div>
+                                            <p class="exp-card__footer">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fugit tenetur fuga, est magni tempore nobis repellendus architecto nisi quasi ex natus cumque ducimus? Minus aperiam repudiandae obcaecati veniam. Ipsum!
+                                            </p>
+                                        </div>
+                                        <div class="exp-card">
+                                            <div class="exp-card__header">
+                                                <div class="exp-card__col">
+                                                    <div class="exp-card__date">
+                                                        <span class="month">Jun</span>, <span class="year">2020</span>
+                                                    </div>
+                                                    <div class="exp-card__date">
+                                                        <span class="month">Dec</span>, <span class="year">2022</span>
+                                                    </div>
+                                                </div>
+                                                <div class="exp-card__col">
+                                                    <div class="exp-card__title">
+                                                        Graphic Designer
+                                                    </div>
+                                                    <div class="exp-card__subtitle">
+                                                        Company name
+                                                    </div>
+                                                </div>
+                                                <button class="exp-card__edit experiance-btn-switch">
+                                                    <img src="assets/img/ico/pen.svg" alt="edit" width="16" height="16">
+                                                </button>
+                                            </div>
+                                            <p class="exp-card__footer">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fugit tenetur fuga, est magni tempore nobis repellendus architecto nisi quasi ex natus cumque ducimus? Minus aperiam repudiandae obcaecati veniam. Ipsum!
+                                            </p>
+                                        </div>
+                                        <div class="exp-card">
+                                            <div class="exp-card__header">
+                                                <div class="exp-card__col">
+                                                    <div class="exp-card__date">
+                                                        <span class="month">Apr</span>, <span class="year">2018</span>
+                                                    </div>
+                                                    <div class="exp-card__date">
+                                                        <span class="month">Jun</span>, <span class="year">2022</span>
+                                                    </div>
+                                                </div>
+                                                <div class="exp-card__col">
+                                                    <div class="exp-card__title">
+                                                        Frontend Developer
+                                                    </div>
+                                                    <div class="exp-card__subtitle">
+                                                        Company name
+                                                    </div>
+                                                </div>
+                                                <button class="exp-card__edit experiance-btn-switch">
+                                                    <img src="assets/img/ico/pen.svg" alt="edit" width="16" height="16">
+                                                </button>
+                                            </div>
+                                            <p class="exp-card__footer">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fugit tenetur fuga, est magni tempore nobis repellendus architecto nisi quasi ex natus cumque ducimus? Minus aperiam repudiandae obcaecati veniam. Ipsum!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <button class="builder__experiance-btn experiance-btn-switch">Add experience</button>
+                                </div>
+                                <div class="builder__experiance-inner ">
+                                    <div class="builder__experiance-inputs">
+                                        <div class="builder__main-info__item">
+                                            <label for="builderInput188" class="builder__main-info__label label-focus">
+                                                Discipline
+                                            </label>
+                                            <input id="builderInput188" type="text" class="builder__main-info__input input-focus" required>
+                                        </div>
+                                        <div class="builder__main-info__item">
+                                            <label for="builderInput189" class="builder__main-info__label label-focus">
+                                                Company name
+                                            </label>
+                                            <input id="builderInput189" type="text" class="builder__main-info__input input-focus" required>
+                                        </div>
+                                        <div class="input-date__wrapper">
+                                            <label for="dataPicker1" class="input-date__label label-focus">
+                                                Discipline
+                                            </label>
+                                            <input id="dataPicker1" class="input-date input-focus" type="text">
+                                        </div>
+                                        <div class="input-date__wrapper">
+                                            <label for="dataPicker2" class="input-date__label label-focus">
+                                                Ending date
+                                            </label>
+                                            <input id="dataPicker2" class="input-date input-focus" type="text">
+                                        </div>
+                                    </div>
+                                    <label class="check builder__experiance-check">
+                                        <input class="check__input" type="checkbox">
+                                        <span class="check__box"></span>
+                                        Work till now
+                                    </label>
+                                    <div class="builder__main-info__item builder__main-info__item-textarea">
+                                        <label for="builderInput18848" class="builder__main-info__label label-focus">
+                                            Short description
+                                        </label>
+                                        <textarea id="builderInput18848" type="text" class="builder__main-info__input input-focus" required maxlength="600"></textarea>
+                                    </div>
+                                    <div class="builder__main-info__box builder__main-info__info">
+                                        <img src="assets/img/ico/info-grey.svg" alt="ico">
+                                        Write a description within 600 symbols
+                                    </div>
+                                    <div class="builder__experiance-btns">
+                                        <button type="button" class="builder__experiance-btn experiance-btn-switch">Cancel</button>
+                                        <button type="button" class="builder__experiance-btn experiance-btn-switch">Save</button>
+                                    </div>
+                                </div>
                             </div>
                             <button class="btn builder__btn btn__continue builder__triger">Continue</button>
                         </div>
@@ -655,6 +957,7 @@
     <script src="assets/js/jquery-3.6.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
