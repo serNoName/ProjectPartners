@@ -132,6 +132,7 @@
         height: 23px
         margin-right: 8px
         white-space: nowrap
+        align-self: center
     &__descr
         display: flex
         align-items: center
@@ -236,6 +237,8 @@
             cursor: text
             transition: font-size .2s, transform .2s
             user-select: none
+            word-wrap: anywhere
+            padding-right: 4px
             span
                 color: $primary
             &.active
@@ -367,6 +370,15 @@
             display: flex
             justify-content: space-between
         &-col
+            &:first-child
+                flex-grow: 1
+            &:last-child
+                display: flex
+                column-gap: 12px
+                row-gap: 4px
+                flex-wrap: wrap
+                justify-content: end
+                // width: min-content
             .text
                 font-size: 14px
                 line-height: 128.571429% // 18/14
@@ -393,9 +405,9 @@
                 font-weight: 800
                 cursor: pointer
                 transition: color .2s, filter .2s
+                white-space: nowrap
             .set
                 color: $primary
-                margin-right: 12px
                 &:hover
                     color: $mid-primary
             .remove

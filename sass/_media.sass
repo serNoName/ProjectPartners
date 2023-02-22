@@ -854,6 +854,15 @@
     .chat-buble
         bottom: 40px
         right: 40px
+    .check
+        &__input
+            &:hover ~ .check__box
+                background-color: #fff
+                border-color: rgba(52,63,72,.5)
+            &:hover
+                &:checked ~ .check__box
+                    background-color: $mid-primary
+                    border-color: $mid-primary
     .container
         width: 556px
     .body__fuild-container
@@ -1499,6 +1508,31 @@
             height: 48px
         &__inner
             padding-bottom: 48px
+        &__disciplines
+            margin-bottom: 36px
+            &-tag
+                padding: 6px 8px
+                height: 28px
+                border-radius: 10px
+            &-tags
+                gap: 6px
+            &-col
+                &:last-child
+                    justify-content: start
+                &:first-child
+                    width: 100%
+                    display: inline-block
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    white-space: nowrap
+            &-row
+                flex-direction: column
+                row-gap: 2px
+        &__availability
+            &-select
+                display: grid
+                .text
+                    padding-right: 8px
 @media (max-width: 576px)
     .container
         width: 460px
@@ -1744,6 +1778,7 @@
     .builder
         &__wrapper
             flex-direction: column
+            min-height: auto
         &__title
             font-size: 36px
             line-height: 1
@@ -1777,7 +1812,18 @@
                 margin-bottom: 16px
             &__inputs
                 margin-bottom: 36px
-
+        &__description
+            margin-bottom: 36px
+        &__address
+            margin-bottom: 36px
+        &__availability
+            margin-bottom: 36px
+        &__experiance
+            margin-bottom: 36px
+        &__online
+            display: flex
+            flex-direction: column
+            margin-bottom: 36px
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -2177,9 +2223,28 @@
                 font-size: 14px
                 height: 32px
                 padding: 0 12px
+        &__address
+            .builder__main-info__info
+                font-size: 10px
+        &__disciplines
+            &-tag
+                .text
+                    font-size: 12px
+                img
+                    margin-right: 2px
+        &__experiance
+            &-btn
+                font-size: 16px
+            &-items
+                margin-bottom: 16px
 @media (max-width: 360px)
     .container
         width: 310px
+    .input
+        &-date
+            &__wrapper
+                &::before
+                    right: 6px
     .header
         &__search
             &-select
@@ -2348,3 +2413,8 @@
                     margin: 0
         &__btn
             font-size: 16px
+        &__address
+            display: flex
+            flex-direction: column
+            .builder__main-info__info
+                margin-top: -8px
