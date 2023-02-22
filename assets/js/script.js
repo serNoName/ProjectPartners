@@ -235,9 +235,10 @@ $(document).ready(function () {
     })
 
     //dropdown hover
-    $('.dropdown-triger').on('hover', function () {
+    $('.dropdown-triger').hover( function () {
         $(this).children('.dropdown').stop(true, false).slideDown(200)
     }, function () {
+        console.log(1);
         $(this).children('.dropdown').stop(true, false).slideUp(200)
     })
     //dropdown click

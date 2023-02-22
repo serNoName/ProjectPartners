@@ -15,6 +15,14 @@
             .filter__rate-list-wrapper
                 left: 0
                 transform: translateY(3px)
+@media ( max-width: 1360px)
+    .nav
+        &-item
+            &-triger
+                &:nth-child(2)
+                    .nav__dropdown
+                        left: 0
+                        transform: none
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1240px)
     .chat-buble
@@ -398,6 +406,10 @@
                 display: none
             &-mobi
                 display: flex
+                position: absolute
+                left: 40px
+                top: 54px
+                width: calc( 100% - 80px )
             &-select
                 padding-left: 12px
                 padding-right: 26px
@@ -421,6 +433,7 @@
                 transform: none
     .nav
         padding: 40px
+        padding-top: 100px
         background-color: #fff
         position: absolute
         left: 0
@@ -892,14 +905,18 @@
         &__masthead
             align-items: center
         &__search
-            width: fit-content
             height: 36px
             min-height: 36px
+            width: calc(100% - 60px)
+            max-width: 380px
             &-desk
                 display: none
             &-mobi
                 display: flex
-                margin-top: 36px
+                margin: 0
+                position: absolute
+                left: 30px
+                top: 54px
             &-select
                 padding-left: 12px
                 padding-right: 26px
@@ -923,6 +940,7 @@
                 transform: none
     .nav
         padding: 30px
+        padding-top: 90px
         background-color: #fff
         position: absolute
         left: -520px
@@ -973,10 +991,6 @@
                 &:hover
                     &::before
                         border-color: transparent transparent $primary transparent
-                &.active
-                    &::before
-                        transform: none
-                        border-color: transparent transparent $primary transparent
                 .text
                     &::after
                         display: none
@@ -992,7 +1006,7 @@
             background: transparent
             border: none
             box-shadow: none
-            padding: 12px 0 0 .5em !important
+            padding: 12px 0 0 0
             &-title
                 font-size: 14px
             &-descr
@@ -1850,7 +1864,6 @@
                 width: 180px
         &__wrapper
             padding: 8px 0
-            margin: 0 16px
         &__search
             &-inner
                 &::before
@@ -1862,7 +1875,6 @@
             position: static
             display: block !important
             padding: 0
-            padding-left: 0.5em
             background-color: transparent
             margin-top: 16px
     .nav
@@ -1870,7 +1882,7 @@
         &-mobile
             display: flex
             flex-direction: column-reverse
-            row-gap: 36px
+            row-gap: 12px
             margin-top: 20px
         .header
             &__login
