@@ -2167,6 +2167,16 @@
                 .builder__step-number
                     &::before
                         display: none
+        &__main-info
+            &__ava
+                margin-right: 12px
+                img
+                    width: 80px
+                    height: 80px
+            &__btn
+                font-size: 14px
+                height: 32px
+                padding: 0 12px
 @media (max-width: 360px)
     .container
         width: 310px
@@ -2315,3 +2325,26 @@
                 &__list
                     flex-direction: column
                     align-items: start
+    .builder
+        &__step
+            &-number
+                margin-right: 4px
+                width: 22px
+                height: 22px
+            &-text
+                font-size: 13px
+        &__subtitle
+            font-size: 14px
+        &__title
+            font-size: 32px
+        &__label
+            font-size: 12px
+            margin-right: 4px
+        &__descr
+            font-size: 12px
+        &__main-info
+            &__btn
+                &:first-child
+                    margin: 0
+        &__btn
+            font-size: 16px
