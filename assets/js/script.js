@@ -16,11 +16,15 @@ function handleImg(myImg, observer) {
 }
 
 function loadImage(image) {
-    // let extension = image.getAttribute('data-src').match(/\.([^.]+)$|$/)[1]
+    let extension = image.getAttribute('data-src').match(/\.([^.]+)$|$/)[1]
     // extension = image.getAttribute('data-src').split('.')[1]
+    if (extension == 'svg') { // if this is a svg
+        image.src = `${image.getAttribute('data-src')}`
+    } else { // if this is not a svg
+        image.srcset = `${image.getAttribute('data-src')} 1x, ${image.getAttribute('data-x2set')} 2x`
+    }
 
-    image.src = image.getAttribute('data-src')
-    image.srcset = `${image.getAttribute('data-x2set')} x2`
+    // image.src = imagчe.getAttribute('data-src')
     // image.srcset = `${image.getAttribute('data-src').split('.')[0]}_x2.${extension} 2x`
 }
 const observer = new IntersectionObserver(handleImg, options);
