@@ -182,7 +182,7 @@ $(document).ready(function () {
     });
 
 
-    if (screen.width <= 1240) {
+    if (window.innerWidth <= 1240) {
         $('.nav-item-triger').click(function () {
             const isActive = $(this).hasClass('active');
 
@@ -200,7 +200,7 @@ $(document).ready(function () {
             $(this).children('.nav__dropdown').stop(true, false).slideUp(200)
         });
     }
-    if (screen.width <= 991) {
+    if (window.innerWidth <= 991) {
         $('.header__search-select').click(function () {
             $(this).toggleClass('active').children('.header__search-dropdown').slideToggle(250)
         })
@@ -239,16 +239,15 @@ $(document).ready(function () {
     })
 
     //dropdown hover
-    $('.dropdown-triger').hover( function () {
+    $('.dropdown-triger:not(".no-hover")').hover( function () {
         $(this).children('.dropdown').stop(true, false).slideDown(200)
     }, function () {
-        console.log(1);
         $(this).children('.dropdown').stop(true, false).slideUp(200)
-    })
+    });
     //dropdown click
     $('.dropdown-triger-click').click(function () {
         $(this).children('.dropdown').stop(true, false).slideToggle(200)
-    })
+    });
 
     //close dropdown
     $(document).click(function (e) {
@@ -764,10 +763,9 @@ function scroll() {
 };
 
 
-// if screen width <= 480 off next functions
-
-if (screen.width <= 480) {
-    $('.header__profile-select.dropdown-triger').off('hover')
+// if screen width <= 576 off next functions
+if (window.innerWidth <= 576) {
+    $('.header__profile-select.dropdown-triger').addClass('no-hover')
 }
 
 

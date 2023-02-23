@@ -1566,6 +1566,12 @@
         transform: translateX(-50%)
         z-index: 101
         background-color: #fff
+        &__dropdown
+            position: static
+            display: block !important
+            padding: 0
+            background-color: transparent
+            margin-top: 16px
         &__burger
             &.active
                 z-index: 201
@@ -1573,19 +1579,37 @@
             display: none
         &__wrapper
             position: static
+        &__login
+            display: none
+            &-mobi
+                display: flex
+        &__profile
+            align-items: start
+            &-desk
+                display: none !important
+            &-select
+                color: $dark-grey
+                font-size: 18px
+                flex-direction: column
+                align-items: start
+                &::before
+                    display: none
     .nav
         transform: translateX(-580px)
         height: 100vh
         width: 100%
         .header
             &__login
-                display: none
+                display: flex
             &__sign
                 display: none
             &__shortlist
+                position: absolute
+                top: 12px
+                left: 30px
                 display: flex
                 width: fit-content
-                margin-top: 20px
+                margin: 0
                 img
                     margin-right: 6px
                 &:hover
@@ -1594,6 +1618,9 @@
                     border-color: #ededed
         &-mobile
             display: flex
+            flex-direction: column-reverse
+            margin-top: 20px
+            row-gap: 12px
         &-close
             display: none !important
         &-item
@@ -1848,17 +1875,6 @@
             width: auto
         &__login
             display: none
-        &__profile
-            align-items: start
-            &-desk
-                display: none !important
-            &-select
-                color: $dark-grey
-                font-size: 18px
-                flex-direction: column
-                align-items: start
-                &::before
-                    display: none
         &__logo
             img
                 width: 180px
@@ -1871,12 +1887,6 @@
             &-input
                 padding: 0 4px
                 padding-left: 6px
-        &__dropdown
-            position: static
-            display: block !important
-            padding: 0
-            background-color: transparent
-            margin-top: 16px
     .nav
         width: 100vw
         &-mobile
