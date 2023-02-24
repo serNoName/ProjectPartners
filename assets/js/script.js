@@ -24,7 +24,7 @@ function loadImage(image) {
         image.srcset = `${image.getAttribute('data-src')} 1x, ${image.getAttribute('data-x2set')} 2x`
     }
 
-    // image.src = imagчe.getAttribute('data-src')
+    // image.src = image.getAttribute('data-src')
     // image.srcset = `${image.getAttribute('data-src').split('.')[0]}_x2.${extension} 2x`
 }
 const observer = new IntersectionObserver(handleImg, options);
@@ -239,7 +239,7 @@ $(document).ready(function () {
     })
 
     //dropdown hover
-    $('.dropdown-triger:not(".no-hover")').hover( function () {
+    $('.dropdown-triger:not(".no-hover")').hover(function () {
         $(this).children('.dropdown').stop(true, false).slideDown(200)
     }, function () {
         $(this).children('.dropdown').stop(true, false).slideUp(200)
@@ -254,8 +254,8 @@ $(document).ready(function () {
         let ele = $(e.target);
 
         let result = !$(ele).hasClass('dropdown-triger-click') &&
-        !$(ele).hasClass('text') &&
-        !$(ele).hasClass('builder__input');
+            !$(ele).hasClass('text') &&
+            !$(ele).hasClass('builder__input');
 
         if (result) {
             if ($(ele).hasClass('confirm__select-item')) {
@@ -584,6 +584,109 @@ $(function () {
             $('.builder__step').removeAttr('disabled');
         }
     })
+    /*************************/
+    /* dragndrop             */
+    /*************************/
+
+    // Get elements
+    const dropZone = $('.dragndrop'),
+        dropZoneInput = dropZone.find('.dragndrop__input');
+
+
+    // Handle the 'dragover' event
+    $(document).on('dragover', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropZone.addClass('hover');
+    });
+
+    // Handle the 'dragleave' event
+    $(document).on('dragleave', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropZone.removeClass('hover');
+    });
+
+    // Handle the 'drop' event
+    $(document).on('drop', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        dropZone.removeClass('hover');
+        const dropZoneInput = e.originalEvent.dataTransfer.files;
+
+        if (dropZoneInput.length > 0) {
+            dropZoneInput.value = dropZoneInput;
+
+            dropZoneChageSlides()
+
+            // server request
+        }
+
+        dropZone.addClass('uploaded');
+    });
+
+    // Animete the drop zone
+    const dropZoneChageSlides = function(){
+        let curentContent = dropZone.find('.dragndrop__inner.active'),
+            indexOfCurentContent = curentContent.attr('data-dragngdrop'),
+            progresBar = dropZone.find('.dragndrop__loading-status')
+            percent = dropZone.find('.dragndrop__persentage > span')
+
+
+            const show2Slide = function () {
+                setTimeout(() => {
+                    let number = 0
+
+                    const timer = setInterval(() => {
+                        number++
+                        if (number > 100) {
+                            clearInterval(timer)
+                            setTimeout( () => { chandgeSlide () },600)
+                        } else {
+                            percent.text(number)
+                            progresBar.css('width',`${number}%`)
+                        }
+                    }, 12);
+
+                }, 200);
+            }
+
+        if (indexOfCurentContent == "1") {
+            chandgeSlide()
+            show2Slide()
+
+        } else if (indexOfCurentContent == "2") {
+            return
+        } else {
+            dropZone.find('.dragndrop__inner.active').fadeOut(100, function () {
+                $(this).removeClass('active')
+
+                percent.text(0)
+                progresBar.css('width',`${0}%`)
+
+                $('[data-dragngdrop="2"]').fadeIn(100, function () {
+                    $(this).addClass('active')
+                })
+                show2Slide()
+            })
+        }
+
+        function chandgeSlide () {
+            dropZone.find('.dragndrop__inner.active').fadeOut(100, function () {
+                $(this).removeClass('active').next().fadeIn(100, function () {
+                    $(this).addClass('active')
+                })
+            })
+        }
+        // server request
+    }
+
+    // Add an event handler for file upload
+    dropZoneInput.on('change', function () {
+        dropZoneChageSlides()
+    });
+
 });
 
 $('.prof__card-add').click(function () {
@@ -601,23 +704,23 @@ $('#reviewsSlider').slick({
     autoplaySpeed: 4000,
     customPaging: (slider) => `<span></span>`,
     responsive: [{
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 993,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-            }
+        breakpoint: 1200,
+        settings: {
+            slidesToShow: 2,
         }
+    },
+    {
+        breakpoint: 993,
+        settings: {
+            slidesToShow: 2,
+        }
+    },
+    {
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 1,
+        }
+    }
     ]
 });
 
@@ -631,40 +734,40 @@ $('#promoSlider').slick({
     centerMode: true,
     variableWidth: true,
     responsive: [{
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerPadding: '50px'
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-            }
-        },
-        {
-            breakpoint: 360,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 2,
-            }
+        breakpoint: 1200,
+        settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
         }
+    },
+    {
+        breakpoint: 992,
+        settings: {
+            slidesToShow: 3,
+        }
+    },
+    {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerPadding: '50px'
+        }
+    },
+    {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+        }
+    },
+    {
+        breakpoint: 360,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 2,
+        }
+    }
     ]
 });
 
@@ -734,7 +837,7 @@ $('.promo__select-theme-item').click(function () {
             });
         }
     }
-    if ($(this).attr('id')) {}
+    if ($(this).attr('id')) { }
 });
 
 //parallax

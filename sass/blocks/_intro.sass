@@ -1,0 +1,61 @@
+.intro
+    background: $light-grey url('../img/bg/lines/line-intro.svg') center (center/cover) no-repeat
+    padding-bottom: 95px
+    padding-top: 20px
+    .breadcrumb
+        margin-bottom: 16px
+    &__wrapper
+        display: grid
+        grid-template-columns: auto 589px
+    &__title
+        margin-bottom: 32px
+        max-width: 486px
+        font-size: 48px
+        line-height: 148.780488% // 61/41
+    &__subtitle
+        margin-bottom: 24px
+        gz: 18px
+        line-height: 150%
+        color: $dark-grey
+    &__dragndrop
+        margin-bottom: 16px
+    &__item
+        margin-bottom: 4px
+    &__label
+        margin-bottom: 22px
+        font-size: 14px
+        color: #000
+        line-height: 128.571429% // 18/14
+        a
+            color: $primary
+            text-decoration: none
+            transition: color .2s
+            font-weight: 800
+            &:hover
+                color: $mid-primary
+    &__footer
+        display: flex
+        align-items: center
+        column-gap: 24px
+    &__col
+        &:last-child
+            max-width: 589px
+    &__btn
+        height: 56px
+        width: 180px
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 18px
+    &__image
+        transform: rotate(-6deg)
+    &__text
+        line-height: 125% // 20/16
+        a
+            color: $primary
+            font-weight: 800
+            text-decoration: none
+            transition: color .2s
+            &:hover
+                color: $mid-primary

@@ -1120,3 +1120,90 @@
                 Text
             </label>
             */
+.dragndrop
+    position: relative
+    width: 589px
+    height: 162px
+    background-color: #fff
+    border-radius: 16px
+    border: 1px dashed rgba(52, 63, 72, 0.5)
+    transition: background-color .2s, border-color .2s
+    overflow: hidden
+    &__title
+        font-weight: 800
+        font-size: 18px
+        line-height: 127.777778% // 23/18
+        color: $dark-grey
+        text-align: center
+    &__subtitle
+        color: $dark-grey
+        font-size: 16px
+        line-height: 150%
+        text-align: center
+        label
+            font-size: inherit
+    &__input
+        position: absolute
+        z-index: -1
+        opacity: 0
+    &.hover
+        background-color: $white
+        border-color: $primary
+    &.uploaded
+        background-color: #fff
+        border-color: $primary
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 100%
+    &__inner
+        display: none
+        width: 100%
+        height: 100%
+        &:last-child
+            border-color: $primary
+            background-color: $white
+        &:first-child
+            display: flex
+    &__loading
+        display: flex
+        column-gap: 15px
+        margin-top: 16px
+        &-bar
+            width: 250px
+            height: 18px
+            background: #F5F5F5
+            border: 1px solid #EDEDED
+            border-radius: 12px
+        &-status
+            min-width: 18px
+            min-height: 18px
+            background-color: $primary
+            border-radius: 12px
+            height: 100%
+            width: 0
+            transition: .2s width ease
+    &__persentage
+        min-width: 39px
+    &__descr
+        color: $primary
+        font-size: 18px
+        line-height: 127.777778% // 23/18
+        max-width: 300px
+        span
+            font-weight: 800
+    &__complete
+        display: flex
+        column-gap: 12px
+        align-items: center
+        width: 100%
+        justify-content: center
+    &__content
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        height: 100%
+        width: 100%
