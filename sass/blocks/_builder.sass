@@ -231,12 +231,6 @@
         &.error
             .builder__main-info__input
                 border: 1px solid $secondary2
-        &-social
-            .builder
-                &__input
-                    padding-left: 36px
-                &__label
-                    left: 36px
         textarea
             resize: none
             overflow: hidden
@@ -246,6 +240,39 @@
             .label-focus
                 &.active
                     transform: translateY(-34px)
+        &-dark
+            .builder
+                &__input
+                    color: rgba(255, 255, 255, .3)
+                    background-color: $black
+                    border: 1px solid rgba(255, 255, 255, .5)
+            &.builder__item
+                &-linkedin
+                    &::before
+                        background: url('../img/ico/social/linkedin.svg') center (center/cover) no-repeat
+                        opacity: .3
+        &-linkedin
+            &::before
+                position: absolute
+                content: ''
+                left: 12px
+                top: 50%
+                transform: translateY(-50%)
+                width: 16px
+                height: 16px
+                background: url('../img/ico/social/linkedin-grey.svg') center (center/cover) no-repeat
+        &-twitter
+            &::before
+                position: absolute
+                content: ''
+                left: 12px
+                top: 50%
+                transform: translateY(-50%)
+                width: 16px
+                height: 16px
+                background: url('../img/ico/social/twitter.svg') center (center/cover) no-repeat
+                filter: invert(200%)
+                opacity: .2
     &__inputs
         margin-bottom: 24px
     &__input
@@ -266,6 +293,8 @@
             box-shadow: 0 0 12px 6px rgba(110,85,255, .08 )
         &.input-focus
             padding: 24px 12px 10px 12px
+        &-social
+            padding-left: 36px
     &-textarea
         resize: none
         outline: none

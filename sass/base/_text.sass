@@ -5,8 +5,101 @@
     line-height: 1.2
 
 .section
+    padding: 80px 0 70px 0
     &__title
         color: $black
         font-weight: 800
         font-size: 40px
         line-height: 127.5% // 51/40\[]
+        text-align: center
+        margin-bottom: 40px
+        span
+            font-weight: inherit
+            color: $primary
+        &-white
+            color: #fff
+        &-difference
+            position: absolute
+            top: 93px
+            left: 50%
+            transform: translateX(-50%)
+            opacity: 0.3
+        &-left
+            text-align: left
+        &-mb32
+            margin-bottom: 32px
+    &__subtitle
+        margin-bottom: 18px
+        color: $dark-grey
+        font-size: 22px
+        font-weight: 800
+        line-height: 127.272727% // 28/22
+        &-white
+            color: #fff
+    &__text
+        font-size: 18px
+        font-weight: 600
+        line-height: 150% // 27/18
+        color: $dark-grey
+        margin-bottom: 24px
+        height: fit-content
+        &-center
+            text-align: center
+            margin: 0 auto
+        &-difference
+            max-width: 794px
+            margin-bottom: 10px
+        &-no_margin
+            margin: 0
+        &-white
+            color: #fff
+        &-mw610
+            max-width: 610px
+        &-wtsi
+            margin: 0
+            margin-top: 32px
+            text-align: center
+            color: #000
+            line-height: 125% // 20/16
+            a
+                position: relative
+                color: $primary
+                text-decoration: none
+                transition: color .2s
+                &::before
+                    position: absolute
+                    content: ''
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    height: 1px
+                    background-color: $primary
+                    opacity: .5
+                    transition: background-color .2s
+                &:hover
+                    color: $mid-primary
+                    &::before
+                        background-color: $mid-primary
+    &__footer
+        &-center
+            display: flex
+            justify-content: center
+        &-mt130
+            margin-top: 130px
+    &-dark
+        background-color: $black
+    &-grey
+        background-color: $light-grey
+    &-difference
+        background: url('../img/bg/lines/line-difference.svg') bottom 24px (center/cover) no-repeat
+    &-road
+        background: $light-grey url('../img/bg/lines/line-road.svg') center center no-repeat
+    &-reviews
+        padding-top: 80px
+        padding-bottom: 90px
+        overflow: hidden
+    &-wtsi
+        position: relative
+    &-lets
+        position: relative
+        padding: 120px 0

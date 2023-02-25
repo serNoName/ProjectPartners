@@ -1,0 +1,32 @@
+.road
+    &__row
+        display: flex
+        justify-content: space-between
+        &:nth-child(even)
+            flex-direction: row-reverse
+    &__col
+        display: flex
+        justify-content: center
+    &__content
+        width: 487px
+        max-width: 100%
+        flex-direction: column
+    &__items
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        margin-bottom: 24px
+    &__item
+        display: flex
+        flex-direction: row
+        align-items: center
+        column-gap: 12px
+    &__ico
+        min-height: 48px
+        min-width: 48px
+        background-color: $white
+        border-radius: 8px
+        &-chains
+            background: $white url('../img/ico/chains.svg') center center no-repeat
+        &-upload
+            background: $white url('../img/ico/upload.svg') center center no-repeat

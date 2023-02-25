@@ -1,0 +1,50 @@
+.wtsi
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 20px
+    &__card
+        position: relative
+        background: #F5F5F5
+        outline: 1px solid #EDEDED
+        border-radius: 32px
+        height: 350px
+        overflow: hidden
+    &__text
+        margin-top: 48px
+        text-align: center
+        color: #000
+        font-weight: 800
+        font-size: 20px
+        line-height: 130% // 26/20
+    &__label
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        background-color: $primary
+        text-align: center
+        span
+            position: relative
+            color: #fff
+            font-size: 14px
+            line-height: 114.285714% // 16/14
+            font-weight: 800
+            &::before
+                position: absolute
+                content: ''
+                top: 50%
+                left: -18px
+                transform: translateY(calc(-50% - 1px))
+                width: 16px
+                height: 16px
+                background: url('../img/ico/star-white.svg') center center no-repeat
+    &__image
+        position: absolute
+        display: flex
+        justify-content: center
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+        img
+            vertical-align: top

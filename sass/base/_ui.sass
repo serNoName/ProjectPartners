@@ -18,6 +18,14 @@
     &:hover
         background-color: $mid-primary
         color: #fff
+    &-md
+        font-size: 18px
+        height: 56px
+        padding: 0 32px
+        display: flex
+        align-items: center
+        line-height: 1
+        width: fit-content
     &-big
         padding: 19px 32px
         font-size: 18px
@@ -164,6 +172,7 @@
         img
             border-radius: 50%
     &-wrapper
+        position: relative
         border-radius: 16px
         padding: 32px
         border: 1px solid #EDEDED
@@ -173,6 +182,19 @@
         row-gap: 16px
         height: 100%
         margin: 0 12px
+        &::before
+            position: absolute
+            content: ''
+            max-width: calc( 100% + 16px )
+            max-height: calc( 100% + 16px )
+            inset: 0
+            outline: 8px solid rgba(110, 85, 255, 0.2)
+            border-radius: 16px
+            opacity: 0
+            transition: opacity .2s
+        &:hover
+            &::before
+                opacity: 1
     &-title
         color: $black
         font-size: 20px
@@ -1122,8 +1144,10 @@
             */
 .dragndrop
     position: relative
+    z-index: 2
     width: 589px
     height: 162px
+    max-width: 100%
     background-color: #fff
     border-radius: 16px
     border: 1px dashed rgba(52, 63, 72, 0.5)
@@ -1173,7 +1197,7 @@
         margin-top: 16px
         &-bar
             width: 250px
-            height: 18px
+            height: 100%
             background: #F5F5F5
             border: 1px solid #EDEDED
             border-radius: 12px
@@ -1207,3 +1231,121 @@
         flex-direction: column
         height: 100%
         width: 100%
+    &-dark
+        position: relative
+        background: rgba(110, 85, 255, 0.1)
+        border: 1px dashed rgba(255, 255, 255, 0.5)
+        .dragndrop
+            &__title
+                color: #fff
+            &__subtitle
+                color: #fff
+            &__inner
+                &:last-child
+                    background: rgba(110, 85, 255, 0.1)
+            &__persentage
+                color: #fff
+        &.uploaded
+            background: rgba(110,85,255,.1)
+        &.complete
+            background-color: $neon
+            .dragndrop
+                &__descr
+                    color: $dark-grey
+        &::before
+            position: absolute
+            content: ''
+            inset: 0
+            width: 100%
+            height: 100%
+            background-color: $primary
+            opacity: 0
+            transition: opacity .2s
+        &.hover
+            background: rgba(110,85,255,.1)
+            .dragndrop
+                &__wrapper
+                    background-color: transparent
+                &__descr
+                    color: #fff
+            &::before
+                opacity: .1
+.parse-info
+    &__row
+        width: 100%
+        margin-bottom: 16px
+        .builder__item
+            &:not(:last-child)
+                margin: 0
+        &-no_margin
+            margin: 0
+    &__cols
+        display: flex
+        justify-content: space-between
+        margin-top: 32px
+        &-no_margin
+            margin: 0
+    &__col
+        display: flex
+        flex-direction: column
+        width: calc(50% - 10px)
+    &__flex
+        margin: auto
+        margin-bottom: 0
+        margin-left: 0
+.notification
+    padding: 16px
+    background-color: $white
+    display: flex
+    align-items: center
+    column-gap: 12px
+    border-radius: 12px
+    &__ico
+        min-width: 40px
+        min-height: 40px
+        &-info
+            background: url('../img/ico/info-purple.svg') center (center/cover) no-repeat
+    &__text
+        font-size: 16px
+        font-weight: 700
+        line-height: 150%
+        color: $primary
+    &-mb32
+        margin-bottom: 32px
+.video
+    position: relative
+    border-radius: 16px
+    overflow: hidden
+    height: 360px
+    cursor: pointer
+    iframe
+        border: none
+    &__title
+        position: absolute
+        color: #fff
+        top: 33px
+        left: 30px
+    &__media
+        width: 100%
+        height: 100%
+        object-fit: cover
+        vertical-align: top
+    &__button
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: transparent
+        border: none
+        svg
+            vertical-align: top
+        circle
+            transition: fill .2s
+        path
+            transition: fill .2s
+    &:hover
+        .video__button
+            circle
+                fill: $primary
+            path
+                fill: $black

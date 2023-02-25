@@ -19,10 +19,8 @@
         color: $dark-grey
     &__dragndrop
         margin-bottom: 16px
-    &__item
-        margin-bottom: 4px
     &__label
-        margin-bottom: 22px
+        margin-top: 6px
         font-size: 14px
         color: #000
         line-height: 128.571429% // 18/14
@@ -33,11 +31,16 @@
             font-weight: 800
             &:hover
                 color: $mid-primary
+        &-white
+            color: #fff
     &__footer
         display: flex
         align-items: center
         column-gap: 24px
     &__col
+        &:first-child
+            display: flex
+            align-items: center
         &:last-child
             max-width: 589px
     &__btn
@@ -59,3 +62,5 @@
             transition: color .2s
             &:hover
                 color: $mid-primary
+        &-white
+            color: #fff

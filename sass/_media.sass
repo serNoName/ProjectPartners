@@ -371,17 +371,33 @@
             font-size: 13px
         &__position
             font-size: 12px
+    .intro
+        &__wrapper
+            grid-template-columns: auto 500px
+        &__image
+            width: 430px
+
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
     .chat-buble
         bottom: 60px
         right: 60px
+    .bg__line
+        &-find
+            display: none
     .container
         width: 747px
     .body__fuild-container
         .container
             width: 100%
             padding: 0 15px
+    .section
+        &__title
+            margin-bottom: 28px
+            &-difference
+                font-size: 32px
+        &-road
+            background: $light-grey
     .header
         &__wrapper
             padding-bottom: 16px
@@ -862,6 +878,34 @@
             &-text
                 font-size: 12px
                 margin-left: 4px
+    .intro
+        &__wrapper
+            grid-template-columns: auto 400px
+        &__image
+            width: 320px
+        &__title
+            margin-bottom: 12px
+            line-height: 90%
+        &__subtitle
+            margin-bottom: 12px
+    .parse-info
+        &__row
+            margin-bottom: 12px
+        &-find
+            flex-direction: column
+            .parse-info__col
+                margin: 0 auto
+                width: 80%
+    .road
+        &__row
+            flex-direction: column
+            &:nth-child(even)
+                flex-direction: column
+        &__col
+            margin: 0 auto
+        &__content
+            width: 500px
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -882,6 +926,27 @@
         .container
             width: 100%
             padding: 0 15px
+    .section
+        padding-top: 70px
+        padding-bottom: 60px
+        &__title
+            margin-bottom: 20px
+            &-difference
+                font-size: 32px
+        &-road
+            background: $light-grey
+        &__footer
+            &-mt130
+                margin-top: 80px
+        &-difference
+            background-image: none
+    .bg__line
+        &-find
+            display: none
+        &-lets
+            display: none
+        &-wtsi
+            display: none
     .header
         padding: 0
         &__wrapper
@@ -1084,6 +1149,9 @@
         padding: 28px 18px
         &-descr
             font-size: 20px
+        &-wrapper
+            &:before
+                outline: none
     .featback
         padding: 60px 0
         &__wrapper
@@ -1542,6 +1610,74 @@
             &-row
                 flex-direction: column
                 row-gap: 2px
+    .intro
+        &__wrapper
+            display: flex
+            flex-direction: column-reverse
+            margin-top: 32px
+            align-items: center
+        &__col
+            &:last-child, &:first-child
+                max-width: 100%
+        &__image
+            margin: 0 auto
+            margin-top: 32px
+            width: 400px
+            max-width: 100%
+        &__title
+            margin-bottom: 12px
+            line-height: 90%
+        &__subtitle
+            margin-bottom: 12px
+        &__footer
+            margin-top: 8px
+    .road
+        &__row
+            flex-direction: column
+            &:nth-child(even)
+                flex-direction: column
+        &__col
+            margin: 0 auto
+            img
+                max-width: 100%
+        &__content
+            width: 500px
+            max-width: 100%
+    .difference
+        flex-direction: column
+        row-gap: 32px
+        &__title
+            display: none
+        &__image
+            margin: 0 auto
+        &__col
+            display: flex
+            justify-content: center
+    .wtsi
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        row-gap: 24px
+        &__card
+            width: 320px
+            max-width: calc( 100%)
+    .video
+        height: 280px
+
+    .parse-info
+        &__row
+            margin-bottom: 12px
+        &-find
+            flex-direction: column
+            row-gap: 16px
+            .parse-info__col
+                margin: 0 auto
+                width: 80%
+        &__cols
+            flex-direction: column
+        .parse-info__col
+            width: 100%
 @media (max-width: 576px)
     .container
         width: 460px
@@ -1859,6 +1995,28 @@
             display: flex
             flex-direction: column
             margin-bottom: 36px
+    .intro
+        padding-bottom: 60px
+        &__wrapper
+            margin-top: 16px
+        &__col
+            &:first-child
+                display: none
+    .section
+        padding-top: 60px
+        padding-bottom: 50px
+        &__subtitle
+            margin-bottom: 12px
+    .road
+        display: flex
+        flex-direction: column
+        row-gap: 48px
+        &__col
+            &:first-child
+                display: none
+    .wtsi
+        &__card
+            width: 360px
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -1870,6 +2028,12 @@
         font-size: 32px
     .container
         width: 350px
+    .section
+        &__subtitle
+            margin-bottom: 8px
+        &__title
+            font-size: 36px
+            line-height: 110%
     .header
         .container
             width: auto
@@ -2252,6 +2416,11 @@
                 font-size: 16px
             &-items
                 margin-bottom: 16px
+    .intro
+        &__footer
+            column-gap: 12px
+    .video
+        height: 200px
 @media (max-width: 360px)
     .container
         width: 310px
@@ -2433,3 +2602,15 @@
             flex-direction: column
             .builder__info
                 margin-top: -8px
+    .wtsi
+        &__card
+            height: 300px
+        &__text
+            margin-top: 16px
+            z-index: 2
+    .notification
+        &__text
+            font-size: 14px
+        &__ico
+            min-width: 32px
+            min-height: 32px

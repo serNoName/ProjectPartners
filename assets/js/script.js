@@ -623,6 +623,7 @@ $(function () {
             // server request
         }
 
+        dropZone.removeClass('complete');
         dropZone.addClass('uploaded');
     });
 
@@ -630,7 +631,7 @@ $(function () {
     const dropZoneChageSlides = function(){
         let curentContent = dropZone.find('.dragndrop__inner.active'),
             indexOfCurentContent = curentContent.attr('data-dragngdrop'),
-            progresBar = dropZone.find('.dragndrop__loading-status')
+            progresBar = dropZone.find('.dragndrop__loading-status'),
             percent = dropZone.find('.dragndrop__persentage > span')
 
 
@@ -676,6 +677,9 @@ $(function () {
             dropZone.find('.dragndrop__inner.active').fadeOut(100, function () {
                 $(this).removeClass('active').next().fadeIn(100, function () {
                     $(this).addClass('active')
+                    if($('[data-dragngdrop="3"]').hasClass('active')) {
+                        dropZone.removeClass('uploaded').addClass('complete')
+                    }
                 })
             })
         }
@@ -896,3 +900,59 @@ $('.input-focus').focusout(function () {
         }
     }, 100);
 })
+
+// video preview optimization
+function findVideos() {
+    let videos = $('.video');
+
+    for (let i = 0; i < videos.length; i++) {
+        setupVideo(videos[i]);
+    }
+}
+
+function setupVideo(video) {
+    let videoTitle = video.querySelector('.video__title');
+    let videoLink = video.querySelector('.video__link');
+    let videoMedia = video.querySelector('.video__media');
+    let videoButton = video.querySelector('.video__button');
+    let videoId = parseMediaURL(videoMedia);
+
+    video.addEventListener('click', () => {
+        let iframe = createIframe(videoId);
+
+        videoLink.remove();
+        videoTitle.remove();
+        videoButton.remove();
+        video.appendChild(iframe);
+    });
+
+    videoLink.removeAttribute('href');
+    video.classList.add('video--enabled');
+}
+
+function parseMediaURL(videoMedia) {
+    let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+    let url = videoMedia.src;
+    let match = url.match(regexp);
+
+    return match[1];
+}
+
+function createIframe(id) {
+    let iframe = document.createElement('iframe');
+
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', generateURL(id));
+    iframe.classList.add('video__media');
+
+    return iframe;
+}
+
+function generateURL(id) {
+    let query = '?rel=0&showinfo=0&autoplay=1';
+
+    return 'https://www.youtube.com/embed/' + id + query;
+}
+
+findVideos();
