@@ -905,7 +905,11 @@
             margin: 0 auto
         &__content
             width: 500px
-
+    .dragndrop
+        &__title
+            font-size: 16px
+        &__subtitle
+            font-size: 14px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -932,7 +936,11 @@
         &__title
             margin-bottom: 20px
             &-difference
-                font-size: 32px
+                font-size: 48px
+                margin: 0
+                z-index: 2
+                top: 51%
+                transform: translateY(-50%) translateX(-50%)
         &-road
             background: $light-grey
         &__footer
@@ -1577,6 +1585,9 @@
             grid-area: f
             margin: 0
     .builder
+        &__item
+            width: 589px
+            max-width: 100%
         &__wrapper
             padding: 24px 18px
         &__col
@@ -1613,9 +1624,9 @@
     .intro
         &__wrapper
             display: flex
-            flex-direction: column-reverse
-            margin-top: 32px
+            flex-direction: column
             align-items: center
+            row-gap: 32px
         &__col
             &:last-child, &:first-child
                 max-width: 100%
@@ -2017,6 +2028,11 @@
     .wtsi
         &__card
             width: 360px
+    .dragndrop
+        &__title
+            font-size: 16px
+        &__subtitle
+            font-size: 14px
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -2419,8 +2435,20 @@
     .intro
         &__footer
             column-gap: 12px
+            display: flex
+            flex-direction: column
+            row-gap: 8px
+            width: 100%
+            align-items: start
+            .btn
+                width: 100%
     .video
         height: 200px
+    .parse-info
+        &__flex
+            width: 100%
+            margin: auto
+            margin-left: 0
 @media (max-width: 360px)
     .container
         width: 310px
