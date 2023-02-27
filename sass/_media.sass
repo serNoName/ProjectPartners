@@ -2022,9 +2022,17 @@
         display: flex
         flex-direction: column
         row-gap: 48px
+        margin-top: 24px
+        overflow: hidden
         &__col
             &:first-child
-                display: none
+                margin-bottom: 16px
+        &__row
+            &:last-child
+                .road__col
+                    &:first-child
+                        img
+                            transform: scale(1.2) translateY(-8px)
     .wtsi
         &__card
             width: 360px
