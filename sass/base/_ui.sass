@@ -59,6 +59,60 @@
             color: $mid-primary
             &::before
                 background-color: $mid-primary
+    &-more
+        position: relative
+        color: $primary
+        font-size: 14px
+        line-height: 24px
+        font-weight: 800
+        width: fit-content
+        cursor: pointer
+        text-decoration: none
+        transition: color .2s
+        height: fit-content
+        background-color: transparent
+        padding: 0
+        text-decoration: none
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 1px
+            opacity: .5
+            background-color: $primary
+            transition: background-color .2s
+        &:hover
+            background-color: transparent
+            color: $mid-primary
+            &::before
+                background-color: $mid-primary
+    &-testimonial
+        padding: 0
+        background-color: transparent
+        color: $dark-grey
+        margin-top: auto
+        &::before
+            background-color: $dark-grey
+        &:hover
+            background-color: transparent
+    &-share
+        padding-left: 20px
+        font-size: 18px
+        &::after
+            position: absolute
+            content: ''
+            left: 0
+            top: 50%
+            width: 16px
+            height: 16px
+            transform: translateY(-50%)
+            background: url('../img/ico/share.svg')
+            transition: filter .2s
+        &:hover
+            &::after
+                filter: contrast(200%)
 .mini-card
     width: fit-content
     padding: 6px 8px
@@ -1363,3 +1417,175 @@
                 fill: $primary
             path
                 fill: $black
+.badge
+    background-color: $primary
+    padding: 4px 6px
+    color: #fff
+    font-size: 12px
+    font-weight: 700
+    line-height: 140%
+    height: fit-content
+    width: fit-content
+    border-radius: 8px
+    &-practitioner
+        background-color: $secondary
+    &-apprentice
+        background-color: $cyan
+    &-foundation
+        background-color: $yellow
+    &-junior
+        background-color: $neon
+    &-guro
+        background-color: $primary
+    &-professional
+        background-color: $secondary2
+.person
+    position: absolute
+    z-index: 2
+    left: 24px
+    bottom: 16px
+    display: flex
+    column-gap: 8px
+    &__ava
+        border-radius: 50%
+        overflow: hidden
+        img
+            vertical-align: top
+    &__prof
+        display: flex
+        column-gap: 4px
+        align-items: center
+        .badge
+            padding: 3px 4px 2px 3px
+            border-radius: 6px
+        span
+            display: flex
+            align-items: center
+            color: #fff
+            font-weight: 600
+            font-size: 14px
+            line-height: 110% // 18/16
+    &__label
+        font-size: 16px
+        color: #fff
+        font-weight: 800
+        line-height: 125% // 20/16
+    &__col
+        display: flex
+        flex-direction: column
+        justify-content: center
+.testimonial
+    border-radius: 16px
+    overflow: hidden
+    &__header
+        position: relative
+        width: 285px
+        height: 225px
+        overflow: hidden
+        max-width: 100%
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 75px
+            background: linear-gradient(180deg, rgba(22, 20, 40, 0) 0%, #161428 100%)
+            z-index: 2
+    &__bg
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+        left: 50%
+        transform: translateX(-50%)
+    &__body
+        background-color: $light-grey
+        padding: 24px
+        display: flex
+        flex-direction: column
+        row-gap: 8px
+        min-height: 250px
+        border-radius: 0 0 16px 16px
+        height: calc(100% - 225px)
+    &__badges
+        display: flex
+        gap: 4px
+        flex-wrap: wrap
+    &__title
+        display: -webkit-box
+        overflow: hidden
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical
+        color: $black
+        font-size: 18px
+        font-weight: 800
+        line-height: 130% // 23/18
+    &__descr
+        display: -webkit-box
+        overflow: hidden
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical
+        font-size: 14px
+        background: linear-gradient(180deg, #161428 0%, rgba(22, 20, 40, 0.1) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        opacity: 0.8
+        line-height: 140%
+    &-mini
+        grid-area: mini
+        background-color: $primary
+    &-big
+        display: flex
+        flex-direction: row
+        overflow: hidden
+        grid-area: baner
+        .person
+            bottom: 24px
+        .testimonial
+            &__body
+                min-height: auto
+                padding: 24px
+                height: 100%
+                border-bottom-left-radius: 0
+                .btn-more
+                    color: $dark-grey
+                    &::before
+                        background-color: currentColor
+                    &:hover
+                        color: $mid-primary
+                &-business
+                    padding-top: 56px
+            &__title
+                font-size: 32px
+                line-height: 130% // 41/32
+                font-weight: 800
+                color: $black
+            &__footer
+                display: flex
+                justify-content: space-between
+                margin-top: auto
+.information
+    padding: 24px
+    display: flex
+    flex-direction: column
+    text-decoration: none
+    height: 100%
+    &__link
+        display: block
+        margin-top: auto
+        color: #fff
+        &::before
+            background-color: #fff
+        &:hover
+            color: $dark-grey
+            &::before
+                background-color: $dark-grey
+    &__title
+        display: block
+        color: #fff
+        font-weight: 800
+        font-size: 22px
+        line-height: 130% // 28/22

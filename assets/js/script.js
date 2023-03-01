@@ -21,7 +21,12 @@ function loadImage(image) {
     if (extension == 'svg') { // if this is a svg
         image.src = `${image.getAttribute('data-src')}`
     } else { // if this is not a svg
-        image.srcset = `${image.getAttribute('data-src')} 1x, ${image.getAttribute('data-x2set')} 2x`
+        if (image.getAttribute('data-x2set') == null) {
+            image.src = `${image.getAttribute('data-src')}`
+            $(image).removeAttr('data-x2set').removeAttr('data-set')
+        } else {
+            image.srcset = `${image.getAttribute('data-src')} 1x, ${image.getAttribute('data-x2set')} 2x`
+        }
     }
 
     // image.src = image.getAttribute('data-src')

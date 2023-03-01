@@ -6,11 +6,27 @@
 
 .section
     padding: 80px 0 70px 0
+    &.promo
+        padding-top: 20px
+        .promo
+            position: relative
+            &__inner
+                display: flex
+                justify-content: center
+                flex-direction: column
+            &__select-theme
+                margin-bottom: 30px
+            &__wrapper
+                justify-content: start
+                column-gap: 70px
+        .section__title
+            font-size: 48px
+            margin-bottom: 16px
     &__title
         color: $black
         font-weight: 800
         font-size: 40px
-        line-height: 127.5% // 51/40\[]
+        line-height: 120% // 51/40\[]
         text-align: center
         margin-bottom: 40px
         span
@@ -33,6 +49,9 @@
             max-width: 486px
             font-size: 48px
             line-height: 130%
+        &-article
+            font-size: 48px
+            margin-bottom: 16px
     &__subtitle
         margin-bottom: 18px
         color: $dark-grey
@@ -41,6 +60,9 @@
         line-height: 127.272727% // 28/22
         &-white
             color: #fff
+        &-promo
+            font-weight: 600
+            color: #000
     &__text
         font-size: 18px
         font-weight: 600
@@ -87,6 +109,11 @@
                     color: $mid-primary
                     &::before
                         background-color: $mid-primary
+        &-article
+            font-size: 16px
+            color: #000
+            line-height: 150%
+            margin: 0
     &__footer
         &-center
             display: flex
@@ -110,3 +137,11 @@
     &-lets
         position: relative
         padding: 120px 0
+    &__testimonial
+        display: grid
+        gap: 20px
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-areas: 'c1 c2 c3 c4''c5 c6 c7 c8''baner baner baner mini''c9 c10 c11 c12 '
+        margin-bottom: 68px
+    &-testimonial
+        position: relative

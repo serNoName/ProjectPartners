@@ -34,6 +34,8 @@
         .container
             width: 100%
             padding: 0 15px
+            &-894
+                width: 894px
     .header
         &__wrapper
             padding-bottom: 16px
@@ -376,6 +378,32 @@
             grid-template-columns: auto 500px
         &__image
             width: 430px
+    .bg__line
+        &-testimonial
+            bottom: -100px
+        &-cards
+            display: none
+        &-article
+            display: none
+    .testimonial
+        &__body
+            padding: 16px
+        &__header
+            .person
+                left: 16px
+        &__title
+            line-height: 110%
+        &-big
+            .person
+                bottom: 16px
+            .testimonial
+                &__header
+                    height: 100%
+                &__col
+                    &:first-child
+                        width: calc(33.33333% - 12.3333px)
+    .information
+        padding: 16px
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
@@ -384,6 +412,8 @@
         right: 60px
     .bg__line
         &-find
+            display: none
+        &-article
             display: none
     .container
         width: 747px
@@ -398,6 +428,9 @@
                 font-size: 32px
         &-road
             background: $light-grey
+        &__testimonial
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-areas: 'c1 c2 c3''c4 c5 mini''c6 c7 c8''baner baner baner''c9 c10 c11''c12 c13 c14'
     .header
         &__wrapper
             padding-bottom: 16px
@@ -543,9 +576,12 @@
             font-size: 40px
             line-height: 50px
             text-align: center
-        &__select-theme
-            margin-bottom: 32px
-            margin-top: 0
+        &__select
+            &-theme
+                margin-bottom: 32px
+                margin-top: 0
+            &-testimonial
+                margin-top: 16px
         &__inner
             justify-content: center
             display: flex
@@ -573,6 +609,8 @@
                     right: 100px
             .bg
                 transform: none !important
+            &-testimonial
+                align-items: start
     .featback
         padding: 80px 0
         &__wrapper
@@ -910,6 +948,37 @@
             font-size: 16px
         &__subtitle
             font-size: 14px
+    .bg__line
+        &-testimonial
+            bottom: -100px
+        &-cards
+            display: none
+    .testimonial
+        &__body
+            padding: 16px
+        &__header
+            width: 100%
+            .person
+                left: 16px
+        &__title
+            line-height: 110%
+        &-big
+            height: 225px
+            .person
+                bottom: 16px
+            .testimonial
+                &__body
+                    &-business
+                        padding-top: 24px
+                &__header
+                    height: 100%
+                    width: 285px
+                &__col
+                    &:first-child
+                        width: calc(33.33333% - 12.3333px)
+    .article
+        &__header
+            height: 425px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -941,6 +1010,9 @@
                 z-index: 2
                 top: 51%
                 transform: translateY(-50%) translateX(-50%)
+            &-article
+                line-height: 110%
+                font-size: 40px
         &-road
             background: $light-grey
         &__footer
@@ -948,12 +1020,17 @@
                 margin-top: 80px
         &-difference
             background-image: none
+        &__testimonial
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-areas: 'c1 c2''c3 c4''mini c5''baner baner''c6 c7''c8 c9''c10 c11''c12 c13'
     .bg__line
         &-find
             display: none
         &-lets
             display: none
         &-wtsi
+            display: none
+        &-article
             display: none
     .header
         padding: 0
@@ -1102,9 +1179,12 @@
             font-size: 40px
             line-height: 50px
             text-align: center
-        &__select-theme
-            margin-bottom: 32px
-            margin-top: 0
+        &__select
+            &-theme
+                margin-bottom: 32px
+                margin-top: 0
+            &-testimonial
+                margin-top: 16px
         &__inner
             justify-content: center
             display: flex
@@ -1114,6 +1194,8 @@
                 margin-bottom: 32px
             img
                 width: 90%
+            &-testimonial
+                align-items: start
             .mini-card
                 &-1
                     left: 50px
@@ -1675,7 +1757,6 @@
             max-width: calc( 100%)
     .video
         height: 280px
-
     .parse-info
         &__row
             margin-bottom: 12px
@@ -1689,6 +1770,45 @@
             flex-direction: column
         .parse-info__col
             width: 100%
+    .bg__line
+        &-testimonial
+            bottom: -100px
+        &-cards
+            display: none
+    .testimonial
+        &__body
+            padding: 16px
+        &__header
+            width: 100%
+            .person
+                left: 16px
+        &__title
+            line-height: 110%
+        &-big
+            flex-direction: column
+            height: auto
+            .person
+                bottom: 16px
+            .testimonial
+                &__body
+                    row-gap: 32px
+                    padding: 16px
+                &__title
+                    font-size: 24px
+
+                // &__header
+                //     height: 100%
+                //     width: 285px
+                // &__col
+                //     &:first-child
+                //         width: calc(33.33333% - 12.3333px)
+    .article
+        &__header
+            height: 380px
+    .related
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            gap: 20px
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2018,6 +2138,17 @@
         padding-bottom: 50px
         &__subtitle
             margin-bottom: 12px
+        &__testimonial
+            gap: 16px
+        &.promo
+            .promo
+                &__inner
+                    &-testimonial
+                        .section
+                            &__title
+                                font-size: 36px
+                            &__subtitle
+                                font-size: 20px
     .road
         display: flex
         flex-direction: column
@@ -2041,6 +2172,22 @@
             font-size: 16px
         &__subtitle
             font-size: 14px
+    .person
+        column-gap: 6px
+        &__ava
+            img
+                width: 44px
+                height: 44px
+    .testimonial
+        &__title
+            font-size: 16px
+    .article
+        &.section
+            padding: 32px 0
+        &__header
+            height: 280px
+        &__row
+            margin-bottom: 24px
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -2052,12 +2199,31 @@
         font-size: 32px
     .container
         width: 350px
+    .bg__line
+        &-testimonial
+            display: none
     .section
         &__subtitle
             margin-bottom: 8px
         &__title
             font-size: 36px
             line-height: 110%
+        &.promo
+            .promo
+                &__select
+                    &-testimonial
+                        margin-bottom: 16px
+                &__inner
+                    &-testimonial
+                        .section
+                            &__title
+                                font-size: 32px
+                            &__subtitle
+                                font-size: 16px
+        &__testimonial
+            grid-template-columns: 1fr
+            grid-template-areas: 'c1''c2''c3''mini''c4''c5''c6''c7''baner''c8''c9''c10''c11''c12'
+            justify-items: center
     .header
         .container
             width: auto
@@ -2095,10 +2261,13 @@
     .promo
         &__title
             font-size: 32px
-        &__select-theme
-            margin-bottom: 18px
-            &-item
-                font-size: 14px
+        &__select
+            &-theme
+                margin-bottom: 18px
+                &-item
+                    font-size: 14px
+            &-testimonial
+                margin-bottom: 16px
         &__btns
             row-gap: 8px
         .btn
@@ -2305,7 +2474,7 @@
                 grid-template-columns: 1fr
                 display: flex
                 align-items: center
-                .aside__list-item aside__list-item-shortlist
+                .aside__list-item .aside__list-item-shortlist
                     width: 280px
     .sign
         &__title
@@ -2457,6 +2626,28 @@
             width: 100%
             margin: auto
             margin-left: 0
+    .testimonial
+        max-width: 320px
+        &-big
+            .testimonial
+                &__title
+                    font-size: 16px
+                &__footer
+                    flex-direction: column
+                &__body
+                    row-gap: 8px
+                    height: calc(100% - 225px)
+            .btn
+                margin-top: 16px
+    .information
+        &__title
+            margin-bottom: 16px
+            font-size: 20px
+    .related
+        &__wrapper
+            gap: 16px
+            grid-template-columns: 1fr
+            justify-items: center
 @media (max-width: 360px)
     .container
         width: 310px
@@ -2650,3 +2841,12 @@
         &__ico
             min-width: 32px
             min-height: 32px
+    .section
+        &__title
+            &-article
+                font-size: 28px
+    .related
+        .article
+            &__row
+                flex-direction: column
+                row-gap: 4px
