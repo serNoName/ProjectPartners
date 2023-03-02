@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preload" href="assets/fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/Mont-Regular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="assets/fonts/Mont-Heavy.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/Mont-Heavy.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="assets/fonts/Mont-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/Mont-Bold.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="assets/fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/Mont-SemiBold.woff" as="font" type="font/woff" crossorigin>
+        <link rel="async" href="assets/fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Heavy.woff" as="font" type="font/woff" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-SemiBold.woff" as="font" type="font/woff" crossorigin>
 
     <link rel="stylesheet" href="assets/css/normalize.min.css">
     <link rel="stylesheet" href="assets/css/slick.css">
@@ -365,12 +365,20 @@
             <div class="article__body">
                 <div class="section__title section__title-article section__title-left">The fastest way to reach out the first role</div>
                 <div class="article__row">
-                    <div class="testimonial__badges">
-                        <div class="badge">Designer</div>
-                        <div class="badge">Motion</div>
-                        <div class="badge">Story</div>
+                    <div class="badges">
+                        <a href="#" class="badge">Designer</a>
+                        <a href="#" class="badge">Motion</a>
+                        <a href="#" class="badge">Story</a>
                     </div>
-                    <a href="#" class="btn btn-more btn-share">Share</a>
+                    <button href="#" class="btn btn-more btn-share dropdown-triger-click">
+                        Share
+                        <ul class="dropdown dropdown-share">
+                            <li><a target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?url=https://www.exemple.com&text=TEXT" class="dropdown__item dropdown__item-share dropdown__item-twitter">Twitter</a></li>
+                            <li><a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.exemple.com" class="dropdown__item dropdown__item-share dropdown__item-linkedin">LinkedIn</a></li>
+                            <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://www.exemple.com" class="dropdown__item dropdown__item-share dropdown__item-facebook">Facebook</a></li>
+                            <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/oauth/authorize?client_id=757604545546484&redirect_uri=www.exemple.com&response_type=token" class="dropdown__item dropdown__item-share dropdown__item-instagram">Instagram</a></li>
+                        </ul>
+                    </button>
                 </div>
                 <p class="section__text section__text-article">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida nisl vel risus auctor, ac malesuada massa porttitor. Nam faucibus nunc in gravida eleifend. Nulla vehicula bibendum mi eget ultricies. Cras facilisis sem sed ipsum auctor, ut interdum augue facilisis. Phasellus porta ipsum at diam ultricies vulputate. Integer vel sem quis enim hendrerit laoreet. Mauris non mauris non magna posuere vulputate.
@@ -388,7 +396,7 @@
             </div>
             <div class="related__wrapper">
                 <div class="testimonial">
-<a href="#" class="testimonial__link"></a>
+                    <a href="#" class="testimonial__link"></a>
                     <div class="testimonial__header">
                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
                          data-src="assets/img/ava/testimonial/1.jpg" alt="bg card" class="testimonial__bg lazyload" width="285" height="285">
@@ -409,10 +417,10 @@
                     </div>
                     <div class="testimonial__body">
                         <div class="testimonial__title" >The fastest way to reach out the first role</div>
-                        <div class="testimonial__badges">
-                            <div class="badge">Management</div>
-                            <div class="badge">Business</div>
-                            <div class="badge">Story</div>
+                        <div class="badges">
+                            <a href="#" class="badge">Management</a>
+                            <a href="#" class="badge">Business</a>
+                            <a href="#" class="badge">Story</a>
                         </div>
                         <div class="testimonial__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus a leo eu tempor...</div>
                         <a href="#" class="btn btn-more btn-testimonial">Learn more</a>
@@ -440,10 +448,10 @@
                     </div>
                     <div class="testimonial__body">
                         <div class="testimonial__title" >The fastest way to reach out the first role</div>
-                        <div class="testimonial__badges">
-                            <div class="badge">Management</div>
-                            <div class="badge">Business</div>
-                            <div class="badge">Story</div>
+                        <div class="badges">
+                            <a href="#" class="badge">Management</a>
+                            <a href="#" class="badge">Business</a>
+                            <a href="#" class="badge">Story</a>
                         </div>
                         <div class="testimonial__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus a leo eu tempor...</div>
                         <a href="#" class="btn btn-more btn-testimonial">Learn more</a>
@@ -471,10 +479,10 @@
                     </div>
                     <div class="testimonial__body">
                         <div class="testimonial__title" >The fastest way to reach out the first role</div>
-                        <div class="testimonial__badges">
-                            <div class="badge">Management</div>
-                            <div class="badge">Business</div>
-                            <div class="badge">Story</div>
+                        <div class="badges">
+                            <a href="#" class="badge">Management</a>
+                            <a href="#" class="badge">Business</a>
+                            <a href="#" class="badge">Story</a>
                         </div>
                         <div class="testimonial__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus a leo eu tempor...</div>
                         <a href="#" class="btn btn-more btn-testimonial">Learn more</a>
@@ -483,7 +491,6 @@
             </div>
         </div>
     </div>
-
 
     <footer class="footer">
         <div class="footer__wrapper">
