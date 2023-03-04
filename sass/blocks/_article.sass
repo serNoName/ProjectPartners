@@ -4,6 +4,11 @@
     padding-bottom: 56px
     .breadcrumb
         margin-bottom: 16px
+    &-constructor
+        padding-bottom: 32px
+        .article
+            &__header
+                margin-bottom: 64px
     &__row
         display: flex
         justify-content: space-between
@@ -58,7 +63,12 @@
         display: grid
         grid-template-columns: repeat(3, 1fr)
         column-gap: 20px
+        &-big
+            grid-template-columns: repeat(4, 1fr)
     .section__subtitle
         margin: 0
         color: $black
         font-size: 24px
+    &-constructor
+        padding-bottom: 0
+        margin-bottom: 96px

@@ -87,14 +87,14 @@
             background-color: transparent
             color: $mid-primary
             &::before
-                background-color: $mid-primary
+                background-color: currentColor
     &-testimonial
         padding: 0
         background-color: transparent
         color: $dark-grey
         margin-top: auto
         &::before
-            background-color: $dark-grey
+            background-color: currentColor
         &:hover
             background-color: transparent
     &-share
@@ -114,6 +114,10 @@
         &:hover
             &::after
                 filter: contrast(200%)
+    &-grey
+        color: $dark-grey
+        &::before
+            background-color: currentColor
 .mini-card
     width: fit-content
     padding: 6px 8px
@@ -799,6 +803,17 @@
                 color: #FF8C52
                 svg path
                     fill: #FF8C52
+    &-professional
+        &::before
+            background-color: $secondary2
+        .row-card
+            &__ava
+                svg path
+                    fill: $secondary2
+            &__role
+                color: $secondary2
+                svg path
+                    fill: $secondary2
     &-junior
         &::before
             background-color: $neon
@@ -865,6 +880,21 @@
                 width: max-content
                 max-width: 200px
                 width: 100%
+    &-qoute
+        &::before
+            display: none
+        .row-card
+            &__wrapper
+                padding: 16px 0
+            &__body
+                margin: 0
+            &__profile
+                margin-left: 24px
+                width: 220px
+                grid-template-columns: 56px auto
+    &__more
+        margin: auto
+        margin-right: 0
     &__wrapper
         padding: 24px
         padding-bottom: 12px
@@ -1386,6 +1416,8 @@
     overflow: hidden
     height: 360px
     cursor: pointer
+    &-simpleText
+        height: 475px
     iframe
         border: none
     &__title
@@ -1559,6 +1591,21 @@
     &-mini
         grid-area: mini
         background-color: $primary
+    &-member
+        border-radius: 16px
+        height: 360px
+        .testimonial
+            &__header
+                height: 100%
+                &::before
+                    height: 100px
+        .person
+            &__label
+                font-size: 22px
+            &__prof
+                span
+                    font-size: 16px
+
     &-big
         display: flex
         flex-direction: row
@@ -1663,4 +1710,26 @@
         &-instagram
             &::before
                 background: url('../img/ico/social/instagram-purple.svg') center center no-repeat
-
+.benefit
+    position: relative
+    padding-left: 44px
+    &__number
+        position: absolute
+        top: 0
+        left: 0
+        width: 32px
+        height: 32px
+        display: grid
+        place-items: center
+        line-height: 140%
+        border-radius: 6px
+        background-color: $primary
+        font-size: 22px
+        font-weight: 800
+        color: #fff
+        &-complete
+            color: rgba(0,0,0,0)
+            background-color: $neon
+            background: url('../img/ico/check-mark.svg') center center no-repeat no-repeat
+    &:not(:last-child)
+        margin-bottom: 28px

@@ -1,0 +1,74 @@
+.styledTable
+    border-collapse: collapse
+    width: 100%
+    border-radius: 16px
+    border: 1px solid $mid-grey
+    display: grid
+    overflow: hidden
+    grid-template-rows: 44px 41px 41px 41px 41px 41px
+    &__row
+        width: 100%
+        display: grid
+        grid-template-columns: auto 175px 175px 140px 140px 140px
+        &:not(:last-child)
+            border-bottom: 1px solid $mid-grey
+    &__cell
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: $dark-grey
+        display: flex
+        align-items: center
+        padding-left: 16px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        &:not(:last-child)
+            border-right: 1px solid $mid-grey
+        &-grey
+            background-color: $light-grey
+            font-weight: 700
+.qoute
+    padding: 32px 24px
+    background-color: $light-grey
+    border-radius: 16px
+    font-weight: 800
+    font-size: 24px
+    line-height: 130% // 31/24
+    color: $black
+    margin-top: 16px
+.simpleText
+    &__content
+        margin: 24px 0
+    &__image
+        border-radius: 16px
+        object-fit: cover
+.twoCols
+    position: relative
+    display: grid
+    grid-template-columns: 572px 590px
+    column-gap: 38px
+    &__col
+        .section
+            &__text
+                &-simpleText
+                    &:not(:last-child)
+                        margin-bottom: 24px
+        &-cta
+            display: grid
+            place-items: center
+    &-benefits
+        column-gap: 20px
+        grid-template-columns: 589px 584px
+    &-get
+        grid-template-columns: repeat(2, 590px)
+        .benefit
+                max-width: 584px
+        .section__text
+            &-benefit
+                max-width: 540px
+    &-cta
+        grid-template-columns: 590px 500px
+.fourCols
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 20px
