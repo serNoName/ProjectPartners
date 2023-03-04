@@ -12,6 +12,8 @@
         grid-template-columns: auto 175px 175px 140px 140px 140px
         &:not(:last-child)
             border-bottom: 1px solid $mid-grey
+        &:first-child
+            background-color: $light-grey
     &__cell
         font-size: 16px
         line-height: 125% // 20/16
@@ -39,9 +41,13 @@
 .simpleText
     &__content
         margin: 24px 0
+        // max-width: 100%
     &__image
         border-radius: 16px
+        max-width: 100%
         object-fit: cover
+        vertical-align: top
+        width: 100%
 .twoCols
     position: relative
     display: grid

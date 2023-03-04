@@ -6,10 +6,21 @@
     background-color: $light-grey
     // background-position-y: -50px
     overflow: hidden
+    &-constructor
+        padding: 56px 0
+        background-image: none
+        .catalog-card
+            margin-right: 20px
+            background-color: transparent
+            &__wrapper
+                background-color: #fff
+                border-radius: 16px
     &__wrapper
         display: grid
         grid-template-columns: repeat(4, auto)
         margin-bottom: 50px
+        &-constructor
+            margin: 0
     &__title
         margin-bottom: 80px
         text-align: center

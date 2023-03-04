@@ -206,6 +206,11 @@
             column-gap: 55px
             justify-content: center
             row-gap: 80px
+        &-constructor
+            .demand
+                &__wrapper
+                    display: grid
+                    column-gap: 20px
     .footer
         &__menu
             column-gap: 60px
@@ -217,6 +222,15 @@
             grid-template-columns: 1fr 1fr
             justify-items: center
             row-gap: 64px
+        &-constructor
+            .roles
+                &__wrapper
+                    display: grid
+                    grid-template-columns: repeat(4, 1fr)
+                    column-gap: 20px
+                    justify-items: unset
+                    .catalog-card
+                        margin: 0
     .possibilities
         &__inner
             &:first-child
@@ -422,6 +436,8 @@
         &__title
             &-article
                 font-size: 40px
+    .twoCols
+        grid-template-columns: auto auto
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
     .chat-buble
@@ -438,30 +454,6 @@
         .container
             width: 100%
             padding: 0 15px
-    .section
-        &.promo
-            .section
-                &__title
-                    font-size: 40px
-                &__subtitle
-                    font-size: 20px
-            .promo
-                &__inner
-                    img
-                        width: 100%
-                        min-width: 400px
-                        max-width: 600px
-        &__title
-            margin-bottom: 28px
-            &-difference
-                font-size: 32px
-            &-article
-                font-size: 40px
-        &-road
-            background: $light-grey
-        &__testimonial
-            grid-template-columns: repeat(3, 1fr)
-            grid-template-areas: 'c1 c2 c3''c4 c5 mini''c6 c7 c8''baner baner baner''c9 c10 c11''c12 c13 c14'
     .header
         &__wrapper
             padding-bottom: 16px
@@ -1011,6 +1003,72 @@
     .article
         &__header
             height: 425px
+        &-constructor
+            .article
+                &__header
+                    margin-bottom: 32px
+                &__row
+                    margin-bottom: 32px
+            .section__title-article
+                margin-bottom: 16px
+    .styledTable
+        overflow-x: scroll
+        width: 100%
+        @include customScrollBar()
+        &__row
+            grid-template-columns: 100px 175px 175px 140px 100px 120px
+            padding-right: 16px
+    .twoCols
+        display: flex
+        flex-direction: column
+        row-gap: 32px
+    .fourCols
+        grid-template-columns: repeat(3, 1fr)
+        row-gap: 24px
+    .section
+        &.promo
+            .section
+                &__title
+                    font-size: 40px
+                &__subtitle
+                    font-size: 20px
+            .promo
+                &__inner
+                    img
+                        width: 100%
+                        min-width: 400px
+                        max-width: 600px
+        &__subtitle
+            &-simpleText
+                margin-bottom: 16px
+        &__title
+            margin-bottom: 28px
+            &-difference
+                font-size: 32px
+            &-article
+                font-size: 40px
+            &-simpleText
+                font-size: 36px
+                margin-bottom: 16px
+        &-cta
+            padding-top: 40px
+        &-road
+            background: $light-grey
+        &__testimonial
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-areas: 'c1 c2 c3''c4 c5 mini''c6 c7 c8''baner baner baner''c9 c10 c11''c12 c13 c14'
+    .related
+        &__wrapper
+            &-big
+                grid-template-columns: 1fr 1fr 1fr
+                row-gap: 24px
+    .faq
+        display: flex
+        flex-direction: column
+    .demand-constructor .catalog-card
+        margin-right: 20px
+    .prof__card-add
+        display: flex
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -1835,15 +1893,15 @@
                     flex-direction: column
                     margin: 0
                     flex-grow: 1
-                // &__header
-                //     height: 100%
-                //     width: 285px
-                // &__col
-                //     &:first-child
-                //         width: calc(33.33333% - 12.3333px)
+        &-member
+            height: 300px
     .article
         &__header
             height: 380px
+        &-constructor
+            padding: 0
+            .article__header
+                margin-bottom: 16px
     .related
         &__wrapper
             grid-template-columns: 1fr 1fr
@@ -1861,6 +1919,62 @@
                         width: 100%
                         min-width: none
                         max-width: 420px
+        &-simpleText
+            padding-top: 0
+            padding-bottom: 32px
+        &__title
+            &-simpleText
+                margin-bottom: 16px
+                font-size: 32px
+            &-blog
+                margin: 0
+        &__subtitle
+            margin-bottom: 16px
+            &-sm
+                margin: 0
+        &-team
+            margin-bottom: 0
+        &-faq
+            margin-bottom: 0
+    .demand
+        &-constructor
+            .catalog-card
+                margin-right: 20px
+    .faq
+        display: flex
+        flex-direction: column
+    .styledTable
+        overflow-x: scroll
+        width: 100%
+        @include customScrollBar()
+        &__row
+            grid-template-columns: 100px 175px 175px 140px 100px 120px
+            padding-right: 16px
+    .twoCols
+        display: flex
+        flex-direction: column
+        row-gap: 32px
+    .fourCols
+        grid-template-columns: repeat(2, 1fr)
+        row-gap: 24px
+    .qoute
+        padding: 24px 16px
+        font-size: 18px
+        margin: 0
+    .row-card
+        &-qoute
+            .row-card
+                &__body
+                    display: flex
+                &__profile
+                    margin: 0
+    .simpleText
+        &__content
+            .simpleText__image
+                max-height: 360px
+    .related
+        &-blog
+            margin-bottom: 36px
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2193,6 +2307,10 @@
         &__title
             &-article
                 font-size: 36px
+            &-get
+                margin-bottom: 32px
+            &-blog
+                font-size: 32px
         &__testimonial
             gap: 16px
         &.promo
@@ -2209,6 +2327,29 @@
                                 font-size: 36px
                             &__subtitle
                                 font-size: 20px
+        &-simpleText
+            padding: 0
+            padding: 32px 0
+        &-benefits
+            .section__title
+                text-align: left
+                margin: 0
+                font-size: 28px
+                &-get
+                    margin-bottom: 32px
+        &__text
+            &-benefit
+                font-size: 14px
+        &-team
+            padding-top: 0
+            .section
+                &__title
+                    font-size: 28px
+                    margin-bottom: 16px
+        &-faq
+            .section
+                &__title
+                    font-size: 28px
     .road
         display: flex
         flex-direction: column
@@ -2224,6 +2365,14 @@
                     &:first-child
                         img
                             transform: scale(1.2) translateY(-8px)
+    .benefit
+        padding-left: 36px
+        &:not(:last-child)
+            margin-bottom: 16px
+        &__number
+            width: 28px
+            height: 28px
+            font-size: 18px
     .wtsi
         &__card
             width: 360px
@@ -2245,6 +2394,10 @@
             .testimonial
                 &__title
                     font-size: 16px
+        &-member
+            height: 240px
+        &-blog
+            border-bottom-left-radius: 0
     .article
         &.section
             padding: 32px 0
@@ -2252,6 +2405,35 @@
             height: 280px
         &__row
             margin-bottom: 24px
+        &-constructor
+            padding: 0
+            .article
+                &__row
+                    margin: 0
+    .start
+        &__title
+            &-cta
+                font-size: 32px
+                margin-bottom: 16px
+        &__subtitle
+            font-size: 16px
+            margin-bottom: 32px
+    .related
+        &__wrapper
+            &-big
+                grid-template-columns: 1fr
+                .testimonial
+                    max-width: 360px
+                    margin: 0 auto
+                    &__body
+                        min-height: auto
+    .faq
+        row-gap: 20px
+    .demand-constructor
+        padding: 40px 0
+        margin-bottom: 40px
+    .roles-constructor
+        padding: 40px 0
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -2266,6 +2448,10 @@
     .bg__line
         &-testimonial
             display: none
+        &-benefits1
+            display: none
+        &-benefits2
+            display: none
     .section
         &__subtitle
             margin-bottom: 8px
@@ -2274,6 +2460,8 @@
             line-height: 110%
             &-article
                 font-size: 32px
+            &-blog
+                font-size: 28px
         &.promo
             .promo
                 &__select
@@ -2290,6 +2478,15 @@
             grid-template-columns: 1fr
             grid-template-areas: 'c1''c2''c3''mini''c4''c5''c6''c7''baner''c8''c9''c10''c11''c12'
             justify-items: center
+        &-faq
+            padding-top: 0
+    .benefit
+        .section
+            &__subtitle
+                font-size: 18px
+                margin-bottom: 8px
+            &__text
+                font-size: 14px
     .header
         .container
             width: auto
@@ -2363,8 +2560,14 @@
         padding: 80px 0
         &__title
             margin-bottom: 18px
+            &-cta
+                font-size: 28px
+                margin-bottom: 12px
         &__subtitle
             margin-bottom: 18px
+            &-cta
+                margin-bottom: 12px
+                font-size: 14px
         &__btn
             font-size: 16px
     .alert
@@ -2716,6 +2919,8 @@
             gap: 16px
             grid-template-columns: 1fr
             justify-items: center
+            &-big
+                row-gap: 40px
     .article
         &__author
             flex-direction: column-reverse
@@ -2723,7 +2928,15 @@
             align-items: start
         &__date
             opacity: 8
-
+        &__row
+            flex-wrap: wrap
+    .twoCols
+        img
+            max-width: 100%
+    .fourCols
+        grid-template-columns: 1fr
+    .qoute
+        font-size: 16px
 @media (max-width: 360px)
     .container
         width: 310px
@@ -2921,8 +3134,26 @@
         &__title
             &-article
                 font-size: 28px
+        &-simpleText
+            padding: 24px 0
+            .section
+                &__title
+                    font-size: 28px
+        &.article
+            &-constructor
+                padding-bottom: 0
     .related
         .article
             &__row
                 flex-direction: column
                 row-gap: 4px
+    .row-card
+        &-qoute
+            .row-card
+                &__wrapper
+                    padding-bottom: 0
+                &__body
+                    flex-direction: column
+                    align-items: start
+                &__more
+                    margin: 4px 0 0 0
