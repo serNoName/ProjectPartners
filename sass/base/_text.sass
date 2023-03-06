@@ -171,6 +171,47 @@
     &-simpleText
         padding: 0
         padding-bottom: 64px
+        ul
+            list-style: none
+            margin-bottom: 16px
+            &:last-child
+                margin-bottom: 0
+        ol
+            padding-left: 24px
+            margin-bottom: 16px
+            &:last-child
+                margin-bottom: 0
+            li
+                padding: 0
+                list-style: decimal
+                &::before
+                    display: none
+        li
+            position: relative
+            font-size: 16px
+            line-height: 150%
+            color: $dark-grey
+            font-weight: 600
+            padding-left: 24px
+            list-style: none
+            &::before
+                position: absolute
+                content: ''
+                left: 10px
+                top: 12px
+                width: 3px
+                height: 3px
+                background-color: $dark-grey
+                border-radius: 50%
+        p
+            font-size: 18px
+            font-weight: 600
+            line-height: 150% // 27/18
+            color: $dark-grey
+            margin-bottom: 16px
+            height: fit-content
+            &:last-child
+                margin-bottom: 0
     &__list
         display: flex
         flex-direction: column
