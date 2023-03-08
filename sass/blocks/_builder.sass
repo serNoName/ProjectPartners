@@ -161,6 +161,7 @@
         position: absolute
         bottom: 0
         left: 0
+        z-index: 0
     &__photo
         display: flex
         margin-bottom: 24px
@@ -223,7 +224,10 @@
             font-size: 10px
     &__item
         position: relative
-        z-index: 2
+        z-index: 1
+        &-social
+            .builder__input
+                padding-left: 36px
         &:not(:last-child)
             margin-bottom: 12px
         &:hover
