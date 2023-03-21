@@ -15,9 +15,14 @@
     &[disabled=""],&[disabled="disabled"]
         background-color: $mid-grey
         color: rgba(52,63,72,.3)
+        cursor: default
         &:hover
             background-color: $mid-grey
             color: rgba(52,63,72,.3)
+        &.btn-dark
+            background-color: #555
+            color: $white
+            opacity: .5
     &:hover
         background-color: $mid-primary
         color: #fff
@@ -1690,6 +1695,12 @@
         text-fill-color: transparent
         opacity: 0.8
         line-height: 140%
+        &-clear
+            opacity: 1
+            -webkit-line-clamp: 6
+            background: transparent
+            color: $dark-grey
+            -webkit-text-fill-color: $dark-grey
     &-mini
         grid-area: mini
         background-color: $primary
@@ -1756,6 +1767,11 @@
                 border-radius: 0
                 .btn
                     margin: 0
+    &-static
+        &:hover
+            .testimonial
+                &__bg
+                    opacity: 1
 .information
     padding: 24px
     display: flex
