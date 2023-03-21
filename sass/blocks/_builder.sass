@@ -248,9 +248,13 @@
         &-dark
             .builder
                 &__input
-                    color: rgba(255, 255, 255, .3)
+                    color: rgba(255, 255, 255, 1)
                     background-color: $black
                     border: 1px solid rgba(255, 255, 255, .5)
+                    &::placeholder
+                        color: rgba(255, 255, 255, .3)
+                &__label
+                    color: rgba(255, 255, 255, .3)
             &.builder__item
                 &-linkedin
                     &::before
@@ -278,6 +282,13 @@
                 background: url('../img/ico/social/twitter.svg') center (center/cover) no-repeat
                 filter: invert(200%)
                 opacity: .2
+        &-big
+            .builder
+                &__input
+                    height: 56px
+                &__label
+                    &.active
+                        transform: translateY(-16px)
     &__inputs
         margin-bottom: 24px
     &__input
@@ -298,6 +309,8 @@
             box-shadow: 0 0 12px 6px rgba(110,85,255, .08 )
         &.input-focus
             padding: 24px 12px 10px 12px
+        &::placeholder
+            color: rgba(52, 63, 72, .3)
         &-social
             padding-left: 36px
     &-textarea

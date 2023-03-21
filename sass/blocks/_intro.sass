@@ -31,8 +31,16 @@
             font-weight: 800
             &:hover
                 color: $mid-primary
+        span
+            color: $primary
         &-white
             color: #fff
+        &-translucent
+            font-size: 12px
+            margin-top: 16px
+            color: rgba(52, 63, 72, .5)
+        &-dark
+            color: rgba(245, 245, 245, .5)
     &__footer
         display: flex
         align-items: center
@@ -64,3 +72,7 @@
                 color: $mid-primary
         &-white
             color: #fff
+    &-landing
+        position: relative
+        padding: 52px 0
+        background: $light-grey

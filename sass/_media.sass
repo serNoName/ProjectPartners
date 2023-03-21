@@ -976,6 +976,12 @@
             bottom: -100px
         &-cards
             display: none
+        &-thank
+            display: none
+        &-thank2
+            display: none
+        &-workTime
+            display: none
     .testimonial
         &__body
             padding: 16px
@@ -1022,6 +1028,18 @@
         display: flex
         flex-direction: column
         row-gap: 32px
+        padding: 0
+        &-share, &-revers, &-thank
+            max-width: 640px
+            margin: 0 auto
+        &-revers
+            flex-direction: column-reverse
+        &-share
+            .twoCols
+                &__col
+                    &:first-child
+                        display: flex
+                        justify-content: center
     .fourCols
         grid-template-columns: repeat(3, 1fr)
         row-gap: 24px
@@ -1057,6 +1075,8 @@
         &__testimonial
             grid-template-columns: repeat(3, 1fr)
             grid-template-areas: 'c1 c2 c3''c4 c5 mini''c6 c7 c8''baner baner baner''c9 c10 c11''c12 c13 c14'
+        &-thank, &-check, &-share
+            padding: 64px 0
     .related
         &__wrapper
             &-big
@@ -1069,6 +1089,7 @@
         margin-right: 20px
     .prof__card-add
         display: flex
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -1180,6 +1201,8 @@
             &-dropdown
                 left: 0
                 transform: none
+        &-simple
+            padding: 24px 0
     .nav
         padding: 30px
         padding-top: 90px
@@ -1846,6 +1869,8 @@
         &__card
             width: 320px
             max-width: calc( 100%)
+        &-landing
+            margin-bottom: 32px
     .video
         height: 280px
     .parse-info
@@ -1861,10 +1886,25 @@
             flex-direction: column
         .parse-info__col
             width: 100%
+        &-row
+            display: flex
+            flex-direction: column
+            .builder__item
+                width: 100%
     .bg__line
         &-testimonial
             bottom: -100px
         &-cards
+            display: none
+        &-thank
+            display: none
+        &-thank2
+            display: none
+        &-workTime
+            display: none
+        &-landing2
+            display: none
+        &-stories
             display: none
     .testimonial
         &__body
@@ -1954,6 +1994,20 @@
         display: flex
         flex-direction: column
         row-gap: 32px
+        padding: 0
+        &__col
+            img
+                max-width: 80%
+        &-revers
+            flex-direction: column-reverse
+        &-share
+            .twoCols
+                &__col
+                    &:first-child
+                        display: flex
+                        justify-content: center
+        &-simple
+            row-gap: 48px
     .fourCols
         grid-template-columns: repeat(2, 1fr)
         row-gap: 24px
@@ -1975,6 +2029,26 @@
     .related
         &-blog
             margin-bottom: 36px
+    .workTime
+        padding: 24px
+    .dragndrop
+        position: relative
+        &-full
+            width: 589px
+            height: 162px
+        &__wrapper
+            position: static
+            // min-height: 220px
+    .parse-info
+        &__row
+            &-2col
+                .builder__item
+                    width: auto
+        &-row
+            max-width: 589px
+            margin: 0 auto
+        &-landing
+            margin-top: 32px
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2027,6 +2101,11 @@
                 align-items: start
                 &::before
                     display: none
+        &-simple
+            background-color: transparent
+            position: static
+            transform: none
+            padding-top: 0
     .nav
         transform: translateX(-580px)
         height: 100vh
@@ -2434,6 +2513,8 @@
         margin-bottom: 40px
     .roles-constructor
         padding: 40px 0
+    .bg__line-landing1
+        display: none
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -2461,6 +2542,8 @@
             &-article
                 font-size: 32px
             &-blog
+                font-size: 28px
+            &-check
                 font-size: 28px
         &.promo
             .promo
@@ -2943,6 +3026,13 @@
             width: 100%
     .qoute
         font-size: 16px
+    .social
+        &__item
+            height: 48px
+            width: 48px
+        &__svg
+            width: 20px
+            height: 20px
 @media (max-width: 360px)
     .container
         width: 310px

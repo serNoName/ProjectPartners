@@ -100,7 +100,21 @@
         .container
             display: flex
             justify-content: space-between
-
+        &-landing
+            position: relative
+            align-items: center
+            padding: 56px 0
+            &::before
+                position: absolute
+                content: ''
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+                height: 1px
+                width: 100%
+                max-width: 1200px
+                background-color: #fff
+                opacity: 0.1
     &__label
         color: $mid-grey
         opacity: .5
@@ -116,3 +130,6 @@
             transition: opacity .4s
             &:hover
                 opacity: .8
+    &__logo
+        img
+            vertical-align: middle
