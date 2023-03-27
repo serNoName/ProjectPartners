@@ -633,30 +633,30 @@ $(function () {
     });
 
     // Animete the drop zone
-    const dropZoneChageSlides = function(){
+    const dropZoneChageSlides = function () {
         let curentContent = dropZone.find('.dragndrop__inner.active'),
             indexOfCurentContent = curentContent.attr('data-dragngdrop'),
             progresBar = dropZone.find('.dragndrop__loading-status'),
             percent = dropZone.find('.dragndrop__persentage > span')
 
 
-            const show2Slide = function () {
-                setTimeout(() => {
-                    let number = 0
+        const show2Slide = function () {
+            setTimeout(() => {
+                let number = 0
 
-                    const timer = setInterval(() => {
-                        number++
-                        if (number > 100) {
-                            clearInterval(timer)
-                            setTimeout( () => { chandgeSlide () },600)
-                        } else {
-                            percent.text(number)
-                            progresBar.css('width',`${number}%`)
-                        }
-                    }, 12);
+                const timer = setInterval(() => {
+                    number++
+                    if (number > 100) {
+                        clearInterval(timer)
+                        setTimeout(() => { chandgeSlide() }, 600)
+                    } else {
+                        percent.text(number)
+                        progresBar.css('width', `${number}%`)
+                    }
+                }, 12);
 
-                }, 200);
-            }
+            }, 200);
+        }
 
         if (indexOfCurentContent == "1") {
             chandgeSlide()
@@ -669,7 +669,7 @@ $(function () {
                 $(this).removeClass('active')
 
                 percent.text(0)
-                progresBar.css('width',`${0}%`)
+                progresBar.css('width', `${0}%`)
 
                 $('[data-dragngdrop="2"]').fadeIn(100, function () {
                     $(this).addClass('active')
@@ -678,11 +678,11 @@ $(function () {
             })
         }
 
-        function chandgeSlide () {
+        function chandgeSlide() {
             dropZone.find('.dragndrop__inner.active').fadeOut(100, function () {
                 $(this).removeClass('active').next().fadeIn(100, function () {
                     $(this).addClass('active')
-                    if($('[data-dragngdrop="3"]').hasClass('active')) {
+                    if ($('[data-dragngdrop="3"]').hasClass('active')) {
                         dropZone.removeClass('uploaded').addClass('complete')
                     }
                 })
@@ -961,3 +961,44 @@ function generateURL(id) {
 }
 
 findVideos();
+
+/*************************/
+/* TABS IN RESOURCES HUB */
+/*************************/
+
+// Hide all content blocks except the first one on page load
+$('[data-tab-content]').not(':first-of-type').hide();
+
+// On tab click
+$('[data-tab]:not(.active)').click(function () {
+    // Get tab id
+    const tab_id = $(this).attr('data-tab');
+
+    // Remove active class from all tabs
+    $('[data-tab]').removeClass('active');
+
+    // Add active class to clicked tab only
+    $(this).addClass('active');
+
+    // Hide all content blocks
+    $('[data-tab-content]').hide();
+
+    // Show content block corresponding to clicked tab
+    $('[data-tab-content="' + tab_id + '"]').show();
+
+    // Update page URL with hash
+    window.location.hash = tab_id;
+
+    // Prevent default action for button
+    return;
+});
+
+// On page load, check hash and open corresponding tab
+if (window.location.hash) {
+    const tab_id = window.location.hash.substr(1);
+
+    $('[data-tab="' + tab_id + '"]').click();
+} else {
+    $('[data-tab]:first-of-type').addClass('active');
+    $(`[data-tab-content="${$('[data-tab]:first-of-type').attr('data-tab')}"]`).show();
+}

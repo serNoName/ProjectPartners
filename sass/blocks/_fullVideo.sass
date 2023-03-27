@@ -1,0 +1,105 @@
+.fullVideo
+    position: relative
+    display: flex
+    column-gap: 16px
+    margin-bottom: 24px
+    &::before
+        position: absolute
+        content: ''
+        right: 0
+        bottom: 0
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 72.4%)
+        width: 320px
+        height: 64px
+        z-index: 4
+    &__chapter
+        display: flex
+        flex-direction: column
+        row-gap: 10px
+        width: 306px
+        min-width: 306px
+        overflow: auto
+        @include customScrollBar()
+        height: 360px
+        padding-bottom: 64px
+    &__video
+        width: 100%
+.chapter
+    display: flex
+    column-gap: 8px
+    border: none
+    background: transparent
+    cursor: pointer
+    &__image
+        position: relative
+        border-radius: 8px
+        min-width: 80px
+        overflow: hidden
+        img
+            transition: transform .2s
+            border-radius: 8px
+            vertical-align: top
+        &::before
+            position: absolute
+            border-radius: 8px
+            content: ''
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            background: rgba(22, 20, 40, 0.5)
+            z-index: 1
+        &::after
+            position: absolute
+            content: ''
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            background: url('../img/ico/play.svg') center center no-repeat
+            width: 24px
+            height: 24px
+            z-index: 3
+    &__content
+        display: flex
+        align-items: start
+        justify-content: center
+        flex-direction: column
+    &__title
+        text-align: left
+        font-weight: 700
+        font-size: 14px
+        line-height: 120%
+        color: $dark-grey
+    &__duration
+        opacity: .5
+        font-size: 12px
+        font-weight: 700
+    &:hover
+        .chapter
+            &__image
+               img
+                transform: scale(1.1)
+    &-complite
+        .chapter
+            &__image
+                &::before
+                    background: rgba(22, 20, 40, 0.8)
+                &::after
+                    background: url('../img/ico/play-complite.svg') center center no-repeat
+            &__title
+                opacity: .5
+    &-active
+        cursor: default
+        .chapter
+            &__image
+                &::before
+                    background: rgba(110, 85, 255, 0.7)
+                &::after
+                    background: url('../img/ico/play-active.svg') center center no-repeat
+            &__title
+                color: $primary
+        &:hover
+            .chapter
+                &__image
+                    img
+                        transform: none
