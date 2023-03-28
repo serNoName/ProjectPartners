@@ -1910,6 +1910,8 @@
         height: 280px
         &-testimonial
             width: 100%
+        &__media
+            max-width: 100%
     .parse-info
         &__row
             margin-bottom: 12px
@@ -2055,6 +2057,12 @@
         &__col
             img
                 max-width: 80%
+            .video
+                &__media
+                    max-width: none
+            .simpleText
+                &__image
+                    max-width: none
         &-revers
             flex-direction: column-reverse
         &-share
@@ -2158,9 +2166,7 @@
         margin: 0
         padding-top: 24px
     .styledTable
-        overflow-x: auto
         width: 100%
-        @include customScrollBar()
         &__cell
             padding-left: 8px
             padding-right: 4px
