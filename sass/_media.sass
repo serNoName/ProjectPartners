@@ -1908,6 +1908,8 @@
             margin-bottom: 32px
     .video
         height: 280px
+        &-testimonial
+            width: 100%
     .parse-info
         &__row
             margin-bottom: 12px
@@ -2014,6 +2016,8 @@
                 margin: 0
             &-videos
                 margin-bottom: 24px
+            &-row
+                margin-bottom: 8px
         &-team
             margin-bottom: 0
         &-faq
@@ -2030,6 +2034,11 @@
         &-attached
             padding: 0
             padding-bottom: 48px
+        &-resources
+            padding: 32px 0
+        &-description
+            padding: 48px 0
+            padding-top: 0
     .demand
         &-constructor
             .catalog-card
@@ -2037,13 +2046,7 @@
     .faq
         display: flex
         flex-direction: column
-    .styledTable
-        overflow-x: scroll
-        width: 100%
-        @include customScrollBar()
-        &__row
-            grid-template-columns: 100px 175px 175px 140px 100px 120px
-            padding-right: 16px
+
     .twoCols
         display: flex
         flex-direction: column
@@ -2151,6 +2154,16 @@
         &__chapter
             height: 280px
             width: 260px
+    .description
+        margin: 0
+        padding-top: 24px
+    .styledTable
+        overflow-x: auto
+        width: 100%
+        @include customScrollBar()
+        &__cell
+            padding-left: 8px
+            padding-right: 4px
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2553,6 +2566,10 @@
         &-attached
             padding: 0
             padding-bottom: 48px
+        &-resources
+            padding: 32px 0
+        &-category
+            padding: 32px 0
     .road
         display: flex
         flex-direction: column
@@ -3216,6 +3233,9 @@
     .resource
         &-event
             flex-direction: row
+    .breadcrumb
+        &-resources
+            margin-bottom: 48px
 @media (max-width: 360px)
     .container
         width: 310px
@@ -3417,6 +3437,9 @@
         &__title
             &-article
                 font-size: 28px
+        &__subtitle
+            &-resources
+                font-size: 18px
         &-simpleText
             padding: 24px 0
             .section

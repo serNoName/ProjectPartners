@@ -6,15 +6,18 @@
     display: grid
     overflow: hidden
     &__row
+        height: auto
         width: 100%
-        display: grid
-        grid-template-columns: auto 175px 175px 140px 140px 140px
-        height: 41px
+        display: flex
+        flex-direction: row
+        align-items: stretch
         &:not(:last-child)
             border-bottom: 1px solid $mid-grey
         &:first-of-type
-            height: 44px
-            background-color: $light-grey
+            .styledTable
+                &__cell
+                    min-height: 44px
+                    background-color: $light-grey
     &__cell
         font-size: 16px
         line-height: 125% // 20/16
@@ -22,9 +25,11 @@
         display: flex
         align-items: center
         padding-left: 16px
-        white-space: nowrap
+        white-space: normal
         overflow: hidden
         text-overflow: ellipsis
+        flex: 1
+        min-height: 40px
         &:not(:last-child)
             border-right: 1px solid $mid-grey
         &-grey
@@ -108,3 +113,4 @@
     display: grid
     grid-template-columns: repeat(4, 1fr)
     column-gap: 20px
+    row-gap: 24px
