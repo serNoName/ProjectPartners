@@ -969,7 +969,17 @@
             &__profile
                 margin-left: 24px
                 width: 220px
+                width: auto
                 grid-template-columns: 56px auto
+                grid-template-columns: none
+                grid-template-areas: 'ava text1''ava text2''ava text3'
+                min-width: auto
+            &__name
+                grid-area: text1
+            &__role
+                grid-area: text2
+            &__position
+                grid-area: text3
         .btn-more
             display: inline-block
     &__more
@@ -1877,6 +1887,9 @@
         &-article
             &::before
                 background: url('../img/ico/article.svg') center center no-repeat
+        &-learning
+            &::before
+                background: url('../img/ico/learning.svg') center center no-repeat
         &-place
             display: flex
             align-items: center
