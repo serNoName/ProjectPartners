@@ -195,6 +195,9 @@
     &-single
         font-size: 18px
         white-space: nowrap
+    &-timesheetItem
+        height: 40px
+        padding: 0 30px
 .mini-card
     width: fit-content
     padding: 6px 8px
@@ -837,7 +840,7 @@
                 transform: translateX(-50%)
                 z-index: 2
                 opacity: 1
-.row-card
+.row-card110
     position: relative
     &::before
         content: ''
@@ -1538,6 +1541,8 @@
     align-items: center
     column-gap: 12px
     border-radius: 12px
+    overflow: hidden
+    text-decoration: none
     &__ico
         min-width: 40px
         min-height: 40px
@@ -1548,8 +1553,82 @@
         font-weight: 700
         line-height: 150%
         color: $primary
+    &__body
+        display: flex
+        flex-direction: column
+        row-gap: 4px
+        padding: 16px
+        padding-left: 12px
+    &__image
+        vertical-align: top
+        transition: transform .2s ease-in-out
+    &__preview
+        position: relative
+        min-width: 88px
+        height: 88px
+        background-size: 40px 40px
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            width: 1px
+            height: calc(100% - 24px)
+            background-color: $mid-grey
+            display: none
+        &-video
+            background: url('../img/ico/video-black.svg') center center no-repeat
+            &::before
+                display: block
+        &-article
+            background: url('../img/ico/article-black.svg') center center no-repeat
+            &::before
+                display: block
+        &-code
+            background: url('../img/ico/code-black.svg') center center no-repeat
+            &::before
+                display: block
+        &-download
+            background: url('../img/ico/download-black.svg') center center no-repeat
+            &::before
+                display: block
+        &-calendar
+            background: url('../img/ico/calendar-black.svg') center center no-repeat
+            &::before
+                display: block
+        &-learning
+            background: url('../img/ico/learning-black.svg') center center no-repeat
+            &::before
+                display: block
+    &__title
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $dark-grey
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        overflow: hidden
+        text-overflow: ellipsis
+        span
+            font-weight: 800
+    &__ago
+        font-weight: 700
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: $dark-grey
+        opacity: 0.5
     &-mb32
         margin-bottom: 32px
+    &-news
+        width: fit-content
+        background-color: #fff
+        padding: 0
+        transition: background-color .2s ease-in-out, outline .2s ease-in-out
+        outline: 0 solid  rgba(110,85,255,0)
+        gap: 0
+        &:hover
+            outline: 6px solid rgba(110,85,255,.2)
 .video
     position: relative
     border-radius: 16px
@@ -1620,8 +1699,9 @@
     border-radius: 8px
     text-decoration: none
     user-select: none
-    transition: color .2s, background-color .2s
+    transition: color .2s, background-color .2s, border-color .2s
     border: none
+    cursor: pointer
     span
         font-weight: 700
         transition: color .2s, background-color .2s, box-shadow .2s
@@ -1698,6 +1778,24 @@
                     background-color: $primary
                 &-professional
                     background-color: $secondary2
+    &-tab
+        font-weight: 600
+        background-color: $light-grey
+        color: $dark-grey
+        border: 1px solid $mid-grey
+        font-size: 16px
+        padding: 9px 16px 6px 16px
+        border-radius: 12px
+        line-height: 115% // 20/16
+        white-space: nowrap
+        &:hover
+            background-color: $primary
+            border-color: $primary
+        &.active
+            cursor: default
+            background-color: $secondary2
+            border: 1px solid $secondary2
+            color: #fff
 .badges
     display: flex
     gap: 4px
@@ -1753,6 +1851,7 @@
         color: #fff
         font-size: 14px
         line-height: 130% // 18/14
+
     &-dark
         .person
             &__label
@@ -1762,6 +1861,15 @@
                 span
                     color: $dark-grey
                 opacity: .5
+    &-static
+        position: static
+        z-index: 0
+    &-timesheetItem
+        .person
+            &__ava
+                border-radius: 15px
+            &__col
+                row-gap: 2px
 .testimonial
     position: relative
     border-radius: 16px
@@ -2424,3 +2532,155 @@
     &-locate
         &:before
             background: url('../img/ico/locate-rose.svg') center center no-repeat
+.timesheetItem
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    background-color: #fff
+    padding: 16px 24px
+    row-gap: 24px
+    border-radius: 16px
+    &__link
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        text-decoration: none
+        transition: outline .2s ease-in-out
+        outline: 0 solid  rgba(110,85,255,0)
+        border-radius: 16px
+        z-index: 2
+        &:hover
+            outline: 6px solid  rgba(110,85,255,.2)
+    &__col
+        display: flex
+        flex-direction: column
+        align-items: left
+        justify-content: center
+        row-gap: 4px
+        &-btns
+            flex-direction: row
+            align-items: center
+            column-gap: 12px
+        &-workedtime
+            gap: 0
+            width: 104px
+        &-name
+            text-align: center
+            font-weight: 700
+            color: $dark-grey
+            width: 165px
+            overflow: hidden
+            text-overflow: ellipsis
+            padding-right: 2px
+        &-first
+            width: 172px
+        &-person
+            width: 196px
+        &-timeframes
+            width: 140px
+        &-date
+            width: 160px
+    &__worked
+        font-weight: 800
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: $dark-grey
+    &__planned
+        font-weight: 700
+        font-size: 14px
+        line-height: 125% // 20/16
+        color: $dark-grey
+        opacity: .5
+    &__timeframes
+        font-weight: 800
+        font-size: 18px
+        color: $dark-grey
+    &-partner
+        .timesheetItem
+            &__col
+                &-timeframes
+                    width: 80px
+        .btn
+            &-timesheetItem
+                padding: 0 20px
+.partnersPhotos
+    display: flex
+    &__photo
+        border-radius: 12px
+        overflow: hidden
+        &:not(:first-child)
+            margin-left: -8px
+            border-left: 4px solid #fff
+        &-last
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: rgba(110, 85, 255, 0.7)
+    &__image
+        border-radius: 12px
+        vertical-align: top
+    &__count
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-weight: 700
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: #fff
+    &-proposalCard
+        margin-top: -8px
+.proposalCard
+    background-color: #fff
+    padding: 24px
+    border-radius: 16px
+    display: flex
+    flex-direction: column
+    row-gap: 16px
+    &__title
+        font-weight: 800
+        font-size: 18px
+        line-height: 130% // 23/18
+        color: $dark-grey
+        span
+            font-weight: inherit
+    &__footer
+        display: flex
+        flex-direction: column
+        row-gap: 12px
+        margin-top: 6px
+        .btn
+            height: 40px
+            white-space: nowrap
+.enquiryDate
+    display: flex
+    column-gap: 8px
+    &__col
+        display: flex
+        flex-direction: column
+        row-gap: 2px
+    &__ico
+        width: 36px
+        height: 36px
+        background: $white url('../img/ico/calendar-purple.svg') center center no-repeat
+        background-size: 24px 24px
+        border-radius: 8px
+    &__title
+        font-weight: 700
+        font-size: 14px
+        line-height: 110% // 18/14
+        color: $dark-grey
+        opacity: 0.5
+    &__date
+        font-weight: 700
+        font-size: 16px
+        line-height: 110% // 20/16
+        color: $dark-grey

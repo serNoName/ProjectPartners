@@ -438,6 +438,8 @@
                 font-size: 40px
     .twoCols
         grid-template-columns: auto auto
+    .proposals
+        grid-template-columns: repeat(3, minmax(260px, 285px))
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
     .chat-buble
@@ -1118,6 +1120,15 @@
         &__bg
             transform: translateX(300px)
             opacity: .8
+    .proposals
+        grid-template-columns: repeat(3, minmax(240px, 285px))
+        column-gap: 12px
+    .notifications
+        grid-template-columns: 1fr 1fr
+    .proposalCard
+        padding: 20px
+    .timesheetItem
+        padding: 16px 20px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -1154,6 +1165,9 @@
             &-article
                 line-height: 110%
                 font-size: 40px
+            &-headbar
+                font-size: 40px
+                margin: 0
         &-road
             background: $light-grey
         &__footer
@@ -1171,6 +1185,11 @@
                     width: calc( 50% - 25px )
                     &-big
                         width: calc( 100% - 30px )
+        &-headbar
+            padding: 24px 0
+        &-dashboard
+            padding: 0
+            padding-bottom: 16px
     .bg__line
         &-find
             display: none
@@ -2020,6 +2039,10 @@
                 margin-bottom: 24px
             &-row
                 margin-bottom: 8px
+            &-dashboard
+                margin: 0
+        &__row
+            margin-bottom: 24px
         &-team
             margin-bottom: 0
         &-faq
@@ -2170,6 +2193,19 @@
         &__cell
             padding-left: 8px
             padding-right: 4px
+    .proposals
+        grid-template-columns: repeat(2, minmax(240px, 285px))
+        column-gap: 12px
+    .notifications
+        grid-template-columns: 1fr
+        .notification
+            width: 100%
+    .proposalCard
+        padding: 20px
+    .timesheetItem
+        padding: 16px 20px
+    .headbar__tabs
+        padding-bottom: 8px
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2505,6 +2541,8 @@
         padding-bottom: 50px
         &__subtitle
             margin-bottom: 12px
+            &-dashboard
+                margin: 0
         &__title
             &-article
                 font-size: 36px
@@ -2576,6 +2614,11 @@
             padding: 32px 0
         &-category
             padding: 32px 0
+        &-dashboard
+            padding: 0
+            padding-bottom: 16px
+        &-headbar
+            padding: 24px 0
     .road
         display: flex
         flex-direction: column
@@ -2678,7 +2721,26 @@
             width: 100%
         &__chapter
             width: 100%
-
+    .proposals
+        grid-template-columns: minmax(200px, 300px)
+        justify-content: center
+    .notification
+        height: 72px
+        &__preview
+            position: relative
+            min-width: 72px
+            height: 72px
+            background-size: 36px 36px
+        &__body
+            padding: 8px
+        &__image
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            height: 100%
+            object-fit: cover
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -2709,6 +2771,9 @@
                 font-size: 28px
             &-check
                 font-size: 28px
+        &__row
+            flex-direction: column
+            align-items: start
         &.promo
             .promo
                 &__select

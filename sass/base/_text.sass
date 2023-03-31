@@ -87,12 +87,18 @@
             margin: 0
             text-align: start
             padding-right: 10px
+        &-headbar
+            font-size: 48px
+            text-align: left
+            margin: 0
     &__subtitle
         margin-bottom: 18px
         color: $dark-grey
         font-size: 22px
         font-weight: 800
         line-height: 127.272727% // 28/22
+        span
+            font-weight: inherit
         &-white
             color: #fff
         &-promo
@@ -132,6 +138,10 @@
             line-height: 1
         &-attached
             margin-bottom: 24px
+        &-dashboard
+            margin: 0
+            font-size: 24px
+            color: $black
     &__text
         font-size: 18px
         font-weight: 600
@@ -319,6 +329,13 @@
             height: 3px
             background-color: $dark-grey
             border-radius: 50%
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 32px
+        .btn-more
+            font-size: 18px
     &-benefits
         position: relative
         margin-bottom: 64px
@@ -390,6 +407,13 @@
     &-attached
         padding: 0
         padding-bottom: 64px
+    &-headbar
+        padding-top: 20px
+        padding-bottom: 24px
+    &-dashboard
+        padding: 0
+        padding-bottom: 16px
+        background-color: $light-grey
 .description
     font-size: 14px
     line-height: 140%

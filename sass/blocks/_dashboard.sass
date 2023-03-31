@@ -1,0 +1,27 @@
+.headbar
+    display: flex
+    flex-direction: column
+    row-gap: 8px
+    &__tabs
+        display: flex
+        column-gap: 16px
+        overflow: auto
+        @include customScrollBar()
+        &::-webkit-scrollbar
+            height: 4px
+.dashboard
+    &__wrapper
+        padding: 32px 0
+.notifications
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 16px 20px
+.timesheetItems
+    display: flex
+    flex-direction: column
+    row-gap: 12px
+.proposals
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 20px
+    row-gap: 24px
