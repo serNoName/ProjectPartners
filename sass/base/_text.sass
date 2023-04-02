@@ -255,7 +255,7 @@
             .testimonial
                 margin-bottom: 32px
         &-noMargin
-            margin: 0
+            margin-bottom: 0
     &-simpleText
         padding: 0
         padding-bottom: 64px
@@ -414,10 +414,17 @@
         padding: 0
         padding-bottom: 16px
         background-color: $light-grey
+a
+    &.section
+        &__subtitle
+            &-hub
+                text-decoration: none
+                &:hover
+                    text-decoration: underline
+                    cursor: pointer
 .description
     font-size: 14px
     line-height: 140%
-    margin-left: 10px
     margin-top: 22px
     padding-top: 32px
     border-top: 1px solid rgba(52, 63, 72, .1)

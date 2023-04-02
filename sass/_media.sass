@@ -452,7 +452,7 @@
         &__timeframes
             font-size: 16px
 /* Portrait tablets and small desktops */
-@media (min-width: 768px) and (max-width: 991px)
+@media (min-width: 768px) and (max-width: 992px)
     .chat-buble
         bottom: 60px
         right: 60px
@@ -1090,7 +1090,8 @@
             grid-template-areas: 'c1 c2 c3''c4 c5 mini''c6 c7 c8''baner baner baner''c9 c10 c11''c12 c13 c14'
             &-flex
                 margin: 0
-                width: calc(100% + 10px)
+                width: calc(100% + 34px)
+                margin-left: -10px
                 .testimonial
                     width: calc( 33.33333% - 25px )
                     &-big
@@ -1200,7 +1201,8 @@
             grid-template-areas: 'c1 c2''c3 c4''mini c5''baner c6''c7 c8''c9 c10''c11 c12''c13 c14'
             &-flex
                 margin: 0
-                width: calc(100% + 10px)
+                width: calc(100% + 30px)
+                margin-left: -10px
                 .testimonial
                     width: calc( 50% - 25px )
                     &-big
@@ -2588,7 +2590,8 @@
             gap: 16px
             &-flex
                 margin: 0
-                width: calc(100% + 10px)
+                width: calc(100% + 24px)
+                margin-left: -10px
                 .testimonial
                     width: calc( 100% - 25px )
                     &-big
@@ -2802,6 +2805,8 @@
     .section
         &__subtitle
             margin-bottom: 8px
+            &-row
+                padding: 0
         &__title
             font-size: 36px
             line-height: 110%
@@ -2832,10 +2837,12 @@
             justify-items: center
             &-flex
                 margin: 0
-                width: calc(100% + 10px)
+                width: 100%
                 .testimonial
-                    width: auto
+                    width: 100%
                     min-width: calc( 100% - 30px )
+                    margin-left: 0
+                    margin-right: 0
                     &-big
                         width: calc( 100% - 35px )
         &-faq
@@ -3259,7 +3266,8 @@
             margin: auto
             margin-left: 0
     .testimonial
-        max-width: 320px
+        max-width: none
+        width: 100%
         &-big
             .testimonial
                 &__title
