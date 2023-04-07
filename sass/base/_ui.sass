@@ -40,6 +40,9 @@
     &-light
         background-color: $white
         color: $primary
+    &-rose
+        background-color: $secondary2
+        color: #fff
     &__more
         position: relative
         color: $primary
@@ -200,6 +203,34 @@
         align-items: center
         height: 40px
         padding: 0 30px
+    &-headbar
+        padding: 19px 0
+        font-size: 18px
+        width: 204px
+    &-popup
+        width: 100%
+        padding: 19px 0
+        font-size: 18px
+        margin-top: 36px
+    &-rate
+        width: calc( 50% - 6px )
+        padding: 19px 0
+    &-log
+        display: flex
+        width: 120px
+        padding: 19px 0
+        font-size: 18px
+        justify-content: center
+    &-statisticsBlock
+        height: 56px
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0
+        font-size: 18px
+    &-dataSelector
+        padding: 12px 16px 10px 16px
 .mini-card
     width: fit-content
     padding: 6px 8px
@@ -1278,6 +1309,53 @@
             right: 12px
             transform: translateY(-50%)
             opacity: .5
+.switch
+    position: relative
+    display: flex
+    width: fit-content
+    align-items: center
+    padding-left: 44px
+    user-select: none
+    cursor: pointer
+    font-size: 14px
+    line-height: 130% // 18/14
+    color: $dark-grey
+    &__input
+        position: absolute
+        appearance: none
+    &__bg
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        content: ''
+        width: 36px
+        height: 20px
+        background-color: $light-grey
+        border-radius: 20px
+        transition: background-color .2s ease-in-out, box-shadow .2s ease
+    &__box
+        position: absolute
+        top: 50%
+        left: 3px
+        transform: translateY(-50%)
+        display: block
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background-color: $primary
+        transition: transform .2s ease-in-out
+    &:hover
+        .switch__bg
+            box-shadow: 0 0 0 2px rgba(110,85,255, .4 )
+    &__input
+        &:checked
+            & ~ .switch__bg
+                background-color: $primary
+                box-shadow: none
+            & ~ .switch__box
+                background-color: #fff
+                transform: translate(15px, -50%)
 .check
     position: relative
     display: flex
@@ -1524,8 +1602,6 @@
         margin: auto
         margin-bottom: 0
         margin-left: 0
-    &__inner
-
     &-find
         column-gap: 36px
     &-row
@@ -1722,6 +1798,8 @@
         background-color: $primary
     &-professional
         background-color: $secondary2
+    &-orange
+
     &:hover
         color: $light-grey
         background-color: $mid-primary
@@ -1768,18 +1846,25 @@
         &:hover
             background-color: $primary
             &.badge
+                cursor: default
                 &-practitioner
                     background-color: $secondary
+                    color: #fff
                 &-apprentice
                     background-color: $cyan
+                    color: #fff
                 &-foundation
                     background-color: $yellow
+                    color: #fff
                 &-junior
                     background-color: $neon
+                    color: #fff
                 &-guro
                     background-color: $primary
+                    color: #fff
                 &-professional
                     background-color: $secondary2
+                    color: #fff
     &-tab
         font-weight: 600
         background-color: $light-grey
@@ -2627,6 +2712,13 @@
         .btn
             &-timesheetItem
                 padding: 0 20px
+    &-group
+        border-top: 1px solid rgba(52, 63, 72, .1)
+        border-radius: 0
+        .timesheetItem__link
+            &:hover
+                outline: none
+                border-radius: 0
 .partnersPhotos
     display: flex
     &__photo
@@ -2659,6 +2751,11 @@
         color: #fff
     &-proposalCard
         margin-top: -8px
+    &-group
+        margin-left: 52px
+        transition: transform .3s ease-in-out, opacity .2s
+        opacity: 1
+        transform: none
 .proposalCard
     background-color: #fff
     padding: 24px
@@ -2705,3 +2802,904 @@
         font-size: 16px
         line-height: 110% // 20/16
         color: $dark-grey
+.timesheet
+    background-color: #fff
+    border-radius: 16px
+    border: 1px solid $mid-grey
+    overflow: auto
+    height: 560px
+    @include customScrollBar()
+    &__col
+        position: relative
+        flex: 1
+        &:not(:last-of-type)
+            &::before
+                position: absolute
+                content: ''
+                right: 0
+                top: 0
+                width: 1px
+                height: 100%
+                opacity: .1
+                background-color: $dark-grey
+        &:not(:first-of-type)
+            min-width: 210px
+        &:first-of-type
+            min-width: 80px
+            width: 100px
+            flex: inherit
+            background-color: #fff
+    &__header
+        display: flex
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1)
+        .timesheet
+            &__col
+                padding: 16px
+                padding-right: 8px
+    &__body
+        .timesheet
+            &__col
+                position: relative
+                height: 40px
+                &:first-of-type
+                    display: flex
+                    justify-content: center
+                    align-items: center
+    &__row
+        position: relative
+        display: flex
+        &::before
+            position: absolute
+            content: ''
+            right: 0
+            bottom: 0
+            width: 100%
+            height: 1px
+            opacity: .1
+            background-color: $dark-grey
+        &:last-child
+            .timesheet
+                &__col
+                    &::before
+                        height: 200%
+    &__weekday
+        font-weight: 800
+        font-size: 18px
+        line-height: 130% // 23/18
+        color: $dark-grey
+    &__date
+        font-weight: 700
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $dark-grey
+    &__time
+        font-weight: 700
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: $dark-grey
+        opacity: 0.7
+        transform: translateY(75%)
+.timesheetLog
+    position: absolute
+    top: 0
+    left: 4px
+    width: calc( 100% - 8px )
+    border: 1px solid $primary
+    background-color: $white
+    padding: 16px 12px
+    border-radius: 8px
+    overflow: hidden
+    z-index: 2
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.12))
+    cursor: pointer
+    &::before
+        position: absolute
+        content: ''
+        inset: 0
+        background-color: black
+        opacity: 0
+        transition: opacity .2s ease-in-out
+    &__line
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 3px
+        background-color: $primary
+        transition: transform .2s
+    &__time
+        margin-bottom: 8px
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: $dark-grey
+        opacity: 0.7
+    &__descr
+        font-weight: 700
+        font-size: 12px
+        line-height: 125% // 15/12
+    &-green
+        border-color: $neon
+        background-color: #EBFDF8
+        .timesheetLog
+            &__line
+                background-color: $neon
+    &-yellow
+        border-color: $yellow
+        background-color: #FFFBEF
+        .timesheetLog
+            &__line
+                background-color: $yellow
+    &:hover
+        &::before
+            opacity: .03
+.workedTime
+    &__title
+        font-weight: 800
+        font-size: 22px
+        line-height: 130% // 28/22
+        color: $dark-grey
+    &__subtitle
+        font-weight: 700
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $dark-grey
+        opacity: 0.5
+    &-small
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        .workedTime
+            &__title
+                font-size: 16px
+            &__subtitle
+                height: fit-content
+.totalTimeCard
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 16px 20px
+    background-color: #fff
+    border-radius: 16px
+    gap: 24px 32px
+    &__col
+        display: flex
+        column-gap: 24px
+        align-items: center
+    &__title
+        font-weight: 800
+        font-size: 22px
+        line-height: 130% // 28/22
+        color: $black
+.hoursProject
+    display: flex
+    flex-direction: column
+    row-gap: 2px
+    &__name
+        position: relative
+        padding-left: 14px
+        font-weight: 700
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: rgba(52,63,72,.5)
+        margin-bottom: 2px
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            width: 10px
+            height: 10px
+            border-radius: 2px
+            background-color: $primary
+    &__time
+        display: flex
+    &__workedTime
+        font-weight: 800
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: $dark-grey
+    &__plannedTime
+        font-weight: 700
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $dark-grey
+        opacity: .5
+    &-green
+        .hoursProject__name
+            &::before
+                background-color: $neon
+    &-yellow
+        .hoursProject__name
+            &::before
+                background-color: $yellow
+    &-rose
+        .hoursProject__name
+            &::before
+                background-color: $secondary2
+    &-orange
+        .hoursProject__name
+            &::before
+                background-color: $secondary
+.chart
+    position: relative
+    display: flex
+    column-gap: 8px
+    &__svg
+        vertical-align: top
+        transform: scaleY(-1)
+        path
+            will-change: auto
+            stroke-miterlimit: round
+            transition: stroke-dashoffset 850ms ease-in-out
+    &__col
+        display: flex
+        flex-direction: column
+        justify-content: center
+        position: relative
+    &__percent
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        color: $dark-grey
+        font-weight: 700
+        font-size: 16px
+        line-height: 1
+        opacity: 0.7
+    &__text
+        font-weight: 700
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: $dark-grey
+    &__subtext
+        font-weight: 700
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: $dark-grey
+        opacity: 0.5
+    &__score
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-weight: 800
+        font-size: 22px
+        line-height: 130% // 28/22
+        color: $dark-grey
+    &-rose
+        .chart
+            &__progress
+                stroke: $secondary2
+    &-yellow
+        .chart
+            &__progress
+                stroke: $yellow
+    &-big
+        width: fit-content
+        align-self: center
+        .chart
+            &__svg
+                width: 160px
+                height: 160px
+            &__col
+                &:last-child
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    flex-direction: column-reverse
+                    width: max-content
+            &__text
+                font-weight: 800
+                font-size: 22px
+                line-height: 110% // 24/22
+.timeRatio
+    display: flex
+    width: 100%
+    height: 36px
+    background-color: $light-grey
+    border: 1px solid $mid-grey
+    padding: 1px
+    border-radius: 10px
+    font-weight: 700
+    font-size: 12px
+    line-height: 125% // 15/12
+    color: #fff
+    user-select: none
+    &__line
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $primary
+        border-radius: 8px
+        transition: width .3s ease-in-out
+        min-width: 20px
+        &:not(:last-child)
+            margin-right: 2px
+        &-green
+            background-color: $neon
+        &-yellow
+            background-color: $yellow
+        &-rose
+            background-color: $secondary2
+        &-blue
+            background-color: $cyan
+        &-orange
+            background-color: $secondary
+.project
+    display: flex
+    flex-direction: column
+    row-gap: 2px
+    border: 1px solid $light-grey
+    border-radius: 16px
+    padding: 16px
+    &__name
+        position: relative
+        font-weight: 700
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $dark-grey
+        margin-bottom: 2px
+        padding-left: 14px
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            width: 10px
+            height: 10px
+            border-radius: 2px
+            background-color: $primary
+        &-green
+            &::before
+                background-color: $neon
+        &-yellow
+            &::before
+                background-color: $yellow
+        &-rose
+            &::before
+                background-color: $secondary2
+        &-blue
+            &::before
+                background-color: $cyan
+        &-orange
+            &::before
+                background-color: $secondary
+        &-code
+            padding-left: 28px
+            &:before
+                width: 24px
+                height: 24px
+                border-radius: 6px
+                background: $primary url('../img/ico/code-white.svg') center center no-repeat
+        &-analyst
+            padding-left: 28px
+            &:before
+                width: 24px
+                height: 24px
+                border-radius: 6px
+                background: $primary url('../img/ico/analyst-white.svg') center center no-repeat
+        &-rocket
+            padding-left: 28px
+            &:before
+                width: 24px
+                height: 24px
+                border-radius: 6px
+                background: $primary url('../img/ico/rocket-white.svg') center center no-repeat
+        &-settings
+            padding-left: 28px
+            &:before
+                width: 24px
+                height: 24px
+                border-radius: 6px
+                background: $primary url('../img/ico/settings-white.svg') center center no-repeat
+.scoreStat
+    background-color: #fff
+    padding: 24px
+    border-radius: 16px
+    display: flex
+    column-gap: 16px
+    &__inner
+        &:last-child
+            display: flex
+            flex-direction: column
+            row-gap: 4px
+            flex: 1
+            padding: 4px 0
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__name
+        font-weight: 800
+        font-size: 22px
+        line-height: 130% // 28/22
+        color: $dark-grey
+    &__help
+        font-weight: 800
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: $primary
+        transition: color .2s ease
+        text-decoration: none
+        &:hover
+            color: $mid-primary
+    &__bonus
+        display: flex
+        align-items: center
+        font-weight: 700
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: rgba(52,63,72,.5)
+        .badge
+            margin-left: 8px
+.message
+    font-weight: 700
+    font-size: 12px
+    line-height: 140%
+    color: $secondary2
+    display: flex
+    align-items: center
+    &__ico
+        margin-right: 2px
+.summary
+    background-color: #fff
+    border-radius: 16px
+    padding: 24px
+    padding-bottom: 62px
+    &__title
+        font-weight: 800
+        font-size: 22px
+        line-height: 130% // 28/22
+        color: $black
+        margin-bottom: 10px
+    &__project
+        position: relative
+        display: none
+        &.active
+            display: block
+    &__heading
+        margin-bottom: 20px
+    &__dates
+        position: absolute
+        right: 0
+        bottom: calc( 100% + 16px )
+        height: 32px
+        display: grid
+        place-items: center
+        padding: 0 38px
+        background-color: $light-grey
+        border: 1px solid $mid-grey
+        border-radius: 12px
+    &__diagram
+        display: none
+        &.active
+            display: block
+    &__date
+        display: none
+        font-weight: 700
+        font-size: 14px
+        line-height: 140%
+        color: $dark-grey
+        user-select: none
+        &.active
+            display: block
+    &__btn
+        position: absolute
+        top: 0
+        width: 32px
+        height: 32px
+        cursor: pointer
+        border: none
+        background: url('../img/ico/arrow-mini.svg') center center no-repeat
+        transition: transform .2s
+        &-prev
+            left: 0
+            transform: rotate(-90deg)
+            border-radius: 12px 12px 0  0
+            &:hover
+                transform: rotate(-90deg) scale(1.8)
+        &-next
+            right: 0
+            transform: rotate(90deg)
+            border-radius: 12px 12px 0  0
+            &:hover
+                transform: rotate(90deg) scale(1.2)
+.diagram
+    position: relative
+    &__bg
+        display: flex
+        flex-direction: column
+        row-gap: 28px
+    &__row
+        position: relative
+        font-weight: 700
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: rgba(52, 63, 72, .5)
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            right: 0
+            width: calc(100% - 12px)
+            height: 1px
+            background-color: $dark-grey
+            opacity: 0.1
+    &__columns
+        position: absolute
+        inset: 0
+        display: flex
+        justify-content: space-between
+        padding-right: 32px
+        padding-left: 44px
+    &__column
+        position: relative
+        display: flex
+    &__graph
+        width: 40px
+        border-radius: 8px
+        background-color: $primary
+        padding-top: 8px
+        text-align: center
+        font-weight: 700
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: #fff
+        margin-top: auto
+        min-height: 32px
+    &__text
+        position: absolute
+        top: calc( 100% + 8px )
+        left: 50%
+        transform: translateX(-50%)
+        font-weight: 700
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: $dark-grey
+        opacity: 0.5
+        white-space: nowrap
+        text-align: center
+.dataSelector
+    position: relative
+    cursor: pointer
+    user-select: none
+    &__current
+        background-color: #fff
+        border: 1px solid rgba(52, 63, 72, 0.1)
+        border-radius: 12px
+        height: 40px
+        display: flex
+        align-items: center
+        padding-left: 12px
+        width: 226px
+        font-size: 14px
+        line-height: 1
+        transition: border .2s ease-in-out
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            right: 12px
+            width: 16px
+            height: 16px
+            transform: translateY(-50%)
+            background: url('../img/ico/arrow-mini.svg') center center no-repeat
+            transition: transform .2s ease-in-out
+        &.active
+            border-color: $primary
+            &::before
+                transform: translateY(-50%) rotate(180deg)
+            &:hover
+                border-color: $primary
+        &:hover
+            border-color: rgba(89, 6, 238, 0.2)
+    &__wrapper
+        display: none
+        border-radius: 16px
+        width: 100%
+    &__inner
+        border: none
+        width: 100%
+        &-top
+            position: relative
+            background-color: #fff
+            box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12)
+            padding: 16px 12px
+            border-radius: 16px 16px 0 0
+            &::before
+                position: absolute
+                content: ''
+                top: 50%
+                left: 12px
+                transform: translateY(-50%)
+                width: 16px
+                height: 16px
+                background: url('../img/ico/arrow-select.svg') center center no-repeat
+        &-bottom
+            background-color: #fff
+            box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.12)
+            padding: 12px 16px
+            border-radius: 0 0 16px 16px
+            display: flex
+            justify-content: end
+        &-middle
+            height: 248px
+            padding: 12px 16px
+            overflow: auto
+            @include customScrollBar(rgba(52, 63, 72, 0.2), rgba(52, 63, 72, .7), 4px)
+            &::-webkit-scrollbar-thumb
+                background-color: rgba(52, 63, 72, .7)
+    &__content
+        counter-reset: weekTimeframes-counter
+        &:not(:first-child)
+            margin-top: 12px
+    &__list
+        display: flex
+        flex-direction: column
+        row-gap: 6px
+    &__item
+        position: relative
+        list-style: none
+        counter-increment: weekTimeframes-counter
+        height: 40px
+        &::before
+            position: absolute
+            content: counter(weekTimeframes-counter)
+            top: 50%
+            left: 8px
+            transform: translateY(-50%)
+            font-weight: 800
+            font-size: 14px
+            line-height: 1
+            color: #fff
+            display: grid
+            place-items: center
+            width: 24px
+            height: 24px
+            background-color: $primary
+            border-radius: 6px
+        &.active
+            &::before
+                color: $secondary2
+                background-color: #fff
+    &__title
+        font-weight: 800
+        font-size: 14px
+        line-height: 1
+        color: $dark-grey
+    &__year
+        margin-bottom: 8px
+        font-weight: 700
+        font-size: 12px
+        line-height: 1
+        color: #000
+    .dropdown
+        position: absolute
+        left: 0
+        top: calc( 100% + 2px )
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12)
+        border-radius: 12px
+        z-index: 10
+        background-color: #fff
+        &__wrapper
+            display: flex
+            flex-direction: column
+            row-gap: 12px
+            list-style: none
+            background-color: #fff
+            background: #FFFFFF
+            border-radius: 12px
+            padding: 16px
+        &__item
+            position: relative
+            padding-left: 24px
+            color: $dark-grey
+            &::before
+                position: absolute
+                content: ''
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+                width: 16px
+                height: 16px
+                background: url('../img/ico/check-circle.svg') center center no-repeat
+                opacity: 0
+            &.active
+                font-weight: 800
+                color: $primary
+                &::before
+                    opacity: 1
+                .dropdown__button
+                    &:hover
+                        color: $primary
+                        cursor: default
+        &__button
+            background-color: transparent
+            border: none
+            cursor: pointer
+            font-size: 14px
+            line-height: 130%
+            color: inherit
+            font-weight: inherit
+            transition: color .1s ease-in-out
+            &:hover
+                color: $mid-primary
+        &-dataSelector
+            width: 100%
+.weekTimeframes
+    padding: 8px
+    padding-left: 40px
+    background-color: #fff
+    border: 1px solid $mid-grey
+    border-radius: 10px
+    transition: background-color .2s ease-in-out, border-color .2s ease-in-out, color .2s ease-in-out
+    font-weight: 700
+    font-size: 14px
+    line-height: 1
+    color: $dark-grey
+    cursor: pointer
+    height: 100%
+    width: 100%
+    text-align: start
+    &:hover
+        background-color: $white
+    &.active
+        background-color: $secondary2
+        border-color: $secondary2
+        color: #fff
+.customSelect
+    position: relative
+    display: inline-block
+    user-select: none
+    &-notActive
+        cursor: default
+        &::before
+            display: none
+        .customSelect
+            &__current
+                cursor: default
+    &-groups
+        margin-right: 16px
+        .customSelect__options
+            left: auto
+            right: 0
+    &__current
+        cursor: pointer
+        color: $dark-grey
+        line-height: 160% // 22/14
+    &::before
+        position: absolute
+        content: ''
+        top: 50%
+        left: 100%
+        width: 16px
+        height: 16px
+        background: url('../img/ico/arrow-mini.svg') center center no-repeat
+        transform: rotate(180deg) translateY(50%)
+        transition: transform .2s
+    &__options
+        position: absolute
+        top: calc( 100% + 2px )
+        left: 0
+        z-index: 20
+        border-radius: 16px
+        background-color: #fff
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12)
+        padding: 16px
+        list-style: none
+        width: fit-content
+    &__option
+        cursor: pointer
+        color: $dark-grey
+        transition: color .2s
+        padding: 2px 0
+        font-size: 14px
+        white-space: nowrap
+        &:hover
+            color: $primary
+        &:not(:last-child)
+            margin-bottom: 4px
+.group
+    border-radius: 16px
+    background-color: #fff
+    padding: 16px 24px
+    transition: padding .3s
+    &.active
+        padding: 24px
+        padding-top: 16px
+        .partnersPhotos
+            transform: translateX(-20px)
+            opacity: 0
+        .group
+            &__inner
+                &-btns
+                    opacity: 1
+                    transform: translateX(-20px)
+            &__control
+                padding-bottom: 16px
+    &__name
+        font-weight: 700
+        font-size: 14px
+        line-height: 130%
+        color: $dark-grey
+    &__count
+        line-height: 1
+        display: grid
+        place-items: center
+        color: #fff
+        background-color: $dark-grey
+        font-weight: 800
+        font-size: 12px
+        min-width: 14px
+        min-height: 14px
+        border-radius: 4px
+    &__control
+        position: relative
+        display: flex
+        justify-content: space-between
+        cursor: pointer
+        transition: padding .3s
+    &__inner
+        display: flex
+        column-gap: 4px
+        align-items: center
+        &-btns
+            column-gap: 16px
+            opacity: 0
+            transition: opacity .2s, transform .2s ease-in-out
+    &__arrow
+        width: 16px
+        height: 16px
+        transform: rotate(180deg)
+        background: url('../img/ico/arrow-mini.svg') center center no-repeat
+    &__btn
+        border: none
+        background: none
+        cursor: pointer
+        font-weight: 800
+        font-size: 14px
+        line-height: 180% // 24/14
+        color: $primary
+        transition: color .2s ease-in-out
+        &:hover
+            color: $mid-primary
+        &-reject
+            color: $secondary2
+    &__content
+        display: none
+.groups
+    display: flex
+    flex-direction: column
+    row-gap: 20px
+.personRating
+    display: flex
+    justify-content: space-between
+    padding: 16px
+    padding-right: 40px
+    border: 1px solid $mid-grey
+    border-radius: 16px
+    transition: border-color .2s ease-in-out
+    cursor: pointer
+    &__inner
+        display: flex
+        align-items: center
+        column-gap: 8px
+    &__stars
+        display: flex
+        column-gap: 8px
+    &__ava
+        border-radius: 12px
+    &__name
+        font-weight: 800
+        line-height: 1
+        color: $dark-grey
+    &__rating
+        font-weight: 800
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: $dark-grey
+    &:hover
+        border-color: $primary

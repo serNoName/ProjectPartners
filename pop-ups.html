@@ -55,8 +55,6 @@
         </div>
     </div>
 
-    <div class="overlayer"></div>
-
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
@@ -334,416 +332,304 @@
         <img src="assets/img/ico/message.svg" alt="ico">
     </div>
 
-    <div class="section section-headbar">
+    <div class="section">
         <div class="container">
-            <div class="headbar">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Homepage</a></li>
-                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Account</a></li>
-                </ul>
-                <div class="section__title section__title-headbar">Account</div>
-                <div class="headbar__tabs">
-                    <a href="#" class="badge badge-tab badge-professional active">Overview</a>
-                    <a href="#" class="badge badge-tab badge-professional">Proposals</a>
-                    <a href="#" class="badge badge-tab badge-professional">Comms</a>
-                    <a href="#" class="badge badge-tab badge-professional">Favourites</a>
-                    <a href="#" class="badge badge-tab badge-professional">Timesheets</a>
-                    <a href="#" class="badge badge-tab badge-professional">My Profile</a>
-                </div>
-            </div>
+            <button class="btn popup-trigger" data-popup="approval">Approval pop-up</button>
+            <button class="btn popup-trigger" data-popup="rate-performance">Rate performance pop-up</button>
+            <button class="btn popup-trigger" data-popup="log-time">Log time pop-up</button>
+            <button class="btn popup-trigger" data-popup="edit-time">Edit time pop-up</button>
         </div>
     </div>
 
-    <div class="section section-dashboard">
-        <div class="container">
-            <div class="dashboard" data-tab-content="overview">
-                <div class="dashboard__wrapper">
-                    <div class="section__row">
-                        <div class="section__subtitle section__subtitle-dashboard">Notifications</div>
-                        <a href="#" class="btn btn-more">See all</a>
-                    </div>
-                    <div class="notifications">
-                        <a href="#" class="notification notification-news">
-                            <span class="notification__preview">
-                                <img src="assets/img/ava/testimonial/1.jpg" alt="preview" class="notification__image" height="88" width="88">
-                            </span>
-                            <span class="notification__body">
-                                <span class="notification__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, nostrum!</span>
-                                <span class="notification__ago">1h ago</span>
-                            </span>
-                        </a>
-                        <a href="#" class="notification notification-news">
-                            <span class="notification__preview notification__preview-video"></span>
-                            <span class="notification__body">
-                                <span class="notification__title"><span>New Front-end developer</span> Partner is available now</span>
-                                <span class="notification__ago">1h ago</span>
-                            </span>
-                        </a>
-                        <a href="#" class="notification notification-news">
-                            <span class="notification__preview notification__preview-download"></span>
-                            <span class="notification__body">
-                                <span class="notification__title"><span>New Front-end developer</span> Partner is available now</span>
-                                <span class="notification__ago">1h ago</span>
-                            </span>
-                        </a>
-                        <a href="#" class="notification notification-news">
-                            <span class="notification__preview notification__preview-article"></span>
-                            <span class="notification__body">
-                                <span class="notification__title"><span>New Front-end developer</span> Partner is available now</span>
-                                <span class="notification__ago">1h ago</span>
-                            </span>
-                        </a>
-                        <a href="#" class="notification notification-news">
-                            <span class="notification__preview notification__preview-code"></span>
-                            <span class="notification__body">
-                                <span class="notification__title"><span>New Front-end developer</span> Partner is available now</span>
-                                <span class="notification__ago">1h ago</span>
-                            </span>
-                        </a>
-                        <a href="#" class="notification notification-news">
-                            <span class="notification__preview notification__preview-learning"></span>
-                            <span class="notification__body">
-                                <span class="notification__title"><span>New Front-end developer</span> Partner is available now</span>
-                                <span class="notification__ago">1h ago</span>
-                            </span>
-                        </a>
+    <div class="popup" id="approval">
+        <div class="popup__bg"></div>
+        <div class="popup__body popup__body_account">
+            <div class="popup__submitted">
+                <img src="assets/img/ico/check-mark.svg" alt="submitted">
+            </div>
+            <div class="popup__subtitle">Timesheet sent for approval</div>
+            <div class="popup__descr popup__descr-center">Great job! Yuo are done for this week</div>
+            <button class="btn popup__shut btn-popup" type="button">Back to Dashboard</button>
+        </div>
+    </div>
+    <div class="popup" id="rate-performance">
+        <div class="popup__bg"></div>
+        <form action="#" class="popup__body popup__body_account">
+            <div class="popup__title">Rate your performance</div>
+            <div class="popup__descr">How would you rate your Service Performance working on SOW-BAU-0004 at Project Partners</div>
+            <span class="stars stars-popup starsInput" data-rate="0">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.00001 13.7L4.85001 16.2C4.66668 16.3167 4.47501 16.3667 4.27501 16.35C4.07501 16.3333 3.90001 16.2667 3.75001 16.15C3.60001 16.0333 3.48334 15.8877 3.40001 15.713C3.31668 15.5377 3.30001 15.3417 3.35001 15.125L4.45001 10.4L0.775009 7.225C0.608343 7.075 0.504343 6.904 0.463009 6.712C0.421009 6.52067 0.433343 6.33333 0.500009 6.15C0.566676 5.96667 0.666676 5.81667 0.800009 5.7C0.933343 5.58333 1.11668 5.50833 1.35001 5.475L6.20001 5.05L8.07501 0.6C8.15834 0.4 8.28768 0.25 8.46301 0.15C8.63768 0.0500001 8.81668 0 9.00001 0C9.18334 0 9.36268 0.0500001 9.53801 0.15C9.71268 0.25 9.84168 0.4 9.92501 0.6L11.8 5.05L16.65 5.475C16.8833 5.50833 17.0667 5.58333 17.2 5.7C17.3333 5.81667 17.4333 5.96667 17.5 6.15C17.5667 6.33333 17.5793 6.52067 17.538 6.712C17.496 6.904 17.3917 7.075 17.225 7.225L13.55 10.4L14.65 15.125C14.7 15.3417 14.6833 15.5377 14.6 15.713C14.5167 15.8877 14.4 16.0333 14.25 16.15C14.1 16.2667 13.925 16.3333 13.725 16.35C13.525 16.3667 13.3333 16.3167 13.15 16.2L9.00001 13.7Z" fill="#FED45C"/></svg>
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.00001 13.7L4.85001 16.2C4.66668 16.3167 4.47501 16.3667 4.27501 16.35C4.07501 16.3333 3.90001 16.2667 3.75001 16.15C3.60001 16.0333 3.48334 15.8877 3.40001 15.713C3.31668 15.5377 3.30001 15.3417 3.35001 15.125L4.45001 10.4L0.775009 7.225C0.608343 7.075 0.504343 6.904 0.463009 6.712C0.421009 6.52067 0.433343 6.33333 0.500009 6.15C0.566676 5.96667 0.666676 5.81667 0.800009 5.7C0.933343 5.58333 1.11668 5.50833 1.35001 5.475L6.20001 5.05L8.07501 0.6C8.15834 0.4 8.28768 0.25 8.46301 0.15C8.63768 0.0500001 8.81668 0 9.00001 0C9.18334 0 9.36268 0.0500001 9.53801 0.15C9.71268 0.25 9.84168 0.4 9.92501 0.6L11.8 5.05L16.65 5.475C16.8833 5.50833 17.0667 5.58333 17.2 5.7C17.3333 5.81667 17.4333 5.96667 17.5 6.15C17.5667 6.33333 17.5793 6.52067 17.538 6.712C17.496 6.904 17.3917 7.075 17.225 7.225L13.55 10.4L14.65 15.125C14.7 15.3417 14.6833 15.5377 14.6 15.713C14.5167 15.8877 14.4 16.0333 14.25 16.15C14.1 16.2667 13.925 16.3333 13.725 16.35C13.525 16.3667 13.3333 16.3167 13.15 16.2L9.00001 13.7Z" fill="#FED45C"/></svg>
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.00001 13.7L4.85001 16.2C4.66668 16.3167 4.47501 16.3667 4.27501 16.35C4.07501 16.3333 3.90001 16.2667 3.75001 16.15C3.60001 16.0333 3.48334 15.8877 3.40001 15.713C3.31668 15.5377 3.30001 15.3417 3.35001 15.125L4.45001 10.4L0.775009 7.225C0.608343 7.075 0.504343 6.904 0.463009 6.712C0.421009 6.52067 0.433343 6.33333 0.500009 6.15C0.566676 5.96667 0.666676 5.81667 0.800009 5.7C0.933343 5.58333 1.11668 5.50833 1.35001 5.475L6.20001 5.05L8.07501 0.6C8.15834 0.4 8.28768 0.25 8.46301 0.15C8.63768 0.0500001 8.81668 0 9.00001 0C9.18334 0 9.36268 0.0500001 9.53801 0.15C9.71268 0.25 9.84168 0.4 9.92501 0.6L11.8 5.05L16.65 5.475C16.8833 5.50833 17.0667 5.58333 17.2 5.7C17.3333 5.81667 17.4333 5.96667 17.5 6.15C17.5667 6.33333 17.5793 6.52067 17.538 6.712C17.496 6.904 17.3917 7.075 17.225 7.225L13.55 10.4L14.65 15.125C14.7 15.3417 14.6833 15.5377 14.6 15.713C14.5167 15.8877 14.4 16.0333 14.25 16.15C14.1 16.2667 13.925 16.3333 13.725 16.35C13.525 16.3667 13.3333 16.3167 13.15 16.2L9.00001 13.7Z" fill="#FED45C"/></svg>
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.00001 13.7L4.85001 16.2C4.66668 16.3167 4.47501 16.3667 4.27501 16.35C4.07501 16.3333 3.90001 16.2667 3.75001 16.15C3.60001 16.0333 3.48334 15.8877 3.40001 15.713C3.31668 15.5377 3.30001 15.3417 3.35001 15.125L4.45001 10.4L0.775009 7.225C0.608343 7.075 0.504343 6.904 0.463009 6.712C0.421009 6.52067 0.433343 6.33333 0.500009 6.15C0.566676 5.96667 0.666676 5.81667 0.800009 5.7C0.933343 5.58333 1.11668 5.50833 1.35001 5.475L6.20001 5.05L8.07501 0.6C8.15834 0.4 8.28768 0.25 8.46301 0.15C8.63768 0.0500001 8.81668 0 9.00001 0C9.18334 0 9.36268 0.0500001 9.53801 0.15C9.71268 0.25 9.84168 0.4 9.92501 0.6L11.8 5.05L16.65 5.475C16.8833 5.50833 17.0667 5.58333 17.2 5.7C17.3333 5.81667 17.4333 5.96667 17.5 6.15C17.5667 6.33333 17.5793 6.52067 17.538 6.712C17.496 6.904 17.3917 7.075 17.225 7.225L13.55 10.4L14.65 15.125C14.7 15.3417 14.6833 15.5377 14.6 15.713C14.5167 15.8877 14.4 16.0333 14.25 16.15C14.1 16.2667 13.925 16.3333 13.725 16.35C13.525 16.3667 13.3333 16.3167 13.15 16.2L9.00001 13.7Z" fill="#FED45C"/></svg>
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.00001 13.7L4.85001 16.2C4.66668 16.3167 4.47501 16.3667 4.27501 16.35C4.07501 16.3333 3.90001 16.2667 3.75001 16.15C3.60001 16.0333 3.48334 15.8877 3.40001 15.713C3.31668 15.5377 3.30001 15.3417 3.35001 15.125L4.45001 10.4L0.775009 7.225C0.608343 7.075 0.504343 6.904 0.463009 6.712C0.421009 6.52067 0.433343 6.33333 0.500009 6.15C0.566676 5.96667 0.666676 5.81667 0.800009 5.7C0.933343 5.58333 1.11668 5.50833 1.35001 5.475L6.20001 5.05L8.07501 0.6C8.15834 0.4 8.28768 0.25 8.46301 0.15C8.63768 0.0500001 8.81668 0 9.00001 0C9.18334 0 9.36268 0.0500001 9.53801 0.15C9.71268 0.25 9.84168 0.4 9.92501 0.6L11.8 5.05L16.65 5.475C16.8833 5.50833 17.0667 5.58333 17.2 5.7C17.3333 5.81667 17.4333 5.96667 17.5 6.15C17.5667 6.33333 17.5793 6.52067 17.538 6.712C17.496 6.904 17.3917 7.075 17.225 7.225L13.55 10.4L14.65 15.125C14.7 15.3417 14.6833 15.5377 14.6 15.713C14.5167 15.8877 14.4 16.0333 14.25 16.15C14.1 16.2667 13.925 16.3333 13.725 16.35C13.525 16.3667 13.3333 16.3167 13.15 16.2L9.00001 13.7Z" fill="#FED45C"/></svg>
+                <div class="cover"></div>
+            </span>
+            <div class="builder__description builder__description-popup">
+                <label for="rateTextarea" class="builder__admonition">Write your comment</label>
+                <textarea class="builder-textarea" maxlength="1000" height="220"
+                    placeholder="Type..." id="rateTextarea"></textarea>
+            </div>
+            <div class="popup__footer">
+                <button class="btn btn-rate popup__shut btn-light" type="submit">Cancel</button>
+                <button class="btn btn-rate popup__shut" type="submit">Continue</button>
+            </div>
+        </form>
+    </div>
+    <div class="popup" id="log-time">
+        <div class="popup__bg"></div>
+        <form action="#" class="popup__body popup__body_account">
+            <div class="popup__title">Log new time</div>
+            <div class="popup__descr popup__descr-log">Great job! Yuo are done for this week</div>
+            <div class="popup__wrapper popup__wrapper-date">
+                <div class="popup__inner">
+                    <div class="popup__descr popup__descr-log">Date</div>
+                    <div class="input-date__wrapper">
+                        <label for="dataPicker1" class="input-date__label label-focus">
+                            MM/DD/YYYY
+                        </label>
+                        <input id="dataPicker1" class="input-date input-focus" type="text">
                     </div>
                 </div>
-                <div class="dashboard__wrapper">
-                    <div class="section__row">
-                        <div class="section__subtitle section__subtitle-dashboard">Awaiting timesheets (<span>6</span>)</div>
-                        <a href="#" class="btn btn-more">See all</a>
-                    </div>
-                    <div class="timesheetItems">
-                        <div class="timesheetItem">
-                            <a href="#" class="timesheetItem__link"></a>
-                            <div class="timesheetItem__col timesheetItem__col-timeframes">
-                                <div class="badge badge-foundation">Awaited</div>
-                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
+                <div class="popup__inner">
+                    <div class="popup__descr popup__descr-log">Time</div>
+                    <div class="filter__list filter__rate filter__rate-log">
+                        <div class="filter__rate-item">
+                            <div class="filter__rate-item-active">
+                                00:00
                             </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-person">
-                                <div class="person person-dark person-static person-timesheetItem">
-                                    <div class="person__col">
-                                        <img src="assets/img/ava/testimonial/1.jpg" alt="ava" height="40" width="40" class="person__ava">
-                                    </div>
-                                    <div class="person__col">
-                                        <div class="person__label">
-                                            Kelly D.
-                                        </div>
-                                        <div class="person__prof">
-                                            <span>Front-End Developer</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-name">
-                                Lorem Ipsum
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-workedtime">
-                                <div class="timesheetItem__worked">8h worked</div>
-                                <div class="timesheetItem__planned">12h planned</div>
-                            </div>
-
-                            <div class="timesheetItem__col">
-                                <div class="chart">
-                                    <div class="chart__col">
-                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160" class="chart__svg">
-                                            <g stroke-width="18" fill="none">
-                                                <path class="chart__progress" stroke="#3AEDBA" d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
-                                                <path stroke="#ededed" d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
-                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
-                                            </g>
-                                        </svg>
-                                        <div class="chart__percent">67%</div>
-                                    </div>
-                                    <div class="chart__col">
-                                        <div class="chart__text">Utilisation</div>
-                                        <div class="chart__subtext">-4h under</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-btns">
-                                <a href="#" class="btn btn-timesheetItem btn-light">Reject</a>
-                                <a href="#" class="btn btn-timesheetItem">Accept</a>
+                            <div class="filter__rate-list-wrapper">
+                                <ul class="filter__rate-list">
+                                    <li class="filter__rate-list-item active">00:00</li>
+                                    <li class="filter__rate-list-item">01:00</li>
+                                    <li class="filter__rate-list-item">02:00</li>
+                                    <li class="filter__rate-list-item">03:00</li>
+                                    <li class="filter__rate-list-item">04:00</li>
+                                    <li class="filter__rate-list-item">05:00</li>
+                                    <li class="filter__rate-list-item">06:00</li>
+                                    <li class="filter__rate-list-item">07:00</li>
+                                    <li class="filter__rate-list-item">08:00</li>
+                                    <li class="filter__rate-list-item">09:00</li>
+                                    <li class="filter__rate-list-item">10:00</li>
+                                    <li class="filter__rate-list-item">11:00</li>
+                                    <li class="filter__rate-list-item">12:00</li>
+                                    <li class="filter__rate-list-item">13:00</li>
+                                    <li class="filter__rate-list-item">14:00</li>
+                                    <li class="filter__rate-list-item">15:00</li>
+                                    <li class="filter__rate-list-item">16:00</li>
+                                    <li class="filter__rate-list-item">17:00</li>
+                                    <li class="filter__rate-list-item">18:00</li>
+                                    <li class="filter__rate-list-item">19:00</li>
+                                    <li class="filter__rate-list-item">20:00</li>
+                                    <li class="filter__rate-list-item">21:00</li>
+                                    <li class="filter__rate-list-item">22:00</li>
+                                    <li class="filter__rate-list-item">23:00</li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="timesheetItem">
-                            <a href="#" class="timesheetItem__link"></a>
-                            <div class="timesheetItem__col timesheetItem__col-timeframes">
-                                <div class="badge badge-foundation">Awaited</div>
-                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
+                        <div class="filter__rate-mid">to</div>
+                        <div class="filter__rate-item">
+                            <div class="filter__rate-item-active">
+                                23:00
                             </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-person">
-                                <div class="person person-dark person-static person-timesheetItem">
-                                    <div class="person__col">
-                                        <img src="assets/img/ava/testimonial/1.jpg" alt="ava" height="40" width="40" class="person__ava">
-                                    </div>
-                                    <div class="person__col">
-                                        <div class="person__label">
-                                            Jessica A.
-                                        </div>
-                                        <div class="person__prof">
-                                            <span>Developers</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-name">
-                                Lorem
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-workedtime">
-                                <div class="timesheetItem__worked">638h worked</div>
-                                <div class="timesheetItem__planned">12h planned</div>
-                            </div>
-
-                            <div class="timesheetItem__col">
-                                <div class="chart">
-                                    <div class="chart__col">
-                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160" class="chart__svg">
-                                            <g stroke-width="18" fill="none">
-                                                <path class="chart__progress" stroke="#3AEDBA" d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
-                                                <path stroke="#ededed" d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
-                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
-                                            </g>
-                                        </svg>
-                                        <div class="chart__percent">67%</div>
-                                    </div>
-                                    <div class="chart__col">
-                                        <div class="chart__text">Utilisation</div>
-                                        <div class="chart__subtext">-4h under</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-btns">
-                                <button class="btn btn-timesheetItem btn-light" type="button">Reject</button>
-                                <button class="btn btn-timesheetItem" type="button">Accept</button>
-                            </div>
-                        </div>
-                        <div class="timesheetItem">
-                            <a href="#" class="timesheetItem__link"></a>
-                            <div class="timesheetItem__col timesheetItem__col-timeframes">
-                                <div class="badge badge-foundation">Awaited</div>
-                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-person">
-                                <div class="person person-dark person-static person-timesheetItem">
-                                    <div class="person__col">
-                                        <img src="assets/img/ava/testimonial/1.jpg" alt="ava" height="40" width="40" class="person__ava">
-                                    </div>
-                                    <div class="person__col">
-                                        <div class="person__label">
-                                            Kelly D.
-                                        </div>
-                                        <div class="person__prof">
-                                            <span>PMO</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-name">
-                                Lorem Ipsum Project
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-workedtime">
-                                <div class="timesheetItem__worked">8h worked</div>
-                                <div class="timesheetItem__planned">12h planned</div>
-                            </div>
-
-                            <div class="timesheetItem__col">
-                                <div class="chart">
-                                    <div class="chart__col">
-                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160" class="chart__svg">
-                                            <g stroke-width="18" fill="none">
-                                                <path class="chart__progress" stroke="#3AEDBA" d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
-                                                <path stroke="#ededed" d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
-                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
-                                            </g>
-                                        </svg>
-                                        <div class="chart__percent">67%</div>
-                                    </div>
-                                    <div class="chart__col">
-                                        <div class="chart__text">Utilisation</div>
-                                        <div class="chart__subtext">-4h under</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-btns">
-                                <button class="btn btn-timesheetItem btn-light" type="button">Reject</button>
-                                <button class="btn btn-timesheetItem" type="button">Accept</button>
-                            </div>
-                        </div>
-                        <div class="timesheetItem">
-                            <a href="#" class="timesheetItem__link"></a>
-                            <div class="timesheetItem__col timesheetItem__col-timeframes">
-                                <div class="badge badge-foundation">Awaited</div>
-                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-person">
-                                <div class="person person-dark person-static person-timesheetItem">
-                                    <div class="person__col">
-                                        <img src="assets/img/ava/testimonial/1.jpg" alt="ava" height="40" width="40" class="person__ava">
-                                    </div>
-                                    <div class="person__col">
-                                        <div class="person__label">
-                                            Kelly D.
-                                        </div>
-                                        <div class="person__prof">
-                                            <span>Business Automation</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-name">
-                                Lorem ipsum dolor sit amet consectetur.
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-workedtime">
-                                <div class="timesheetItem__worked">8h worked</div>
-                                <div class="timesheetItem__planned">12h planned</div>
-                            </div>
-
-                            <div class="timesheetItem__col">
-                                <div class="chart">
-                                    <div class="chart__col">
-                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160" class="chart__svg">
-                                            <g stroke-width="18" fill="none">
-                                                <path class="chart__progress" stroke="#3AEDBA" d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
-                                                <path stroke="#ededed" d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
-                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
-                                            </g>
-                                        </svg>
-                                        <div class="chart__percent">67%</div>
-                                    </div>
-                                    <div class="chart__col">
-                                        <div class="chart__text">Utilisation</div>
-                                        <div class="chart__subtext">-4h under</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="timesheetItem__col timesheetItem__col-btns">
-                                <button class="btn btn-timesheetItem btn-light" type="button">Reject</button>
-                                <button class="btn btn-timesheetItem" type="button">Accept</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dashboard__wrapper">
-                    <div class="section__row">
-                        <div class="section__subtitle section__subtitle-dashboard">Proposals awaiting (<span>3</span>)</div>
-                        <a href="#" class="btn btn-more">See all</a>
-                    </div>
-                    <div class="proposals">
-                        <div class="proposalCard">
-                            <div class="badge badge-foundation badge-static">Awaiting</div>
-                            <div class="proposalCard__title"><span>3</span>x Partners</div>
-                            <div class="partnersPhotos partnersPhotos-proposalCard">
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                            </div>
-                            <div class="enquiryDate">
-                                <div class="enquiryDate__col">
-                                    <div class="enquiryDate__ico"></div>
-                                </div>
-                                <div class="enquiryDate__col">
-                                    <div class="enquiryDate__title">Enquiry date</div>
-                                    <div class="enquiryDate__date">March 23, 2023</div>
-                                </div>
-                            </div>
-                            <div class="proposalCard__footer">
-                                <button class="btn btn-light">Contact us</button>
-                                <button class="btn btn-light">View</button>
-                            </div>
-                        </div>
-                        <div class="proposalCard">
-                            <div class="badge badge-foundation badge-static">Awaiting</div>
-                            <div class="proposalCard__title"><span>10</span>x Partners</div>
-                            <div class="partnersPhotos partnersPhotos-proposalCard">
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                                <div class="partnersPhotos__photo partnersPhotos__photo-last">
-                                    <span class="partnersPhotos__count">+5</span>
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                            </div>
-                            <div class="enquiryDate">
-                                <div class="enquiryDate__col">
-                                    <div class="enquiryDate__ico"></div>
-                                </div>
-                                <div class="enquiryDate__col">
-                                    <div class="enquiryDate__title">Enquiry date</div>
-                                    <div class="enquiryDate__date">March 23, 2023</div>
-                                </div>
-                            </div>
-                            <div class="proposalCard__footer">
-                                <button class="btn btn-light">Contact us</button>
-                                <button class="btn btn-light">View</button>
-                            </div>
-                        </div>
-                        <div class="proposalCard">
-                            <div class="badge badge-foundation badge-static">Awaiting</div>
-                            <div class="proposalCard__title"><span>1</span>x Partners</div>
-                            <div class="partnersPhotos partnersPhotos-proposalCard">
-                                <div class="partnersPhotos__photo">
-                                    <img src="assets/img/ava/testimonial/1.jpg" alt="ava" class="partnersPhotos__image" width="40" height="40">
-                                </div>
-                            </div>
-                            <div class="enquiryDate">
-                                <div class="enquiryDate__col">
-                                    <div class="enquiryDate__ico"></div>
-                                </div>
-                                <div class="enquiryDate__col">
-                                    <div class="enquiryDate__title">Enquiry date</div>
-                                    <div class="enquiryDate__date">March 23, 2023</div>
-                                </div>
-                            </div>
-                            <div class="proposalCard__footer">
-                                <button class="btn btn-light">Contact us</button>
-                                <button class="btn btn-light">View</button>
+                            <div class="filter__rate-list-wrapper">
+                                <ul class="filter__rate-list">
+                                    <li class="filter__rate-list-item">00:00</li>
+                                    <li class="filter__rate-list-item">01:00</li>
+                                    <li class="filter__rate-list-item">02:00</li>
+                                    <li class="filter__rate-list-item">03:00</li>
+                                    <li class="filter__rate-list-item">04:00</li>
+                                    <li class="filter__rate-list-item">05:00</li>
+                                    <li class="filter__rate-list-item">06:00</li>
+                                    <li class="filter__rate-list-item">07:00</li>
+                                    <li class="filter__rate-list-item">08:00</li>
+                                    <li class="filter__rate-list-item">09:00</li>
+                                    <li class="filter__rate-list-item">10:00</li>
+                                    <li class="filter__rate-list-item">11:00</li>
+                                    <li class="filter__rate-list-item">12:00</li>
+                                    <li class="filter__rate-list-item">13:00</li>
+                                    <li class="filter__rate-list-item">14:00</li>
+                                    <li class="filter__rate-list-item">15:00</li>
+                                    <li class="filter__rate-list-item">16:00</li>
+                                    <li class="filter__rate-list-item">17:00</li>
+                                    <li class="filter__rate-list-item">18:00</li>
+                                    <li class="filter__rate-list-item">19:00</li>
+                                    <li class="filter__rate-list-item">20:00</li>
+                                    <li class="filter__rate-list-item">21:00</li>
+                                    <li class="filter__rate-list-item">22:00</li>
+                                    <li class="filter__rate-list-item active">23:00</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="dashboard" data-tab-content="proposals">2</div>
-            <div class="dashboard" data-tab-content="comms">3</div>
-            <div class="dashboard" data-tab-content="favourites">4</div>
-            <div class="dashboard" data-tab-content="timesheets">5</div>
-            <div class="dashboard" data-tab-content="my-profile">6</div>
-        </div>
+            <div class="popup__wrapper">
+                <div class="popup__inner">
+                    <div class="popup__descr popup__descr-log">Is this work planned?</div>
+                    <label class="switch">
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__bg"></span>
+                        <span class="switch__box"></span>
+                        Planned work
+                    </label>
+                </div>
+            </div>
+            <div class="popup__wrapper">
+                <div class="popup__inner">
+                    <div class="popup__descr popup__descr-log">Activity</div>
+                    <div class="builder__item builder__item-log">
+                        <label for="activityInput" class="builder__label label-focus">
+                            Choose activity
+                        </label>
+                        <input id="activityInput" type="text" class="builder__input input-focus"
+                            required>
+                        <ul class="confirm__select-list dropdown">
+                            <li class="confirm__select-item">Busy</li>
+
+                            <li class="confirm__select-item">Busy, but ready to </li>
+                            <li class="confirm__select-item">Busy, but ready to start within some time</li>
+                            <li class="confirm__select-item">Busy, but ready to start within some time Busy, but ready to</li>
+                        </ul>
+                    </div>
+                    <div class="popup__label">Not seeing your project?<a href="">Get help</a></div>
+                </div>
+            </div>
+            <div class="popup__footer popup__footer-log">
+                <button class="btn btn-log btn-light popup__shut" type="submit">Cancel</button>
+                <button class="btn btn-log popup__shut" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+    <div class="popup" id="edit-time">
+        <div class="popup__bg"></div>
+        <form action="#" class="popup__body popup__body_account">
+            <div class="popup__title">Log new time</div>
+            <div class="popup__descr popup__descr-log">Great job! Yuo are done for this week</div>
+            <div class="popup__wrapper popup__wrapper-date">
+                <div class="popup__inner">
+                    <div class="popup__descr popup__descr-log">Date</div>
+                    <div class="input-date__wrapper">
+                        <label for="dataPicker1" class="input-date__label label-focus">
+                            MM/DD/YYYY
+                        </label>
+                        <input id="dataPicker1" class="input-date input-focus" type="text">
+                    </div>
+                </div>
+                <div class="popup__inner">
+                    <div class="popup__descr popup__descr-log">Time</div>
+                    <div class="filter__list filter__rate filter__rate-log">
+                        <div class="filter__rate-item">
+                            <div class="filter__rate-item-active">
+                                00:00
+                            </div>
+                            <div class="filter__rate-list-wrapper">
+                                <ul class="filter__rate-list">
+                                    <li class="filter__rate-list-item active">00:00</li>
+                                    <li class="filter__rate-list-item">01:00</li>
+                                    <li class="filter__rate-list-item">02:00</li>
+                                    <li class="filter__rate-list-item">03:00</li>
+                                    <li class="filter__rate-list-item">04:00</li>
+                                    <li class="filter__rate-list-item">05:00</li>
+                                    <li class="filter__rate-list-item">06:00</li>
+                                    <li class="filter__rate-list-item">07:00</li>
+                                    <li class="filter__rate-list-item">08:00</li>
+                                    <li class="filter__rate-list-item">09:00</li>
+                                    <li class="filter__rate-list-item">10:00</li>
+                                    <li class="filter__rate-list-item">11:00</li>
+                                    <li class="filter__rate-list-item">12:00</li>
+                                    <li class="filter__rate-list-item">13:00</li>
+                                    <li class="filter__rate-list-item">14:00</li>
+                                    <li class="filter__rate-list-item">15:00</li>
+                                    <li class="filter__rate-list-item">16:00</li>
+                                    <li class="filter__rate-list-item">17:00</li>
+                                    <li class="filter__rate-list-item">18:00</li>
+                                    <li class="filter__rate-list-item">19:00</li>
+                                    <li class="filter__rate-list-item">20:00</li>
+                                    <li class="filter__rate-list-item">21:00</li>
+                                    <li class="filter__rate-list-item">22:00</li>
+                                    <li class="filter__rate-list-item">23:00</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter__rate-mid">to</div>
+                        <div class="filter__rate-item">
+                            <div class="filter__rate-item-active">
+                                23:00
+                            </div>
+                            <div class="filter__rate-list-wrapper">
+                                <ul class="filter__rate-list">
+                                    <li class="filter__rate-list-item">00:00</li>
+                                    <li class="filter__rate-list-item">01:00</li>
+                                    <li class="filter__rate-list-item">02:00</li>
+                                    <li class="filter__rate-list-item">03:00</li>
+                                    <li class="filter__rate-list-item">04:00</li>
+                                    <li class="filter__rate-list-item">05:00</li>
+                                    <li class="filter__rate-list-item">06:00</li>
+                                    <li class="filter__rate-list-item">07:00</li>
+                                    <li class="filter__rate-list-item">08:00</li>
+                                    <li class="filter__rate-list-item">09:00</li>
+                                    <li class="filter__rate-list-item">10:00</li>
+                                    <li class="filter__rate-list-item">11:00</li>
+                                    <li class="filter__rate-list-item">12:00</li>
+                                    <li class="filter__rate-list-item">13:00</li>
+                                    <li class="filter__rate-list-item">14:00</li>
+                                    <li class="filter__rate-list-item">15:00</li>
+                                    <li class="filter__rate-list-item">16:00</li>
+                                    <li class="filter__rate-list-item">17:00</li>
+                                    <li class="filter__rate-list-item">18:00</li>
+                                    <li class="filter__rate-list-item">19:00</li>
+                                    <li class="filter__rate-list-item">20:00</li>
+                                    <li class="filter__rate-list-item">21:00</li>
+                                    <li class="filter__rate-list-item">22:00</li>
+                                    <li class="filter__rate-list-item active">23:00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup__wrapper">
+                <div class="popup__inner">
+                    <div class="popup__descr popup__descr-log">Is this work planned?</div>
+                    <label class="switch">
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__bg"></span>
+                        <span class="switch__box"></span>
+                        Planned work
+                    </label>
+                </div>
+            </div>
+            <div class="popup__wrapper">
+                <div class="popup__inner">
+                    <div class="popup__descr popup__descr-log">Activity</div>
+                    <div class="builder__item builder__item-log">
+                        <label for="activityInput" class="builder__label label-focus">
+                            Choose activity
+                        </label>
+                        <input id="activityInput" type="text" class="builder__input input-focus"
+                            required>
+                        <ul class="confirm__select-list dropdown">
+                            <li class="confirm__select-item">Busy</li>
+
+                            <li class="confirm__select-item">Busy, but ready to </li>
+                            <li class="confirm__select-item">Busy, but ready to start within some time</li>
+                            <li class="confirm__select-item">Busy, but ready to start within some time Busy, but ready to</li>
+                        </ul>
+                    </div>
+                    <div class="popup__label">Not seeing your project?<a href="">Get help</a></div>
+                </div>
+            </div>
+            <div class="popup__footer popup__footer-edit">
+                <div class="popup__block">
+                    <button class="btn btn-log btn-rose popup__shut" type="submit">Delete</button>
+                </div>
+                <div class="popup__block">
+                    <button class="btn btn-log btn-light popup__shut" type="submit">Cancel</button>
+                    <button class="btn btn-log popup__shut" type="submit">Save</button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <footer class="footer">

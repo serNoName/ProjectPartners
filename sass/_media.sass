@@ -451,6 +451,12 @@
                 width: 120px
         &__timeframes
             font-size: 16px
+    .timesheet
+        &__header
+            width: max-content
+        &__body
+            width: max-content
+
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 992px)
     .chat-buble
@@ -1081,6 +1087,8 @@
             &-simpleText
                 font-size: 36px
                 margin-bottom: 16px
+            &-headbar
+                margin: 0
         &-cta
             padding-top: 40px
         &-road
@@ -1150,6 +1158,28 @@
                 width: 120px
         &__timeframes
             font-size: 16px
+    .timesheet
+        &__header
+            width: max-content
+        &__body
+            width: max-content
+        &__col
+            &:first-of-type
+                width: 80px
+    .hoursStats
+        justify-content: start
+        column-gap: 32px
+    .statisticsBlock
+        &__projects
+            grid-template-columns: 1fr 1fr
+    .dashboard
+        &__wrapper
+            &-2cols
+                grid-template-columns: 1fr
+    .summary
+        &__title
+            font-size: 20px
+            margin-bottom: 4px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -1653,6 +1683,10 @@
                     .filter__rate-list-wrapper
                         left: 0
                         transform: translateY(-3px)
+            &-log
+                .filter__rate-list-wrapper
+                    top: calc( 100% + 6px )
+                    bottom: auto
         &__label
             &:hover
                 .filter__checkmark
@@ -2065,6 +2099,8 @@
                 margin: 0
         &__row
             margin-bottom: 24px
+            &-headbar
+                margin: 0
         &-team
             margin-bottom: 0
         &-faq
@@ -2240,6 +2276,53 @@
             column-gap: 4px
     .headbar__tabs
         padding-bottom: 8px
+    .timesheet
+        &__header
+            width: max-content
+        &__body
+            width: max-content
+        &__col
+            &:first-of-type
+                width: 80px
+        &__weekday
+            font-size: 16px
+            line-height: 110%
+    .hoursStats
+        justify-content: start
+        column-gap: 32px
+    .workedTime
+        &__title
+            font-size: 20px
+            line-height: 110%
+    .popup
+        &__title
+            font-size: 36px
+            margin-bottom: 16px
+        &__body
+            &_account
+                padding: 24px 18px 32px 18px
+    .dashboard
+        &__wrapper
+            &-2cols
+                grid-template-columns: 1fr
+    .statisticsBlock
+        flex-direction: column
+        &__inner
+            width: 100%
+        &__projects
+            grid-template-columns: 1fr 1fr
+    .summary
+        &__title
+            font-size: 20px
+            margin-bottom: 4px
+    .scoreStat
+        &__name
+            font-size: 20px
+        &__bonus
+            font-size: 14px
+            .badge
+                margin-left: 4px
+
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2784,6 +2867,16 @@
                 justify-content: start
                 column-gap: 8px
                 width: 100%
+    // .summary
+    //     &__diagram
+    //         padding-bottom: 48px
+    //         overflow: auto
+    //         min-width: 480px
+    //         @include customScrollBar($light-grey, $primary)
+    .diagram
+        &__columns
+            padding: 0 24px
+            column-gap: 40px
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -3344,6 +3437,7 @@
             padding: 0
             width: 100%
             justify-content: center
+
     .resources
         &-article
             display: flex
@@ -3364,6 +3458,63 @@
         &-timesheetItem
             width: 50%
             justify-content: center
+        &-headbar
+            width: fit-content
+            padding: 16px 28px
+            font-size: 16px
+        &-log
+            padding: 16px 0
+    .popup
+        &__footer
+            &-edit
+                .btn
+                    width: calc( 50% - 8px )
+                    font-size: 14px
+        &__wrapper
+            &-date
+                flex-direction: column
+                row-gap: 8px
+                .popup__inner
+                    width: 100%
+        &__block
+            width: calc( 50% - 6px )
+    .statisticsBlock
+        &__inner
+            padding: 20px
+        &__projects
+            grid-template-columns: 1fr
+    .summary
+        padding: 20px
+        &__project
+            padding-top: 64px
+        &__dates
+            right: auto
+            bottom: auto
+            left: 0
+            top: 0
+        &__heading
+            margin-bottom: 8px
+        &__diagram
+            overflow-x: auto
+            overflow-y: clip
+            padding-bottom: 48px
+            @imclude customScrollBar()
+    .diagram
+        &__row
+            &::before
+                right: auto
+                left: 12px
+                width: 140%
+    .scoreStat
+        padding: 20px
+        &__inner
+            &:first-child
+                display: flex
+                align-items: center
+        &__row
+            flex-direction: column
+            row-gap: 4px
+            align-items: start
 @media (max-width: 360px)
     .container
         width: 310px

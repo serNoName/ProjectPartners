@@ -1,0 +1,38 @@
+.statisticsBlock
+    display: flex
+    gap: 16px 20px
+    &__inner
+        display: flex
+        flex-direction: column
+        gap: 16px
+        background-color: #fff
+        border-radius: 16px
+        padding: 24px
+        width: calc( 100% - 316px )
+        &-total
+            gap: 20px
+            width: 296px
+    &__title
+        font-weight: 800
+        font-size: 22px
+        line-height: 130% // 28/22
+        color: $dark-grey
+    &__subtitle
+        font-weight: 800
+        font-size: 16px
+        line-height: 125% // 20/16
+        margin-bottom: 4px
+        color: $dark-grey
+    &__planned
+        font-weight: 700
+        line-height: 125% // 20/16
+        color: rgba(52,63,72,.5)
+        margin-bottom: 8px
+        span
+            color: $dark-grey
+            margin-left: 8px
+            font-weight: inherit
+    &__projects
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px

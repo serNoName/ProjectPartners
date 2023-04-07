@@ -250,8 +250,12 @@ $(document).ready(function () {
         $(this).children('.dropdown').stop(true, false).slideUp(200)
     });
     //dropdown click
-    $('.dropdown-triger-click').click(function () {
-        $(this).children('.dropdown').stop(true, false).slideToggle(200)
+    $('.dropdown-triger-click').click(function (e) {
+        if ($(e.target).hasClass('smallDropdown__text')) {
+            $(this).children('.dropdown').show(200)
+        } else {
+            $(this).children('.dropdown').stop(true, false).slideToggle(200)
+        }
     });
 
     //close dropdown
@@ -260,9 +264,18 @@ $(document).ready(function () {
 
         let result = !$(ele).hasClass('dropdown-triger-click') &&
             !$(ele).hasClass('text') &&
-            !$(ele).hasClass('builder__input');
+            !$(ele).hasClass('builder__input') &&
+            !$(ele).hasClass('custom-range') &&
+            !$(ele).hasClass('dataSelector__inner') &&
+            !$(ele).hasClass('weekTimeframes') &&
+            !$(ele).hasClass('customSelect__current') &&
+            !$(ele).hasClass('dataSelector__list') &&
+            !$(ele).hasClass('dataSelector__item') &&
+            !$(ele).hasClass('dataSelector__year') &&
+            !$(ele).hasClass('dataSelector__current');
 
         if (result) {
+            $('.dataSelector__current').removeClass('active')
             if ($(ele).hasClass('confirm__select-item')) {
                 $('.dropdown').slideUp(200);
             } else {
@@ -1002,3 +1015,192 @@ if (window.location.hash) {
     $('[data-tab]:first-of-type').addClass('active');
     $(`[data-tab-content="${$('[data-tab]:first-of-type').attr('data-tab')}"]`).show();
 }
+
+
+// Popups
+
+$(document).on('click', '.popup-trigger', function (e) {
+    if ($(this).attr('data-popup')) {
+        e.preventDefault();
+
+        if ($(this).attr('data-type')) {
+            $('.sign__inner').removeClass('active');
+            $('.' + $(this).attr('data-type')).addClass('active');
+        }
+
+        if ($('#' + $(this).attr('data-popup')).length) {
+            $('.nav').removeClass('active');
+            $('.header__burger').removeClass('active')
+            $('#filter').removeClass('active')
+            $('.dropdown__active').removeClass('dropdown__active');
+            $('body').addClass('noscroll');
+            $('#' + $(this).attr('data-popup')).addClass('popup_active');
+        }
+
+    }
+})
+$(document).on('click', '.popup__bg, .popup__close, .popup__shut', function () {
+    $('body').removeClass('noscroll');
+    $('.popup').removeClass('popup_active');
+})
+
+// starsInput
+
+$('.starsInput').click(function (e) {
+    const x = e.pageX - $(this).offset().left;
+    const widthStar = $(this).width() / 5;
+
+    const rate = parseInt(x / widthStar) + 1;
+
+    const cover = $(this).children('.cover')
+    switch (rate) {
+        case 1: cover.css('width', '80%'); break;
+        case 2: cover.css('width', '60%'); break;
+        case 3: cover.css('width', '40%'); break;
+        case 4: cover.css('width', '20%'); break;
+        case 5: cover.css('width', '0%'); break;
+    }
+
+    $(this).attr('data-rate', rate)
+})
+
+
+// timesheetLog
+
+$(document).ready(function () {
+    const timesheetLog = $('.timesheetLog') //find .timesheetLog
+
+    timesheetLog.each(function () {
+        const colHeight = $(this).parent().height() // get the height of one cell
+        const interval = $(this).attr('data-interval') // get the interval
+
+        $(this).css('min-height', `${colHeight * interval}px`); // set the min height of the current .timesheetLog
+    })
+})
+
+
+// time ratio
+
+$('.timeRatio__line').each(function () {
+    $(this).width($(this).children('span').text() + '%')
+})
+
+//dataSelector
+
+$('.dataSelector__current').click(function () {
+    $(this).toggleClass('active')
+    $(this).siblings('.dropdown').slideToggle(200)
+    $('.dataSelector__wrapper').hide()
+    $('.dropdown__wrapper').show()
+})
+$('.dropdown__button').click(function () {
+
+    if (!$(this).hasClass('custom-range')) {
+        $(this).parent().parent().parent().siblings('.dataSelector__current').text($(this).text())
+        $('.dropdown__button').parent().removeClass('active')
+        $(this).parent().addClass('active')
+    }
+})
+$('.custom-range').click(function () {
+    $(this).parent().parent().hide()
+    $(this).parent().parent().siblings('.dataSelector__wrapper').show()
+})
+$('.dataSelector__item').click(function () {
+    $(this).toggleClass('active').children().toggleClass('active')
+})
+$('.btn-dataSelector').click(function () {
+    const activeItems = $(this).parent().parent().find('.dataSelector__item.active')
+    const currentItem = $(this).parent().parent().parent().parent().find('.dataSelector__current')
+
+    if(activeItems.first().attr('data-date-first') === undefined) return;
+
+    let result = activeItems.first().attr('data-date-first') + ', '
+        + activeItems.first().parent().attr('data-year')
+        + ' - '
+        + activeItems.last().attr('data-date-second') + ', '
+        + activeItems.last().parent().attr('data-year')
+
+    currentItem.text(result)
+
+    $(this).parent().parent().parent().parent().find('.dropdown__item.active').removeClass('active')
+    $(this).parent().parent().parent().parent().find('.dropdown__item').last().addClass('active')
+})
+
+
+//custom selected
+
+$(document).ready(function () {
+    const customSelect = $('.customSelect');
+    customSelect.each(function () {
+        const selectedOption = $(this).find('.customSelect__current');
+        const optionsList = $(this).find('.customSelect__options');
+        const optionsListItem = $(this).find('li');
+        const summary = $(this).parent().parent()
+
+        selectedOption.on('click', function () {
+            optionsList.slideToggle(200);
+        });
+
+        optionsListItem.on('click', function () {
+            const clickedOption = $(this);
+            const id = clickedOption.attr('data-id');
+            const projectName = clickedOption.text();
+
+            selectedOption.text(projectName);
+            selectedOption.attr('data-id', id);
+            customSelect.removeClass('open');
+
+
+            summary.find('.summary__project').hide()
+            summary.find('.summary__project[data-id="' + id + '"]').show()
+        });
+    })
+
+})
+
+
+// summary
+
+const summary = $('.summary')
+summary.find('.summary__project').each(function() {
+    $(this).find('.summary__diagram').last().show()
+})
+$('.summary__project[data-id="' + summary.find('.customSelect__current').attr('data-id') + '"]').show()
+if ($('.summary__date.active.summary__date-last').length) $('.summary__btn-next').hide()
+if ($('.summary__date.active.summary__date-first').length) $('.summary__btn-prev').hide()
+
+$('.summary__btn').click(function (e) {
+    const target = e.target
+    let currentDate = $(this).siblings('.summary__date.active')
+    const parent = $(this).parent()
+
+    $(this).siblings('.summary__btn').show()
+
+    currentDate.removeClass('active').hide()
+
+    if ($(target).hasClass('summary__btn-prev')) {
+        currentDate = currentDate.prev()
+    }
+    else if ($(target).hasClass('summary__btn-next')) {
+        currentDate = currentDate.next()
+    }
+
+    if (currentDate.hasClass('summary__date-last')) $(this).hide()
+
+    const id = currentDate.attr('data-id')
+
+    currentDate.addClass('active').show()
+    parent.attr('data-id', id)
+
+    parent.siblings('.summary__diagram').hide()
+    parent.siblings('.summary__diagram[data-id="' + id + '"]').show()
+})
+
+
+// groups
+
+$('.group.active').children('.group__content').show()
+
+$('.group__control').click(function() {
+    $(this).parent().toggleClass('active').children('.group__content').stop().slideToggle(300)
+})

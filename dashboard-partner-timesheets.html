@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="async" href="assets/fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Heavy.woff" as="font" type="font/woff" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="async" href="assets/fonts/Mont-SemiBold.woff" as="font" type="font/woff" crossorigin>
+
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-128.png" sizes="128x128">
+
+    <title>PPv2</title>
+</head>
+
+<body class="body__fuild-container">
+
+    <div class="alert">
+        <div class="alert__wrapper">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8C15 9.85652 14.2625 11.637 12.9497 12.9497C11.637 14.2625 9.85652 15 8 15C6.14348 15 4.36301 14.2625 3.05025 12.9497C1.7375 11.637 1 9.85652 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1ZM7.128 9.381L5.573 7.825C5.51725 7.76925 5.45107 7.72503 5.37824 7.69486C5.3054 7.66469 5.22734 7.64917 5.1485 7.64917C5.06966 7.64917 4.9916 7.66469 4.91876 7.69486C4.84593 7.72503 4.77975 7.76925 4.724 7.825C4.61142 7.93758 4.54817 8.09028 4.54817 8.2495C4.54817 8.40872 4.61142 8.56142 4.724 8.674L6.704 10.654C6.75959 10.71 6.82572 10.7545 6.89858 10.7848C6.97143 10.8152 7.04958 10.8308 7.1285 10.8308C7.20742 10.8308 7.28557 10.8152 7.35842 10.7848C7.43128 10.7545 7.49741 10.71 7.553 10.654L11.653 6.553C11.7095 6.49748 11.7544 6.43133 11.7852 6.35836C11.816 6.28539 11.8321 6.20705 11.8324 6.12785C11.8328 6.04864 11.8175 5.97015 11.7874 5.8969C11.7573 5.82365 11.7129 5.75708 11.657 5.70104C11.601 5.645 11.5345 5.6006 11.4613 5.5704C11.388 5.54019 11.3096 5.52478 11.2304 5.52506C11.1512 5.52533 11.0728 5.54129 10.9998 5.572C10.9268 5.60271 10.8606 5.64757 10.805 5.704L7.128 9.381Z"
+                    fill="#6E55FF" />
+            </svg>
+            <span>Partner was successfully added to your Checklist</span>
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M4.00008 4.00008L0.666748 0.666748M4.00008 4.00008L7.33341 7.33341M4.00008 4.00008L7.33341 0.666748M4.00008 4.00008L0.666748 7.33341"
+                    stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="overlayer"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="#" class="header__logo">
+                    <img src="assets/img/logo/logo.svg" alt="logo" width="249">
+                </a>
+                <form action="#" class="header__search header__search-desk">
+                    <div class="header__search-select dropdown-triger">
+                        <span class="text">All</span>
+                        <ul class="header__search-dropdown dropdown">
+                            <li class="header__search-item">
+                                <a href="#" class="header__search-link">
+                                    <svg class="header__search-ico" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M8.50004 8.5C7.60629 8.5 6.84119 8.18177 6.20473 7.54531C5.56827 6.90885 5.25004 6.14375 5.25004 5.25C5.25004 4.35625 5.56827 3.59115 6.20473 2.95469C6.84119 2.31823 7.60629 2 8.50004 2C9.39379 2 10.1589 2.31823 10.7954 2.95469C11.4318 3.59115 11.75 4.35625 11.75 5.25C11.75 6.14375 11.4318 6.90885 10.7954 7.54531C10.1589 8.18177 9.39379 8.5 8.50004 8.5ZM3.62504 15C3.17817 15 2.79575 14.841 2.47779 14.5231C2.15929 14.2046 2.00004 13.8219 2.00004 13.375V12.725C2.00004 12.2646 2.11867 11.8413 2.35592 11.4551C2.59263 11.0694 2.90733 10.775 3.30004 10.5719C4.13963 10.1521 4.99275 9.8371 5.85942 9.62694C6.72608 9.41731 7.60629 9.3125 8.50004 9.3125C9.39379 9.3125 10.274 9.41731 11.1407 9.62694C12.0073 9.8371 12.8605 10.1521 13.7 10.5719C14.0927 10.775 14.4075 11.0694 14.6442 11.4551C14.8814 11.8413 15 12.2646 15 12.725V13.375C15 13.8219 14.8411 14.2046 14.5231 14.5231C14.2046 14.841 13.8219 15 13.375 15H3.62504Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <span class="header__search-title">Partners</span>
+                                    <span class="header__search-descr">Find talent</span>
+                                </a>
+                            </li>
+                            <li class="header__search-item">
+                                <a href="#" class="header__search-link">
+                                    <svg class="header__search-ico" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.33333 2C9.86377 2 10.3725 2.21071 10.7475 2.58579C11.1226 2.96086 11.3333 3.46957 11.3333 4H13.3333C13.687 4 14.0261 4.14048 14.2761 4.39052C14.5262 4.64057 14.6667 4.97971 14.6667 5.33333V12.6667C14.6667 13.0203 14.5262 13.3594 14.2761 13.6095C14.0261 13.8595 13.687 14 13.3333 14H2.66667C2.31304 14 1.9739 13.8595 1.72386 13.6095C1.47381 13.3594 1.33333 13.0203 1.33333 12.6667V5.33333C1.33333 4.97971 1.47381 4.64057 1.72386 4.39052C1.9739 4.14048 2.31304 4 2.66667 4H4.66667C4.66667 3.46957 4.87738 2.96086 5.25245 2.58579C5.62752 2.21071 6.13623 2 6.66667 2H9.33333ZM12.6667 6.66667H3.33333C3.16341 6.66686 2.99998 6.73192 2.87642 6.84857C2.75286 6.96521 2.67851 7.12464 2.66855 7.29426C2.65859 7.46389 2.71378 7.63092 2.82284 7.76122C2.9319 7.89152 3.0866 7.97526 3.25533 7.99533L3.33333 8H7.33333V8.66667C7.33352 8.83659 7.39858 9.00002 7.51523 9.12358C7.63188 9.24714 7.7913 9.32149 7.96093 9.33145C8.13056 9.34141 8.29759 9.28622 8.42789 9.17716C8.55819 9.0681 8.64193 8.9134 8.662 8.74467L8.66667 8.66667V8H12.6667C12.8366 7.99981 13 7.93475 13.1236 7.8181C13.2471 7.70146 13.3215 7.54203 13.3314 7.3724C13.3414 7.20278 13.2862 7.03575 13.1772 6.90545C13.0681 6.77514 12.9134 6.6914 12.7447 6.67133L12.6667 6.66667ZM9.33333 3.33333H6.66667C6.50338 3.33335 6.34577 3.3933 6.22375 3.50181C6.10173 3.61032 6.02377 3.75983 6.00467 3.922L6 4H10C9.99998 3.83671 9.94003 3.67911 9.83152 3.55709C9.72302 3.43506 9.5735 3.3571 9.41133 3.338L9.33333 3.33333Z"
+                                            fill="black" />
+                                    </svg>
+                                    <span class="header__search-title">Roles</span>
+                                    <span class="header__search-descr">Find work</span>
+                                </a>
+                            </li>
+                            <li class="header__search-item">
+                                <a href="#" class="header__search-link">
+                                    <svg class="header__search-ico" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M14.9894 8.39688L13.9894 3.65281C13.7962 2.61781 13.0525 2 12 2H4C3.475 2 3.03125 2.14656 2.68437 2.43563C2.3375 2.72469 2.11031 3.13281 2.01 3.65094L1.01 8.39688C1.00324 8.43083 0.999893 8.46538 0.999999 8.5V12C0.999999 12.5304 1.21071 13.0391 1.58579 13.4142C1.96086 13.7893 2.46957 14 3 14H13C13.5304 14 14.0391 13.7893 14.4142 13.4142C14.7893 13.0391 15 12.5304 15 12V8.5C14.9999 8.46536 14.9963 8.43081 14.9894 8.39688ZM2.98937 3.85313V3.84437C3.10031 3.26844 3.42094 3.00062 3.99844 3.00062H12C12.5816 3.00062 12.9022 3.26781 13.0084 3.84156C13.0084 3.84563 13.01 3.84969 13.0106 3.85375L13.8522 7.85C13.856 7.86821 13.8557 7.88704 13.8513 7.90511C13.8469 7.92319 13.8386 7.94006 13.8268 7.95449C13.8151 7.96893 13.8003 7.98056 13.7835 7.98854C13.7667 7.99652 13.7483 8.00065 13.7297 8.00062H10C9.86816 7.99996 9.74145 8.05165 9.6477 8.14435C9.55395 8.23704 9.50083 8.36316 9.5 8.495C9.5 8.89282 9.34196 9.27436 9.06066 9.55566C8.77936 9.83696 8.39782 9.995 8 9.995C7.60217 9.995 7.22064 9.83696 6.93934 9.55566C6.65803 9.27436 6.5 8.89282 6.5 8.495C6.49967 8.42967 6.48648 8.36504 6.46117 8.3048C6.43587 8.24457 6.39895 8.18991 6.35252 8.14394C6.30609 8.09798 6.25106 8.06161 6.19057 8.03691C6.13009 8.01221 6.06533 7.99967 6 8H2.27031C2.25171 8.00002 2.23334 7.99589 2.21653 7.98791C2.19973 7.97993 2.18492 7.9683 2.17318 7.95387C2.16144 7.93944 2.15307 7.92257 2.14868 7.90449C2.1443 7.88641 2.144 7.86758 2.14781 7.84937L2.98937 3.85313Z"
+                                                fill="black" />
+                                            <path
+                                                d="M11.5 5H4.5C4.36739 5 4.24021 4.94732 4.14645 4.85355C4.05268 4.75979 4 4.63261 4 4.5C4 4.36739 4.05268 4.24021 4.14645 4.14645C4.24021 4.05268 4.36739 4 4.5 4H11.5C11.6326 4 11.7598 4.05268 11.8536 4.14645C11.9473 4.24021 12 4.36739 12 4.5C12 4.63261 11.9473 4.75979 11.8536 4.85355C11.7598 4.94732 11.6326 5 11.5 5ZM12 7H4C3.86739 7 3.74021 6.94732 3.64645 6.85355C3.55268 6.75979 3.5 6.63261 3.5 6.5C3.5 6.36739 3.55268 6.24021 3.64645 6.14645C3.74021 6.05268 3.86739 6 4 6H12C12.1326 6 12.2598 6.05268 12.3536 6.14645C12.4473 6.24021 12.5 6.36739 12.5 6.5C12.5 6.63261 12.4473 6.75979 12.3536 6.85355C12.2598 6.94732 12.1326 7 12 7Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <span class="header__search-title">Resources</span>
+                                    <span class="header__search-descr">Content to empower your change</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__search-inner">
+                        <input type="text" class="header__search-input" placeholder="Start typing to search" required>
+                    </div>
+                    <button type="submit" class="header__search-submit">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.99999 0.333313C5.09638 0.33339 4.2059 0.549556 3.40282 0.963776C2.59975 1.378 1.90738 1.97826 1.38348 2.71448C0.859572 3.45071 0.519326 4.30154 0.391125 5.19601C0.262924 6.09047 0.350485 7.00263 0.646505 7.85637C0.942524 8.71011 1.43842 9.48068 2.09281 10.1038C2.7472 10.7269 3.54112 11.1845 4.40833 11.4384C5.27553 11.6923 6.19088 11.7351 7.078 11.5633C7.96512 11.3914 8.79828 11.01 9.50799 10.4506L11.9427 12.8853C12.0684 13.0068 12.2368 13.0739 12.4116 13.0724C12.5864 13.0709 12.7536 13.0008 12.8772 12.8772C13.0008 12.7536 13.0709 12.5864 13.0724 12.4116C13.074 12.2368 13.0068 12.0684 12.8853 11.9426L10.4507 9.50798C11.1093 8.67239 11.5194 7.66825 11.6341 6.61046C11.7487 5.55268 11.5632 4.48399 11.0988 3.52671C10.6344 2.56942 9.90991 1.76222 9.00819 1.19747C8.10646 0.632717 7.06396 0.333242 5.99999 0.333313ZM1.66665 5.99998C1.66665 4.85071 2.1232 3.74851 2.93586 2.93585C3.74851 2.12319 4.85071 1.66665 5.99999 1.66665C7.14926 1.66665 8.25146 2.12319 9.06412 2.93585C9.87677 3.74851 10.3333 4.85071 10.3333 5.99998C10.3333 7.14925 9.87677 8.25145 9.06412 9.06411C8.25146 9.87677 7.14926 10.3333 5.99999 10.3333C4.85071 10.3333 3.74851 9.87677 2.93586 9.06411C2.1232 8.25145 1.66665 7.14925 1.66665 5.99998Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </form>
+                <div class="header__masthead">
+                    <a href="#" class="header__shortlist btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.5 5.25C5.5 5.44891 5.42098 5.63968 5.28033 5.78033C5.13968 5.92098 4.94891 6 4.75 6C4.55109 6 4.36032 5.92098 4.21967 5.78033C4.07902 5.63968 4 5.44891 4 5.25C4 5.05109 4.07902 4.86032 4.21967 4.71967C4.36032 4.57902 4.55109 4.5 4.75 4.5C4.94891 4.5 5.13968 4.57902 5.28033 4.71967C5.42098 4.86032 5.5 5.05109 5.5 5.25ZM4.75 9C4.94891 9 5.13968 8.92098 5.28033 8.78033C5.42098 8.63968 5.5 8.44891 5.5 8.25C5.5 8.05109 5.42098 7.86032 5.28033 7.71967C5.13968 7.57902 4.94891 7.5 4.75 7.5C4.55109 7.5 4.36032 7.57902 4.21967 7.71967C4.07902 7.86032 4 8.05109 4 8.25C4 8.44891 4.07902 8.63968 4.21967 8.78033C4.36032 8.92098 4.55109 9 4.75 9ZM5.5 11.25C5.5 11.4489 5.42098 11.6397 5.28033 11.7803C5.13968 11.921 4.94891 12 4.75 12C4.55109 12 4.36032 11.921 4.21967 11.7803C4.07902 11.6397 4 11.4489 4 11.25C4 11.0511 4.07902 10.8603 4.21967 10.7197C4.36032 10.579 4.55109 10.5 4.75 10.5C4.94891 10.5 5.13968 10.579 5.28033 10.7197C5.42098 10.8603 5.5 11.0511 5.5 11.25ZM7.5 5C7.36739 5 7.24021 5.05268 7.14645 5.14645C7.05268 5.24021 7 5.36739 7 5.5C7 5.63261 7.05268 5.75979 7.14645 5.85355C7.24021 5.94732 7.36739 6 7.5 6H11.5C11.6326 6 11.7598 5.94732 11.8536 5.85355C11.9473 5.75979 12 5.63261 12 5.5C12 5.36739 11.9473 5.24021 11.8536 5.14645C11.7598 5.05268 11.6326 5 11.5 5H7.5ZM7 8.5C7 8.36739 7.05268 8.24021 7.14645 8.14645C7.24021 8.05268 7.36739 8 7.5 8H11.5C11.6326 8 11.7598 8.05268 11.8536 8.14645C11.9473 8.24021 12 8.36739 12 8.5C12 8.63261 11.9473 8.75979 11.8536 8.85355C11.7598 8.94732 11.6326 9 11.5 9H7.5C7.36739 9 7.24021 8.94732 7.14645 8.85355C7.05268 8.75979 7 8.63261 7 8.5ZM7.5 11C7.36739 11 7.24021 11.0527 7.14645 11.1464C7.05268 11.2402 7 11.3674 7 11.5C7 11.6326 7.05268 11.7598 7.14645 11.8536C7.24021 11.9473 7.36739 12 7.5 12H11.5C11.6326 12 11.7598 11.9473 11.8536 11.8536C11.9473 11.7598 12 11.6326 12 11.5C12 11.3674 11.9473 11.2402 11.8536 11.1464C11.7598 11.0527 11.6326 11 11.5 11H7.5ZM1 3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H13C13.5304 1 14.0391 1.21071 14.4142 1.58579C14.7893 1.96086 15 2.46957 15 3V13C15 13.5304 14.7893 14.0391 14.4142 14.4142C14.0391 14.7893 13.5304 15 13 15H3C2.46957 15 1.96086 14.7893 1.58579 14.4142C1.21071 14.0391 1 13.5304 1 13V3ZM3 2C2.73478 2 2.48043 2.10536 2.29289 2.29289C2.10536 2.48043 2 2.73478 2 3V13C2 13.2652 2.10536 13.5196 2.29289 13.7071C2.48043 13.8946 2.73478 14 3 14H13C13.2652 14 13.5196 13.8946 13.7071 13.7071C13.8946 13.5196 14 13.2652 14 13V3C14 2.73478 13.8946 2.48043 13.7071 2.29289C13.5196 2.10536 13.2652 2 13 2H3Z"
+                                fill="#343F48" />
+                        </svg>
+                        <span>Shortlist</span>
+                        <span class="header__shortlist-count" id="countInShortList">0</span>
+                    </a>
+                    <div class="header__login">
+                        <a href="#" class="header__login-log btn">Log in</a>
+                        <a href="#" class="header__login-sign btn">Sign up</a>
+                    </div>
+                    <div class="header__profile header__profile-desk">
+                        <div class="header__profile-select dropdown-triger">My Account
+
+                            <ul class="header__dropdown dropdown">
+                                <li class="header__dropdown-item"><a href="#" class="header__dropdown-link">Edit
+                                        account</a></li>
+                                <li class="header__dropdown-item"><a href="#" class="header__dropdown-link">Projects</a>
+                                </li>
+                                <li class="header__dropdown-item"><a href="#" class="header__dropdown-link">Roles</a>
+                                </li>
+                                <li class="header__dropdown-item"><a href="#"
+                                        class="header__dropdown-link">Contracts</a></li>
+                                <li class="header__dropdown-item"><a href="#" class="header__dropdown-link"><img
+                                            src="assets/img/ico/exit.svg" alt="exit" width="16">Log out</a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                            <img src="assets/img/ava/header_ava.webp" alt="avatar">
+                        </a>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <div class="nav-close">
+                    <span></span><span></span>
+                </div>
+                <div class="nav-item nav-item-triger">
+                    <span class="text">Find Talent</span>
+                    <ul class="nav__dropdown ">
+                        <li class="nav__dropdown-item">
+                            <a href="#" class="nav__dropdown-link">
+                                <span class="nav__dropdown-title">Partner Catalogue</span>
+                                <span class="nav__dropdown-descr">Experts at your fingertips, ready <br>
+                                    to deliver the change you want</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown-item">
+                            <a href="#" class="nav__dropdown-link">
+                                <div class="nav__dropdown-title">Let us find what you need</div>
+                                <div class="nav__dropdown-descr">Our team can recommend a solution <br>
+                                    to meet your project needs</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-item nav-item-triger">
+                    <span class="text">Find Work</span>
+                    <ul class="nav__dropdown ">
+                        <li class="nav__dropdown-item">
+                            <a href="#" class="nav__dropdown-link">
+                                <span class="nav__dropdown-title">Search our Exclusive Roles</span>
+                                <span class="nav__dropdown-descr">Work with great companies on exciting <br>
+                                    projects that make a difference</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown-item">
+                            <a href="#" class="nav__dropdown-link">
+                                <span class="nav__dropdown-title">Help Me Create a Killer Profile</span>
+                                <span class="nav__dropdown-descr">We can help to promote your skills and <br>
+                                    talents to land the best opportunities</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-item nav-item-triger">
+                    <span class="text">Why ProjectPartners</span>
+                    <ul class="nav__dropdown ">
+                        <li class="nav__dropdown-item">
+                            <a href="#" class="nav__dropdown-link">
+                                <span class="nav__dropdown-title">Our Why</span>
+                                <span class="nav__dropdown-descr">We empower meaningful change. Learn how we <br>
+                                    bring together great people with great organisations</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown-item">
+                            <a href="#" class="nav__dropdown-link">
+                                <span class="nav__dropdown-title">Testimonials</span>
+                                <span class="nav__dropdown-descr">Learn how ProectPartnershave made a difference <br>
+                                    to hundreds of business and professionals</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="nav-item">Content & Resources</a>
+                <a href="#" class="nav-item">Profile Builder</a>
+                <a href="#" class="nav-item nav-item-no-login">My Favourites</a>
+                <a href="#" class="nav-item nav-item-no-login">My Compares</a>
+                <div class="nav-mobile">
+                    <a href="#" class="header__shortlist btn">
+                        <img src="assets/img/ico/shortlist.svg" alt="ico">
+                        <span>Shortlist</span>
+                        <span class="header__shortlist-count" id="countInShortListMobile">0</span>
+                    </a>
+                    <div class="header__login">
+                        <a href="#" class="header__login-log btn">Log in</a>
+                        <a href="#" class="header__login-sign btn">Sign up</a>
+                    </div>
+                    <div class="header__profile">
+                        <div class="header__profile-select dropdown-triger">
+                            <span class="text">My Account</span>
+                            <ul class="header__dropdown dropdown">
+                                <li class="header__dropdown-item">
+                                    <div class="header__dropdown-link">Edit account</div>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <div class="header__dropdown-link">Projects</div>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <div class="header__dropdown-link">Roles</div>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <div class="header__dropdown-link">Contracts</div>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <div class="header__dropdown-link"><img src="assets/img/ico/exit.svg" alt="exit"
+                                            width="16">Log out</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                            <img src="assets/img/ava/header_ava.webp" alt="avatar">
+                        </a>
+                    </div>
+                </div>
+                <form action="#" class="header__search header__search-mobi">
+                    <div class="header__search-select">
+                        <span class="text">All</span>
+                        <ul class="header__search-dropdown ">
+                            <li class="header__search-item">
+                                <a href="#" class="header__search-link">
+                                    <svg class="header__search-ico" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M8.50004 8.5C7.60629 8.5 6.84119 8.18177 6.20473 7.54531C5.56827 6.90885 5.25004 6.14375 5.25004 5.25C5.25004 4.35625 5.56827 3.59115 6.20473 2.95469C6.84119 2.31823 7.60629 2 8.50004 2C9.39379 2 10.1589 2.31823 10.7954 2.95469C11.4318 3.59115 11.75 4.35625 11.75 5.25C11.75 6.14375 11.4318 6.90885 10.7954 7.54531C10.1589 8.18177 9.39379 8.5 8.50004 8.5ZM3.62504 15C3.17817 15 2.79575 14.841 2.47779 14.5231C2.15929 14.2046 2.00004 13.8219 2.00004 13.375V12.725C2.00004 12.2646 2.11867 11.8413 2.35592 11.4551C2.59263 11.0694 2.90733 10.775 3.30004 10.5719C4.13963 10.1521 4.99275 9.8371 5.85942 9.62694C6.72608 9.41731 7.60629 9.3125 8.50004 9.3125C9.39379 9.3125 10.274 9.41731 11.1407 9.62694C12.0073 9.8371 12.8605 10.1521 13.7 10.5719C14.0927 10.775 14.4075 11.0694 14.6442 11.4551C14.8814 11.8413 15 12.2646 15 12.725V13.375C15 13.8219 14.8411 14.2046 14.5231 14.5231C14.2046 14.841 13.8219 15 13.375 15H3.62504Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <span class="header__search-title">Partners</span>
+                                    <span class="header__search-descr">Find talent</span>
+                                </a>
+                            </li>
+                            <li class="header__search-item">
+                                <a href="#" class="header__search-link">
+                                    <svg class="header__search-ico" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.33333 2C9.86377 2 10.3725 2.21071 10.7475 2.58579C11.1226 2.96086 11.3333 3.46957 11.3333 4H13.3333C13.687 4 14.0261 4.14048 14.2761 4.39052C14.5262 4.64057 14.6667 4.97971 14.6667 5.33333V12.6667C14.6667 13.0203 14.5262 13.3594 14.2761 13.6095C14.0261 13.8595 13.687 14 13.3333 14H2.66667C2.31304 14 1.9739 13.8595 1.72386 13.6095C1.47381 13.3594 1.33333 13.0203 1.33333 12.6667V5.33333C1.33333 4.97971 1.47381 4.64057 1.72386 4.39052C1.9739 4.14048 2.31304 4 2.66667 4H4.66667C4.66667 3.46957 4.87738 2.96086 5.25245 2.58579C5.62752 2.21071 6.13623 2 6.66667 2H9.33333ZM12.6667 6.66667H3.33333C3.16341 6.66686 2.99998 6.73192 2.87642 6.84857C2.75286 6.96521 2.67851 7.12464 2.66855 7.29426C2.65859 7.46389 2.71378 7.63092 2.82284 7.76122C2.9319 7.89152 3.0866 7.97526 3.25533 7.99533L3.33333 8H7.33333V8.66667C7.33352 8.83659 7.39858 9.00002 7.51523 9.12358C7.63188 9.24714 7.7913 9.32149 7.96093 9.33145C8.13056 9.34141 8.29759 9.28622 8.42789 9.17716C8.55819 9.0681 8.64193 8.9134 8.662 8.74467L8.66667 8.66667V8H12.6667C12.8366 7.99981 13 7.93475 13.1236 7.8181C13.2471 7.70146 13.3215 7.54203 13.3314 7.3724C13.3414 7.20278 13.2862 7.03575 13.1772 6.90545C13.0681 6.77514 12.9134 6.6914 12.7447 6.67133L12.6667 6.66667ZM9.33333 3.33333H6.66667C6.50338 3.33335 6.34577 3.3933 6.22375 3.50181C6.10173 3.61032 6.02377 3.75983 6.00467 3.922L6 4H10C9.99998 3.83671 9.94003 3.67911 9.83152 3.55709C9.72302 3.43506 9.5735 3.3571 9.41133 3.338L9.33333 3.33333Z"
+                                            fill="black" />
+                                    </svg>
+                                    <span class="header__search-title">Roles</span>
+                                    <span class="header__search-descr">Find work</span>
+                                </a>
+                            </li>
+                            <li class="header__search-item">
+                                <a href="#" class="header__search-link">
+                                    <svg class="header__search-ico" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M14.9894 8.39688L13.9894 3.65281C13.7962 2.61781 13.0525 2 12 2H4C3.475 2 3.03125 2.14656 2.68437 2.43563C2.3375 2.72469 2.11031 3.13281 2.01 3.65094L1.01 8.39688C1.00324 8.43083 0.999893 8.46538 0.999999 8.5V12C0.999999 12.5304 1.21071 13.0391 1.58579 13.4142C1.96086 13.7893 2.46957 14 3 14H13C13.5304 14 14.0391 13.7893 14.4142 13.4142C14.7893 13.0391 15 12.5304 15 12V8.5C14.9999 8.46536 14.9963 8.43081 14.9894 8.39688ZM2.98937 3.85313V3.84437C3.10031 3.26844 3.42094 3.00062 3.99844 3.00062H12C12.5816 3.00062 12.9022 3.26781 13.0084 3.84156C13.0084 3.84563 13.01 3.84969 13.0106 3.85375L13.8522 7.85C13.856 7.86821 13.8557 7.88704 13.8513 7.90511C13.8469 7.92319 13.8386 7.94006 13.8268 7.95449C13.8151 7.96893 13.8003 7.98056 13.7835 7.98854C13.7667 7.99652 13.7483 8.00065 13.7297 8.00062H10C9.86816 7.99996 9.74145 8.05165 9.6477 8.14435C9.55395 8.23704 9.50083 8.36316 9.5 8.495C9.5 8.89282 9.34196 9.27436 9.06066 9.55566C8.77936 9.83696 8.39782 9.995 8 9.995C7.60217 9.995 7.22064 9.83696 6.93934 9.55566C6.65803 9.27436 6.5 8.89282 6.5 8.495C6.49967 8.42967 6.48648 8.36504 6.46117 8.3048C6.43587 8.24457 6.39895 8.18991 6.35252 8.14394C6.30609 8.09798 6.25106 8.06161 6.19057 8.03691C6.13009 8.01221 6.06533 7.99967 6 8H2.27031C2.25171 8.00002 2.23334 7.99589 2.21653 7.98791C2.19973 7.97993 2.18492 7.9683 2.17318 7.95387C2.16144 7.93944 2.15307 7.92257 2.14868 7.90449C2.1443 7.88641 2.144 7.86758 2.14781 7.84937L2.98937 3.85313Z"
+                                                fill="black" />
+                                            <path
+                                                d="M11.5 5H4.5C4.36739 5 4.24021 4.94732 4.14645 4.85355C4.05268 4.75979 4 4.63261 4 4.5C4 4.36739 4.05268 4.24021 4.14645 4.14645C4.24021 4.05268 4.36739 4 4.5 4H11.5C11.6326 4 11.7598 4.05268 11.8536 4.14645C11.9473 4.24021 12 4.36739 12 4.5C12 4.63261 11.9473 4.75979 11.8536 4.85355C11.7598 4.94732 11.6326 5 11.5 5ZM12 7H4C3.86739 7 3.74021 6.94732 3.64645 6.85355C3.55268 6.75979 3.5 6.63261 3.5 6.5C3.5 6.36739 3.55268 6.24021 3.64645 6.14645C3.74021 6.05268 3.86739 6 4 6H12C12.1326 6 12.2598 6.05268 12.3536 6.14645C12.4473 6.24021 12.5 6.36739 12.5 6.5C12.5 6.63261 12.4473 6.75979 12.3536 6.85355C12.2598 6.94732 12.1326 7 12 7Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <span class="header__search-title">Resources</span>
+                                    <span class="header__search-descr">Content to empower your change</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__search-inner">
+                        <input type="text" class="header__search-input" placeholder="Start typing to search" required>
+                    </div>
+                    <button type="submit" class="header__search-submit">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.99999 0.333313C5.09638 0.33339 4.2059 0.549556 3.40282 0.963776C2.59975 1.378 1.90738 1.97826 1.38348 2.71448C0.859572 3.45071 0.519326 4.30154 0.391125 5.19601C0.262924 6.09047 0.350485 7.00263 0.646505 7.85637C0.942524 8.71011 1.43842 9.48068 2.09281 10.1038C2.7472 10.7269 3.54112 11.1845 4.40833 11.4384C5.27553 11.6923 6.19088 11.7351 7.078 11.5633C7.96512 11.3914 8.79828 11.01 9.50799 10.4506L11.9427 12.8853C12.0684 13.0068 12.2368 13.0739 12.4116 13.0724C12.5864 13.0709 12.7536 13.0008 12.8772 12.8772C13.0008 12.7536 13.0709 12.5864 13.0724 12.4116C13.074 12.2368 13.0068 12.0684 12.8853 11.9426L10.4507 9.50798C11.1093 8.67239 11.5194 7.66825 11.6341 6.61046C11.7487 5.55268 11.5632 4.48399 11.0988 3.52671C10.6344 2.56942 9.90991 1.76222 9.00819 1.19747C8.10646 0.632717 7.06396 0.333242 5.99999 0.333313ZM1.66665 5.99998C1.66665 4.85071 2.1232 3.74851 2.93586 2.93585C3.74851 2.12319 4.85071 1.66665 5.99999 1.66665C7.14926 1.66665 8.25146 2.12319 9.06412 2.93585C9.87677 3.74851 10.3333 4.85071 10.3333 5.99998C10.3333 7.14925 9.87677 8.25145 9.06412 9.06411C8.25146 9.87677 7.14926 10.3333 5.99999 10.3333C4.85071 10.3333 3.74851 9.87677 2.93586 9.06411C2.1232 8.25145 1.66665 7.14925 1.66665 5.99998Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chat-buble">
+        <img src="assets/img/ico/message.svg" alt="ico">
+    </div>
+
+    <div class="section section-headbar">
+        <div class="container">
+            <div class="headbar">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Homepage</a></li>
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Account</a></li>
+                </ul>
+                <div class="section__title section__title-headbar">Account</div>
+                <div class="headbar__tabs">
+                    <a href="#" class="badge badge-tab badge-professional ">Overview</a>
+                    <a href="#" class="badge badge-tab badge-professional">Proposals</a>
+                    <a href="#" class="badge badge-tab badge-professional">Comms</a>
+                    <a href="#" class="badge badge-tab badge-professional">Favourites</a>
+                    <a href="#" class="badge badge-tab badge-professional active">Timesheets</a>
+                    <a href="#" class="badge badge-tab badge-professional">My Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-dashboard">
+        <div class="container">
+            <div class="dashboard">
+                <div class="dashboard__wrapper">
+                    <div class="section__row">
+                        <div class="section__subtitle section__subtitle-dashboard">Statistics</div>
+                        <div class="dataSelector">
+                            <div class="dataSelector__current">Last week</div>
+                            <div class="dropdown dropdown-dataSelector">
+                                <ul class="dropdown__wrapper">
+                                    <li class="dropdown__item active"><button class="dropdown__button"
+                                            type="button">Last week</button></li>
+                                    <li class="dropdown__item"><button class="dropdown__button" type="button">Last
+                                            month</button></li>
+                                    <li class="dropdown__item"><button class="dropdown__button" type="button">All the
+                                            time</button></li>
+                                    <li class="dropdown__item"><button class="dropdown__button custom-range"
+                                            type="button">Custom range</button></li>
+                                </ul>
+                                <div class="dataSelector__wrapper">
+                                    <button class="dataSelector__inner dataSelector__inner-top" type="button">
+                                        <span class="dataSelector__title">Select weekly range</span>
+                                    </button>
+                                    <div class="dataSelector__inner dataSelector__inner-middle">
+                                        <div class="dataSelector__content">
+                                            <div class="dataSelector__year">2023</div>
+                                            <ul class="dataSelector__list" data-year="2023">
+                                                <li class="dataSelector__item" data-date-first="Mar 12"
+                                                    data-date-second="Mar 17"><button class="weekTimeframes"
+                                                        type="button">Mar 13 - Mar 17</button></li>
+                                                <li class="dataSelector__item" data-date-first="Mar 17"
+                                                    data-date-second="Mar 21"><button class="weekTimeframes"
+                                                        type="button">Mar 17 - Mar 21</button></li>
+                                                <li class="dataSelector__item" data-date-first="Mar 21"
+                                                    data-date-second="Mar 26"><button class="weekTimeframes"
+                                                        type="button">Mar 21 - Mar 26</button></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dataSelector__content">
+                                            <div class="dataSelector__year">2024</div>
+                                            <ul class="dataSelector__list" data-year="2024">
+                                                <li class="dataSelector__item" data-date-first="Mar 28"
+                                                    data-date-second="Mar 30"><button class="weekTimeframes"
+                                                        type="button">Mar 28 - Mar 30</button></li>
+                                                <li class="dataSelector__item" data-date-first="Apr 1"
+                                                    data-date-second="Apr 3"><button class="weekTimeframes"
+                                                        type="button">Apr 1 - Apr 3</button></li>
+                                                <li class="dataSelector__item" data-date-first="Apr 4"
+                                                    data-date-second="Apr 8"><button class="weekTimeframes"
+                                                        type="button">Apr 4 - Apr 8</button></li>
+                                                <li class="dataSelector__item" data-date-first="Apr 8"
+                                                    data-date-second="Apr 12"><button class="weekTimeframes"
+                                                        type="button">Apr 8 - Apr 12</button></li>
+                                                <li class="dataSelector__item" data-date-first="Apr 12"
+                                                    data-date-second="Apr 17"><button class="weekTimeframes"
+                                                        type="button">Apr 12 - Apr 17</button></li>
+                                                <li class="dataSelector__item" data-date-first="Apr 19"
+                                                    data-date-second="Apr 24"><button class="weekTimeframes"
+                                                        type="button">Apr 19 - Apr 24</button></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dataSelector__content">
+                                            <div class="dataSelector__year">2025</div>
+                                            <ul class="dataSelector__list" data-year="2024">
+                                                <li class="dataSelector__item" data-date-first="Jan 12"
+                                                    data-date-second="Jan 17"><button class="weekTimeframes"
+                                                        type="button">Jan 12 - Jan 17</button></li>
+                                                <li class="dataSelector__item" data-date-first="Jan 17"
+                                                    data-date-second="Jan 18"><button class="weekTimeframes"
+                                                        type="button">Jan 17 - Jan 18</button></li>
+                                                <li class="dataSelector__item" data-date-first="Jan 19"
+                                                    data-date-second="Jan 21"><button class="weekTimeframes"
+                                                        type="button">Jan 19 - Jan 21</button></li>
+                                                <li class="dataSelector__item" data-date-first="Jan 22"
+                                                    data-date-second="Jan 25"><button class="weekTimeframes"
+                                                        type="button">Jan 22 - Jan 25</button></li>
+                                                <li class="dataSelector__item" data-date-first="Jan 27"
+                                                    data-date-second="Jan 30"><button class="weekTimeframes"
+                                                        type="button">Jan 27 - Jan 30</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="dataSelector__inner dataSelector__inner-bottom">
+                                        <button class="btn btn-dataSelector" type="button">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statisticsBlock">
+                        <div class="statisticsBlock__inner statisticsBlock__inner-total">
+                            <div class="statisticsBlock__title">Total time</div>
+                            <div class="chart chart-big">
+                                <div class="chart__col">
+                                    <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                        class="chart__svg">
+                                        <g stroke-width="18" fill="none">
+                                            <path class="chart__progress" stroke="#3AEDBA"
+                                                d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                            <path stroke="#ededed"
+                                                d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                        </g>
+                                    </svg>
+                                    <!-- <div class="chart__percent">67%</div> -->
+                                </div>
+                                <div class="chart__col">
+                                    <div class="chart__text">56 hours</div>
+                                    <div class="chart__subtext">Total work time</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="statisticsBlock__planned">Planned time<span>68 hours</span></div>
+                                <div class="chart">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__percent">67%</div>
+                                    </div>
+                                    <div class="chart__col">
+                                        <div class="chart__text">Utilisation</div>
+                                        <div class="chart__subtext">-4h under</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-statisticsBlock">Edit current timesheet</a>
+                        </div>
+                        <div class="statisticsBlock__inner">
+                            <div class="statisticsBlock__title">Project report</div>
+                            <div class="statisticsBlock__projects">
+                                <div class="project">
+                                    <div class="project__name">Lorem Ipsum Project</div>
+                                    <div class="workedTime workedTime-small">
+                                        <div class="workedTime__title">8h worked</div>
+                                        <div class="workedTime__subtitle">/12h planned</div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="chart__col">
+                                            <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                                class="chart__svg">
+                                                <g stroke-width="18" fill="none">
+                                                    <path class="chart__progress" stroke="#3AEDBA"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                    <path stroke="#ededed"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                        stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                                </g>
+                                            </svg>
+                                            <div class="chart__percent">67%</div>
+                                        </div>
+                                        <div class="chart__col">
+                                            <div class="chart__text">Utilisation</div>
+                                            <div class="chart__subtext">-4h under</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="project__name project__name-green">Lorem Ipsum Project</div>
+                                    <div class="workedTime workedTime-small">
+                                        <div class="workedTime__title">8h worked</div>
+                                        <div class="workedTime__subtitle">/12h planned</div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="chart__col">
+                                            <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                                class="chart__svg">
+                                                <g stroke-width="18" fill="none">
+                                                    <path class="chart__progress" stroke="#3AEDBA"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                    <path stroke="#ededed"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                        stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                                </g>
+                                            </svg>
+                                            <div class="chart__percent">67%</div>
+                                        </div>
+                                        <div class="chart__col">
+                                            <div class="chart__text">Utilisation</div>
+                                            <div class="chart__subtext">-4h under</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="project__name project__name-yellow">Lorem Ipsum Project</div>
+                                    <div class="workedTime workedTime-small">
+                                        <div class="workedTime__title">8h worked</div>
+                                        <div class="workedTime__subtitle">/12h planned</div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="chart__col">
+                                            <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                                class="chart__svg">
+                                                <g stroke-width="18" fill="none">
+                                                    <path class="chart__progress" stroke="#3AEDBA"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                    <path stroke="#ededed"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                        stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                                </g>
+                                            </svg>
+                                            <div class="chart__percent">67%</div>
+                                        </div>
+                                        <div class="chart__col">
+                                            <div class="chart__text">Utilisation</div>
+                                            <div class="chart__subtext">-4h under</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="project__name project__name-rose">Lorem Ipsum Project</div>
+                                    <div class="workedTime workedTime-small">
+                                        <div class="workedTime__title">8h worked</div>
+                                        <div class="workedTime__subtitle">/12h planned</div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="chart__col">
+                                            <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                                class="chart__svg">
+                                                <g stroke-width="18" fill="none">
+                                                    <path class="chart__progress" stroke="#3AEDBA"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                    <path stroke="#ededed"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                        stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                                </g>
+                                            </svg>
+                                            <div class="chart__percent">67%</div>
+                                        </div>
+                                        <div class="chart__col">
+                                            <div class="chart__text">Utilisation</div>
+                                            <div class="chart__subtext">-4h under</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="project__name project__name-blue">Lorem Ipsum Project</div>
+                                    <div class="workedTime workedTime-small">
+                                        <div class="workedTime__title">8h worked</div>
+                                        <div class="workedTime__subtitle">/12h planned</div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="chart__col">
+                                            <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                                class="chart__svg">
+                                                <g stroke-width="18" fill="none">
+                                                    <path class="chart__progress" stroke="#3AEDBA"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                    <path stroke="#ededed"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                        stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                                </g>
+                                            </svg>
+                                            <div class="chart__percent">67%</div>
+                                        </div>
+                                        <div class="chart__col">
+                                            <div class="chart__text">Utilisation</div>
+                                            <div class="chart__subtext">-4h under</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="project__name project__name-orange">Lorem Ipsum Project</div>
+                                    <div class="workedTime workedTime-small">
+                                        <div class="workedTime__title">8h worked</div>
+                                        <div class="workedTime__subtitle">/12h planned</div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="chart__col">
+                                            <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                                class="chart__svg">
+                                                <g stroke-width="18" fill="none">
+                                                    <path class="chart__progress" stroke="#3AEDBA"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                    <path stroke="#ededed"
+                                                        d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                        stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                                </g>
+                                            </svg>
+                                            <div class="chart__percent">67%</div>
+                                        </div>
+                                        <div class="chart__col">
+                                            <div class="chart__text">Utilisation</div>
+                                            <div class="chart__subtext">-4h under</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="statisticsBlock__subtitle">Time ratio</div>
+                                <div class="timeRatio">
+                                    <div class="timeRatio__line"><span>25</span>%</div>
+                                    <div class="timeRatio__line timeRatio__line-green"><span>57</span>%</div>
+                                    <div class="timeRatio__line timeRatio__line-yellow"><span>18</span>%</div>
+                                    <div class="timeRatio__line timeRatio__line-rose"><span>6</span>%</div>
+                                    <div class="timeRatio__line timeRatio__line-blue"><span>18</span>%</div>
+                                    <div class="timeRatio__line timeRatio__line-orange"><span>1</span>%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__wrapper">
+                    <div class="section__row">
+                        <div class="section__subtitle section__subtitle-dashboard">Awaiting timesheets (<span>6</span>)
+                        </div>
+                        <a href="#" class="btn btn-more">See all</a>
+                    </div>
+                    <div class="timesheetItems">
+                        <div class="timesheetItem timesheetItem-partner">
+                            <a href="#" class="timesheetItem__link"></a>
+                            <div class="timesheetItem__col timesheetItem__col-timeframes">
+                                <div class="badge badge-foundation badge-guro">In Progress</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-date">
+                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-name">
+                                Lorem Ipsum
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-workedtime">
+                                <div class="timesheetItem__worked">8h worked</div>
+                                <div class="timesheetItem__planned">12h planned</div>
+                            </div>
+
+                            <div class="timesheetItem__col">
+                                <div class="chart">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__percent">67%</div>
+                                    </div>
+                                    <div class="chart__col">
+                                        <div class="chart__text">Utilisation</div>
+                                        <div class="chart__subtext">-4h under</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-btns">
+                                <button class="btn btn-timesheetItem" type="button">Complete</button>
+                            </div>
+                        </div>
+                        <div class="timesheetItem timesheetItem-partner">
+                            <a href="#" class="timesheetItem__link"></a>
+                            <div class="timesheetItem__col timesheetItem__col-timeframes">
+                                <div class="badge badge-foundation">Awaited</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-date">
+                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-name">
+                                Lorem Ipsum
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-workedtime">
+                                <div class="timesheetItem__worked">8h worked</div>
+                                <div class="timesheetItem__planned">12h planned</div>
+                            </div>
+
+                            <div class="timesheetItem__col">
+                                <div class="chart">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__percent">67%</div>
+                                    </div>
+                                    <div class="chart__col">
+                                        <div class="chart__text">Utilisation</div>
+                                        <div class="chart__subtext">-4h under</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-btns">
+                                <button class="btn btn-timesheetItem" type="button">Complete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__wrapper dashboard__wrapper-2cols">
+                    <div class="dashboard__inner">
+                        <div class="section__subtitle section__subtitle-dashboard">Client feedback</div>
+                        <div class="scoreStat">
+                            <div class="scoreStat__inner">
+                                <div class="chart chart-rose no-change">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__score">3.2</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scoreStat__inner">
+                                <div class="scoreStat__row">
+                                    <div class="scoreStat__name">Average score</div>
+                                    <div class="scoreStat__bonus">Score change <span
+                                            class="badge badge-junior badge-static">+5%</span></div>
+                                </div>
+                                <div class="scoreStat__row">
+                                    <div class="message">
+                                        <svg class="message__ico" width="10" height="10" viewBox="0 0 15 14"
+                                            fill="none">
+                                            <path
+                                                d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                fill="#FF3E6C" />
+                                        </svg>
+                                        Your score is lower than 4.5
+                                    </div>
+                                    <a href="#" class="scoreStat__help">Get help</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary">
+                            <div class="summary__title">Project summary</div>
+                            <div class="summary__heading">
+                                <div class="customSelect">
+                                    <div class="customSelect__current" data-id="1">Lorem Ipsum Project 1</div>
+                                    <ul class="customSelect__options dropdown">
+                                        <li class="customSelect__option" data-id="1">Lorem Ipsum Project 1</li>
+                                        <li class="customSelect__option" data-id="2">Lorem Ipsum Project 2</li>
+                                        <li class="customSelect__option" data-id="3">Lorem Ipsum Project 3</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="summary__project" data-id="1">
+                                <div class="summary__dates" data-id="4">
+                                    <button class="summary__btn summary__btn-prev" type="button"></button>
+                                    <div class="summary__date summary__date-last" data-id="1">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="2">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="3">Jan 30 - Mar 24</div>
+                                    <div class="summary__date active summary__date-last" data-id="4">Jan 30 - Mar 24
+                                    </div>
+                                    <button class="summary__btn summary__btn-next" type="button"></button>
+                                </div>
+                                <div class="summary__diagram" data-id="1">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="2">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="3">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="4">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary__project" data-id="2">
+                                <div class="summary__dates" data-id="4">
+                                    <button class="summary__btn summary__btn-prev" type="button"></button>
+                                    <div class="summary__date summary__date-last" data-id="1">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="2">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="3">Jan 30 - Mar 24</div>
+                                    <div class="summary__date active summary__date-last" data-id="4">Jan 30 - Mar 24
+                                    </div>
+                                    <button class="summary__btn summary__btn-next" type="button"></button>
+                                </div>
+                                <div class="summary__diagram" data-id="1">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="2">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="3">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="4">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary__project" data-id="3">
+                                <div class="summary__dates" data-id="4">
+                                    <button class="summary__btn summary__btn-prev" type="button"></button>
+                                    <div class="summary__date summary__date-last" data-id="1">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="2">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="3">Jan 30 - Mar 24</div>
+                                    <div class="summary__date active summary__date-last" data-id="4">Jan 30 - Mar 24
+                                    </div>
+                                    <button class="summary__btn summary__btn-next" type="button"></button>
+                                </div>
+                                <div class="summary__diagram" data-id="1">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="2">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="3">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="4">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__inner">
+                        <div class="section__subtitle section__subtitle-dashboard">My happinesss</div>
+                        <div class="scoreStat">
+                            <div class="scoreStat__inner">
+                                <div class="chart chart-rose no-change">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__score">3.2</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scoreStat__inner">
+                                <div class="scoreStat__row">
+                                    <div class="scoreStat__name">Average score</div>
+                                    <div class="scoreStat__bonus">Score change <span
+                                            class="badge badge-junior badge-static">+5%</span></div>
+                                </div>
+                                <div class="scoreStat__row">
+                                    <div class="message">
+                                        <svg class="message__ico" width="10" height="10" viewBox="0 0 15 14"
+                                            fill="none">
+                                            <path
+                                                d="M7.50004 10.3335C7.68893 10.3335 7.84737 10.2695 7.97537 10.1415C8.10293 10.0139 8.16671 9.85572 8.16671 9.66683V6.9835C8.16671 6.79461 8.10293 6.63905 7.97537 6.51683C7.84737 6.39461 7.68893 6.3335 7.50004 6.3335C7.31115 6.3335 7.15293 6.39727 7.02537 6.52483C6.89737 6.65283 6.83337 6.81127 6.83337 7.00016V9.6835C6.83337 9.87238 6.89737 10.0279 7.02537 10.1502C7.15293 10.2724 7.31115 10.3335 7.50004 10.3335ZM7.50004 5.00016C7.68893 5.00016 7.84737 4.93616 7.97537 4.80816C8.10293 4.68061 8.16671 4.52238 8.16671 4.3335C8.16671 4.14461 8.10293 3.98616 7.97537 3.85816C7.84737 3.73061 7.68893 3.66683 7.50004 3.66683C7.31115 3.66683 7.15293 3.73061 7.02537 3.85816C6.89737 3.98616 6.83337 4.14461 6.83337 4.3335C6.83337 4.52238 6.89737 4.68061 7.02537 4.80816C7.15293 4.93616 7.31115 5.00016 7.50004 5.00016ZM7.50004 13.6668C6.57782 13.6668 5.71115 13.4917 4.90004 13.1415C4.08893 12.7917 3.38337 12.3168 2.78337 11.7168C2.18337 11.1168 1.70849 10.4113 1.35871 9.60016C1.00849 8.78905 0.833374 7.92238 0.833374 7.00016C0.833374 6.07794 1.00849 5.21127 1.35871 4.40016C1.70849 3.58905 2.18337 2.8835 2.78337 2.2835C3.38337 1.6835 4.08893 1.20838 4.90004 0.858163C5.71115 0.508385 6.57782 0.333496 7.50004 0.333496C8.42226 0.333496 9.28893 0.508385 10.1 0.858163C10.9112 1.20838 11.6167 1.6835 12.2167 2.2835C12.8167 2.8835 13.2916 3.58905 13.6414 4.40016C13.9916 5.21127 14.1667 6.07794 14.1667 7.00016C14.1667 7.92238 13.9916 8.78905 13.6414 9.60016C13.2916 10.4113 12.8167 11.1168 12.2167 11.7168C11.6167 12.3168 10.9112 12.7917 10.1 13.1415C9.28893 13.4917 8.42226 13.6668 7.50004 13.6668Z"
+                                                fill="#FF3E6C" />
+                                        </svg>
+                                        Your score is lower than 4.5
+                                    </div>
+                                    <a href="#" class="scoreStat__help">Get help</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary">
+                            <div class="summary__title">Project summary</div>
+                            <div class="summary__heading">
+                                <div class="customSelect">
+                                    <div class="customSelect__current" data-id="1">Lorem Ipsum Project 1</div>
+                                    <ul class="customSelect__options dropdown">
+                                        <li class="customSelect__option" data-id="1">Lorem Ipsum Project 1</li>
+                                        <li class="customSelect__option" data-id="2">Lorem Ipsum Project 2</li>
+                                        <li class="customSelect__option" data-id="3">Lorem Ipsum Project 3</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="summary__project" data-id="1">
+                                <div class="summary__dates" data-id="4">
+                                    <button class="summary__btn summary__btn-prev" type="button"></button>
+                                    <div class="summary__date summary__date-last" data-id="1">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="2">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="3">Jan 30 - Mar 24</div>
+                                    <div class="summary__date active summary__date-last" data-id="4">Jan 30 - Mar 24
+                                    </div>
+                                    <button class="summary__btn summary__btn-next" type="button"></button>
+                                </div>
+                                <div class="summary__diagram" data-id="1">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="2">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="3">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="4">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary__project" data-id="2">
+                                <div class="summary__dates" data-id="4">
+                                    <button class="summary__btn summary__btn-prev" type="button"></button>
+                                    <div class="summary__date summary__date-last" data-id="1">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="2">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="3">Jan 30 - Mar 24</div>
+                                    <div class="summary__date active summary__date-last" data-id="4">Jan 30 - Mar 24
+                                    </div>
+                                    <button class="summary__btn summary__btn-next" type="button"></button>
+                                </div>
+                                <div class="summary__diagram" data-id="1">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="2">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="3">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="4">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary__project" data-id="3">
+                                <div class="summary__dates" data-id="4">
+                                    <button class="summary__btn summary__btn-prev" type="button"></button>
+                                    <div class="summary__date summary__date-last" data-id="1">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="2">Jan 30 - Mar 24</div>
+                                    <div class="summary__date" data-id="3">Jan 30 - Mar 24</div>
+                                    <div class="summary__date active summary__date-last" data-id="4">Jan 30 - Mar 24
+                                    </div>
+                                    <button class="summary__btn summary__btn-next" type="button"></button>
+                                </div>
+                                <div class="summary__diagram" data-id="1">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="2">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="3">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__diagram" data-id="4">
+                                    <div class="diagram">
+                                        <div class="diagram__bg">
+                                            <div class="diagram__row">1</div>
+                                            <div class="diagram__row">2</div>
+                                            <div class="diagram__row">3</div>
+                                            <div class="diagram__row">4</div>
+                                            <div class="diagram__row">5</div>
+                                            <div class="diagram__row">6</div>
+                                        </div>
+                                        <div class="diagram__columns">
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 20%">1</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 40%">2</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 60%">3</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 80%">4</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                            <div class="diagram__column">
+                                                <div class="diagram__graph" style="height: 100%">5</div>
+                                                <div class="diagram__text">February 6<br>February 10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__wrapper">
+                    <div class="section__row">
+                        <div class="section__subtitle section__subtitle-dashboard">Awaiting timesheets (<span>6</span>)
+                        </div>
+                        <a href="#" class="btn btn-more">See all</a>
+                    </div>
+                    <div class="timesheetItems">
+                        <div class="timesheetItem timesheetItem-partner">
+                            <a href="#" class="timesheetItem__link"></a>
+                            <div class="timesheetItem__col timesheetItem__col-timeframes">
+                                <div class="badge badge-practitioner ">Submitted</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-date">
+                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-name">
+                                Lorem Ipsum
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-workedtime">
+                                <div class="timesheetItem__worked">8h worked</div>
+                                <div class="timesheetItem__planned">12h planned</div>
+                            </div>
+
+                            <div class="timesheetItem__col">
+                                <div class="chart">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__percent">67%</div>
+                                    </div>
+                                    <div class="chart__col">
+                                        <div class="chart__text">Utilisation</div>
+                                        <div class="chart__subtext">-4h under</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-btns">
+                                <button class="btn btn-light btn-timesheetItem" type="button">Review</button>
+                            </div>
+                        </div>
+                        <div class="timesheetItem timesheetItem-partner">
+                            <a href="#" class="timesheetItem__link"></a>
+                            <div class="timesheetItem__col timesheetItem__col-timeframes">
+                                <div class="badge badge-practitioner ">Submitted</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-date">
+                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-name">
+                                Lorem Ipsum
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-workedtime">
+                                <div class="timesheetItem__worked">8h worked</div>
+                                <div class="timesheetItem__planned">12h planned</div>
+                            </div>
+
+                            <div class="timesheetItem__col">
+                                <div class="chart">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__percent">67%</div>
+                                    </div>
+                                    <div class="chart__col">
+                                        <div class="chart__text">Utilisation</div>
+                                        <div class="chart__subtext">-4h under</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-btns">
+                                <button class="btn btn-light btn-timesheetItem" type="button">Review</button>
+                            </div>
+                        </div>
+                        <div class="timesheetItem timesheetItem-partner">
+                            <a href="#" class="timesheetItem__link"></a>
+                            <div class="timesheetItem__col timesheetItem__col-timeframes">
+                                <div class="badge badge-junior">Approved</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-date">
+                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-name">
+                                Lorem Ipsum
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-workedtime">
+                                <div class="timesheetItem__worked">8h worked</div>
+                                <div class="timesheetItem__planned">12h planned</div>
+                            </div>
+
+                            <div class="timesheetItem__col">
+                                <div class="chart">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__percent">67%</div>
+                                    </div>
+                                    <div class="chart__col">
+                                        <div class="chart__text">Utilisation</div>
+                                        <div class="chart__subtext">-4h under</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-btns">
+                                <button class="btn btn-light btn-timesheetItem" type="button">Review</button>
+                            </div>
+                        </div>
+                        <div class="timesheetItem timesheetItem-partner">
+                            <a href="#" class="timesheetItem__link"></a>
+                            <div class="timesheetItem__col timesheetItem__col-timeframes">
+                                <div class="badge badge-professional">Rejected</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-date">
+                                <div class="timesheetItem__timeframes">Feb 27 - Mar 05</div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-name">
+                                Lorem Ipsum
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-workedtime">
+                                <div class="timesheetItem__worked">8h worked</div>
+                                <div class="timesheetItem__planned">12h planned</div>
+                            </div>
+
+                            <div class="timesheetItem__col">
+                                <div class="chart">
+                                    <div class="chart__col">
+                                        <svg data-percent="67" width="56" height="56" viewBox="0 0 160 160"
+                                            class="chart__svg">
+                                            <g stroke-width="18" fill="none">
+                                                <path class="chart__progress" stroke="#3AEDBA"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z" />
+                                                <path stroke="#ededed"
+                                                    d="M80 149.5A69.5 69.5 0 1 1 80 10.5A69.5 69.5 0 0 1 80 149.5Z"
+                                                    stroke-dasharray="439.82" stroke-dashoffset="0" />
+                                            </g>
+                                        </svg>
+                                        <div class="chart__percent">67%</div>
+                                    </div>
+                                    <div class="chart__col">
+                                        <div class="chart__text">Utilisation</div>
+                                        <div class="chart__subtext">-4h under</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timesheetItem__col timesheetItem__col-btns">
+                                <button class="btn btn-light btn-timesheetItem" type="button">Review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <img src="assets/img/bg/lines/line-footer.svg" alt="image" class="footer__bg">
+            <div class="container">
+                <div class="footer__title">Need some help?</div>
+                <div class="footer__subtitle">Choose the best way we can reach you and give a hand</div>
+                <div class="footer__cards">
+                    <a href="#" class="footer__card">
+                        <span class="footer__card-image">
+                            <img src="assets/img/ico/footer/phone.svg" alt="ico">
+                        </span>
+                        <span class="footer__card-text">Call Us</span>
+                        <img src="assets/img/ico/footer/arrow-to-right.svg" alt="ico" class="footer__card-arrow">
+                    </a>
+                    <a href="#" class="footer__card">
+                        <span class="footer__card-image">
+                            <img src="assets/img/ico/footer/quiz.svg" alt="ico">
+                        </span>
+                        <span class="footer__card-text">Live Chat</span>
+                        <img src="assets/img/ico/footer/arrow-to-right.svg" alt="ico" class="footer__card-arrow">
+                    </a>
+                    <a href="#" class="footer__card">
+                        <span class="footer__card-image">
+                            <img src="assets/img/ico/footer/camera.svg" alt="ico">
+                        </span>
+                        <span class="footer__card-text">Video Call</span>
+                        <img src="assets/img/ico/footer/arrow-to-right.svg" alt="ico" class="footer__card-arrow">
+                    </a>
+                    <a href="#" class="footer__card">
+                        <span class="footer__card-image">
+                            <img src="assets/img/ico/footer/message.svg" alt="ico">
+                        </span>
+                        <span class="footer__card-text">Message Us</span>
+                        <img src="assets/img/ico/footer/arrow-to-right.svg" alt="ico" class="footer__card-arrow">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__content">
+            <div class="container">
+                <a href="#" class="footer__logo">
+                    <img src="assets/img/logo/logo-footer.svg" alt="logo">
+                </a>
+                <div class="footer__menu">
+                    <ul class="footer__list">
+                        <li class="footer__list-item">Learn more about us</li>
+                        <li class="footer__list-item"><a href="#">Our Why</a></li>
+                        <li class="footer__list-item"><a href="#">Testimonials</a></li>
+                        <li class="footer__list-item"><a href="#">Methodologies</a></li>
+                        <li class="footer__list-item"><a href="#">Our People</a></li>
+                        <li class="footer__list-item"><a href="#">Company Info</a></li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">Become a ProjectPartner</li>
+                        <li class="footer__list-item"><a href="#">Onboarding</a></li>
+                        <li class="footer__list-item"><a href="#">Promote Myself</a></li>
+                        <li class="footer__list-item"><a href="#">More Uptime</a></li>
+                        <li class="footer__list-item"><a href="#">Upskilling & Training</a></li>
+                        <li class="footer__list-item"><a href="#">Resources</a></li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">Let us help you</li>
+                        <li class="footer__list-item"><a href="#">Help & Advice</a></li>
+                        <li class="footer__list-item"><a href="#">Contact Us</a></li>
+                        <li class="footer__list-item"><a href="#">Rate Card</a></li>
+                        <li class="footer__list-item"><a href="#">How It Works</a></li>
+                        <li class="footer__list-item"><a href="#">Service Delivery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__label">Project Partners © 2022 </div>
+                <ul class="footer__social">
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/twitter.svg" alt="ico"></a>
+                    </li>
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/youtube.svg" alt="ico"></a>
+                    </li>
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/linkedin.svg" alt="ico"></a>
+                    </li>
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/facebook.svg" alt="ico"></a>
+                    </li>
+                    <li class="footer__social"><a href="#"><img src="assets/img/ico/social/instagram.svg" alt="ico"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/chart.js"></script>
+</body>
+
+</html>

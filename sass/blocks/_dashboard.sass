@@ -12,6 +12,20 @@
 .dashboard
     &__wrapper
         padding: 32px 0
+        &-2cols
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 64px 20px
+    &__inner
+        display: flex
+        flex-direction: column
+        row-gap: 20px
+        .section__subtitle
+            margin-bottom: 12px
+    &-timesheet
+        display: flex
+        flex-direction: column
+        row-gap: 24px
 .notifications
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -25,3 +39,11 @@
     grid-template-columns: repeat(4, 1fr)
     column-gap: 20px
     row-gap: 24px
+.hoursStats
+    display: flex
+    justify-content: space-between
+    padding: 24px
+    border-radius: 16px
+    background-color: #fff
+    flex-wrap: wrap
+    gap: 24px 20px
