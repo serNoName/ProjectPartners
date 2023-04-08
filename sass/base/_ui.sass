@@ -3244,6 +3244,18 @@
     align-items: center
     &__ico
         margin-right: 2px
+    &-ico
+        position: relative
+        padding-left: 13px
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 10px
+            height: 10px
+            background: url('../img/ico/info.svg') center (center/cover) no-repeat
 .summary
     background-color: #fff
     border-radius: 16px
@@ -3307,6 +3319,10 @@
             border-radius: 12px 12px 0  0
             &:hover
                 transform: rotate(90deg) scale(1.2)
+    &-ratings
+        padding: 0
+        .diagram__bg
+            row-gap: 48px
 .diagram
     position: relative
     &__bg
@@ -3602,14 +3618,15 @@
             color: $primary
         &:not(:last-child)
             margin-bottom: 4px
+    &-rating
+        margin-bottom: 16px
 .group
     border-radius: 16px
     background-color: #fff
-    padding: 16px 24px
     transition: padding .3s
+    padding: 0 24px
     &.active
-        padding: 24px
-        padding-top: 16px
+        padding-bottom: 32px
         .partnersPhotos
             transform: translateX(-20px)
             opacity: 0
@@ -3619,12 +3636,13 @@
                     opacity: 1
                     transform: translateX(-20px)
             &__control
-                padding-bottom: 16px
+                padding: 12px 0
     &__name
         font-weight: 700
         font-size: 14px
         line-height: 130%
         color: $dark-grey
+        user-select: none
     &__count
         line-height: 1
         display: grid
@@ -3636,12 +3654,14 @@
         min-width: 14px
         min-height: 14px
         border-radius: 4px
+        user-select: none
     &__control
         position: relative
         display: flex
         justify-content: space-between
         cursor: pointer
         transition: padding .3s
+        padding: 16px 0
     &__inner
         display: flex
         column-gap: 4px
@@ -3675,14 +3695,19 @@
     flex-direction: column
     row-gap: 20px
 .personRating
-    display: flex
-    justify-content: space-between
+    position: relative
     padding: 16px
     padding-right: 40px
     border: 1px solid $mid-grey
     border-radius: 16px
-    transition: border-color .2s ease-in-out
+    transition: border-color .2s ease-in-out, background-color .2s ease-in-out
     cursor: pointer
+    width: 450px
+    max-width: 100%
+    user-select: none
+    &__wrapper
+        display: flex
+        justify-content: space-between
     &__inner
         display: flex
         align-items: center
@@ -3701,5 +3726,35 @@
         font-size: 16px
         line-height: 125% // 20/16
         color: $dark-grey
+    &__footer
+        display: flex
+        justify-content: space-between
+        margin-top: 8px
+    &__help
+        text-decoration: none
+        font-weight: 800
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: $primary
+        transition: color .2s ease-in-out
+        &:hover
+            color: $mid-primary
     &:hover
         border-color: $primary
+    &::before
+        position: absolute
+        content: ''
+        top: 50%
+        right: 8px
+        transform: translateY(-50%) translateX(12px)
+        width: 16px
+        height: 16px
+        background: url('../img/ico/arrow-purple.svg') center center no-repeat
+        opacity: 0
+        transition: opacity .2s ease-in-out, transform .2s ease-in-out
+    &.active
+        border-color: $primary
+        background-color: $white
+        &::before
+            transform: translateY(-50%)
+            opacity: 1

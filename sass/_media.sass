@@ -456,7 +456,8 @@
             width: max-content
         &__body
             width: max-content
-
+    .personRating
+        width: 360px
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 992px)
     .chat-buble
@@ -1180,6 +1181,12 @@
         &__title
             font-size: 20px
             margin-bottom: 4px
+    .rating
+        flex-direction: column
+        row-gap: 24px
+        &__col
+            &-summary
+                padding-bottom: 48px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -2311,10 +2318,6 @@
             width: 100%
         &__projects
             grid-template-columns: 1fr 1fr
-    .summary
-        &__title
-            font-size: 20px
-            margin-bottom: 4px
     .scoreStat
         &__name
             font-size: 20px
@@ -2322,7 +2325,33 @@
             font-size: 14px
             .badge
                 margin-left: 4px
-
+    .rating
+        flex-direction: column
+        row-gap: 32px
+        // &__col
+        //     &-summary
+        //         padding-bottom: 48px
+    .summary
+        &__title
+            font-size: 20px
+            margin-bottom: 4px
+        &-ratings
+            .summary
+                &__heading
+                    margin-bottom: 8px
+                &__diagram
+                    overflow-x: auto
+                    overflow-y: clip
+                    padding-bottom: 48px
+                    @include customScrollBar()
+                &__columns
+                    column-gap: 48px
+            .diagram
+                &__row
+                    &::before
+                        right: auto
+                        left: 12px
+                        width: 120%
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2867,16 +2896,22 @@
                 justify-content: start
                 column-gap: 8px
                 width: 100%
-    // .summary
-    //     &__diagram
-    //         padding-bottom: 48px
-    //         overflow: auto
-    //         min-width: 480px
-    //         @include customScrollBar($light-grey, $primary)
     .diagram
         &__columns
             padding: 0 24px
             column-gap: 40px
+    .group
+        &__inner
+            &-btns
+                position: absolute
+                top: 50%
+                right: 0px
+                transform: translateY(-50%) translateX(20px)
+        &.active
+            .group
+                &__inner
+                    &-btns
+                        transform: translateY(-50%) translateX(0px)
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -3498,7 +3533,12 @@
             overflow-x: auto
             overflow-y: clip
             padding-bottom: 48px
-            @imclude customScrollBar()
+            @include customScrollBar()
+        &-ratings
+            padding: 0
+            .diagram__row
+                &::before
+                    width: 140%
     .diagram
         &__row
             &::before
@@ -3515,6 +3555,66 @@
             flex-direction: column
             row-gap: 4px
             align-items: start
+    .group
+        padding-left: 20px
+        padding-right: 20px
+        border-radius: 12px
+        &__btn
+            font-size: 12px
+        &__name
+            width: max-content
+        &__inner
+            &-btns
+                column-gap: 6px
+        &__arrow
+            margin-left: -4px
+        &.active
+            .partnersPhotos
+                &-group
+                    transform: translateY(-50%) translateX(-20px)
+    .rating
+        padding: 20px
+        &__col
+            &-summary
+                padding: 0
+                border: none
+    .personRating
+        padding: 12px
+        padding-right: 24px
+        &__name
+            font-size: 14px
+        &__ava
+            width: 36px
+            height: 36px
+        &__inner
+            column-gap: 6px
+        &__rating
+            font-size: 14px
+        &::before
+            right: 4px
+    .partnersPhotos
+        &-group
+            margin: 0
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0px
+            .partnersPhotos
+                &__image
+                    width: 28px
+                    height: 28px
+                    border-radius: 10px
+                &__photo
+                    border-radius: 10px
+                    border-left-width: 2px
+                    &:nth-child(even)
+                        display: none
+                    &:first-of-type
+                        display: block
+                    &-last
+                        display: block !important
+                &__count
+                    font-size: 12px
 @media (max-width: 360px)
     .container
         width: 310px
@@ -3759,3 +3859,26 @@
                 max-width: 50%
             &-name
                 text-align: start
+    .partnersPhotos
+        &-group
+            display: none
+    .group
+        &.active
+            .group
+                &__control
+                    padding-bottom: 32px
+        &__inner
+            &-btns
+                right: auto
+                top: 44px
+                left: 0
+                transform: none
+    .personRating
+        &__wrapper
+            flex-direction: column
+            row-gap: 6px
+        &__footer
+            flex-direction: column
+            row-gap: 4px
+        &__help
+            width: fit-content

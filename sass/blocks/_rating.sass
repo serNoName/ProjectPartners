@@ -7,6 +7,14 @@
     &__col
         display: flex
         flex-direction: column
+        &-summary
+            flex: 1
+            border: 1px solid $mid-grey
+            border-radius: 16px
+            padding: 24px
+            user-select: none
+            .summary__title
+                margin-bottom: 20px
     &__inner
         &-footer
             display: flex
@@ -33,3 +41,7 @@
         line-height: 130% // 28/22
         color: $black
         margin-bottom: 16px
+    &__persons
+        display: flex
+        flex-direction: column
+        row-gap: 12px

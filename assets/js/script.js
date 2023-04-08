@@ -1112,7 +1112,7 @@ $('.btn-dataSelector').click(function () {
     const activeItems = $(this).parent().parent().find('.dataSelector__item.active')
     const currentItem = $(this).parent().parent().parent().parent().find('.dataSelector__current')
 
-    if(activeItems.first().attr('data-date-first') === undefined) return;
+    if (activeItems.first().attr('data-date-first') === undefined) return;
 
     let result = activeItems.first().attr('data-date-first') + ', '
         + activeItems.first().parent().attr('data-year')
@@ -1129,43 +1129,54 @@ $('.btn-dataSelector').click(function () {
 
 //custom selected
 
-$(document).ready(function () {
-    const customSelect = $('.customSelect');
-    customSelect.each(function () {
-        const selectedOption = $(this).find('.customSelect__current');
-        const optionsList = $(this).find('.customSelect__options');
-        const optionsListItem = $(this).find('li');
-        const summary = $(this).parent().parent()
+if ($('.customSelect__current-tabs').length) {
+    $('[data-selectoe-id]').hide()
+    $('[data-selectoe-id='+ $('.customSelect__current-tabs').attr('data-id') +']').show()
+}
 
-        selectedOption.on('click', function () {
-            optionsList.slideToggle(200);
-        });
+    $(document).ready(function () {
+        const customSelect = $('.customSelect');
+        customSelect.each(function () {
+            const selectedOption = $(this).find('.customSelect__current');
+            const optionsList = $(this).find('.customSelect__options');
+            const optionsListItem = $(this).find('li');
+            const summary = $(this).parent().parent();
 
-        optionsListItem.on('click', function () {
-            const clickedOption = $(this);
-            const id = clickedOption.attr('data-id');
-            const projectName = clickedOption.text();
+            selectedOption.on('click', function () {
+                optionsList.slideToggle(200);
+            });
 
-            selectedOption.text(projectName);
-            selectedOption.attr('data-id', id);
-            customSelect.removeClass('open');
+            optionsListItem.on('click', function () {
+                const clickedOption = $(this);
+                const id = clickedOption.attr('data-id');
+                const projectName = clickedOption.text();
+
+                selectedOption.text(projectName);
+                selectedOption.attr('data-id', id);
+                customSelect.removeClass('open');
+
+                if(selectedOption.hasClass('customSelect__current-tabs')) {
+                    $('[data-selectoe-id]').hide()
+                    $('[data-selectoe-id="'+ clickedOption.attr('data-id') +'"]').show()
+                }
 
 
-            summary.find('.summary__project').hide()
-            summary.find('.summary__project[data-id="' + id + '"]').show()
-        });
+                summary.find('.summary__project').hide()
+                summary.find('.summary__project[data-id="' + id + '"]').show()
+            });
+        })
     })
-
-})
 
 
 // summary
 
 const summary = $('.summary')
-summary.find('.summary__project').each(function() {
+summary.find('.summary__project').each(function () {
     $(this).find('.summary__diagram').last().show()
 })
-$('.summary__project[data-id="' + summary.find('.customSelect__current').attr('data-id') + '"]').show()
+let projectId = summary.find('.customSelect__current').attr('data-id')
+if (projectId === undefined) projectId = 1
+$('.summary__project[data-id="' + projectId + '"]').show()
 if ($('.summary__date.active.summary__date-last').length) $('.summary__btn-next').hide()
 if ($('.summary__date.active.summary__date-first').length) $('.summary__btn-prev').hide()
 
@@ -1201,6 +1212,8 @@ $('.summary__btn').click(function (e) {
 
 $('.group.active').children('.group__content').show()
 
-$('.group__control').click(function() {
+$('.group__control').click(function () {
     $(this).parent().toggleClass('active').children('.group__content').stop().slideToggle(300)
 })
+
+// ratings
