@@ -1212,7 +1212,12 @@ $('.summary__btn').click(function (e) {
 
 $('.group.active').children('.group__content').show()
 
-$('.group__control').click(function () {
+$('.group__control').click(function (e) {
+
+    if ($(this).parent().hasClass('active') &&
+        $(e.target).hasClass('group__btn')) return;
+
+
     $(this).parent().toggleClass('active').children('.group__content').stop().slideToggle(300)
 })
 

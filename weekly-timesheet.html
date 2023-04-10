@@ -1029,9 +1029,8 @@
 
     <div class="popup" id="log-time">
         <div class="popup__bg"></div>
-        <form action="#" class="popup__body popup__body_account">
+        <form action="assets/js/timesheet.js" method="post" class="popup__body popup__body_account popup_log-time">
             <div class="popup__title">Log new time</div>
-            <div class="popup__descr popup__descr-log">Great job! Yuo are done for this week</div>
             <div class="popup__wrapper popup__wrapper-date">
                 <div class="popup__inner">
                     <div class="popup__descr popup__descr-log">Date</div>
@@ -1046,7 +1045,7 @@
                     <div class="popup__descr popup__descr-log">Time</div>
                     <div class="filter__list filter__rate filter__rate-log">
                         <div class="filter__rate-item">
-                            <div class="filter__rate-item-active">
+                            <div class="filter__rate-item-active data-start">
                                 00:00
                             </div>
                             <div class="filter__rate-list-wrapper">
@@ -1080,7 +1079,7 @@
                         </div>
                         <div class="filter__rate-mid">to</div>
                         <div class="filter__rate-item">
-                            <div class="filter__rate-item-active">
+                            <div class="filter__rate-item-active data-end">
                                 23:00
                             </div>
                             <div class="filter__rate-list-wrapper">
@@ -1133,7 +1132,7 @@
                         <label for="activityInput" class="builder__label label-focus">
                             Choose activity
                         </label>
-                        <input id="activityInput" type="text" class="builder__input input-focus"
+                        <input id="activityInput" type="text" class="builder__input input-focus form-activity"
                             required>
                         <ul class="confirm__select-list dropdown">
                             <li class="confirm__select-item">Busy</li>
@@ -1147,16 +1146,16 @@
                 </div>
             </div>
             <div class="popup__footer popup__footer-log">
-                <button class="btn btn-log btn-light popup__shut" type="submit">Cancel</button>
+                <button class="btn btn-log btn-light popup__shut" type="button">Cancel</button>
                 <button class="btn btn-log popup__shut" type="submit">Save</button>
             </div>
         </form>
     </div>
+
     <div class="popup" id="edit-time">
         <div class="popup__bg"></div>
         <form action="#" class="popup__body popup__body_account">
-            <div class="popup__title">Log new time</div>
-            <div class="popup__descr popup__descr-log">Great job! Yuo are done for this week</div>
+            <div class="popup__title">Edit time</div>
             <div class="popup__wrapper popup__wrapper-date">
                 <div class="popup__inner">
                     <div class="popup__descr popup__descr-log">Date</div>

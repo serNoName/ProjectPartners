@@ -3279,6 +3279,7 @@
         right: 0
         bottom: calc( 100% + 16px )
         height: 32px
+        min-width: 188px
         display: grid
         place-items: center
         padding: 0 38px
@@ -3620,13 +3621,32 @@
             margin-bottom: 4px
     &-rating
         margin-bottom: 16px
+    &-dashboard
+        &::before
+            background-image: url('../img/ico/arrow-mini-purple.svg')
+            transform: translateY(-50%)
+        .customSelect
+            &__current
+                position: relative
+                font-weight: 800
+                font-size: 24px
+                line-height: 130% // 31/24
+                color: $primary
+                &::before
+                    position: absolute
+                    content: ''
+                    left: 0
+                    bottom: 0
+                    width: 100%
+                    height: 1px
+                    background-color: $primary
 .group
     border-radius: 16px
     background-color: #fff
     transition: padding .3s
     padding: 0 24px
     &.active
-        padding-bottom: 32px
+        padding-bottom: 8px
         .partnersPhotos
             transform: translateX(-20px)
             opacity: 0
@@ -3636,7 +3656,7 @@
                     opacity: 1
                     transform: translateX(-20px)
             &__control
-                padding: 12px 0
+                padding: 5px 0
     &__name
         font-weight: 700
         font-size: 14px

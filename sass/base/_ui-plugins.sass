@@ -49,10 +49,10 @@
                 content: ''
                 top: 50%
                 left: 50%
-                transform: translate(-50%, -50%)
+                transform: translate(-50%, -50%) rotate(90deg)
                 width: 16px
                 height: 16px
-                background: url(../img/ico/arrow-calendar.svg) center center no-repeat
+                background: url(../img/ico/arrow-mini.svg) center center no-repeat
                 transition: transform .2s ease-in-out
                 transform-origin: center
         .ui // jquary
@@ -63,13 +63,13 @@
                         left: 2px
                         top: 2px
                         &::before
-                            transform: translate(calc( -50% + 3px ), -50%) scale(1.2)
+                            transform: translate(calc( -50% + 3px ), -50%) scale(1.2) rotate(90deg)
                 &-next
                     &-hover
                         right: 2px
                         top: 2px
                         &::before
-                            transform: translate(calc( -50% + 3px ), -50%) scale(1.2)
+                            transform: translate(calc( -50% + 3px ), -50%) scale(1.2) rotate(90deg)
     &-state
         &-default
             color: $primary
