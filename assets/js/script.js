@@ -1091,7 +1091,8 @@ $('.timeRatio__line').each(function () {
 
 //dataSelector
 
-$('.dataSelector__current').on('click',function (e) {
+$('.dataSelector__current').on('click', function (e) {
+    $('.dropdown').not($(this).siblings('.dropdown')).stop().slideUp(100)
     e.stopPropagation();
     $(this).toggleClass('active')
     $(this).siblings('.dropdown').slideToggle(200)
@@ -1144,41 +1145,44 @@ $('.btn-dataSelector').click(function () {
 
 if ($('.customSelect__current-tabs').length) {
     $('[data-selectoe-id]').hide()
-    $('[data-selectoe-id='+ $('.customSelect__current-tabs').attr('data-id') +']').show()
+    $('[data-selectoe-id=' + $('.customSelect__current-tabs').attr('data-id') + ']').show()
 }
 
-    $(document).ready(function () {
-        const customSelect = $('.customSelect');
-        customSelect.each(function () {
-            const selectedOption = $(this).find('.customSelect__current');
-            const optionsList = $(this).find('.customSelect__options');
-            const optionsListItem = $(this).find('li');
-            const summary = $(this).parent().parent();
+$(document).ready(function () {
+    const customSelect = $('.customSelect');
+    customSelect.each(function () {
+        const selectedOption = $(this).find('.customSelect__current');
+        const optionsList = $(this).find('.customSelect__options');
+        const optionsListItem = $(this).find('li');
+        const summary = $(this).parent().parent();
 
-            selectedOption.on('click', function () {
-                optionsList.slideToggle(200);
-            });
+        selectedOption.on('click', function (e) {
+            $('.dropdown').not($(this).siblings('.dropdown')).stop().slideUp(100)
+            e.stopPropagation()
+            optionsList.slideToggle(200);
+        });
 
-            optionsListItem.on('click', function () {
-                const clickedOption = $(this);
-                const id = clickedOption.attr('data-id');
-                const projectName = clickedOption.text();
+        optionsListItem.on('click', function (e) {
+            e.stopPropagation()
+            const clickedOption = $(this);
+            const id = clickedOption.attr('data-id');
+            const projectName = clickedOption.text();
 
-                selectedOption.text(projectName);
-                selectedOption.attr('data-id', id);
-                customSelect.removeClass('open');
+            selectedOption.text(projectName);
+            selectedOption.attr('data-id', id);
+            customSelect.removeClass('open');
 
-                if(selectedOption.hasClass('customSelect__current-tabs')) {
-                    $('[data-selectoe-id]').hide()
-                    $('[data-selectoe-id="'+ clickedOption.attr('data-id') +'"]').show()
-                }
+            if (selectedOption.hasClass('customSelect__current-tabs')) {
+                $('[data-selectoe-id]').hide()
+                $('[data-selectoe-id="' + clickedOption.attr('data-id') + '"]').show()
+            }
 
 
-                summary.find('.summary__project').hide()
-                summary.find('.summary__project[data-id="' + id + '"]').show()
-            });
-        })
+            summary.find('.summary__project').hide()
+            summary.find('.summary__project[data-id="' + id + '"]').show()
+        });
     })
+})
 
 
 // summary
