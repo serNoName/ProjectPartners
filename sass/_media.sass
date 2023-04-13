@@ -1358,6 +1358,11 @@
             &-dropdown
                 left: 0
                 transform: none
+        &__icons
+            &-desck
+                display: none
+            &-mobi
+                display: flex
         &-simple
             padding: 24px 0
     .nav
@@ -2511,6 +2516,13 @@
                 align-items: start
                 &::before
                     display: none
+        &__icons
+            &-mobi
+                top: 12px
+                left: auto
+                right: 60px
+        &__ico
+            min-height: 35px
         &-simple
             background-color: transparent
             position: static
@@ -3798,6 +3810,9 @@
                 &::before
                     right: 6px
     .header
+        &__icons
+            position: static
+            margin-top: 8px
         &__search
             &-select
                 padding-left: 8px

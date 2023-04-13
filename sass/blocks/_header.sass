@@ -336,6 +336,57 @@
         a
             img
                 vertical-align: top
+    &__icons
+        display: flex
+        column-gap: 8px
+        &-mobi
+            position: absolute
+            top: 8px
+            left: 30px
+            display: none
+    &__ico
+        position: relative
+        min-width: 38px
+        min-height: 38px
+        background-color: $light-grey
+        border: 1px solid $mid-grey
+        border-radius: 8px
+        text-decoration: none
+        transition: background-color .2s,border-color .2s
+        display: flex
+        align-items: center
+        padding-left: 34px
+        &:hover
+            background-color: $mid-primary
+            border-color: $mid-primary
+            &::before
+                filter: brightness(11)
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 10px
+            transform: translateY(-50%)
+            width: 16px
+            height: 16px
+        &-balance
+            &:before
+                background: url('../img/ico/balance.svg') center center no-repeat
+        &-favourites
+            &:before
+                background: url('../img/ico/favourite.svg') center (center/cover) no-repeat
+    &__count
+        min-width: 13px
+        width: fit-content
+        height: 13px
+        border-radius: 4px
+        background-color: $secondary2
+        line-height: 1
+        color: #fff
+        font-size: 12px
+        display: grid
+        place-items: center
+        margin-right: 12px
     &-simple
         display: flex
         justify-content: center
