@@ -1,0 +1,33 @@
+.profile
+    display: flex
+    flex-direction: column
+    row-gap: 32px
+    &__wrapper
+        display: flex
+        column-gap: 40px
+    &__col
+        display: flex
+        flex-direction: column
+        row-gap: 35px
+        width: calc( 50% - 20px )
+    &__title
+        font-weight: 800
+        font-size: 20px
+        line-height: 1
+        color: #000
+        margin-bottom: 16px
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 12px
+    &__content
+        display: flex
+        flex-direction: column
+        row-gap: 12px
+    &__help
+        margin-top: 4px
+    &__footer
+        display: flex
+        justify-content: end
+    .builder__item
+        margin: 0

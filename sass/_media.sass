@@ -206,6 +206,10 @@
             column-gap: 55px
             justify-content: center
             row-gap: 80px
+            &-dashboard
+                column-gap: 16px
+                .catalog-card
+                    width: calc( 25% - 20px )
         &-constructor
             .demand
                 &__wrapper
@@ -411,9 +415,6 @@
             .person
                 bottom: 16px
             .testimonial
-                &__header
-                    // height: 100%
-                    // min-width: calc(33.33333% - 12.3333px)
                 &__body
                     padding-top: 24px
                     row-gap: 32px
@@ -458,6 +459,18 @@
             width: max-content
     .personRating
         width: 360px
+    .group
+        &__inner
+            &-left
+                column-gap: 8px
+        &__control
+            &-poposals
+                column-gap: 8px
+        &-poposals
+            padding: 0 16px
+    .enquiryDate
+        &-group
+            margin-left: 32px
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 992px)
     .chat-buble
@@ -666,6 +679,11 @@
             grid-template-columns: 1fr 1fr
             justify-items: center
             row-gap: 80px
+            &-dashboard
+                column-gap: 16px
+                row-gap: 32px
+                .catalog-card
+                    width: 100%
     .footer
         &__logo
             img
@@ -929,7 +947,6 @@
             // justify-items: center
             row-gap: 24px
         &-role
-
     .row-card
         &__list
             display: grid
@@ -1090,6 +1107,9 @@
                 margin-bottom: 16px
             &-headbar
                 margin: 0
+            &-proposals
+                font-size: 40px
+                margin: 0
         &-cta
             padding-top: 40px
         &-road
@@ -1105,7 +1125,6 @@
                     width: calc( 33.33333% - 25px )
                     &-big
                         width: calc( 100% - 30px )
-
         &-thank, &-check, &-share
             padding: 64px 0
     .related
@@ -1187,6 +1206,31 @@
         &__col
             &-summary
                 padding-bottom: 48px
+    .group
+        &__inner
+            &-left
+                column-gap: 8px
+        &__control
+            &-poposals
+                column-gap: 8px
+                flex-wrap: wrap
+                row-gap: 16px
+        &-poposals
+            padding: 0 16px
+            &.active
+                .group
+                    &__control
+                        justify-content: space-between
+    .enquiryDate
+        &-group
+            margin-left: 32px
+    .proposal
+        grid-template-columns: auto 220px
+    .summaryCard
+        &__row
+            flex-direction: column
+            align-items: start
+            row-gap: 4px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -2094,6 +2138,9 @@
             &-single
                 margin: 0
                 font-size: 40px
+            &-proposals
+                font-size: 40px
+                margin: 0
         &__subtitle
             margin-bottom: 16px
             &-sm
@@ -2104,10 +2151,14 @@
                 margin-bottom: 8px
             &-dashboard
                 margin: 0
+            &-comms
+                margin-bottom: 0px
         &__row
             margin-bottom: 24px
             &-headbar
                 margin: 0
+            &-comms
+                margin-bottom: 8px
         &-team
             margin-bottom: 0
         &-faq
@@ -2129,6 +2180,12 @@
         &-description
             padding: 48px 0
             padding-top: 0
+        &-proposals
+            padding-top: 16px
+            padding-bottom: 48px
+        &-profile
+            padding: 32px 0
+            padding-bottom: 48px
     .demand
         &-constructor
             .catalog-card
@@ -2136,7 +2193,6 @@
     .faq
         display: flex
         flex-direction: column
-
     .twoCols
         display: flex
         flex-direction: column
@@ -2352,6 +2408,55 @@
                         right: auto
                         left: 12px
                         width: 120%
+    .group
+        &__inner
+            &-left
+                column-gap: 8px
+        &__control
+            &-poposals
+                column-gap: 8px
+                flex-wrap: wrap
+                row-gap: 16px
+        &-poposals
+            padding: 0 16px
+            .enquiryDate
+                margin: 0
+            &.active
+                .group
+                    &__control
+                        justify-content: space-between
+    .enquiryDate
+        &-group
+            margin-left: 32px
+    .proposal
+        display: flex
+        flex-direction: column-reverse
+        row-gap: 32px
+    .btn
+        &-summaryCard
+            margin: 0 auto
+            height: 48px
+            max-width: 480px
+            align-self: center
+    .detailedCard
+        &-proposal
+            .row-card__rate
+                position: static
+                transform: none
+    .appInfo
+        height: 64px
+    .profile
+        &__wrapper
+            flex-direction: column
+            row-gap: 35px
+            max-width: 520px
+            margin: 0 auto
+        &__col
+            width: 100%
+        &__footer
+            justify-content: center
+        .builder__item
+            width: auto
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2689,6 +2794,8 @@
             margin-bottom: 12px
             &-dashboard
                 margin: 0
+            &-comms
+                margin-bottom: 0px
         &__title
             &-article
                 font-size: 36px
@@ -2698,6 +2805,9 @@
                 font-size: 32px
             &-single
                 font-size: 32px
+        &__row
+            &-comms
+                margin-bottom: 4px
         &__testimonial
             gap: 16px
             &-flex
@@ -2735,6 +2845,8 @@
         &__text
             &-benefit
                 font-size: 14px
+            &-comms
+                margin-bottom: 24px
         &-team
             padding-top: 0
             .section
@@ -2766,6 +2878,10 @@
             padding-bottom: 16px
         &-headbar
             padding: 24px 0
+        &-profile
+            padding: 28px 0
+            padding-bottom: 48px
+
     .road
         display: flex
         flex-direction: column
@@ -2907,11 +3023,36 @@
                 top: 50%
                 right: 0px
                 transform: translateY(-50%) translateX(20px)
+            &-left
+                display: flex
+                flex-wrap: wrap
+                row-gap: 12px
         &.active
             .group
                 &__inner
                     &-btns
                         transform: translateY(-50%) translateX(0px)
+        &-poposals
+            .group
+                &__inner
+                    &-btns
+                        position: static
+                        margin: 0
+    .detailedCard
+        flex-direction: column
+        row-gap: 16px
+        &-proposal
+            .row-card__rate
+                position: absolute
+                top: 16px
+                right: 16px
+    .appInfo
+        height: 48px
+        font-size: 14px
+    .profile
+        .builder
+            &__photo
+                margin-bottom: 0
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -2935,6 +3076,9 @@
             margin-bottom: 8px
             &-row
                 padding: 0
+            &-comms
+                margin-bottom: 0px
+                font-size: 20px
         &__title
             font-size: 36px
             line-height: 110%
@@ -2944,6 +3088,9 @@
                 font-size: 28px
             &-check
                 font-size: 28px
+        &__text
+            &-comms
+                font-size: 16px
         &__row
             flex-direction: column
             align-items: start
@@ -3472,7 +3619,6 @@
             padding: 0
             width: 100%
             justify-content: center
-
     .resources
         &-article
             display: flex
@@ -3615,6 +3761,32 @@
                         display: block !important
                 &__count
                     font-size: 12px
+    .group
+        &__inner
+            &-left
+                row-gap: 16px
+        &-poposals
+            .partnersPhotos
+                position: static
+                transform: none
+                &__photo:nth-child(2n)
+                    display: block
+            .row-card__rate
+                bottom: 16px
+                right: 16px
+                transform: none
+    .detailedCard
+        &__items
+            flex-direction: column
+            align-items: start
+    .profile
+        &__row
+            grid-template-columns: auto
+            row-gap: 12px
+        &__footer
+            .btn
+                width: 100%
+                justify-content: center
 @media (max-width: 360px)
     .container
         width: 310px
@@ -3873,6 +4045,9 @@
                 top: 44px
                 left: 0
                 transform: none
+        &-poposals
+            .partnersPhotos
+                display: flex
     .personRating
         &__wrapper
             flex-direction: column
@@ -3882,3 +4057,6 @@
             row-gap: 4px
         &__help
             width: fit-content
+    .btn
+        &-comms
+            width: 100%

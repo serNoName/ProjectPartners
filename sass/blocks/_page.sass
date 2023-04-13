@@ -24,6 +24,11 @@
                 row-gap: 12px
                 grid-template-areas: 'bb bb''sb1 sb2'
                 justify-items: center
+                &.page__header-inner-dashboard
+                    grid-template-areas:  'e e''bb bb''sb1 sb2'
+                    .resource
+                        width: 100%
+                        grid-area: e
     &__more
         // margin-top: 16px
         display: block
@@ -227,3 +232,5 @@
             &:not(:first-child)
                 margin-top: 12px
                 display: none
+    &-proposals
+        padding-top: 20px

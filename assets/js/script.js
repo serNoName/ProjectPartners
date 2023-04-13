@@ -810,6 +810,7 @@ $('#demandSlider:not(.slick-initialized)').slick({
     infinite: false,
     arrows: false,
     dots: true,
+    margin: 30,
     customPaging: (slider) => `<span></span>`,
 });
 
@@ -895,7 +896,9 @@ if (window.innerWidth <= 576) {
 
 
 //custom calendar
-$('.input-date').datepicker();
+if ($('.input-date').length) {
+    $('.input-date').datepicker();
+}
 
 //builder input
 const inputs = $('.input-focus');
@@ -1087,7 +1090,8 @@ $('.timeRatio__line').each(function () {
 
 //dataSelector
 
-$('.dataSelector__current').click(function () {
+$('.dataSelector__current').on('click',function (e) {
+    e.stopPropagation();
     $(this).toggleClass('active')
     $(this).siblings('.dropdown').slideToggle(200)
     $('.dataSelector__wrapper').hide()
@@ -1095,9 +1099,17 @@ $('.dataSelector__current').click(function () {
 })
 $('.dropdown__button').click(function () {
 
-    if (!$(this).hasClass('custom-range')) {
-        $(this).parent().parent().parent().siblings('.dataSelector__current').text($(this).text())
-        $('.dropdown__button').parent().removeClass('active')
+    let selector = $(this).parent().parent().parent().parent()
+
+    if (selector.hasClass('dataSelector-filter')) {
+        selector.find('.dataSelector__text').removeClass('dataSelector__text-placeholder').text($(this).text())
+        $(this).parent().siblings().removeClass('active')
+        $(this).parent().addClass('active')
+    }
+
+    if (!$(this).hasClass('custom-range') && !selector.hasClass('dataSelector-filter')) {
+        selector.find('.dataSelector__current').text($(this).text())
+        $(this).parent().siblings().removeClass('active')
         $(this).parent().addClass('active')
     }
 })

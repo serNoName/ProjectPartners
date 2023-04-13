@@ -10,18 +10,27 @@
         &::-webkit-scrollbar
             height: 4px
 .dashboard
+    &__hr
+        opacity: .1
+        border-color: $dark-grey
     &__wrapper
         padding: 32px 0
         &-2cols
             display: grid
             grid-template-columns: 1fr 1fr
             gap: 64px 20px
+        &-proposals
+            padding: 0
     &__inner
         display: flex
         flex-direction: column
         row-gap: 20px
         .section__subtitle
             margin-bottom: 12px
+    &__switches
+        display: flex
+        flex-direction: column
+        row-gap: 24px
     &-timesheet
         display: flex
         flex-direction: column

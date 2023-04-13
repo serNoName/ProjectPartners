@@ -231,6 +231,24 @@
         font-size: 18px
     &-dataSelector
         padding: 12px 16px 10px 16px
+    &-comms
+        margin-top: 32px
+        margin-bottom: 56px
+    &-group
+        height: 40px
+        min-width: 120px
+        padding: 0 14px
+        border-radius: 8px
+    &-summaryCard
+        height: 56px
+        width: 100%
+        font-size: 18px
+    &-PPprofile
+        display: flex
+        align-items: center
+        border-radius: 8px
+        height: 40px
+        padding: 0 16px
 .mini-card
     width: fit-content
     padding: 6px 8px
@@ -1028,6 +1046,11 @@
         margin-bottom: 15px
         display: flex
         align-items: center
+        &-poposals
+            margin: 0
+            padding: 16px
+            border-radius: 16px
+            border: 1px solid $mid-grey
     &__profile
         display: grid
         grid-template-columns: 48px auto
@@ -1356,6 +1379,63 @@
             & ~ .switch__box
                 background-color: #fff
                 transform: translate(15px, -50%)
+        &[disabled=""], &[disabled="disabled"]
+            & ~ .switch
+                &__bg
+                    opacity: .5
+                    background-color: #fff
+                &__box
+                    background-color: $dark-grey
+                &__input:checked ~ .switch__bg
+                    background-color: $dark-grey
+            &:checked
+                & ~ .switch
+                    &__bg
+                        opacity: .5
+                        background-color: $dark-grey
+                    &__box
+                        background-color: #fff
+    &__title
+        font-weight: 700
+        font-size: 16px
+        line-height: 125% // 20/16
+        color: $dark-grey
+        margin-bottom: 4px
+    &__descr
+        font-weight: 600
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $dark-grey
+        max-width: 450px
+    &-white
+        .switch
+            &__bg
+                background-color: #fff
+    &-comms
+        font-weight: 700
+        font-size: 16px
+    &-big
+        flex-direction: column
+        align-items: start
+        .switch
+            &__bg
+                transform: none
+                top: 0
+            &__box
+                top: 2px
+                transform: none
+            &__input
+                &:checked
+                    & ~ .switch
+                        &__box
+                            transform: translateX(15px)
+    &-disabled
+        opacity: .5
+        &:hover
+            .switch
+                &__bg
+                    background-color: $light-grey
+                    box-shadow: none
 .check
     position: relative
     display: flex
@@ -1938,7 +2018,15 @@
         color: #fff
         font-size: 14px
         line-height: 130% // 18/14
-
+    &__level
+        font-weight: 800
+        font-size: 12px
+        line-height: 125% // 15/12
+        color: $primary
+        &-professional
+            color: $secondary2
+        &-foundation
+            color: $yellow
     &-dark
         .person
             &__label
@@ -1956,7 +2044,10 @@
             &__ava
                 border-radius: 15px
             &__col
-                row-gap: 2px
+                row-gap: 1px
+    &-poposals
+        min-width: 193px
+        max-width: 193px
 .testimonial
     position: relative
     border-radius: 16px
@@ -2756,6 +2847,8 @@
         transition: transform .3s ease-in-out, opacity .2s
         opacity: 1
         transform: none
+        min-width: 218px
+        margin: 0
 .proposalCard
     background-color: #fff
     padding: 24px
@@ -2802,6 +2895,12 @@
         font-size: 16px
         line-height: 110% // 20/16
         color: $dark-grey
+    &-group
+        margin-left: 56px
+    &-proposal
+        padding: 16px
+        background-color: #fff
+        border-radius: 16px
 .timesheet
     background-color: #fff
     border-radius: 16px
@@ -3493,6 +3592,27 @@
         font-size: 12px
         line-height: 1
         color: #000
+    &__count
+        display: grid
+        place-items: center
+        width: 13px
+        height: 13px
+        border-radius: 4px
+        background-color: $primary
+        font-weight: 800
+        font-size: 12px
+        line-height: 1
+        color: #fff
+        margin-left: 4px
+    &__text
+        &-placeholder
+            opacity: .3
+    &-filter
+        .dataSelector
+            &__current
+                width: auto
+                min-width: 140px
+                padding-right: 28px
     .dropdown
         position: absolute
         left: 0
@@ -3510,6 +3630,7 @@
             background: #FFFFFF
             border-radius: 12px
             padding: 16px
+            width: max-content
         &__item
             position: relative
             padding-left: 24px
@@ -3657,6 +3778,19 @@
                     transform: translateX(-20px)
             &__control
                 padding: 5px 0
+                &-poposals
+                    justify-content: flex-start
+                    padding: 24px 0
+        &.group
+            &-poposals
+                padding-bottom: 24px
+                .partnersPhotos
+                    transform: none
+                    opacity: 1
+                .group
+                    &__inner
+                        &-btns
+                            transform: none
     &__name
         font-weight: 700
         font-size: 14px
@@ -3682,6 +3816,9 @@
         cursor: pointer
         transition: padding .3s
         padding: 16px 0
+        user-select: none
+        &-poposals
+            padding: 24px 0
     &__inner
         display: flex
         column-gap: 4px
@@ -3690,6 +3827,10 @@
             column-gap: 16px
             opacity: 0
             transition: opacity .2s, transform .2s ease-in-out
+        &-left
+            column-gap: 24px
+    &__status
+        width: 115px
     &__arrow
         width: 16px
         height: 16px
@@ -3708,8 +3849,24 @@
             color: $mid-primary
         &-reject
             color: $secondary2
+    &__partners
+        font-weight: 800
+        font-size: 18px
+        line-height: 130% // 23/18
+        color: $dark-grey
+        width: 120px
+        margin-right: 8px
     &__content
         display: none
+        height: auto
+    &-poposals
+        .group
+            &__inner
+                &-btns
+                    margin-left: auto
+                    margin-right: 0
+                    opacity: 1
+                    transform: none
 .groups
     display: flex
     flex-direction: column
@@ -3778,3 +3935,128 @@
         &::before
             transform: translateY(-50%)
             opacity: 1
+.appInfo
+    background-color: #FFF6DE
+    border-radius: 16px
+    border: 1px solid $yellow
+    height: 72px
+    padding: 0 24px
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    &__text
+        line-height: 125% // 20/16
+        color: $dark-grey
+        span
+            font-weight: 800
+    &-proposal
+        margin-bottom: 16px
+.detailedCard
+    position: relative
+    padding: 16px
+    border-radius: 16px
+    display: flex
+    border: 1px solid $mid-grey
+    column-gap: 24px
+    &__items
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        column-gap: 16px
+        row-gap: 8px
+    &__col
+        display: flex
+        row-gap: 2px
+        flex-direction: column
+    &-white
+        background-color: #fff
+        column-gap: 12px
+        border: none
+    &:not(:last-of-type)
+        margin-bottom: 12px
+.item
+    position: relative
+    color: $dark-grey
+    font-size: 10px
+    line-height: 130% // 13/10
+    padding-left: 18px
+    &-stars
+        display: flex
+        column-gap: 4px
+        align-content: center
+        padding: 0
+    &-superpower, &-finance, &-calendar, &-contract
+        &:before
+            position: absolute
+            content: ''
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 16px
+            height: 16px
+            background-size: 12px
+    &-superpower
+        width: 124px
+        &:before
+            background: url('../img/ico/lightning-purple.svg') center center no-repeat
+            background-size: 12px
+    &-finance
+        width: 160px
+        max-width: 160px
+        &:before
+            background: url('../img/ico/premises2.svg') center center no-repeat
+            background-size: 16px
+            opacity: 0.3
+    &-calendar
+        width: 140px
+        &:before
+            background: url('../img/ico/calendar.svg') center center no-repeat
+            background-size: 12px
+    &-contract
+        width: 100px
+        &:before
+            background: url('../img/ico/contract.svg') center center no-repeat
+            background-size: 12px
+.summaryCard
+    display: flex
+    flex-direction: column
+    row-gap: 12px
+    padding: 20px 16px
+    background-color: #fff
+    border-radius: 16px
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__partners
+        display: flex
+        align-items: center
+        font-weight: 800
+        font-size: 16px
+        line-height: 120%
+        color: $dark-grey
+    &__count
+        font-weight: inherit
+    &__title
+        font-weight: 800
+        font-size: 20px
+        line-height: 120%
+        color: $dark-grey
+.PPprofile
+    background-color: #fff
+    padding: 16px
+    border-radius: 12px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__inner
+        display: flex
+        align-items: center
+    &__descr
+        font-weight: 700
+        font-size: 12px
+        line-height: 150% // 18/12
+        color: $dark-grey
+        opacity: .5
