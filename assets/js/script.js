@@ -251,6 +251,7 @@ $(document).ready(function () {
     });
     //dropdown click
     $('.dropdown-triger-click').click(function (e) {
+        e.stopPropagation()
         if ($(e.target).hasClass('smallDropdown__text')) {
             $(this).children('.dropdown').show(200)
         } else {
