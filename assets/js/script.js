@@ -897,12 +897,13 @@ if (window.innerWidth <= 576) {
 
 
 //custom calendar
-if (isMobileDevice) {
+alert(isMobileDevice())
+if (isMobileDevice()) {
+    $('.input-date').attr('type', 'date')
+} else {
     if ($('.input-date').length) {
         $('.input-date').datepicker();
     }
-} else {
-    $('.input-date').attr('type', 'date')
 }
 
 //builder input
@@ -1244,4 +1245,4 @@ $('.group__control').click(function (e) {
 
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-  };
+};
