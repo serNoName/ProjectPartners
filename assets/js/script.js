@@ -897,7 +897,6 @@ if (window.innerWidth <= 576) {
 
 
 //custom calendar
-alert(isMobileDevice())
 if (isMobileDevice()) {
     $('.input-date').attr('type', 'date')
 } else {
