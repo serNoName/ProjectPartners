@@ -1239,3 +1239,6 @@ $('.group__control').click(function (e) {
 })
 
 // ratings
+$('.hasDatepicker').on('touchstart', function(e) {
+    $(this).blur();
+  });
