@@ -1237,8 +1237,3 @@ $('.group__control').click(function (e) {
 
     $(this).parent().toggleClass('active').children('.group__content').stop().slideToggle(300)
 })
-
-// ratings
-$('.hasDatepicker').on('touchstart', function(e) {
-    $(this).blur();
-  });
