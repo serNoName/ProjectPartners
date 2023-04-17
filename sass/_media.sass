@@ -807,7 +807,9 @@
         overflow-y: scroll
         height: 100vh
         padding: 24px 18px
-        left: -350px
+        left: auto
+        right: 100%
+        min-width: 350px
         top: 0
         z-index: 199
         background-color: #fff
@@ -1719,8 +1721,8 @@
         position: fixed
         overflow-y: scroll
         height: 100vh
+        width: 100vw
         padding: 24px 18px
-        left: -350px
         top: 0
         z-index: 199
         background-color: #fff
@@ -2634,7 +2636,6 @@
                     font-size: 18px
     .filter
         width: 100vw
-        left: -580px
         &.active
             transform: translateX(580px)
         &__burger
@@ -3802,6 +3803,8 @@
                 width: 100%
                 justify-content: center
 @media (max-width: 360px)
+    .filter
+        min-width: 320px
     .container
         width: 310px
     .input
