@@ -1703,13 +1703,12 @@
             column-gap: 16px
         &__row
             &-cards
-                display: flex
-                flex-wrap: wrap
-                justify-content: center
+                grid-template-columns: repeat(2, 1fr)
                 column-gap: 18px
                 row-gap: 18px
             // &:not(:first-child)
             //     margin-top: 16px
+
         &__info
             &-card
                 &-1
@@ -1724,6 +1723,7 @@
         width: 100vw
         padding: 24px 18px
         top: 0
+        left: 0
         z-index: 199
         background-color: #fff
         border-right: 1px solid rgba(52,63,72,.1)
@@ -2723,9 +2723,16 @@
             row-gap: 4px
             justify-items: start
             max-width: 360px
-
         &-role
+            .shortlist__label
+                top: 32px
             .row-card
+                &__profile
+                    grid-template-columns: 40px auto
+                &__ava
+                    width: 40px
+                    height: 40px
+                    min-height: 40px
                 &__list
                     display: flex
                     justify-content: space-around
@@ -2896,7 +2903,6 @@
         &-profile
             padding: 28px 0
             padding-bottom: 48px
-
     .road
         display: flex
         flex-direction: column
@@ -3068,6 +3074,13 @@
         .builder
             &__photo
                 margin-bottom: 0
+    .catalogCard
+        &__content, &__subtitle, &__title
+            left: 12px
+        &__body, &__footer
+            padding-left: 12px
+            padding-right: 12px
+
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -3325,6 +3338,10 @@
         padding-bottom: 40px
     .catalog
         padding-top: 30px
+        &__row
+            &-cards
+                grid-template-columns: minmax(200px, 320px)
+                justify-content: center
         &___title
             font-size: 28px
         &__info
@@ -3887,7 +3904,7 @@
             font-size: 20px
     .aside
         &__list
-            grid-template-columns: 220px
+            grid-template-columns: 1fr
             justify-content: center
         &__inner
             &-shortlist
@@ -4080,3 +4097,6 @@
     .btn
         &-comms
             width: 100%
+    .catalogCard
+        &__line
+            margin: 12px 0

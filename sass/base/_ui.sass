@@ -243,6 +243,43 @@
         height: 56px
         width: 100%
         font-size: 18px
+    &-catalogCard
+        height: 40px
+        margin-bottom: 2px
+    &-favourites, &-compare
+        position: relative
+        background: transparent
+        color: $primary
+        width: fit-content
+        margin: 0 auto
+        padding: 0 0 0 20px
+        line-height: 170% // 24/14
+        font-size: 14px
+        &::before
+            position: absolute
+            content: ''
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 1px
+            background-color: currentColor
+            opacity: .5
+        &::after
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-60%)
+            content: ''
+            width: 16px
+            height: 16px
+            opacity: 0.7
+            background: url(../img/ico/favourite-purple.svg) center center no-repeat
+        &:hover
+            background: transparent
+            color: $mid-primary
+    &-compare
+        &::after
+            background: url(../img/ico/balance-purple.svg) center center no-repeat
     &-PPprofile
         display: flex
         align-items: center
@@ -915,15 +952,41 @@
         &::after
             display: none
     &__ava
+        position: relative
         overflow: hidden
         grid-area: ava
         width: fit-content
+        border-radius: 12px
+        min-width: 100%
         img
             vertical-align: middle
-            border-radius: 50%
+            border-radius: 12px
         svg
             path
                 fill: $primary
+        &-blue
+            background-color: #006DE3
+        &-red
+            background-color: #B4002A
+        &-purple
+            background-color: #650079
+        &-green
+            background-color: #0C7C5B
+        &-brown
+            background-color: #8A5D02
+        &-pear
+            background-color: #6C7E00
+        &-roket
+            background-image: url(../img/ico/roket-grey.svg)
+    &__shortName
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-weight: 700
+        font-size: 20px
+        line-height: 1
+        color: #fff
     &-practitioner
         &::before
             background-color: #FF8C52
@@ -984,11 +1047,12 @@
             &__ava
                 width: 48px
                 height: 48px
-                display: grid
-                place-items: center
-                border-radius: 50%
-                border: 2px solid $light-grey
+                border-radius: 12px
                 min-height: 48px
+                background-color: #f5f5f5
+                background-size: 22px
+                background-position: center
+                background-repeat: no-repeat
             &__item
                 &:nth-child(2)
                     flex-direction: row
@@ -1012,6 +1076,7 @@
                 width: max-content
                 max-width: 200px
                 width: 100%
+                opacity: 1
     &-qoute
         &::before
             display: none
@@ -1059,13 +1124,13 @@
         width: fit-content
         padding-right: 7px
         margin-left: 36px
-        width: 180px
+        width: 182px
         min-width: 180px
     &__name
-        color: $black
+        color: $dark-grey
         font-weight: 800
         font-size: 16px
-        line-height: 16px
+        line-height: 1
         word-wrap: anywhere
     &__role
         font-weight: 800
@@ -1083,8 +1148,9 @@
         color: $dark-grey
         font-weight: 700
         font-size: 14px
-        line-height: 18px
+        line-height: 130% // 18/14
         width: 100%
+        opacity: .5
     &__rating
         margin-left: 4px
     &__item
@@ -1987,6 +2053,15 @@
     bottom: 16px
     display: flex
     column-gap: 8px
+    &__initial
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-weight: 700
+        font-size: 16px
+        line-height: 1
+        color: #fff
     &__ava
         border-radius: 50%
         overflow: hidden
@@ -2011,6 +2086,7 @@
         font-weight: 800
         line-height: 125% // 20/16
     &__col
+        position: relative
         display: flex
         flex-direction: column
         justify-content: center
@@ -2048,6 +2124,38 @@
     &-poposals
         min-width: 193px
         max-width: 193px
+    &-blue, &-red, &-green, &-brown, &-pear, &-purple
+        .person__col
+            &:first-of-type
+                width: 40px
+                min-width: 40px
+                height: 40px
+                border-radius: 12px
+    &-blue
+        .person__col
+            &:first-of-type
+                background-color: #006DE3
+    &-red
+        .person__col
+            &:first-of-type
+                background-color: #B4002A
+    &-purple
+        .person__col
+            &:first-of-type
+                background-color: #650079
+    &-brown
+        .person__col
+            &:first-of-type
+                background-color: #8A5D02
+    &-pear
+        .person__col
+            &:first-of-type
+                background-color: #6C7E00
+    &-green
+        .person__col
+            &:first-of-type
+                background-color: #0C7C5B
+
 .testimonial
     position: relative
     border-radius: 16px
@@ -4095,3 +4203,457 @@
         line-height: 150% // 18/12
         color: $dark-grey
         opacity: .5
+.catalogCard
+    position: relative
+    overflow: hidden
+    background-color: #fff
+    border-radius: 16px
+    &__link
+        position: absolute
+        inset: 0
+        z-index: 2
+    &__content
+        position: absolute
+        left: 24px
+        bottom: 16px
+        right: 8px
+        z-index: 3
+    &__img
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__subtitle
+        position: absolute
+        top: 20px
+        left: 24px
+        width: calc( 100% - 48px )
+        color: #fff
+        font-weight: 800
+        font-size: 24px
+        line-height: 130% // 31/24
+    &__title
+        position: absolute
+        top: 20px
+        left: 24px
+        width: calc( 100% - 48px )
+        color: #fff
+        font-weight: 800
+        font-size: 96px
+        line-height: 1
+    &__name
+        margin-bottom: 2px
+        font-weight: 800
+        font-size: 18px
+        line-height: 23px
+        color: #FFFFFF
+    &__inner
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        column-gap: 4px
+        font-weight: 700
+        font-size: 14px
+        line-height: 18px
+        color: #FFFFFF
+        margin-bottom: 6px
+    &__header
+        position: relative
+        min-height: 225px
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 50%
+            background: linear-gradient(180deg, rgba(22, 20, 40, 0) 0%, #161428 100%)
+            z-index: 2
+    &__line
+        width: 140%
+        transform: translateX(-15%)
+        height: 1px
+        margin: 16px 0
+        background-color: $dark-grey
+        opacity: .1
+    &__descr
+        font-weight: 800
+        font-size: 18px
+        line-height: 23px
+        color: $black
+        margin-bottom: 8px
+    &__row
+        display: flex
+        justify-content: center
+        align-items: center
+    &__rate
+        position: relative
+        padding-left: 28px
+        font-weight: 800
+        font-size: 20px
+        line-height: 130% // 26/20
+        color: $dark-grey
+        span
+            font-size: 14px
+            line-height: 130% // 18/14
+            opacity: 0.3
+        &::before
+            position: absolute
+            content: ''
+            width: 24px
+            height: 24px
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            background: url(../img/ico/sterling-purple.svg) center center no-repeat
+    &__body
+        padding: 16px 24px 0 24px
+    &__footer
+        display: flex
+        flex-direction: column
+        justify-content: center
+        row-gap: 6px
+        padding: 24px
+        padding-top: 4px
+    &__superpowers
+        display: grid
+        grid-template-columns: repeat(2, calc( 50% - 2px ))
+        column-gap: 4px
+    &__start
+        background-color: rgba(0, 200, 232, 0.1)
+        font-size: 12px
+        line-height: 1
+        color: $dark-grey
+        padding: 8px 0 7px 0
+        display: flex
+        justify-content: center
+        border-radius: 8px
+        margin-bottom: 12px
+        span
+            font-weight: 700
+            margin-left: 2px
+        div
+            position: relative
+            padding-left: 18px
+            &::before
+                position: absolute
+                content: ''
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+                width: 16px
+                height: 16px
+                background: url(../img/ico/calendar.svg) center (center / 12px) no-repeat
+    &__list
+        list-style: none
+        display: flex
+        flex-direction: column
+        row-gap: 10px
+        margin-bottom: 24px
+    &__item
+        position: relative
+        padding-left: 20px
+        font-weight: 700
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $dark-grey
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            width: 16px
+            height: 16px
+            background: center (center / 16px ) no-repeat
+            opacity: .3
+        &-contract
+            &::before
+                background-image: url(../img/ico/contract.svg)
+                background-size: 12px
+                filter: grayscale(100%)
+        &-locate
+            &::before
+                opacity: .3
+                background-image: url(../img/ico/location.svg)
+                background-size: 10px
+                filter: grayscale(100%)
+        &-finance
+            &::before
+                opacity: .3
+                background-image: url(../img/ico/premises2.svg)
+        &-change
+            &::before
+                background-image: url(../img/ico/regulatory_change.svg)
+    &__superpower
+        display: grid
+        place-items: center
+        background: $white
+        border: 1px solid rgba(110, 85, 255, 0.5)
+        border-radius: 8px
+        span
+            position: relative
+            font-weight: 700
+            font-size: 12px
+            line-height: 140%
+            color: $primary
+            padding: 4px 0
+            padding-left: 18px
+            padding-right: 4px
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            max-width: 100%
+            &:before
+                position: absolute
+                content: ''
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                width: 16px
+                height: 16px
+                background: url(../img/ico/lightning-purple.svg) center center no-repeat
+    &__col
+        display: flex
+        justify-content: center
+        flex-direction: column
+        row-gap: 2px
+    &__level
+        position: relative
+        font-weight: 800
+        font-size: 14px
+        line-height: 18px
+        color: $primary
+        z-index: 2
+        svg
+            vertical-align: middle
+    &__prof
+        font-weight: 800
+        font-size: 20px
+        line-height: 80% // 16/20
+        color: #161428
+    &__ico
+        min-width: 48px
+        min-height: 48px
+        border-radius: 12px
+        background-color: $primary
+        background-repeat: no-repeat
+        background-position: center
+        &-graph
+            background-image: url(../img/ico/graph-white.svg)
+    &__summary
+        display: flex
+        column-gap: 8px
+        margin-bottom: 8px
+        &-yellow
+            .catalogCard
+                &__level
+                    color: $yellow
+                    svg path
+                        fill: $yellow
+                &__ico
+                    background-color: $yellow
+        &-neon
+            .catalogCard
+                &__level
+                    color: $neon
+                    svg path
+                        fill: $neon
+                &__ico
+                    background-color: $neon
+        &-rose
+            .catalogCard
+                &__level
+                    color: $secondary2
+                    svg path
+                        fill: $secondary2
+                &__ico
+                    background-color: $secondary2
+        &-blue
+            .catalogCard
+                &__level
+                    color: $cyan
+                    svg path
+                        fill: $cyan
+                &__ico
+                    background-color: $cyan
+        &-orange
+            .catalogCard
+                &__level
+                    color: $secondary
+                    svg path
+                        fill: $secondary
+                &__ico
+                    background-color: $secondary
+    &-red, &-green, &-blue, &-brown, &-purple, &-pear
+        .catalogCard
+            &__header
+                &::before
+                    display: none
+    &-red
+        .catalogCard
+            &__header
+                background-color: #B4002A
+    &-green
+        .catalogCard
+            &__header
+                background-color: #0C7C5B
+    &-blue
+        .catalogCard
+            &__header
+                background-color: #006DE3
+    &-brown
+        .catalogCard
+            &__header
+                background-color: #8A5D02
+    &-purple
+        .catalogCard
+            &__header
+                background-color: #650079
+    &-pear
+        .catalogCard
+            &__header
+                background-color: #6C7E00
+    &-role
+        .catalogCard
+            &__header
+                min-height: auto
+                padding: 24px
+                padding-bottom: 0
+                &::before
+                    display: none
+.industry
+    position: relative
+    background: rgba(245, 245, 245, 0.2)
+    border-radius: 8px
+    padding: 4px 8px
+    padding-left: 29px
+    height: 25px
+    display: flex
+    align-items: center
+    color: #fff
+    font-size: 12px
+    line-height: 1
+    width: fit-content
+    &::before
+        position: absolute
+        content: ''
+        left: 8px
+        top: 50%
+        transform: translateY(-50%)
+        width: 16px
+        height: 16px
+        background: center center no-repeat
+    &-finance
+        &::before
+            background-image: url(../img/ico/premises-white.svg)
+    &-factory
+        &::before
+            background-image: url(../img/ico/factory-white.svg)
+    &-technology
+        &::before
+            background-image: url(../img/ico/technology-white.svg)
+.viewedMiniCard
+    position: relative
+    display: flex
+    column-gap: 12px
+    background-color: #fff
+    border-radius: 16px
+    overflow: hidden
+    transition: background-color .2s ease-in-out
+    &__link
+        position: absolute
+        inset: 0
+        z-index: 3
+    &__col
+        position: relative
+        display: flex
+        justify-content: center
+        flex-direction: column
+        row-gap: 2px
+        &:first-of-type
+            min-width: 72px
+            min-height: 72px
+    &__shortTitle
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-weight: 800
+        font-size: 32px
+        line-height: 125% // 40/32
+        color: #fff
+        z-index: 2
+    &__name
+        font-weight: 800
+        font-size: 16px
+        line-height: 16px
+        color: $dark-grey
+    &__level
+        font-weight: 800
+        font-size: 12px
+        color: $primary
+        line-height: 125% // 15/12
+        &-professional
+            color: $secondary2
+        &-junior
+            color: $neon
+        &-foundation
+            color: $yellow
+    &__discipline
+        font-weight: 700
+        font-size: 14px
+        line-height: 1
+        color: $dark-grey
+        opacity: 0.7
+    &-red
+        .viewedMiniCard
+            &__col
+                &:first-of-type
+                    background-color: #B4002A
+    &-green
+        .viewedMiniCard
+            &__col
+                &:first-of-type
+                    background-color: #0C7C5B
+    &-blue
+        .viewedMiniCard
+            &__col
+                &:first-of-type
+                    background-color: #006DE3
+    &-brown
+        .viewedMiniCard
+            &__col
+                &:first-of-type
+                    background-color: #8A5D02
+    &-purple
+        .viewedMiniCard
+            &__col
+                &:first-of-type
+                    background-color: #650079
+    &-pear
+        .viewedMiniCard
+            &__col
+                &:first-of-type
+                    background-color: #6C7E00
+    &-role
+        padding: 16px
+        .viewedMiniCard
+            &__discipline
+                opacity: 1
+                font-weight: 800
+                font-size: 16px
+            &__col
+                &:first-of-type
+                    min-width: 40px
+                    min-height: 40px
+                    background: #F5F5F5 center center no-repeat
+                    background-size: 22px
+                    border-radius: 8px
+    &-rocket
+        .viewedMiniCard
+            &__col
+                &:first-of-type
+                    background-image: url(../img/ico/roket-grey.svg)
+    &:hover
+        background-color: $white
