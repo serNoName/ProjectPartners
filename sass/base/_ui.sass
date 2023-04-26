@@ -958,12 +958,11 @@
         width: fit-content
         border-radius: 12px
         min-width: 100%
+        display: grid
+        place-items: center
         img
             vertical-align: middle
             border-radius: 12px
-        svg
-            path
-                fill: $primary
         &-blue
             background-color: #006DE3
         &-red
@@ -976,8 +975,6 @@
             background-color: #8A5D02
         &-pear
             background-color: #6C7E00
-        &-roket
-            background-image: url(../img/ico/roket-grey.svg)
     &__shortName
         position: absolute
         top: 50%
@@ -991,9 +988,6 @@
         &::before
             background-color: #FF8C52
         .row-card
-            &__ava
-                svg path
-                    fill: #FF8C52
             &__role
                 color: #FF8C52
                 svg path
@@ -1002,9 +996,6 @@
         &::before
             background-color: $secondary2
         .row-card
-            &__ava
-                svg path
-                    fill: $secondary2
             &__role
                 color: $secondary2
                 svg path
@@ -1013,9 +1004,6 @@
         &::before
             background-color: $neon
         .row-card
-            &__ava
-                svg path
-                    fill: $neon
             &__role
                 color: $neon
                 svg path
@@ -1024,9 +1012,6 @@
         &::before
             background-color: $yellow
         .row-card
-            &__ava
-                svg path
-                    fill: $yellow
             &__role
                 color: $yellow
                 svg path
@@ -1035,9 +1020,6 @@
         &::before
             background-color: $cyan
         .row-card
-            &__ava
-                svg path
-                    fill: $cyan
             &__role
                 color: $cyan
                 svg path
@@ -2124,38 +2106,13 @@
     &-poposals
         min-width: 193px
         max-width: 193px
-    &-blue, &-red, &-green, &-brown, &-pear, &-purple
+    &-сolorfull
         .person__col
             &:first-of-type
                 width: 40px
                 min-width: 40px
                 height: 40px
                 border-radius: 12px
-    &-blue
-        .person__col
-            &:first-of-type
-                background-color: #006DE3
-    &-red
-        .person__col
-            &:first-of-type
-                background-color: #B4002A
-    &-purple
-        .person__col
-            &:first-of-type
-                background-color: #650079
-    &-brown
-        .person__col
-            &:first-of-type
-                background-color: #8A5D02
-    &-pear
-        .person__col
-            &:first-of-type
-                background-color: #6C7E00
-    &-green
-        .person__col
-            &:first-of-type
-                background-color: #0C7C5B
-
 .testimonial
     position: relative
     border-radius: 16px
@@ -4433,6 +4390,8 @@
         line-height: 80% // 16/20
         color: #161428
     &__ico
+        display: grid
+        place-items: center
         min-width: 48px
         min-height: 48px
         border-radius: 12px
@@ -4647,13 +4606,9 @@
                 &:first-of-type
                     min-width: 40px
                     min-height: 40px
-                    background: #F5F5F5 center center no-repeat
-                    background-size: 22px
+                    background: #F5F5F5
                     border-radius: 8px
-    &-rocket
-        .viewedMiniCard
-            &__col
-                &:first-of-type
-                    background-image: url(../img/ico/roket-grey.svg)
+                    display: grid
+                    place-items: center
     &:hover
         background-color: $white

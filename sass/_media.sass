@@ -1723,7 +1723,8 @@
         width: 100vw
         padding: 24px 18px
         top: 0
-        left: 0
+        // left: 0
+        left: -100vw
         z-index: 199
         background-color: #fff
         border-right: 1px solid rgba(52,63,72,.1)
@@ -1753,6 +1754,10 @@
                     background-color: transparent
                     &::before
                         opacity: 0
+        &__burger
+            display: flex
+        &.active
+            transform: translateX(100vw)
     .page
         &__body
             display: flex
@@ -2637,7 +2642,7 @@
     .filter
         width: 100vw
         &.active
-            transform: translateX(580px)
+            transform: translateX(100vw)
         &__burger
             display: flex
     .catalog
