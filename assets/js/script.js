@@ -1245,3 +1245,15 @@ $('.group__control').click(function (e) {
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
+
+// show more opportunity card
+$('.btn-opportunity').click( function (e) {
+    e.preventDefault()
+    $(this).toggleClass('btn-less')
+    if ($(this).hasClass('btn-less')) {
+        $(this).text('Show less')
+    } else {
+        $(this).text('Show more')
+    }
+    $(this).parent().toggleClass('opportunity-open')
+})

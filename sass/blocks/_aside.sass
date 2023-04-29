@@ -15,6 +15,16 @@
             display: flex
             flex-direction: column
             row-gap: 12px
+        &-approval
+            background-color: $light-grey
+            border: 1px solid $mid-grey
+            padding: 20px 16px
+            gap: 4px
+            .aside
+                &__text
+                    padding-top: 6px
+                &__row
+                    margin-top: 4px
     &__step
         display: flex
         align-items: center
@@ -31,6 +41,10 @@
             height: 21px
             display: flex
             align-items: center
+        &-approval
+            font-weight: 800
+            span
+                font-weight: inherit
     &-shortlist
         padding: 0
         border: none
@@ -81,6 +95,11 @@
                     opacity: 1
                 &::before
                     opacity: 1
+        &-approval
+            width: 100%
+            cursor: default !important
+            &::before
+                display: none
     &__list
         display: flex
         row-gap: 10px
@@ -265,3 +284,7 @@
                     transform: translateX(3px)
     &__more
         padding-bottom: 2px
+    &-approval
+        padding: 0
+        border: none
+        row-gap: 16px

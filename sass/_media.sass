@@ -300,6 +300,10 @@
                 column-gap: 80px
     .aside
         padding-left: 12px
+        &__inner
+            &-approval
+                height: fit-content
+                min-width: 300px
         &__list
             &-item
                 padding: 12px
@@ -471,6 +475,16 @@
     .enquiryDate
         &-group
             margin-left: 32px
+    .approval
+        display: flex
+        flex-direction: column-reverse
+        &__col
+            &-aside
+                padding-left: 0
+                flex-direction: row
+                gap: 24px
+                &::before
+                    display: none
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 992px)
     .chat-buble
@@ -893,6 +907,11 @@
                 .aside
                     &__list
                         grid-template-columns: repeat(3, 1fr)
+            &-approval
+                height: fit-content
+                position: static
+                .aside__btn-shortlist
+                    width: 100%
         &__phone
             &-image
                 width: 36px
@@ -1100,6 +1119,9 @@
                 margin-bottom: 16px
         &__title
             margin-bottom: 28px
+            &-approval
+                margin-bottom: 4px
+                font-size: 40px
             &-difference
                 font-size: 32px
             &-article
@@ -1233,6 +1255,21 @@
             flex-direction: column
             align-items: start
             row-gap: 4px
+    .approval
+        display: flex
+        flex-direction: column-reverse
+        &__col
+            &-aside
+                padding-left: 0
+                flex-direction: row
+                gap: 16px
+                &::before
+                    display: none
+    .remuneration
+        &__cards
+            width: 320px
+    .tableOpportunities__head
+        grid-template-columns: auto 160px 160px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -1256,6 +1293,9 @@
     .section
         padding-top: 70px
         padding-bottom: 60px
+        &-approval
+            padding-top: 20px
+            padding-bottom: 32px
         &__title
             margin-bottom: 20px
             &-article
@@ -1863,6 +1903,10 @@
                         grid-area: i2
                         align-self: center
                         justify-self: end
+            &-approval
+                position: static
+                display: flex
+                // width: 40%
     .superpower
         display: flex
         flex-wrap: wrap
@@ -2126,6 +2170,9 @@
             grid-template-columns: 1fr 1fr
             gap: 20px
     .section
+        &__text
+            &-approval
+                font-size: 14px
         &.promo
             .section
                 &__title
@@ -2142,6 +2189,9 @@
             padding-top: 0
             padding-bottom: 32px
         &__title
+            &-approval
+                font-size: 36px
+                margin-bottom: 4px
             &-simpleText
                 margin-bottom: 16px
                 font-size: 32px
@@ -2471,6 +2521,33 @@
             justify-content: center
         .builder__item
             width: auto
+    .approval
+        gap: 32px
+        display: flex
+        flex-direction: column-reverse
+        padding-top: 20px
+        &__col
+            &-aside
+                padding-left: 0
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
+                gap: 16px
+                &::before
+                    display: none
+                .aside__inner
+                    width: 80%
+    .remuneration
+        flex-direction: column
+        &__cards
+            max-width: 100%
+    .tableOpportunities
+        overflow: hidden
+        border-radius: 16px
+        &__sectionTitle
+            border: none !important
+        &__head
+            display: none
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2908,6 +2985,9 @@
         &-profile
             padding: 28px 0
             padding-bottom: 48px
+        &-approval
+            padding-top: 20px
+            padding-bottom: 32px
     .road
         display: flex
         flex-direction: column
@@ -3085,7 +3165,18 @@
         &__body, &__footer
             padding-left: 12px
             padding-right: 12px
-
+    .approval
+        &__col
+            &-aside
+                .aside__inner
+                    width: 100%
+    .opportunity
+        &__wrapper
+            display: flex
+            flex-direction: column-reverse
+    .tableOpportunities
+        &__descr
+            font-size: 14px
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -3465,12 +3556,16 @@
                     &__row
                         margin: 0
                 .btn
+                    height: fit-content
                     font-size: 12px
                     height: 38px
                     &__more
                         font-size: 12px
                         svg
                             width: 12px
+            &-approval
+                .btn-more
+                    height: fit-content
         &__list
             &-shortlist
                 grid-template-columns: 1fr
@@ -3651,11 +3746,6 @@
         padding: 24px
         &__title
             font-size: 28px
-    .btn
-        &-info
-            padding: 0
-            width: 100%
-            justify-content: center
     .resources
         &-article
             display: flex
@@ -3673,6 +3763,10 @@
             &-btns
                 width: 100%
     .btn
+        &-info
+            padding: 0
+            width: 100%
+            justify-content: center
         &-timesheetItem
             width: 50%
             justify-content: center
@@ -3824,6 +3918,25 @@
             .btn
                 width: 100%
                 justify-content: center
+    .approval
+        &__col
+            &-aside
+                gap: 16px
+    .opportunity
+        &__list
+            padding-left: 8px
+    .levelAndDiscipline
+        flex-direction: column
+    .remuneration
+        &__cards
+            display: flex
+            flex-direction: column
+            .remunerationCell
+                &__field
+                    height: auto
+                    min-height: 92px
+                &__box
+                    margin-bottom: 8px
 @media (max-width: 360px)
     .filter
         min-width: 320px
@@ -3916,6 +4029,12 @@
                 display: flex
                 .btn
                     margin: 0 auto
+            &-approval
+                .btn
+                    width: 100%
+                    &-more
+                        width: fit-content
+                        margin: 0
     .confirm
         &__title
             font-size: 29px
@@ -4028,6 +4147,8 @@
             min-height: 32px
     .section
         &__title
+            &-approval
+                font-size: 32px
             &-article
                 font-size: 28px
         &__subtitle

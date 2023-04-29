@@ -691,216 +691,216 @@
         &-active
             &::after
                 opacity: 1
-.catalog-card
-    background-color: #fff
-    border-radius: 16px
-    max-width: 300px
-    position: relative
-    height: fit-content
-    &__wrapper
-        padding: 24px
-    &__header
-        display: flex
-    &__name
-        color: $black
-        font-size: 20px
-        line-height: 26px
-        font-weight: 800
-        margin-bottom: 2px
-        word-wrap: anywhere
-    &__link
-        position: absolute
-        width: 100%
-        height: 100%
-        display: block
-    &-favorite
-        width: 285px
-    &__status
-        position: relative
-        font-size: 12px
-        font-weight: 800
-        line-height: 15px
-        color: $secondary2
-        cursor: help
-        display: flex
-        column-gap: 2px
-        &:hover
-            .catalog-card__tooltip
-                z-index: 2
-                opacity: 1
-                transform: translateY(-20px) translateX(-50%)
-        &-yellow
-            color: $yellow
-            path
-                fill: $yellow
-        &-cyan
-            color: #00C8E8
-            path
-                fill: #00C8E8
-        &-neon
-            color: $neon
-            path
-                fill: $neon
-        &-orange
-            color: $secondary
-            path
-                fill: $secondary
-        &-purple
-            color: $primary
-            path
-                fill: $primary
-        &-role
-            font-size: 16px
-    &__inner
-        height: fit-content
-    &__prof
-        color: $dark-grey
-        font-weight: 700
-        font-size: 14px
-        line-height: 18px
-    &__image
-        display: flex
-        align-items: center
-        justify-content: center
-        margin-right: 12px
-        img
-            border-radius: 50%
-    &__body
-        max-width: 172px
-        margin: 0 auto
-        margin-top: 12px
-    &__rating
-        display: flex
-        gap: 8px
-        margin-bottom: 8px
-        .catalog-card__item
-            justify-content: center
-            &:first-child
-                width: 64px
-            &:last-child
-                width: 100%
-    &__item
-        position: relative
-        background-color: $light-grey
-        border: 1px solid $mid-grey
-        display: flex
-        align-items: center
-        border-radius: 8px
-        padding: 5px 9px
-        padding-right: 6px
-        cursor: help
-        &:hover
-            .catalog-card__tooltip
-                z-index: 2
-                opacity: 1
-                transform: translateY(-12px) translateX(-50%)
-        img
-            margin-right: 5px
-        &-text
-            font-weight: 700
-            font-size: 14px
-            line-height: 1.3
-            display: flex
-            align-items: center
-            font-weight: 800
-            color: $dark-grey
-            transform: translateY(1px)
-            span
-                font-weight: 800
-                opacity: .4
-    &__list
-        display: flex
-        flex-direction: column
-        row-gap: 8px
-        margin-bottom: 25px
-        img, svg
-            margin-right: 5px
-        &-item
-            display: flex
-            justify-content: center
-            cursor: pointer
-            text-decoration: none
-            .catalog-card__item-text
-                font-weight: 700
-            &:last-child
-                img,svg
-                    opacity: .7
-        &-text
-            font-weight: 800 !important
-    &__btn
-        width: 100%
-        display: flex
-        justify-content: center
-        align-items: center
-        padding: 12px 0 10px 0
-        border-radius: 8px
-        margin-bottom: 12px
-        position: relative
-        z-index: 1
-        &.active
-            &:hover
-                color: $primary
-                background-color: $white
-    &__add
-        margin-bottom: 5px
-        line-height: 24px
-    &__compare
-        line-height: 24px
-        user-select: none
-        &::after
-            display: none !important
-    &__tooltip
-        position: absolute
-        bottom: -60px
-        left: 50%
-        transform: translateX(-50%)
-        padding: 8px
-        max-width: 140px
-        font-size: 10px
-        font-weight: 600
-        line-height: 13px
-        color: $dark-grey
-        background-color: $white
-        border-radius: 12px
-        width: max-content
-        transition: .3s
-        opacity: 0
-        cursor: auto
-        z-index: -1
-    &-role
-        position: relative
-        margin-top: 36px
-        .catalog-card
-            &__header
-                flex-direction: column
-            &__inner
-                display: flex
-                flex-direction: column
-                justify-content: center
-            &__image
-                position: absolute
-                top: -36px
-                left: 50%
-                transform: translateX(-50%)
-                background-color: #fff
-                width: 72px
-                height: 72px
-                border-radius: 50%
-                border: 4px solid $light-grey
-            &__name
-                color: $dark-grey
-                text-align: center
-            &__status
-                justify-content: center
-                margin-top: 16px
-            &__list
-                margin-bottom: 16px
-                &-item
-                    span
-                        font-weight: 800
-                    &:last-child
-                        span
-                            font-weight: 700
+// .catalog-card
+//     background-color: #fff
+//     border-radius: 16px
+//     max-width: 300px
+//     position: relative
+//     height: fit-content
+//     &__wrapper
+//         padding: 24px
+//     &__header
+//         display: flex
+//     &__name
+//         color: $black
+//         font-size: 20px
+//         line-height: 26px
+//         font-weight: 800
+//         margin-bottom: 2px
+//         word-wrap: anywhere
+//     &__link
+//         position: absolute
+//         width: 100%
+//         height: 100%
+//         display: block
+//     &-favorite
+//         width: 285px
+//     &__status
+//         position: relative
+//         font-size: 12px
+//         font-weight: 800
+//         line-height: 15px
+//         color: $secondary2
+//         cursor: help
+//         display: flex
+//         column-gap: 2px
+//         &:hover
+//             .catalog-card__tooltip
+//                 z-index: 2
+//                 opacity: 1
+//                 transform: translateY(-20px) translateX(-50%)
+//         &-yellow
+//             color: $yellow
+//             path
+//                 fill: $yellow
+//         &-cyan
+//             color: #00C8E8
+//             path
+//                 fill: #00C8E8
+//         &-neon
+//             color: $neon
+//             path
+//                 fill: $neon
+//         &-orange
+//             color: $secondary
+//             path
+//                 fill: $secondary
+//         &-purple
+//             color: $primary
+//             path
+//                 fill: $primary
+//         &-role
+//             font-size: 16px
+//     &__inner
+//         height: fit-content
+//     &__prof
+//         color: $dark-grey
+//         font-weight: 700
+//         font-size: 14px
+//         line-height: 18px
+//     &__image
+//         display: flex
+//         align-items: center
+//         justify-content: center
+//         margin-right: 12px
+//         img
+//             border-radius: 50%
+//     &__body
+//         max-width: 172px
+//         margin: 0 auto
+//         margin-top: 12px
+//     &__rating
+//         display: flex
+//         gap: 8px
+//         margin-bottom: 8px
+//         .catalog-card__item
+//             justify-content: center
+//             &:first-child
+//                 width: 64px
+//             &:last-child
+//                 width: 100%
+//     &__item
+//         position: relative
+//         background-color: $light-grey
+//         border: 1px solid $mid-grey
+//         display: flex
+//         align-items: center
+//         border-radius: 8px
+//         padding: 5px 9px
+//         padding-right: 6px
+//         cursor: help
+//         &:hover
+//             .catalog-card__tooltip
+//                 z-index: 2
+//                 opacity: 1
+//                 transform: translateY(-12px) translateX(-50%)
+//         img
+//             margin-right: 5px
+//         &-text
+//             font-weight: 700
+//             font-size: 14px
+//             line-height: 1.3
+//             display: flex
+//             align-items: center
+//             font-weight: 800
+//             color: $dark-grey
+//             transform: translateY(1px)
+//             span
+//                 font-weight: 800
+//                 opacity: .4
+//     &__list
+//         display: flex
+//         flex-direction: column
+//         row-gap: 8px
+//         margin-bottom: 25px
+//         img, svg
+//             margin-right: 5px
+//         &-item
+//             display: flex
+//             justify-content: center
+//             cursor: pointer
+//             text-decoration: none
+//             .catalog-card__item-text
+//                 font-weight: 700
+//             &:last-child
+//                 img,svg
+//                     opacity: .7
+//         &-text
+//             font-weight: 800 !important
+//     &__btn
+//         width: 100%
+//         display: flex
+//         justify-content: center
+//         align-items: center
+//         padding: 12px 0 10px 0
+//         border-radius: 8px
+//         margin-bottom: 12px
+//         position: relative
+//         z-index: 1
+//         &.active
+//             &:hover
+//                 color: $primary
+//                 background-color: $white
+//     &__add
+//         margin-bottom: 5px
+//         line-height: 24px
+//     &__compare
+//         line-height: 24px
+//         user-select: none
+//         &::after
+//             display: none !important
+//     &__tooltip
+//         position: absolute
+//         bottom: -60px
+//         left: 50%
+//         transform: translateX(-50%)
+//         padding: 8px
+//         max-width: 140px
+//         font-size: 10px
+//         font-weight: 600
+//         line-height: 13px
+//         color: $dark-grey
+//         background-color: $white
+//         border-radius: 12px
+//         width: max-content
+//         transition: .3s
+//         opacity: 0
+//         cursor: auto
+//         z-index: -1
+//     &-role
+        // position: relative
+        // margin-top: 36px
+        // .catalog-card
+        //     &__header
+        //         flex-direction: column
+        //     &__inner
+        //         display: flex
+        //         flex-direction: column
+        //         justify-content: center
+        //     &__image
+        //         position: absolute
+        //         top: -36px
+        //         left: 50%
+        //         transform: translateX(-50%)
+        //         background-color: #fff
+        //         width: 72px
+        //         height: 72px
+        //         border-radius: 50%
+        //         border: 4px solid $light-grey
+        //     &__name
+        //         color: $dark-grey
+        //         text-align: center
+        //     &__status
+        //         justify-content: center
+        //         margin-top: 16px
+        //     &__list
+                // margin-bottom: 16px
+                // &-item
+                    // span
+                    //     font-weight: 800
+                    // &:last-child
+                    //     span
+                    //         font-weight: 700
 .tooltip
     position: absolute
     top: calc( 100% + 2px )
@@ -1503,13 +1503,17 @@
         &:checked ~ .check__box
             background-color: $mid-primary
             border-color: $mid-primary
+            background-image: url('../img/ico/check.svg')
         &:hover ~ .check__box
             background-color: $primary
             border-color: $primary
+            background-image: url('../img/ico/check.svg')
         &:hover
             &:checked ~ .check__box
                 background-color: $mid-primary
                 border-color: $mid-primary
+                background-image: url('../img/ico/check.svg')
+
     &__box
         position: absolute
         left: 0
@@ -1521,7 +1525,7 @@
         border: 1px solid rgba(52,63,72,.5)
         border-radius: 6px
         transition: border-color .2s, background-color .2s, box-shadow .2s
-        background: url('../img/ico/check.svg') center center no-repeat
+        background: center center no-repeat
         /*
             <label class="check">
                 <input class="check__input" type="checkbox">
@@ -1529,6 +1533,10 @@
                 Text
             </label>
             */
+    &-remuneration
+        font-size: 14px
+        line-height: 130%
+        font-weight: 600
     &-white
         color: #fff
         font-weight: 600
@@ -1536,12 +1544,10 @@
             &__box
                 border-color: #fff
                 background: transparent
-
             &__input
                 &:checked
                     & ~ .check__box
                         background: $primary url(../img/ico/check.svg) center center no-repeat
-
         &:hover
             .check
                 &__box
@@ -1926,8 +1932,34 @@
         background-color: $primary
     &-professional
         background-color: $secondary2
-    &-orange
-
+    &-confirm, &-perfect, &-challenge, &-win
+        position: relative
+        padding-left: 26px
+        background-color: $neon
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            left: 6px
+            transform: translateY(-50%)
+            width: 16px
+            height: 16px
+            background: url(../img/ico/check-circle.svg) center center no-repeat
+            filter: grayscale(100%) contrast(500%) invert(100%)
+    &-perfect
+        &:before
+            background-image: url(../img/ico/perfect.svg)
+            filter: none
+    &-challenge
+        background-color: $secondary2
+        &::before
+            filter: none
+            background: url(../img/ico/challenge.svg) center center no-repeat
+    &-win
+        background-color: $primary
+        &::before
+            filter: none
+            background: url(../img/ico/win.svg) center center no-repeat
     &:hover
         color: $light-grey
         background-color: $mid-primary
@@ -1990,6 +2022,10 @@
                 &-guro
                     background-color: $primary
                     color: #fff
+                &-confirm, &-perfect
+                    background-color: $neon
+                &-challenge
+                    background-color: $secondary2
                 &-professional
                     background-color: $secondary2
                     color: #fff
@@ -2062,6 +2098,9 @@
             font-weight: 600
             font-size: 14px
             line-height: 110% // 18/16
+        &-small
+            span
+                font-size: 12px
     &__label
         font-size: 16px
         color: #fff
@@ -2085,6 +2124,12 @@
             color: $secondary2
         &-foundation
             color: $yellow
+    &__ico
+        width: 32px
+        height: 32px
+        border: 1px solid $mid-grey
+        border-radius: 8px
+        background: #fff url(../img/ico/get-money.svg) center center no-repeat
     &-dark
         .person
             &__label
@@ -4612,3 +4657,219 @@
                     place-items: center
     &:hover
         background-color: $white
+.levelAndDiscipline
+    display: flex
+    justify-content: space-between
+    gap: 8px
+    &__col
+        display: flex
+        flex-direction: column
+        gap: 2px
+    &__inner
+        display: flex
+        gap: 8px
+        align-items: center
+    &__level
+        font-weight: 800
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $yellow
+        svg
+            vertical-align: middle
+    &__ava
+        display: grid
+        place-items: center
+        border-radius: 12px
+        background-color: $light-grey
+        width: 40px
+        height: 40px
+    &__discipline
+        font-weight: 800
+        font-size: 20px
+        line-height: 80% // 16/20
+        color: $black
+    &-small
+       .levelAndDiscipline
+            &__discipline
+                font-size: 16px
+.opportunity
+    display: flex
+    flex-direction: column
+    row-gap: 16px
+    padding-bottom: 16px
+    &__wrapper
+        display: grid
+        grid-template-columns: auto 272px
+        gap: 24px
+    &__text
+        line-height: 150%
+        color: $dark-grey
+        margin-bottom: 16px
+    &__subtitle
+        font-weight: 800
+        font-size: 19px
+        line-height: 150%
+        color: $dark-grey
+        margin-bottom: 10px
+    &__list
+        list-style: none
+        padding-left: 16px
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+    &__li
+        position: relative
+        padding-left: 24px
+        line-height: 140%
+        color: $dark-grey
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            width: 16px
+            height: 16px
+            background: url(../img/ico/check-mark.svg) center (center/cover) no-repeat
+    &__content
+        position: relative
+        display: flex
+        flex-direction: column
+        row-gap: 24px
+        height: 72px
+        overflow: hidden
+        &::before
+            position: absolute
+            content: ''
+            inset: 0
+            background: linear-gradient(transparent, transparent, #fff)
+            z-index: 2
+    &-open
+        .opportunity
+            &__content
+                height: auto
+                &::before
+                    display: none
+.tableOpportunities
+    &__wrapper
+        background-color: $light-grey
+        border-radius: 16px
+        margin-bottom: 24px
+        border: 1px solid $mid-grey
+        overflow: hidden
+    &__head
+        display: grid
+        grid-template-columns: auto 200px 200px
+        background: $dark-grey
+        border-radius: 16px 16px 0 0
+        padding: 16px 24px 12px 24px
+    &__cell
+        color: #fff
+        font-weight: 700
+        line-height: 125% // 20/16
+        &:not(:first-child)
+            text-align: center
+            transform: translateX(-4px)
+    &__sectionTitle
+        font-size: 14px
+        line-height: 130% // 18/14
+        color: $dark-grey
+        padding: 12px 24px
+        margin-bottom: 8px
+        background-color: $mid-grey
+        span
+            font-weight: 700
+        &:not(:first-of-type)
+            border-top: 1px solid rgba(52,63,72,.1)
+
+    &__descr
+        position: relative
+        line-height: 150%
+        color: $dark-grey
+        padding-left: 9px
+        &::before
+            position: absolute
+            content: '*'
+            left: 0
+            top: 0
+            color: $primary
+            font-weight: 800
+            line-height: 140%
+.remuneration
+    display: flex
+    gap: 24px
+    padding: 20px 24px
+    background-color: $light-grey
+    .levelAndDiscipline__ava
+        background-color: #fff
+    &__text
+        font-size: 14px
+        line-height: 150%
+        color: $dark-grey
+        margin-top: 12px
+        span
+            font-weight: 700
+    &__cards
+        display: flex
+        gap: 16px
+        margin-bottom: 12px
+        width: 400px
+    &-perfect
+        background: #D8FBF1
+.remunerationCell
+    position: relative
+    display: block
+    user-select: none
+    cursor: pointer
+    flex: 1
+    &__field
+        border-radius: 16px
+        display: block
+        border: 1px solid $mid-grey
+        background-color: #fff
+        height: 144px
+        padding: 16px
+        transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .2s ease-in-out
+    &__box
+        display: block
+        width: 20px
+        height: 20px
+        opacity: .5
+        border: 1px solid $dark-grey
+        border-radius: 6px
+        margin-bottom: 16px
+        transition: background-color .2s ease-in-out
+    &__input
+        position: absolute
+        z-index: -1
+        appearance: none
+        &:checked
+            & ~ .remunerationCell__field
+                background-color: $white
+                border: 1px solid $primary
+            & ~ .remunerationCell__wrapper .remunerationCell__box
+                opacity: 1
+                border-color: $primary
+                background: $primary url('../img/ico/check.svg') center center no-repeat
+        &:disabled
+            & ~ .remunerationCell__field
+                cursor: not-allowed
+                background-color: $light-grey
+            & ~ .remunerationCell__wrapper
+                cursor: not-allowed
+                filter: grayscale(1)
+                opacity: .5
+    &__wrapper
+        position: absolute
+        top: 16px
+        left: 16px
+    &:hover
+        .remunerationCell
+            &__field
+                border-color: $primary
+                box-shadow: 0px 0px 12px rgba(110, 85, 255, 0.2)
+            &__input
+                &:disabled
+                    & ~ .remunerationCell__field
+                        box-shadow: none
+                        border-color: $mid-grey
