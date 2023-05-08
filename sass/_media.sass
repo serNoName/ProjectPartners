@@ -1270,6 +1270,9 @@
             width: 320px
     .tableOpportunities__head
         grid-template-columns: auto 160px 160px
+    .detailedCard
+        &__col
+            min-width: calc(33.33333% - 16px)
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -2503,10 +2506,14 @@
             max-width: 480px
             align-self: center
     .detailedCard
+        .row-card__rate
+            position: static
         &-proposal
             .row-card__rate
                 position: static
                 transform: none
+        &__col
+            min-width: calc( 50% - 8px )
     .appInfo
         height: 64px
     .profile
@@ -3882,14 +3889,21 @@
                     height: 28px
                     border-radius: 10px
                 &__photo
+                    display: flex
+                    justify-content: center
+                    align-items: center
                     border-radius: 10px
-                    border-left-width: 2px
+                    border-width: 2px
+                    font-size: 12px
+                    min-width: 28px
                     &:nth-child(even)
                         display: none
                     &:first-of-type
-                        display: block
+                        display: flex
                     &-last
-                        display: block !important
+                        display: flex !important
+                    &:not(:first-child)
+                        margin-left: -6px
                 &__count
                     font-size: 12px
     .group
@@ -3901,11 +3915,12 @@
                 position: static
                 transform: none
                 &__photo:nth-child(2n)
-                    display: block
+                    display: flex
             .row-card__rate
                 bottom: 16px
                 right: 16px
                 transform: none
+                min-width: auto
     .detailedCard
         &__items
             flex-direction: column

@@ -2945,7 +2945,6 @@
         box-sizing: content-box
         background-color: #fff
         border: 4px solid #fff
-        border-right: none
         color: #fff
         font-weight: 700
         font-size: 16px
@@ -2953,7 +2952,7 @@
         display: grid
         place-items: center
         &:not(:first-child)
-            margin-left: -8px
+            margin-left: -12px
             // border-left: 4px solid #fff
             // border: 4px solid #fff
         &-last
@@ -4139,23 +4138,24 @@
         display: flex
         flex-wrap: wrap
         align-items: center
-        justify-content: space-between
+        // justify-content: space-between
         column-gap: 16px
         row-gap: 8px
     &__col
         display: flex
         row-gap: 2px
         flex-direction: column
-        &-contract
-            min-width: 7.8%
-        &-calendar
-            min-width: 10.2%
-        &-industry
-            min-width: 14.8%
-        &-superpower
-            min-width: 12%
-        &-stars
-            min-width: 12.7%
+        min-width: calc(20% - 16px)
+        // &-contract
+        //     min-width: 7.8%
+        // &-calendar
+        //     min-width: 10.2%
+        // &-industry
+        //     min-width: 14.8%
+        // &-superpower
+        //     min-width: 12%
+        // &-stars
+        //     min-width: 100px
     &-white
         background-color: #fff
         column-gap: 12px
