@@ -906,7 +906,7 @@
                     //         font-weight: 700
 .tooltip
     position: absolute
-    top: calc( 100% + 2px )
+    top: calc( 100%  )
     left: 50%
     transform: translateX(-50%) translateY(20%)
     padding: 8px
@@ -966,9 +966,15 @@
         display: grid
         place-items: center
         height: fit-content
+        min-height: 48px
         img
             vertical-align: middle
             border-radius: 12px
+        .discipline-icon
+            width: 24px
+            height: 24px
+            opacity: .5
+            background-color: $dark-grey
         &-blue
             background-color: #006DE3
         &-red
@@ -1114,6 +1120,10 @@
         margin-left: 36px
         width: 182px
         min-width: 180px
+        &-role
+            .row-card__ava
+                img
+                    border-radius: 0
     &__name
         color: $dark-grey
         font-weight: 800
@@ -2929,11 +2939,23 @@
 .partnersPhotos
     display: flex
     &__photo
-        border-radius: 12px
+        border-radius: 16px
         overflow: hidden
+        min-width: 40px
+        box-sizing: content-box
+        background-color: #fff
+        border: 4px solid #fff
+        border-right: none
+        color: #fff
+        font-weight: 700
+        font-size: 16px
+        left: 1px
+        display: grid
+        place-items: center
         &:not(:first-child)
             margin-left: -8px
-            border-left: 4px solid #fff
+            // border-left: 4px solid #fff
+            // border: 4px solid #fff
         &-last
             position: relative
             &::before
@@ -2945,8 +2967,9 @@
                 height: 100%
                 background: rgba(110, 85, 255, 0.7)
     &__image
-        border-radius: 12px
-        vertical-align: top
+        width: 40px
+        height: 40px
+        vertical-align: middle
     &__count
         position: absolute
         top: 50%
@@ -4109,6 +4132,8 @@
     display: flex
     border: 1px solid $mid-grey
     column-gap: 24px
+    .row-card__rate
+        min-width: 88px
     &__items
         width: 100%
         display: flex
@@ -4121,6 +4146,16 @@
         display: flex
         row-gap: 2px
         flex-direction: column
+        &-contract
+            min-width: 7.8%
+        &-calendar
+            min-width: 10.2%
+        &-industry
+            min-width: 14.8%
+        &-superpower
+            min-width: 12%
+        &-stars
+            min-width: 12.7%
     &-white
         background-color: #fff
         column-gap: 12px
@@ -4129,43 +4164,20 @@
         margin-bottom: 12px
 .item
     position: relative
+    display: flex
+    align-items: center
+    column-gap: 4px
     color: $dark-grey
     font-size: 10px
     line-height: 130% // 13/10
-    padding-left: 18px
+    // padding-left: 18px
+    &__translucent
+        opacity: .3
     &-stars
         display: flex
         column-gap: 4px
         align-content: center
         padding: 0
-    &-superpower, &-finance, &-calendar, &-contract
-        &:before
-            position: absolute
-            content: ''
-            left: 0
-            top: 50%
-            transform: translateY(-50%)
-            width: 16px
-            height: 16px
-            background-size: 12px
-    &-superpower
-        width: 124px
-        &:before
-            background: url('../img/ico/lightning-purple.svg') center center no-repeat
-            background-size: 12px
-    &-finance
-        width: 160px
-        max-width: 160px
-        &:before
-            background: url('../img/ico/premises2.svg') center center no-repeat
-            background-size: 16px
-            opacity: 0.3
-    &-calendar
-        width: 140px
-        &:before
-            background: url('../img/ico/calendar.svg') center center no-repeat
-            background-size: 12px
-    &-contract
         width: 100px
         &:before
             background: url('../img/ico/contract.svg') center center no-repeat
