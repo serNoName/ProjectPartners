@@ -1238,7 +1238,7 @@ $('.group__control').click(function (e) {
     if ($(this).parent().hasClass('active') &&
         $(e.target).hasClass('group__btn')) return;
 
-    if($(e.target).hasClass('btn')) return;
+    if ($(e.target).hasClass('btn')) return;
 
 
     $(this).parent().toggleClass('active').children('.group__content').stop().slideToggle(300)
@@ -1249,7 +1249,7 @@ function isMobileDevice() {
 };
 
 // show more opportunity card
-$('.btn-opportunity').click( function (e) {
+$('.btn-opportunity').click(function (e) {
     e.preventDefault()
     $(this).toggleClass('btn-less')
     if ($(this).hasClass('btn-less')) {
@@ -1259,3 +1259,13 @@ $('.btn-opportunity').click( function (e) {
     }
     $(this).parent().toggleClass('opportunity-open')
 })
+
+// select2
+$('.customSelect2').select2({
+    placeholder: "Choose an item",
+    minimumResultsForSearch: -1,
+});
+$('.customSelect2-autocomplete').select2({
+    placeholder: "Choose an item",
+    // minimumResultsForSearch: -1,
+});

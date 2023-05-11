@@ -2024,6 +2024,9 @@
             background-color: $primary
             &.badge
                 cursor: default
+                &-double
+                    background-color: $light-grey
+                    color: $dark-grey
                 &-practitioner
                     background-color: $secondary
                     color: #fff
@@ -2064,6 +2067,40 @@
             background-color: $secondary2
             border: 1px solid $secondary2
             color: #fff
+    &-double
+        background-color: $light-grey
+        color: $dark-grey
+        display: flex
+        align-items: center
+        height: 36px
+        line-height: 1
+        overflow: hidden
+        padding: 6 8px 6 16px
+        border: 1px solid $mid-grey
+        &.badge-sm
+            height: 30px
+    .discipline-icon
+        min-width: 16px
+        width: 16px
+        height: 16px
+        opacity: .7
+        background-color: $dark-grey
+    &__title
+        position: relative
+        font-weight: 700
+        margin-left: 4px
+        padding-right: 13px
+        margin-right: 12px
+        &::before
+            position: absolute
+            content: ''
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+            width: 1px
+            height: 400%
+            background-color: $dark-grey
+            opacity: 0.05
 .badges
     display: flex
     gap: 4px
