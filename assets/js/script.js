@@ -902,6 +902,14 @@ if (isMobileDevice()) {
 } else {
     if ($('.input-date').length) {
         $('.input-date').datepicker();
+        $('.input-date').on('change', function() {
+            const label = $(this).siblings('.input-date__label');
+            if ($(this).val().length) {
+                label.addClass('active')
+            } else {
+                label.removeClass('active')
+            }
+        })
     }
 }
 

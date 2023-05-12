@@ -1,4 +1,8 @@
 @media ( min-width: 1600px)
+    .section
+        &-diversity
+            background-size: cover
+
     .thank
         background-size: cover
         background-position-y: -100px
@@ -1136,6 +1140,8 @@
                 margin: 0
         &-cta
             padding-top: 40px
+        &-diversity
+            padding: 80px 0
         &-road
             background: $light-grey
         &__testimonial
@@ -1273,6 +1279,11 @@
     .detailedCard
         &__col
             min-width: calc(33.33333% - 16px)
+    .diversity
+        grid-template-columns: auto
+        justify-items: center
+        &__col
+            max-width: 800px
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
     .chat-buble
@@ -2237,6 +2248,9 @@
         &-firstScreen
             padding-bottom: 0
             padding-top: 48px
+        &-diversity
+            background-image: none
+            padding: 80px 0
         &-attached
             padding: 0
             padding-bottom: 48px
@@ -2505,6 +2519,11 @@
             height: 48px
             max-width: 480px
             align-self: center
+    .diversity
+        grid-template-columns: auto
+        justify-items: center
+        &__col
+            max-width: 800px
     .detailedCard
         .row-card__rate
             position: static
@@ -2555,6 +2574,12 @@
             border: none !important
         &__head
             display: none
+    .contactForm
+        &__row
+            grid-template-columns: auto
+            row-gap: 16px
+        .builder__item
+            width: 100%
 @media (max-width: 576px)
     .container
         width: 460px
@@ -2956,6 +2981,8 @@
         &__text
             &-benefit
                 font-size: 14px
+            &-diversity
+                margin-bottom: 36px
             &-comms
                 margin-bottom: 24px
         &-team
@@ -4244,3 +4271,7 @@
     .catalogCard
         &__line
             margin: 12px 0
+    .contactForm
+        padding: 20px 16px
+        &__title
+            margin-bottom: 20px
