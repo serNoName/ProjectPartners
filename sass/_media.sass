@@ -447,6 +447,11 @@
                 font-size: 40px
     .twoCols
         grid-template-columns: auto auto
+        &-noMatch
+            grid-template-columns: auto
+            gap: 48px
+            .twoCols__col-image
+                justify-content: center
     .proposals
         grid-template-columns: repeat(3, minmax(260px, 285px))
     .timesheetItem
@@ -489,6 +494,7 @@
                 gap: 24px
                 &::before
                     display: none
+
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 992px)
     .chat-buble
@@ -1085,12 +1091,30 @@
         @include customScrollBar()
         &__row
             grid-template-columns: 100px 175px 175px 140px 100px 120px
-            padding-right: 16px
+            // padding-right: 16px
+        &-page .styledTable__row-head .styledTable__cell
+            padding: 12px 16px
+            // height: fit-content
     .twoCols
         display: flex
         flex-direction: column
         row-gap: 32px
         padding: 0
+        &__img
+            display: block
+            margin: 0 auto
+        &-page
+            display: flex
+            flex-direction: column
+            &.twoCols-noMatch
+                flex-direction: column
+        &-reverse
+            flex-direction: column-reverse
+        &-noMatch
+            grid-template-columns: auto
+            gap: 48px
+            .twoCols__col-image
+                justify-content: center
         &-share, &-revers, &-thank
             max-width: 640px
             margin: 0 auto
@@ -1421,6 +1445,9 @@
                 display: flex
         &-simple
             padding: 24px 0
+            .header__logo img
+                width: auto
+                max-width: 100%
     .nav
         padding: 30px
         padding-top: 90px
@@ -2279,6 +2306,25 @@
         flex-direction: column
         row-gap: 32px
         padding: 0
+        &-noMatch
+            grid-template-columns: auto
+            gap: 48px
+            .twoCols__col-image
+                justify-content: center
+                img
+                    height: auto
+                    width: auto
+                    max-width: 100%
+        &__img
+            display: block
+            margin: 0 auto
+        &-page
+            display: flex
+            flex-direction: column
+            &.twoCols-noMatch
+                flex-direction: column
+        &-reverse
+            flex-direction: column-reverse
         &__col
             img
                 max-width: 80%
@@ -2395,6 +2441,21 @@
         &__cell
             padding-left: 8px
             padding-right: 4px
+        &-page .styledTable__row-head .styledTable__cell
+            padding: 8px 16px
+            // height: fit-content
+        &-types
+            .styledTable
+                &__cell
+                    padding: 16px 12px
+                    font-size: 14px
+                    .person
+                        flex-direction: column
+                        gap: 8px
+                        &__col-bold
+                            font-size: 16px
+                    &:first-child
+                        min-width: 200px
     .proposals
         grid-template-columns: repeat(2, minmax(240px, 285px))
         column-gap: 12px
@@ -3210,6 +3271,19 @@
     .tableOpportunities
         &__descr
             font-size: 14px
+    .form
+        &-horizontal
+            flex-direction: column
+            .form__input
+                width: 100%
+            .btn
+                width: 100%
+    .helpForm
+        &__row
+            display: flex
+            flex-direction: column
+            &-fluid
+                gap: 0
 /* Portrait phones and smaller */
 @media (max-width: 480px)
     .alert
@@ -3246,6 +3320,8 @@
             &-check
                 font-size: 28px
         &__text
+            &-page
+                font-size: 16px
             &-comms
                 font-size: 16px
         &__row
@@ -4275,3 +4351,7 @@
         padding: 20px 16px
         &__title
             margin-bottom: 20px
+    .helpForm
+        padding: 24px 12px
+        &__title
+            margin-bottom: 16px

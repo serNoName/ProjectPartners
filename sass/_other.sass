@@ -25,8 +25,6 @@
         left: 0
         width: 100%
         z-index: -1
-        // height: 100%
-        // object-fit: cover
     &-article
         bottom: -110px
         left: 0
@@ -67,6 +65,20 @@
         top: -90px
         width: 100%
         left: 0
+    &-noMatch
+        top: 0
+        left: 0
+    &-pages
+        top: 124px
+        left: 0
+        width: 100%
+    &-1
+        left: -48px
+        bottom: -100px
+    &-2
+        transform: rotate(180deg)
+        top: -260px
+        right: 0
 .tab-content
     overflow: hidden
 .levelColor
@@ -83,3 +95,36 @@
         color: $neon
     &-apprentice
         color: $cyan
+.newBtns
+    padding: 16px 0
+.helpForm
+    padding: 32px 24px
+    background-color: #fff
+    border-radius: 16px
+    &__title
+        font-weight: 800
+        font-size: 24px
+        line-height: 120%
+        color: $black
+        margin-bottom: 24px
+    &__wrapper
+        display: flex
+        flex-direction: column
+        gap: 16px
+        margin-bottom: 24px
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 16px
+        &-fluid
+            display: block
+    &__textarea
+        height: 120px
+        margin: 0
+.tip
+    display: block
+    font-weight: 700
+    font-size: 14px
+    line-height: 1
+    color: $dark-grey
+    margin-bottom: 8px

@@ -98,6 +98,8 @@
             color: $mid-primary
             &::before
                 background-color: currentColor
+    &-moreBig
+        font-size: 18px
     &-testimonial
         padding: 0
         background-color: transparent
@@ -293,6 +295,12 @@
         border-radius: 8px
         height: 40px
         padding: 0 16px
+    &-benefits
+        margin-top: 32px
+    &-fluid
+        width: 100%
+        text-align: center
+        justify-content: center
 .mini-card
     width: fit-content
     padding: 6px 8px
@@ -2140,7 +2148,7 @@
         color: #fff
     &__ava
         border-radius: 50%
-        overflow: hidden
+        // overflow: hidden
         img
             vertical-align: top
     &__prof
@@ -2172,12 +2180,29 @@
         &:first-child
             min-width: 40px
             min-height: 40px
-            height: 40px
+            // height: 40px
             text-align: center
             border-radius: 12px
             color: #fff
             font-weight: 700
             font-size: 16px
+        &-icon
+            width: 40px
+            height: 40px
+            background-color: $light-grey
+            border-radius: 12px
+            justify-content: center
+            align-items: center
+            .discipline-icon
+                width: 24px
+                height: 24px
+                background-color: $dark-grey
+                opacity: 0.5
+        &-bold
+            color: $dark-grey
+            font-weight: 700
+            font-size: 18px
+            line-height: 130% // 23/18
     &__date
         color: #fff
         font-size: 14px
@@ -2218,6 +2243,8 @@
     &-poposals
         min-width: 193px
         max-width: 193px
+    &-top
+        align-items: start
     &-сolorfull
         .person__col
             &:first-of-type
@@ -5015,3 +5042,35 @@
                     color:  rgba(255, 255, 255, .9)
             &__label
                 color: rgba(255, 255, 255, 0.5)
+.levelCell
+    position: relative
+    font-weight: 700
+    font-size: 18px
+    line-height: 130% // 23/18
+    color: $dark-grey
+    padding-left: 20px
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        width: 16px
+        height: 16px
+        background: $cyan
+        border-radius: 6px
+    &-junior
+        &::before
+            background-color: $neon
+    &-foundation
+        &::before
+            background-color: $yellow
+    &-practitioner
+        &::before
+            background-color: $secondary
+    &-specialist
+        &::before
+            background-color: $secondary2
+    &-guru
+        &::before
+            background-color: $primary

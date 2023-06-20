@@ -39,6 +39,37 @@
         &-grey
             background-color: $light-grey
             font-weight: 700
+    &-page
+        .styledTable
+            &__cell
+                font-size: 14px
+                align-items: start
+                padding: 16px
+                line-height: 140%
+            &__row
+                &-head
+                    .styledTable
+                        &__cell
+                            align-items: center
+                            font-size: 16px
+                            padding-top: 22px
+                            padding-bottom: 18px
+    &-types
+        .styledTable
+            &__cell
+                font-size: 18px
+                align-items: start
+                padding: 14px 16px
+                line-height: 140%
+                &:first-child
+                    min-width: 228px
+                    flex: .5
+            &__row
+                &-head
+                    .styledTable
+                        &__cell
+                            font-size: 16px
+                            padding: 12px 16px 8px 16px
 .qoute
     padding: 32px 24px
     background-color: $light-grey
@@ -48,6 +79,13 @@
     line-height: 130% // 31/24
     color: $black
     margin-top: 16px
+.qouteBottom
+    display: flex
+    justify-content: space-between
+    margin-top: 16px
+    padding: 0 24px
+    gap: 16px
+    flex-wrap: wrap
 .simpleText
     &__content
         margin: 24px 0
@@ -81,8 +119,17 @@
             display: flex
             justify-content: center
             flex-direction: column
+        &-image
+            display: flex
+            justify-content: right
+            align-items: center
+        &-page
+            display: flex
+            justify-content: center
     &__image
         border-radius: 16px
+    &__img
+        height: auto
     &-benefits
         column-gap: 20px
         grid-template-columns: 589px 584px
@@ -113,6 +160,11 @@
     &-simple
         grid-template-columns: auto 462px
         column-gap: 42px
+    &-page
+        gap: 38px
+        grid-template-columns: auto 590px
+    &-reverse
+        grid-template-columns: 590px auto
 .fourCols
     display: grid
     grid-template-columns: repeat(4, 1fr)

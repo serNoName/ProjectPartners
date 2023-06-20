@@ -45,6 +45,9 @@
         &:focus-visible
             box-shadow: 0 0 12px 6px rgba(110,85,255, .08 )
             border-color: $primary
+        &-middle
+            max-width: 100%
+            width: 360px
     &__notification
         opacity: .3
         margin-top: 6px
@@ -87,3 +90,7 @@
         line-height: 128.571429% // 18/14
         text-align: center
         margin-top: 24px
+    &-horizontal
+        display: flex
+        flex-direction: row
+        gap: 10px

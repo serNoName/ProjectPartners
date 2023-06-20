@@ -3,7 +3,13 @@
     font-weight: 800
     font-size: 40px
     line-height: 1.2
-
+    &-black
+        color: #000
+    &-noMatch
+        margin-bottom: 32px
+    span
+        font-weight: inherit
+        color: $primary
 .section
     padding: 80px 0 70px 0
     &.promo
@@ -99,6 +105,12 @@
         &-approval
             margin: 8px 0
             font-size: 48px
+        &-page
+            margin-bottom: 24px
+        &-data
+            max-width: 516px
+        &-help
+            max-width: 500px
     &__subtitle
         margin-bottom: 18px
         color: $dark-grey
@@ -171,6 +183,10 @@
         height: fit-content
         &-diversity
             margin-bottom: 56px
+        &-black
+            color: #000
+        &-noMatch
+            margin-bottom: 32px
         &-center
             text-align: center
             margin: 0 auto
@@ -238,6 +254,9 @@
             font-size: 16px
             line-height: 150%
             color: $dark-grey
+        &-page
+            margin-bottom: 40px
+            padding-right: 50px
     &__footer
         &-center
             display: flex
@@ -477,6 +496,23 @@
     &-approval
         padding-top: 20px
         padding-bottom: 32px
+    &-moMatch
+        padding: 100px 0
+    &-fill
+        flex: 1
+    &-page
+        padding: 130px 0
+        display: flex
+        align-items: center
+        min-height: 600px
+    &-qoute
+        padding: 48px 0
+    &-trusted
+        padding: 50px 0 100px 0
+    &-table
+        padding: 72px 0 100px 0
+    &-relative
+        position: relative
 a
     &.section
         &__subtitle
